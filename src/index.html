@@ -1,17 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D3.js Connections</title>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <style>
-    /* Add any custom styles here */
-  </style>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3.js Project</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="data.js"></script>
+  </head>
 <body>
-  <svg id="visualization"></svg>
-
-  <script src="index.js"></script>
+    <div id="d3-container"></div>
 </body>
 </html>
+
+<script>
+    const data = [
+    {
+        "type": "ownership",
+        "weight": 0.90013963,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "12744",
+        "sourceX": 114,
+        "sourceY": 195,
+        "targetX": 578,
+        "targetY": 684
+    },
+    {
+        "type": "partnership",
+        "weight": 0.8458973,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "21323516",
+        "sourceX": 114,
+        "sourceY": 195,
+        "targetX": 498,
+        "targetY": 686
+    },
+    {
+        "type": "partnership",
+        "weight": 0.9648761,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "290834957",
+        "sourceX": 114,
+        "sourceY": 195,
+        "targetX": 329,
+        "targetY": 754
+    },
+    {
+        "type": "ownership",
+        "weight": 0.9642126,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "3506021",
+        "sourceX": 114,
+        "sourceY": 195,
+        "targetX": 49,
+        "targetY": 288
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.82348585,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Conventionâ",
+        "sourceX": 114,
+        "sourceY": 195,
+        "targetX": 132,
+        "targetY": 410
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.8931523,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "2262",
+        "sourceX": 114,
+        "sourceY": 195,
+        "targetX": 884,
+        "targetY": 238
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.8393061,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Ashley Davis",
+        "sourceX": 114,
+        "sourceY": 195,
+        "targetX": 788,
+        "targetY": 867
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.88508075,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "924",
+        "sourceX": 114,
+        "sourceY": 195,
+        "targetX": 869,
+        "targetY": 839
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.8865156,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "95",
+        "sourceX": 114,
+        "sourceY": 195,
+        "targetX": 585,
+        "targetY": 253
+    },
+    {
+        "type": "membership",
+        "weight": 0.8986875,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Ancla Azul Company Solutions",
+        "sourceX": 114,
+        "sourceY": 195,
+        "targetX": 996,
+        "targetY": 164
+    },
+    {
+        "type": "partnership",
+        "weight": 0.87834406,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "185106",
+        "sourceX": 114,
+        "sourceY": 195,
+        "targetX": 653,
+        "targetY": 793
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.9664978,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Stephanie Garner",
+        "sourceX": 114,
+        "sourceY": 195,
+        "targetX": 741,
+        "targetY": 919
+    },
+    {
+        "type": "membership",
+        "weight": 0.95491886,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "âpair",
+        "sourceX": 114,
+        "sourceY": 195,
+        "targetX": 111,
+        "targetY": 206
+    }
+    ];
+
+    // Define the dimensions and margins for the SVG container
+    const width = 1000;
+    const height = 1000;
+    const margin = { top: 20, right: 20, bottom: 20, left: 20 };
+
+    // Create SVG container
+    const svg = d3.select('#d3-container')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height);
+
+    // Create a color scale for different membership types
+    const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+
+    // Create links
+    const links = svg.selectAll('line')
+        .data(data)
+        .enter()
+        .append('line')
+        .style('stroke', d => colorScale(d.type))
+        .style('stroke-width', d => d.weight * 5);
+
+    // Create nodes (circles for this example)
+    const nodes = {};
+
+    // Extract unique nodes from data
+    data.forEach(d => {
+        nodes[d.source] = { name: d.source, type: 'source', x: d.sourceX, y: d.sourceY };
+        nodes[d.target] = { name: d.target, type: 'target', x: d.targetX, y: d.targetY };
+    });
+
+    // Convert nodes object to array
+    const nodesArray = Object.values(nodes);
+
+    // Create simulation for force-directed layout
+    const simulation = d3.forceSimulation(nodesArray)
+        .force('link', d3.forceLink(data).id(d => d.name).distance(100))
+        .force('charge', d3.forceManyBody().strength(-200))
+        .force('center', d3.forceCenter(width / 2, height / 2));
+
+    // Add nodes as circles
+    const node = svg.selectAll('.node')
+        .data(nodesArray)
+        .enter()
+        .append('circle')
+        .attr('class', 'node')
+        .attr('r', 8)
+        .style('fill', d => colorScale(d.type));
+
+    // Add tooltips (optional)
+    node.append('title')
+        .text(d => d.name);
+
+    // Add tick function for simulation
+    simulation.on('tick', () => {
+        // Update link positions
+        links.attr('x1', d => d.source.x)
+            .attr('y1', d => d.source.y)
+            .attr('x2', d => d.target.x)
+            .attr('y2', d => d.target.y);
+
+        // Update node positions
+        node.attr('cx', d => d.x)
+            .attr('cy', d => d.y);
+    });
+
+</script>
