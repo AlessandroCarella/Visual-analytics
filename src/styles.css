@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.command-column {
+  width: 300px;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.command-column h2 {
+  margin-top: 0;
+}
+.command-column button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+svg {
+  border: 1px solid #ccc;
+  flex-grow: 1;
+}
