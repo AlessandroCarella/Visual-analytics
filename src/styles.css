@@ -26,3 +26,43 @@ svg {
   border: 1px solid #ccc;
   flex-grow: 1;
 }
+
+/* Styles for active and inactive buttons */
+.active-button {
+  background-color: #4CAF50; /* Green background for active buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.inactive-button {
+  background-color: #f44336; /* Red background for inactive buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Styles for links */
+.link {
+  stroke: #000;
+}
+
+.link.inactive {
+  stroke: #808080; /* Grey color for inactive links */
+}
+
+
