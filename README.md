@@ -24,3 +24,13 @@ edges:
 nodes:
 * removed dataset column
 * saved the remaining dataset in a json file
+
+splitted the screen into:
+* left column for controls
+* right side for the map
+
+created buttons for the controls:
+* each button controls one kind of link to be showed or not (showed in grey) in the map
+
+TODO:
+* create a select where i can select the sources in the dataset to show only the nodes from that source

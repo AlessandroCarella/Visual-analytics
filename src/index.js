@@ -9,41 +9,50 @@ const color = d3.scaleOrdinal()
   .range(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"]);
 
   // Load external data
-  d3.json('data/edgesCleanWithCoordinates cut.json').then(data => {
-// Create links
-const links = svg.selectAll("line")
-  .data(data)
-  .enter().append("line")
-  .attr("x1", d => d.sourceX)
-  .attr("y1", d => d.sourceY)
-  .attr("x2", d => d.targetX)
-  .attr("y2", d => d.targetY)
-  .attr("class", d => `link ${d.type}`)
-  .style("stroke", d => color(d.type))
-  .style("stroke-width", d => Math.sqrt(d.weight) * 3);
+d3.json('data/edgesCleanWithCoordinates cut.json').then(data => {
+  // Create links
+  const links = svg.selectAll("line")
+    .data(data)
+    .enter().append("line")
+    .attr("x1", d => d.sourceX)
+    .attr("y1", d => d.sourceY)
+    .attr("x2", d => d.targetX)
+    .attr("y2", d => d.targetY)
+    .attr("class", d => `link ${d.type}`)
+    .style("stroke", d => color(d.type))
+    .style("stroke-width", d => Math.sqrt(d.weight) * 3)
+    .each(function(d) {
+      // Store the initial color in a property
+      d.initialColor = color(d.type);
+    });
 
-// Add button event listeners
-const types = ["ownership", "partnership", "family_relationship", "membership"];
-const activeTypes = new Set(types); // Initialize all types as active
+  // Add button event listeners
+  const types = ["ownership", "partnership", "family_relationship", "membership"];
+  const activeTypes = new Set(types); // Initialize all types as active
 
-types.forEach(type => {
-  d3.select(`#${type}`).on('click', function() {
-    const isActive = d3.select(this).classed('active-button');
-    d3.select(this).classed('active-button', !isActive).classed('inactive-button', isActive);
+  types.forEach(type => {
+    d3.select(`#${type}`).on('click', function() {
+      const isActive = d3.select(this).classed('active-button');
+      d3.select(this).classed('active-button', !isActive).classed('inactive-button', isActive);
+      
+      
+      if (isActive) {
+        activeTypes.delete(type);
 
-    if (isActive) {
-      activeTypes.delete(type);
-    } else {
-      activeTypes.add(type);
-    }
+        //if the button is active put the color to gray
+        svg.selectAll(`line.link.${type}`) 
+        .style("stroke", "#808080")
+      } 
+      else {
+        activeTypes.add(type);
 
-    links.attr("class", d => {
-      return `link ${d.type} ${activeTypes.has(d.type) ? '' : 'inactive'}`;
+        //if button is inactive revert to the default color of the button
+        svg.selectAll(`line.link.${type}`)
+          .style("stroke", color(type));
+      }
     });
   });
-});
-
-
+  
 
   // Create nodes for sources
   svg.selectAll("circle.source")
