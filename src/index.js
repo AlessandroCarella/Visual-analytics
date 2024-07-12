@@ -40,7 +40,7 @@ d3.json('data/edgesCleanWithCoordinates cut.json').then(data => {
   console.error('Error loading the data:', error);
 });
 
-function setupGraph (data, types){
+function setupGraph(data, types){
   svg.selectAll(`line.link`).remove();
   svg.selectAll(`circle.source`).remove();
   svg.selectAll(`circle.target`).remove();
@@ -48,11 +48,16 @@ function setupGraph (data, types){
   svg.selectAll(`text.target`).remove();
 
   console.log(`Graph setup for ${types.join(', ')}`);
-  createLinks(data, types);
-  createNodes(data, 'source', '#216b44');
-  createNodes(data, 'target', '#c3c90e');
-  createLabels(data, 'source');
-  createLabels(data, 'target');
+  const activeData = data.filter(d => types.includes(d.type));
+  
+  const activeSources = new Set(activeData.map(d => d.source));
+  const activeTargets = new Set(activeData.map(d => d.target));
+
+  createLinks(activeData, types);
+  createNodes(activeData, 'source', '#216b44', activeSources);
+  createNodes(activeData, 'target', '#c3c90e', activeTargets);
+  createLabels(activeData, 'source', activeSources);
+  createLabels(activeData, 'target', activeTargets);
 }
 
 function populateDropdown(selector, items) {
@@ -67,14 +72,14 @@ function populateDropdown(selector, items) {
 function filterVisibilityBySource(selectedSource) {
   svg.selectAll("circle.source, circle.target, line, text.source, text.target")
     .style("visibility", function(d) {
-      return selectedSource === 'all' || d.source === selectedSource ? "visible" : "hidden";
+      return d.source === selectedSource || selectedSource === 'all' ? "visible" : "hidden";
     });
 }
 
 function filterVisibilityByTarget(selectedTarget) {
   svg.selectAll("circle.source, circle.target, line, text.source, text.target")
     .style("visibility", function(d) {
-      return selectedTarget === 'all' || d.target === selectedTarget ? "visible" : "hidden";
+      return d.target === selectedTarget || selectedTarget === 'all' ? "visible" : "hidden";
     });
 }
 
@@ -96,9 +101,9 @@ function createLinks(data, types) {
   });
 }
 
-function createNodes(data, className, fillColor) {
+function createNodes(data, className, fillColor, activeNodes) {
   svg.selectAll(`circle.${className}`)
-    .data(data)
+    .data(data.filter(d => activeNodes.has(d[className])))
     .enter().append("circle")
     .attr("class", className)
     .attr("cx", d => d[`${className}X`])
@@ -109,9 +114,9 @@ function createNodes(data, className, fillColor) {
     .style("stroke-width", 1);
 }
 
-function createLabels(data, className) {
+function createLabels(data, className, activeNodes) {
   svg.selectAll(`text.${className}`)
-    .data(data)
+    .data(data.filter(d => activeNodes.has(d[className])))
     .enter().append("text")
     .attr("class", className)
     .attr("x", d => d[`${className}X`] + 8)
