@@ -24,16 +24,27 @@ d3.json('data/edgesCleanWithCoordinates cut.json').then(data => {
     filterVisibilityByTarget(this.value);
   });
 
-  createLinks(data);
-  createNodes(data, 'source', '#216b44');
-  createNodes(data, 'target', '#c3c90e');
-  createLabels(data, 'source');
-  createLabels(data, 'target');
+  setupGraph(data, ["ownership", "partnership", "family_relationship", "membership"]);
 
   addTypeButtonsEventListeners(data);
 }).catch(error => {
   console.error('Error loading the data:', error);
 });
+
+function setupGraph (data, types){
+  svg.selectAll(`line.link`).remove();
+  svg.selectAll(`circle.source`).remove();
+  svg.selectAll(`circle.target`).remove();
+  svg.selectAll(`text.source`).remove();
+  svg.selectAll(`text.target`).remove();
+
+  console.log(`Graph setup for ${types.join(', ')}`);
+  createLinks(data, types);
+  createNodes(data, 'source', '#216b44');
+  createNodes(data, 'target', '#c3c90e');
+  createLabels(data, 'source');
+  createLabels(data, 'target');
+}
 
 function populateDropdown(selector, items) {
   const dropdown = d3.select(selector);
@@ -45,29 +56,35 @@ function populateDropdown(selector, items) {
 function filterVisibilityBySource(selectedSource) {
   const visibility = selectedSource === 'all' ? "visible" : "hidden";
   svg.selectAll("circle.source, circle.target, line, text.source, text.target")
-    .style("visibility", d => d.source === selectedSource || visibility);
+    .style("visibility", function(d) {
+      return d.source === selectedSource || selectedSource === 'all' ? "visible" : "hidden";
+    });
 }
 
 function filterVisibilityByTarget(selectedTarget) {
   const visibility = selectedTarget === 'all' ? "visible" : "hidden";
   svg.selectAll("circle.source, circle.target, line, text.source, text.target")
-    .style("visibility", d => d.target === selectedTarget || visibility);
+    .style("visibility", function(d) {
+      return d.target === selectedTarget || selectedTarget === 'all' ? "visible" : "hidden";
+    });
 }
 
-function createLinks(data) {
-  svg.selectAll("line")
-    .data(data)
-    .enter().append("line")
-    .attr("x1", d => d.sourceX)
-    .attr("y1", d => d.sourceY)
-    .attr("x2", d => d.targetX)
-    .attr("y2", d => d.targetY)
-    .attr("class", d => `link ${d.type}`)
-    .style("stroke", d => color(d.type))
-    .style("stroke-width", d => Math.sqrt(d.weight) * 3)
-    .each(function(d) {
-      d.initialColor = color(d.type);
-    });
+function createLinks(data, types) {
+  types.forEach(type => {
+    svg.selectAll(`line.link.${type}`)
+      .data(data.filter(d => d.type === type))
+      .enter().append("line")
+      .attr("x1", d => d.sourceX)
+      .attr("y1", d => d.sourceY)
+      .attr("x2", d => d.targetX)
+      .attr("y2", d => d.targetY)
+      .attr("class", d => `link ${d.type}`)
+      .style("stroke", d => color(d.type))
+      .style("stroke-width", d => Math.sqrt(d.weight) * 3)
+      .each(function(d) {
+        d.initialColor = color(d.type);
+      });
+  });
 }
 
 function createNodes(data, className, fillColor) {
@@ -106,20 +123,12 @@ function addTypeButtonsEventListeners(data) {
 
       if (isActive) {
         activeTypes.delete(type);
-        svg.selectAll(`line.link.${type}`).remove();
       } else {
         activeTypes.add(type);
-        svg.selectAll(`line.link.${type}`)
-          .data(data.filter(d => d.type === type))
-          .enter().append("line")
-          .attr("x1", d => d.sourceX)
-          .attr("y1", d => d.sourceY)
-          .attr("x2", d => d.targetX)
-          .attr("y2", d => d.targetY)
-          .attr("class", d => `link ${d.type}`)
-          .style("stroke", d => color(d.type))
-          .style("stroke-width", d => Math.sqrt(d.weight) * 3);
       }
+      
+      console.log('Active types:', Array.from(activeTypes));
+      setupGraph(data, Array.from(activeTypes))
     });
   });
 }
