@@ -30,7 +30,7 @@ d3.json('data/edgesCleanWithCoordinates cut.json').then(data => {
   createLabels(data, 'source');
   createLabels(data, 'target');
 
-  addTypeButtonsEventListeners();
+  addTypeButtonsEventListeners(data);
 }).catch(error => {
   console.error('Error loading the data:', error);
 });
@@ -95,7 +95,7 @@ function createLabels(data, className) {
     .style("fill", "#000");
 }
 
-function addTypeButtonsEventListeners() {
+function addTypeButtonsEventListeners(data) {
   const types = ["ownership", "partnership", "family_relationship", "membership"];
   const activeTypes = new Set(types);
 
@@ -106,10 +106,19 @@ function addTypeButtonsEventListeners() {
 
       if (isActive) {
         activeTypes.delete(type);
-        svg.selectAll(`line.link.${type}`).style("stroke", "#FFFFFF");
+        svg.selectAll(`line.link.${type}`).remove();
       } else {
         activeTypes.add(type);
-        svg.selectAll(`line.link.${type}`).style("stroke", color(type));
+        svg.selectAll(`line.link.${type}`)
+          .data(data.filter(d => d.type === type))
+          .enter().append("line")
+          .attr("x1", d => d.sourceX)
+          .attr("y1", d => d.sourceY)
+          .attr("x2", d => d.targetX)
+          .attr("y2", d => d.targetY)
+          .attr("class", d => `link ${d.type}`)
+          .style("stroke", d => color(d.type))
+          .style("stroke-width", d => Math.sqrt(d.weight) * 3);
       }
     });
   });
