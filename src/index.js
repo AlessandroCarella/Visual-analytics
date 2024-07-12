@@ -1,71 +1,55 @@
+// Create a set of unique sources and targets
 const width = 1399;
 const height = 888;
 
 const svg = d3.select('svg');
 
+// Define color scale for different link types
 const color = d3.scaleOrdinal()
   .domain(["ownership", "partnership", "family_relationship", "membership"])
   .range(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"]);
 
-d3.json('data/edgesCleanWithCoordinates cut.json')
-  .then(data => {
-    const uniqueSources = getUniqueItems(data, 'source');
-    const uniqueTargets = getUniqueItems(data, 'target');
+// Load external data
+d3.json('data/edgesCleanWithCoordinates cut.json').then(data => {
+  const uniqueSources = Array.from(new Set(data.map(d => d.source)));
+  const uniqueTargets = Array.from(new Set(data.map(d => d.target)));
 
-    populateDropdown('#source-select', uniqueSources);
-    populateDropdown('#target-select', uniqueTargets);
+  populateDropdown('#source-select', uniqueSources);
+  populateDropdown('#target-select', uniqueTargets);
 
-    addDropdownEventListeners(data);
-
-    createGraph(data, ["ownership", "partnership", "family_relationship", "membership"]);
-    addTypeButtonsEventListeners(data);
-  })
-  .catch(error => console.error('Error loading the data:', error));
-
-function getUniqueItems(data, key) {
-  return Array.from(new Set(data.map(d => d[key])));
-}
-
-function populateDropdown(selector, items) {
-  const dropdown = d3.select(selector);
-  dropdown.selectAll('option').remove();
-  dropdown.append('option').attr('value', 'all').text('All');
-  items.forEach(item => dropdown.append('option').attr('value', item).text(item));
-}
-
-function addDropdownEventListeners(data) {
   d3.select('#source-select').on('change', function() {
-    handleDropdownChange(this.value, 'source', data);
+    const selectedSource = this.value;
+    if (selectedSource !== 'all') {
+      d3.select('#target-select').property('value', 'all');
+    }
+    filterVisibilityBySource(selectedSource);
   });
-
+  
   d3.select('#target-select').on('change', function() {
-    handleDropdownChange(this.value, 'target', data);
+    const selectedTarget = this.value;
+    if (selectedTarget !== 'all') {
+      d3.select('#source-select').property('value', 'all');
+    }
+    filterVisibilityByTarget(selectedTarget);
   });
-}
+  
+  setupGraph(data, ["ownership", "partnership", "family_relationship", "membership"]);
 
-function handleDropdownChange(selectedValue, type, data) {
-  const otherType = type === 'source' ? 'target' : 'source';
-  if (selectedValue !== 'all') {
-    d3.select(`#${otherType}-select`).property('value', 'all');
-  }
-  filterVisibilityByTypeAndSelectedValue(selectedValue, type);
-}
+  addTypeButtonsEventListeners(data);
+}).catch(error => {
+  console.error('Error loading the data:', error);
+});
 
-function filterVisibilityByTypeAndSelectedValue(selectedValue, type) {
-  console.log(`Filtering by ${selectedValue} in ${type} column`);
-  svg.selectAll("circle.source, circle.target, line, text.source, text.target")
-    .style("visibility", function(d) {
-      console.log(d)
-      //d is the current data object so it checks in the type (either source or target) column
-      //if the selected value matches the selected value or if all is selected, it returns visible
-      return d[type] === selectedValue || selectedValue === 'all' ? "visible" : "hidden";
-    });
-}
+function setupGraph(data, types){
+  svg.selectAll(`line.link`).remove();
+  svg.selectAll(`circle.source`).remove();
+  svg.selectAll(`circle.target`).remove();
+  svg.selectAll(`text.source`).remove();
+  svg.selectAll(`text.target`).remove();
 
-function createGraph(data, types) {
   console.log(`Graph setup for ${types.join(', ')}`);
-  const activeData = filterDataByTypes(data, types);
-
+  const activeData = data.filter(d => types.includes(d.type));
+  
   const activeSources = new Set(activeData.map(d => d.source));
   const activeTargets = new Set(activeData.map(d => d.target));
 
@@ -76,8 +60,27 @@ function createGraph(data, types) {
   createLabels(activeData, 'target', activeTargets);
 }
 
-function filterDataByTypes(data, types) {
-  return data.filter(d => types.includes(d.type));
+function populateDropdown(selector, items) {
+  const dropdown = d3.select(selector);
+  dropdown.selectAll('option').remove(); // Clear existing options
+  dropdown.append('option').attr('value', 'all').text('All'); // Add "all" option
+  items.forEach(item => {
+    dropdown.append('option').attr('value', item).text(item);
+  });
+}
+
+function filterVisibilityBySource(selectedSource) {
+  svg.selectAll("circle.source, circle.target, line, text.source, text.target")
+    .style("visibility", function(d) {
+      return d.source === selectedSource || selectedSource === 'all' ? "visible" : "hidden";
+    });
+}
+//
+function filterVisibilityByTarget(selectedTarget) {
+  svg.selectAll("circle.source, circle.target, line, text.source, text.target")
+    .style("visibility", function(d) {
+      return d.target === selectedTarget || selectedTarget === 'all' ? "visible" : "hidden";
+    });
 }
 
 function createLinks(data, types) {
@@ -89,8 +92,8 @@ function createLinks(data, types) {
       .attr("y1", d => d.sourceY)
       .attr("x2", d => d.targetX)
       .attr("y2", d => d.targetY)
-      .attr("class", `link ${type}`)
-      .style("stroke", color(type))
+      .attr("class", d => `link ${d.type}`)
+      .style("stroke", d => color(d.type))
       .style("stroke-width", d => Math.sqrt(d.weight) * 3)
       .each(function(d) {
         d.initialColor = color(d.type);
@@ -137,55 +140,9 @@ function addTypeButtonsEventListeners(data) {
       } else {
         activeTypes.add(type);
       }
-      refreshGraph(data, Array.from(activeTypes));
+      
+      console.log('Active types:', Array.from(activeTypes));
+      setupGraph(data, Array.from(activeTypes))
     });
   });
-}
-
-function refreshGraph(data, types) {
-  hideAllGraphElements();
-
-  const activeData = filterDataByTypes(data, types);
-
-  const activeSources = new Set(activeData.map(d => d.source));
-  const activeTargets = new Set(activeData.map(d => d.target));
-
-  refreshLinks(activeData, types);
-  refreshNodes(activeData, 'source', '#216b44', activeSources);
-  refreshNodes(activeData, 'target', '#c3c90e', activeTargets);
-  refreshLabels(activeData, 'source', activeSources);
-  refreshLabels(activeData, 'target', activeTargets);
-}
-
-function hideAllGraphElements() {
-  svg.selectAll(`line.link, circle.source, circle.target, text.source, text.target`)
-    .style("visibility", "hidden");
-}
-
-function refreshLinks(data, types) {
-  console.log("refresh links");
-  console.log(types);
-  types.forEach(type => {
-    svg.selectAll(`line.link.${type}`)
-      .data(data.filter(d => d.type === type))
-      .style("visibility", "visible");
-  });
-}
-
-function refreshNodes(data, className, fillColor, activeNodes) {
-  console.log("refresh nodes");
-  console.log(activeNodes);
-  
-  svg.selectAll(`circle.${className}`)
-    .data(data.filter(d => activeNodes.has(d[className])))
-    .style("visibility", "visible");
-}
-
-function refreshLabels(data, className, activeNodes) {
-  console.log("refresh labels");
-  console.log(activeNodes);
-
-  svg.selectAll(`text.${className}`)
-    .data(data.filter(d => activeNodes.has(d[className])))
-    .style("visibility", "visible");
 }
