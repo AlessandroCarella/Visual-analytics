@@ -39,6 +39,7 @@ TODO:
 * add an option to, after selecting a source, click on one of the targets and see the connections of it 
 * sometimes there are mutliple links between the same 2 source and target, find a way to plot both of them
 
+*initialize the activeSources and activeTargets as all the sources and targets in the beginning, it will crash if not
 
 * order the sources from the one with most targets to the one with less
 after that find the companies which own the biggest comanies and see how they are connected to each other;

@@ -14,7 +14,7 @@ const color = d3.scaleOrdinal()
   .domain(types)
   .range(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"]);
 
-d3.json('data/edgesCleanWithCoordinates.json')
+d3.json('data/edgesCleanWithCoordinates cut.json')
   .then(data => {
     const uniqueSources = getUniqueItems(data, 'source');
     const uniqueTargets = getUniqueItems(data, 'target');
@@ -79,18 +79,18 @@ function refreshGraph(data) {
 
   hideAllGraphElements();
 
-  if (selectedSource === 'all' && selectedTarget === 'all') {
+  if (selectedSource === 'All' && selectedTarget === 'All') {
     // Show all elements for active types
-    refreshLinks(data, activeTypes);
     refreshNodes(data, 'source', '#216b44', new Set(data.map(d => d.source)));
     refreshNodes(data, 'target', '#c3c90e', new Set(data.map(d => d.target)));
     refreshLabels(data, 'source', new Set(data.map(d => d.source)));
     refreshLabels(data, 'target', new Set(data.map(d => d.target)));
+    refreshLinks(data, activeTypes, new Set(data.map(d => d.source)), new Set(data.map(d => d.target)));
   } else {
     // Filter data based on selected source and/or target
     const filteredData = data.filter(d => 
-      (selectedSource === 'all' || d.source === selectedSource) &&
-      (selectedTarget === 'all' || d.target === selectedTarget)
+      (d.source === selectedSource || selectedSource === 'all') &&
+      (d.target === selectedTarget || selectedTarget === 'all')
     );
 
     const activeSources = new Set(filteredData.map(d => d.source));
@@ -111,10 +111,6 @@ function hideAllGraphElements() {
 
 function refreshLinks(filteredData, types, activeSources, activeTargets) {
   types.forEach(type => {
-    // Hide all links initially
-    svg.selectAll(`line.link.${type}`)
-      .style('visibility', 'hidden');
-
     // Update the positions and visibility of the filtered links
     svg.selectAll(`line.link.${type}`)
       .data(filteredData.filter(d => d.type === type && activeSources.has(d.source) && activeTargets.has(d.target)))
