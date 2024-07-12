@@ -48,12 +48,16 @@ function handleDropdownChange(selectedValue, type, data) {
   if (selectedValue !== 'all') {
     d3.select(`#${otherType}-select`).property('value', 'all');
   }
-  filterVisibilityByType(selectedValue, type);
+  filterVisibilityByTypeAndSelectedValue(selectedValue, type);
 }
 
-function filterVisibilityByType(selectedValue, type) {
+function filterVisibilityByTypeAndSelectedValue(selectedValue, type) {
+  console.log(`Filtering by ${selectedValue} in ${type} column`);
   svg.selectAll("circle.source, circle.target, line, text.source, text.target")
     .style("visibility", function(d) {
+      console.log(d)
+      //d is the current data object so it checks in the type (either source or target) column
+      //if the selected value matches the selected value or if all is selected, it returns visible
       return d[type] === selectedValue || selectedValue === 'all' ? "visible" : "hidden";
     });
 }
@@ -72,48 +76,8 @@ function createGraph(data, types) {
   createLabels(activeData, 'target', activeTargets);
 }
 
-function refreshGraph(data, types) {
-  hideAllGraphElements();
-
-  const activeData = filterDataByTypes(data, types);
-
-  const activeSources = new Set(activeData.map(d => d.source));
-  const activeTargets = new Set(activeData.map(d => d.target));
-
-  refreshLinks(activeData, types);
-  refreshNodes(activeData, 'source', '#216b44', activeSources);
-  refreshNodes(activeData, 'target', '#c3c90e', activeTargets);
-  refreshLabels(activeData, 'source', activeSources);
-  refreshLabels(activeData, 'target', activeTargets);
-}
-
 function filterDataByTypes(data, types) {
   return data.filter(d => types.includes(d.type));
-}
-
-function hideAllGraphElements() {
-  svg.selectAll(`line.link, circle.source, circle.target, text.source, text.target`)
-    .style("visibility", "hidden");
-}
-
-function refreshLinks(data, types) {
-  types.forEach(type => {
-    svg.selectAll(`line.link.${type}`)
-      .data(data.filter(d => d.type === type))
-      .style("visibility", "visible");
-  });
-}
-
-function refreshNodes(data, className, fillColor, activeNodes) {
-  svg.selectAll(`circle.${className}`)
-    .data(data.filter(d => activeNodes.has(d[className])))
-    .style("visibility", "visible");
-}
-
-function refreshLabels(data, className, activeNodes) {
-  svg.selectAll(`text.${className}`)
-    .data(data.filter(d => activeNodes.has(d[className])))
-    .style("visibility", "visible");
 }
 
 function createLinks(data, types) {
@@ -173,8 +137,55 @@ function addTypeButtonsEventListeners(data) {
       } else {
         activeTypes.add(type);
       }
-
       refreshGraph(data, Array.from(activeTypes));
     });
   });
+}
+
+function refreshGraph(data, types) {
+  hideAllGraphElements();
+
+  const activeData = filterDataByTypes(data, types);
+
+  const activeSources = new Set(activeData.map(d => d.source));
+  const activeTargets = new Set(activeData.map(d => d.target));
+
+  refreshLinks(activeData, types);
+  refreshNodes(activeData, 'source', '#216b44', activeSources);
+  refreshNodes(activeData, 'target', '#c3c90e', activeTargets);
+  refreshLabels(activeData, 'source', activeSources);
+  refreshLabels(activeData, 'target', activeTargets);
+}
+
+function hideAllGraphElements() {
+  svg.selectAll(`line.link, circle.source, circle.target, text.source, text.target`)
+    .style("visibility", "hidden");
+}
+
+function refreshLinks(data, types) {
+  console.log("refresh links");
+  console.log(types);
+  types.forEach(type => {
+    svg.selectAll(`line.link.${type}`)
+      .data(data.filter(d => d.type === type))
+      .style("visibility", "visible");
+  });
+}
+
+function refreshNodes(data, className, fillColor, activeNodes) {
+  console.log("refresh nodes");
+  console.log(activeNodes);
+  
+  svg.selectAll(`circle.${className}`)
+    .data(data.filter(d => activeNodes.has(d[className])))
+    .style("visibility", "visible");
+}
+
+function refreshLabels(data, className, activeNodes) {
+  console.log("refresh labels");
+  console.log(activeNodes);
+
+  svg.selectAll(`text.${className}`)
+    .data(data.filter(d => activeNodes.has(d[className])))
+    .style("visibility", "visible");
 }
