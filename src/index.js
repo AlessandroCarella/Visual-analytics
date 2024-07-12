@@ -18,13 +18,21 @@ d3.json('data/edgesCleanWithCoordinates cut.json').then(data => {
   populateDropdown('#target-select', uniqueTargets);
 
   d3.select('#source-select').on('change', function() {
-    filterVisibilityBySource(this.value);
+    const selectedSource = this.value;
+    if (selectedSource !== 'all') {
+      d3.select('#target-select').property('value', 'all');
+    }
+    filterVisibilityBySource(selectedSource);
   });
-
+  
   d3.select('#target-select').on('change', function() {
-    filterVisibilityByTarget(this.value);
+    const selectedTarget = this.value;
+    if (selectedTarget !== 'all') {
+      d3.select('#source-select').property('value', 'all');
+    }
+    filterVisibilityByTarget(selectedTarget);
   });
-
+  
   setupGraph(data, ["ownership", "partnership", "family_relationship", "membership"]);
 
   addTypeButtonsEventListeners(data);
@@ -50,6 +58,7 @@ function setupGraph (data, types){
 function populateDropdown(selector, items) {
   const dropdown = d3.select(selector);
   dropdown.selectAll('option').remove(); // Clear existing options
+  dropdown.append('option').attr('value', 'all').text('All'); // Add "all" option
   items.forEach(item => {
     dropdown.append('option').attr('value', item).text(item);
   });
@@ -58,14 +67,14 @@ function populateDropdown(selector, items) {
 function filterVisibilityBySource(selectedSource) {
   svg.selectAll("circle.source, circle.target, line, text.source, text.target")
     .style("visibility", function(d) {
-      return d.source === selectedSource || selectedSource === 'all' ? "visible" : "hidden";
+      return selectedSource === 'all' || d.source === selectedSource ? "visible" : "hidden";
     });
 }
 
 function filterVisibilityByTarget(selectedTarget) {
   svg.selectAll("circle.source, circle.target, line, text.source, text.target")
     .style("visibility", function(d) {
-      return d.target === selectedTarget || selectedTarget === 'all' ? "visible" : "hidden";
+      return selectedTarget === 'all' || d.target === selectedTarget ? "visible" : "hidden";
     });
 }
 
