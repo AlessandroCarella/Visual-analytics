@@ -1,3 +1,4 @@
+// Create a set of unique sources and targets
 const width = 1399;
 const height = 888;
 
@@ -48,13 +49,13 @@ function setupGraph (data, types){
 
 function populateDropdown(selector, items) {
   const dropdown = d3.select(selector);
+  dropdown.selectAll('option').remove(); // Clear existing options
   items.forEach(item => {
     dropdown.append('option').attr('value', item).text(item);
   });
 }
 
 function filterVisibilityBySource(selectedSource) {
-  const visibility = selectedSource === 'all' ? "visible" : "hidden";
   svg.selectAll("circle.source, circle.target, line, text.source, text.target")
     .style("visibility", function(d) {
       return d.source === selectedSource || selectedSource === 'all' ? "visible" : "hidden";
@@ -62,7 +63,6 @@ function filterVisibilityBySource(selectedSource) {
 }
 
 function filterVisibilityByTarget(selectedTarget) {
-  const visibility = selectedTarget === 'all' ? "visible" : "hidden";
   svg.selectAll("circle.source, circle.target, line, text.source, text.target")
     .style("visibility", function(d) {
       return d.target === selectedTarget || selectedTarget === 'all' ? "visible" : "hidden";
