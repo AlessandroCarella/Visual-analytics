@@ -29,14 +29,12 @@ splitted the screen into:
 * left column for controls
 * right side for the map
 
-created buttons for the controls:
+created controls:
 * each button controls one kind of link to be showed or not in the map
 * one select for the sources and one for the targets in the data; once one of the options is selected all the other data is removed from the map
 
 TODO:
 * report about the select
-* in the select reset the other one with the all option
 * make the circles of the companies bigger based on the number of targets they're connected to (and a switch to switch based on the number of targets and the number of sources) (generate a new json source for that)
 * add an option to, after selecting a source, click on one of the targets and see the connections of it 
-* reset other select when an option is selected in the other (select source selected "shrimp bla bla bla" --> select target becames "all")
 * sometimes there are mutliple links between the same 2 source and target, find a way to plot both of them

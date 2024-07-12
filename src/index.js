@@ -9,7 +9,7 @@ var target = "all"
 const svg = d3.select('svg');
 
 const color = d3.scaleOrdinal()
-  .domain(["ownership", "partnership", "family_relationship", "membership"])
+  .domain(types)
   .range(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"]);
 
 d3.json('data/edgesCleanWithCoordinates cut.json')
@@ -22,7 +22,7 @@ d3.json('data/edgesCleanWithCoordinates cut.json')
 
     addDropdownEventListeners(data);
 
-    createGraph(data, ["ownership", "partnership", "family_relationship", "membership"]);
+    createGraph(data);
     addTypeButtonsEventListeners(data);
   })
   .catch(error => console.error('Error loading the data:', error));
@@ -53,12 +53,15 @@ function handleDropdownChange(selectedValue, type, data) {
   var selectedSource = d3.select(`#source-select`).property('value')
   var selectedTarget = d3.select(`#target-select`).property('value')
   
+  //if the source has been changed
   if (selectedSource === selectedValue){
     d3.select(`#target-select`).property('value', 'all');
   }
+  // if the target has been changed
   else if (selectedTarget === selectedValue){
     d3.select(`#source-select`).property('value', 'all');
   }
+  //else reset everything
   else {
     d3.select(`#source-select`).property('value', 'all');
     d3.select(`#target-select`).property('value', 'all');
@@ -68,41 +71,83 @@ function handleDropdownChange(selectedValue, type, data) {
 }
 
 function refreshGraph(data) {
-  const selectedSource = d3.select(`#source-select`).property('value')
-  const selectedTarget = d3.select(`#target-select`).property('value')
-  const activeButtons = Array.from(activeButtons)
+  const selectedSource = d3.select(`#source-select`).property('value');
+  const selectedTarget = d3.select(`#target-select`).property('value');
+  const activeTypes = Array.from(activeButtons);
 
-  console.log(selectedSource)
-  console.log(selectedTarget)
-  console.log(activeButtons)
+  hideAllGraphElements();
 
-  //hideAllGraphElements();
+  if (selectedSource === 'all' && selectedTarget === 'all') {
+    // Show all elements for active types
+    refreshLinks(data, activeTypes);
+    refreshNodes(data, 'source', '#216b44', new Set(data.map(d => d.source)));
+    refreshNodes(data, 'target', '#c3c90e', new Set(data.map(d => d.target)));
+    refreshLabels(data, 'source', new Set(data.map(d => d.source)));
+    refreshLabels(data, 'target', new Set(data.map(d => d.target)));
+  } else {
+    // Filter data based on selected source and/or target
+    const filteredData = data.filter(d => 
+      (selectedSource === 'all' || d.source === selectedSource) &&
+      (selectedTarget === 'all' || d.target === selectedTarget)
+    );
 
+    refreshLinks(filteredData, activeTypes);
+
+    const activeSources = new Set(filteredData.map(d => d.source));
+    const activeTargets = new Set(filteredData.map(d => d.target));
+    console.log('active sources:', Array.from(activeSources));
+    console.log('active targets:', Array.from(activeTargets));
+
+    refreshNodes(filteredData, 'source', '#216b44', activeSources);
+    refreshNodes(filteredData, 'target', '#c3c90e', activeTargets);
+    refreshLabels(filteredData, 'source', activeSources);
+    refreshLabels(filteredData, 'target', activeTargets);
+  }
 }
 
 function hideAllGraphElements() {
-  svg.selectAll(`line.link, circle.source, circle.target, text.source, text.target`)
-    .style("visibility", "hidden");
+  svg.selectAll('line.link, circle.source, circle.target, text.source, text.target')
+    .style('visibility', 'hidden');
 }
 
-function refreshLinks(data, types) {
+function refreshLinks(filteredData, types) {
   types.forEach(type => {
     svg.selectAll(`line.link.${type}`)
-      .data(data.filter(d => d.type === type))
-      .style("visibility", "visible");
+      .style('visibility', 'hidden');  // Hide all links initially
+
+    svg.selectAll(`line.link.${type}`)
+      .data(filteredData.filter(d => d.type === type))
+      .style('visibility', 'visible');  // Only show the filtered links
   });
 }
 
-function refreshNodes(data, className, fillColor, activeNodes) {
+function refreshNodes(filteredData, className, fillColor, activeNodes) {
   svg.selectAll(`circle.${className}`)
-    .data(data.filter(d => activeNodes.has(d[className])))
-    .style("visibility", "visible");
+    .style('visibility', 'hidden');  // Hide all nodes initially
+
+  svg.selectAll(`circle.${className}`)
+    .data(filteredData.filter(d => activeNodes.has(d[className])))
+    .style('visibility', 'visible')  // Only show the filtered nodes
+    .attr('cx', d => d[`${className}X`])
+    .attr('cy', d => d[`${className}Y`])
+    .attr('r', 6)
+    .style('fill', fillColor)
+    .style('stroke', '#000')
+    .style('stroke-width', 1);
 }
 
-function refreshLabels(data, className, activeNodes) {
+function refreshLabels(filteredData, className, activeNodes) {
   svg.selectAll(`text.${className}`)
-    .data(data.filter(d => activeNodes.has(d[className])))
-    .style("visibility", "visible");
+    .style('visibility', 'hidden');  // Hide all labels initially
+
+  svg.selectAll(`text.${className}`)
+    .data(filteredData.filter(d => activeNodes.has(d[className])))
+    .style('visibility', 'visible')  // Only show the filtered labels
+    .attr('x', d => d[`${className}X`] + 8)
+    .attr('y', d => d[`${className}Y`] - 8)
+    .text(d => d[className])
+    .style('font-size', '10px')
+    .style('fill', '#000');
 }
 
 function addTypeButtonsEventListeners(data) {
@@ -122,32 +167,31 @@ function addTypeButtonsEventListeners(data) {
   });
 }
 
-function createGraph(data, types) {
-  console.log(`Graph setup for ${types.join(', ')}`);
-  const activeData = filterDataByTypes(data, types);
+function createGraph(data) {
+  const activeData = data.filter(d => types.includes(d.type));
 
   const activeSources = new Set(activeData.map(d => d.source));
   const activeTargets = new Set(activeData.map(d => d.target));
 
-  createLinks(activeData, types);
+  createLinks(activeData);
   createNodes(activeData, 'source', '#216b44', activeSources);
   createNodes(activeData, 'target', '#c3c90e', activeTargets);
   createLabels(activeData, 'source', activeSources);
   createLabels(activeData, 'target', activeTargets);
 }
 
-function createLinks(data, types) {
+function createLinks(data) {
   types.forEach(type => {
     svg.selectAll(`line.link.${type}`)
       .data(data.filter(d => d.type === type))
-      .enter().append("line")
-      .attr("x1", d => d.sourceX)
-      .attr("y1", d => d.sourceY)
-      .attr("x2", d => d.targetX)
-      .attr("y2", d => d.targetY)
-      .attr("class", `link ${type}`)
-      .style("stroke", color(type))
-      .style("stroke-width", d => Math.sqrt(d.weight) * 3)
+      .enter().append('line')
+      .attr('x1', d => d.sourceX)
+      .attr('y1', d => d.sourceY)
+      .attr('x2', d => d.targetX)
+      .attr('y2', d => d.targetY)
+      .attr('class', `link ${type}`)
+      .style('stroke', color(type))
+      .style('stroke-width', d => Math.sqrt(d.weight) * 3)
       .each(function(d) {
         d.initialColor = color(d.type);
       });
@@ -157,25 +201,24 @@ function createLinks(data, types) {
 function createNodes(data, className, fillColor, activeNodes) {
   svg.selectAll(`circle.${className}`)
     .data(data.filter(d => activeNodes.has(d[className])))
-    .enter().append("circle")
-    .attr("class", className)
-    .attr("cx", d => d[`${className}X`])
-    .attr("cy", d => d[`${className}Y`])
-    .attr("r", 6)
-    .style("fill", fillColor)
-    .style("stroke", "#000")
-    .style("stroke-width", 1);
+    .enter().append('circle')
+    .attr('class', className)
+    .attr('cx', d => d[`${className}X`])
+    .attr('cy', d => d[`${className}Y`])
+    .attr('r', 6)
+    .style('fill', fillColor)
+    .style('stroke', '#000')
+    .style('stroke-width', 1);
 }
 
 function createLabels(data, className, activeNodes) {
   svg.selectAll(`text.${className}`)
     .data(data.filter(d => activeNodes.has(d[className])))
-    .enter().append("text")
-    .attr("class", className)
-    .attr("x", d => d[`${className}X`] + 8)
-    .attr("y", d => d[`${className}Y`] - 8)
+    .enter().append('text')
+    .attr('class', className)
+    .attr('x', d => d[`${className}X`] + 8)
+    .attr('y', d => d[`${className}Y`] - 8)
     .text(d => d[className])
-    .style("font-size", "10px")
-    .style("fill", "#000");
+    .style('font-size', '10px')
+    .style('fill', '#000');
 }
-
