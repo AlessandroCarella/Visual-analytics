@@ -1,3 +1,5 @@
+const { active, filter } = require("d3");
+
 const width = 1399;
 const height = 888;
 
@@ -12,7 +14,7 @@ const color = d3.scaleOrdinal()
   .domain(types)
   .range(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"]);
 
-d3.json('data/edgesCleanWithCoordinates cut.json')
+d3.json('data/edgesCleanWithCoordinates.json')
   .then(data => {
     const uniqueSources = getUniqueItems(data, 'source');
     const uniqueTargets = getUniqueItems(data, 'target');
@@ -91,17 +93,14 @@ function refreshGraph(data) {
       (selectedTarget === 'all' || d.target === selectedTarget)
     );
 
-    refreshLinks(filteredData, activeTypes);
-
     const activeSources = new Set(filteredData.map(d => d.source));
     const activeTargets = new Set(filteredData.map(d => d.target));
-    console.log('active sources:', Array.from(activeSources));
-    console.log('active targets:', Array.from(activeTargets));
 
     refreshNodes(filteredData, 'source', '#216b44', activeSources);
     refreshNodes(filteredData, 'target', '#c3c90e', activeTargets);
     refreshLabels(filteredData, 'source', activeSources);
     refreshLabels(filteredData, 'target', activeTargets);
+    refreshLinks(filteredData, activeTypes, activeSources, activeTargets);
   }
 }
 
@@ -110,21 +109,24 @@ function hideAllGraphElements() {
     .style('visibility', 'hidden');
 }
 
-function refreshLinks(filteredData, types) {
+function refreshLinks(filteredData, types, activeSources, activeTargets) {
   types.forEach(type => {
+    // Hide all links initially
     svg.selectAll(`line.link.${type}`)
-      .style('visibility', 'hidden');  // Hide all links initially
+      .style('visibility', 'hidden');
 
+    // Update the positions and visibility of the filtered links
     svg.selectAll(`line.link.${type}`)
-      .data(filteredData.filter(d => d.type === type))
-      .style('visibility', 'visible');  // Only show the filtered links
+      .data(filteredData.filter(d => d.type === type && activeSources.has(d.source) && activeTargets.has(d.target)))
+      .attr('x1', d => d.sourceX)
+      .attr('y1', d => d.sourceY)
+      .attr('x2', d => d.targetX)
+      .attr('y2', d => d.targetY)
+      .style('visibility', 'visible');
   });
 }
 
 function refreshNodes(filteredData, className, fillColor, activeNodes) {
-  svg.selectAll(`circle.${className}`)
-    .style('visibility', 'hidden');  // Hide all nodes initially
-
   svg.selectAll(`circle.${className}`)
     .data(filteredData.filter(d => activeNodes.has(d[className])))
     .style('visibility', 'visible')  // Only show the filtered nodes
@@ -137,9 +139,6 @@ function refreshNodes(filteredData, className, fillColor, activeNodes) {
 }
 
 function refreshLabels(filteredData, className, activeNodes) {
-  svg.selectAll(`text.${className}`)
-    .style('visibility', 'hidden');  // Hide all labels initially
-
   svg.selectAll(`text.${className}`)
     .data(filteredData.filter(d => activeNodes.has(d[className])))
     .style('visibility', 'visible')  // Only show the filtered labels
