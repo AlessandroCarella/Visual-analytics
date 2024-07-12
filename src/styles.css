@@ -67,5 +67,21 @@ background-color: #1f77b4;
 
 
 .link.inactive {
-  stroke: #808080; /* Grey color for inactive links */
+  stroke: #FFFFFF;
+}
+
+.source-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.target-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }

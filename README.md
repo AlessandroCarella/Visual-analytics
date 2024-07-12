@@ -33,4 +33,10 @@ created buttons for the controls:
 * each button controls one kind of link to be showed or not (showed in grey) in the map
 
 TODO:
-* create a select where i can select the sources in the dataset to show only the nodes from that source
+* report about the select
+* in the select reset the other one with the all option
+* in the select the options show twice, something is broken with the
+
+        * // Create a set of unique sources 
+        const uniqueTargets = Array.from(new Set(data.map(d => d.target)));
+* make the circles of the companies bigger based on the number of targets they're connected to (and a switch to switch based on the number of targets and the number of sources) (generate a new json source for that)
