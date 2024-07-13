@@ -42,6 +42,9 @@ TODO:
 * make the circles of the companies bigger based on the number of targets they're connected to (and a switch to switch based on the number of targets and the number of sources) (generate a new json source for that)
 * add an option to, after selecting a source, click on one of the targets and see the connections of it 
 * sometimes there are mutliple links between the same 2 source and target, find a way to plot both of them
+* when the node is too little the label should show when the node is hovered
+* clean the dataset so that it has only relevant information and the graph is not too crowded
+* remember to recreate the arrays witht the active sources and targets when selecting an option on the select; some nodes are both at times; i.e. Spanish Shrimp  Carriers owns 12744 which owns other companies aswell; so 12744 will be a target when Spanish Shrimp is a source and not when it is not 
 
 * order the sources from the one with most targets to the one with less
 after that find the companies which own the biggest companies and see how they are connected to each other;

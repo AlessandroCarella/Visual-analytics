@@ -1,22 +1,27 @@
 import * as d3 from "d3";
 import { types, svg, color } from "../index";
-import { findNumberOfTargets } from "./utils";
+import { findNumberOfTargets, cleanSet } from "./utils";
 
 function createGraph(data) {
     const activeData = data.filter(d => types.includes(d.type));
 
-    const activeSources = new Set(activeData.map(d => d.source));
-    const activeTargets = new Set(activeData.map(d => d.target));
+    var activeSources = Array.from(new Set(activeData.map(d => d.source)));
+    var activeTargets = Array.from(new Set(activeData.map(d => d.target)));
+    console.log("before")
+    console.log(activeTargets)
+    activeTargets = cleanSet(activeTargets, activeSources);
+    console.log("after")
+    console.log(activeTargets)
 
-    // Calculate the number of targets each source has
     const sourceTargetCounts = findNumberOfTargets(data);
 
-    const nodes = Array.from(activeSources).map(source => ({ id: source, type: 'source' }))
-        .concat(Array.from(activeTargets).map(target => ({ id: target, type: 'target' })));
+    // Create nodes with initial positions
+    const nodes = activeSources.map(source => ({ id: source, type: 'source' }))
+        .concat(activeTargets.map(target => ({ id: target, type: 'target' })));
 
     const links = activeData.map(d => ({
-        source: d.source,
-        target: d.target,
+        source: nodes.find(node => node.id === d.source),
+        target: nodes.find(node => node.id === d.target),
         type: d.type,
         weight: d.weight
     }));
@@ -25,7 +30,7 @@ function createGraph(data) {
     const height = +svg.attr('height');
 
     const simulation = d3.forceSimulation(nodes)
-        .force('link', d3.forceLink(links).id(d => d.id).distance(100))
+        .force('link', d3.forceLink().id(d => d.id).links(links).distance(100))
         .force('charge', d3.forceManyBody().strength(-300))
         .force('center', d3.forceCenter(width / 2, height / 2))
         .on('tick', ticked);
@@ -33,6 +38,7 @@ function createGraph(data) {
     createLinks(links);
     createNodes(nodes, sourceTargetCounts);
     createLabels(nodes, sourceTargetCounts);
+    setupTooltip();
 
     function ticked() {
         svg.selectAll('line.link')
@@ -121,6 +127,27 @@ function createGraph(data) {
             .style('pointer-events', 'none');  // Prevent pointer events on text
     }
     
+    function setupTooltip() {
+        const tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0)
+            .style("position", "absolute")
+            .style("background", "#fff")
+            .style("border", "1px solid #ccc")
+            .style("padding", "5px")
+            .style("border-radius", "3px");
+
+        svg.selectAll('circle')
+            .on('mouseover', (event, d) => {
+                tooltip.transition().duration(200).style("opacity", 0.9);
+                tooltip.html(d.id)
+                    .style("left", (event.pageX + 5) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on('mouseout', () => {
+                tooltip.transition().duration(500).style("opacity", 0);
+            });
+    }
 }
 
 export { createGraph }

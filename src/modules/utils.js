@@ -17,4 +17,17 @@ function findNumberOfTargets(data) {
     return sourceTargetCounts;
 }
 
-export { getUniqueItems, findNumberOfTargets }
+function cleanSet (arrayToClean, arrayTwo){
+    arrayToClean = new Set(arrayToClean);
+    arrayTwo = new Set(arrayTwo);
+
+    arrayToClean.forEach(elem => {
+        if (arrayTwo.has(elem)) {
+            arrayToClean.delete(elem);
+        }
+    });
+
+    return Array.from(arrayToClean);
+}
+
+export { getUniqueItems, findNumberOfTargets, cleanSet }
