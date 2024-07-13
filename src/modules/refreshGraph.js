@@ -14,26 +14,36 @@ function refreshGraph(data) {
         (d.target === selectedTarget || selectedTarget === 'all')
     );
 
-    var activeSources = Array.from(new Set(filteredData.map(d => d.source)));
-    var activeTargets = Array.from(new Set(filteredData.map(d => d.target)));
+    const activeSources = Array.from(new Set(filteredData.map(d => d.source)));
+    let activeTargets = Array.from(new Set(filteredData.map(d => d.target)));
     activeTargets = cleanSet(activeTargets, activeSources);
+
+    // Update links based on active sources, targets, and types
+    const activeLinks = filteredData.filter(d =>
+        activeSources.includes(d.source) &&
+        activeTargets.includes(d.target) &&
+        activeTypes.includes(d.type)
+    );
+
+    // Get unique nodes from active links
+    const activeNodes = Array.from(new Set(activeLinks.flatMap(link => [link.source, link.target])));
 
     // Update node visibility
     svg.selectAll('circle')
         .style('visibility', d => 
-            activeSources.includes(d.id) || activeTargets.includes(d.id) ? 'visible' : 'hidden'
+            activeNodes.includes(d.id) ? 'visible' : 'hidden'
         );
 
     // Update link visibility
     svg.selectAll('line.link')
         .style('visibility', d => 
-            activeSources.includes(d.source.id) && activeTargets.includes(d.target.id) ? 'visible' : 'hidden'
+            activeLinks.some(link => link.source === d.source.id && link.target === d.target.id) ? 'visible' : 'hidden'
         );
 
     // Update label visibility
     svg.selectAll('text')
         .style('visibility', d => 
-            activeSources.includes(d.id) || activeTargets.includes(d.id) ? 'visible' : 'hidden'
+            activeNodes.includes(d.id) ? 'visible' : 'hidden'
         );
 }
 
