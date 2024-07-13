@@ -1,5 +1,6 @@
 import * as d3 from "d3";
 import { types, svg, color } from "../index";
+import { findNumberOfTargets } from "./utils";
 
 function createGraph(data) {
     const activeData = data.filter(d => types.includes(d.type));
@@ -8,27 +9,13 @@ function createGraph(data) {
     const activeTargets = new Set(activeData.map(d => d.target));
 
     // Calculate the number of targets each source has
-    const sourceTargetCounts = findNumberOfTargets(activeData);
+    const sourceTargetCounts = findNumberOfTargets(data);
  
     createLinks(activeData);
     createNodes(activeData, 'source', '#216b44', activeSources, sourceTargetCounts);
     createNodes(activeData, 'target', '#c3c90e', activeTargets);
     createLabels(activeData, 'source', activeSources, sourceTargetCounts);
     createLabels(activeData, 'target', activeTargets);
-}
-
-function findNumberOfTargets(activeData) {
-    const sourceTargetCounts = {}
-    
-    // Calculate the number of targets each source has
-    activeData.forEach(d => {
-        if (!sourceTargetCounts[d.source]) {
-            sourceTargetCounts[d.source] = 0;
-        }
-        sourceTargetCounts[d.source]++;
-    });
-
-    return sourceTargetCounts;
 }
 
 function createLinks(data) {
