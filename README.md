@@ -31,16 +31,14 @@ splitted the screen into:
 
 created controls:
 * each button controls one kind of link to be showed or not in the map
-* one select for the sources and one for the targets in the data; once one of the options is selected all the other data is removed from the map
+* one select for the sources and one for the targets in the data; once one of the options is selected all the other data is removed from the map\\
+and when an option of the select is choosen the other select resets to the option All (since it doesn't make sense to choose 1 source and 1 target only (in the case where there is only 1:1 it will be showed anyway)) 
 
 TODO:
-* report about the select
 * make the circles of the companies bigger based on the number of targets they're connected to (and a switch to switch based on the number of targets and the number of sources) (generate a new json source for that)
 * add an option to, after selecting a source, click on one of the targets and see the connections of it 
 * sometimes there are mutliple links between the same 2 source and target, find a way to plot both of them
 
-*initialize the activeSources and activeTargets as all the sources and targets in the beginning, it will crash if not
-
 * order the sources from the one with most targets to the one with less
-after that find the companies which own the biggest comanies and see how they are connected to each other;
+after that find the companies which own the biggest companies and see how they are connected to each other;
 like if the bigger companies have the same owner

@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D3.js Visualization</title>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="command-column">
-    <h2>Commands</h2>
-    <button id="ownership" class="button ownershipButton active-button">ownership</button>
-    <button id="partnership" class="button partnershipButton active-button">partnership</button>
-    <button id="family_relationship" class="button family_relationshipButton active-button">family relationship</button>
-    <button id="membership" class="button membershipButton active-button">membership</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>D3.js Visualization</title>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="command-column">
+            <h2>Commands</h2>
+            <button id="ownership" class="button ownershipButton active-button">
+                ownership
+            </button>
+            <button
+                id="partnership"
+                class="button partnershipButton active-button"
+            >
+                partnership
+            </button>
+            <button
+                id="family_relationship"
+                class="button family_relationshipButton active-button"
+            >
+                family relationship
+            </button>
+            <button
+                id="membership"
+                class="button membershipButton active-button"
+            >
+                membership
+            </button>
 
-    <label for="source-select">Select Source:</label>
-    <select id="source-select" class="source-select">
-      <option value="all">All</option>
-      <!-- Options will be populated dynamically -->
-    </select>
+            <label for="source-select">Select Source:</label>
+            <select id="source-select" class="source-select">
+                <option value="all">All</option>
+                <!-- Options will be populated dynamically -->
+            </select>
 
-    <label for="target-select">Select Target:</label>
-    <select id="target-select" class="target-select">
-      <option value="all">All</option>
-      <!-- Options will be populated dynamically -->
-    </select>
-  </div>
+            <label for="target-select">Select Target:</label>
+            <select id="target-select" class="target-select">
+                <option value="all">All</option>
+                <!-- Options will be populated dynamically -->
+            </select>
+        </div>
 
-  <svg width="1399" height="888"></svg>
-  
-  <script src="index.js"></script>
-</body>
+        <svg width="1399" height="888"></svg>
+
+        <script src="index.js"></script>
+    </body>
 </html>

@@ -1,0 +1,60 @@
+import * as d3 from "d3";
+import { types, svg, color } from "../index";
+
+function createGraph(data) {
+    const activeData = data.filter(d => types.includes(d.type));
+
+    const activeSources = new Set(activeData.map(d => d.source));
+    const activeTargets = new Set(activeData.map(d => d.target));
+
+    createLinks(activeData);
+    createNodes(activeData, 'source', '#216b44', activeSources);
+    createNodes(activeData, 'target', '#c3c90e', activeTargets);
+    createLabels(activeData, 'source', activeSources);
+    createLabels(activeData, 'target', activeTargets);
+}
+
+function createLinks(data) {
+    types.forEach(type => {
+        svg.selectAll(`line.link.${type}`)
+            .data(data.filter(d => d.type === type))
+            .enter().append('line')
+            .attr('x1', d => d.sourceX)
+            .attr('y1', d => d.sourceY)
+            .attr('x2', d => d.targetX)
+            .attr('y2', d => d.targetY)
+            .attr('class', `link ${type}`)
+            .style('stroke', color(type))
+            .style('stroke-width', d => Math.sqrt(d.weight) * 3)
+            .each(function (d) {
+                d.initialColor = color(d.type);
+            });
+    });
+}
+
+function createNodes(data, className, fillColor, activeNodes) {
+    svg.selectAll(`circle.${className}`)
+        .data(data.filter(d => activeNodes.has(d[className])))
+        .enter().append('circle')
+        .attr('class', className)
+        .attr('cx', d => d[`${className}X`])
+        .attr('cy', d => d[`${className}Y`])
+        .attr('r', 6)
+        .style('fill', fillColor)
+        .style('stroke', '#000')
+        .style('stroke-width', 1);
+}
+
+function createLabels(data, className, activeNodes) {
+    svg.selectAll(`text.${className}`)
+        .data(data.filter(d => activeNodes.has(d[className])))
+        .enter().append('text')
+        .attr('class', className)
+        .attr('x', d => d[`${className}X`] + 8)
+        .attr('y', d => d[`${className}Y`] - 8)
+        .text(d => d[className])
+        .style('font-size', '10px')
+        .style('fill', '#000');
+}
+
+export { createGraph }
