@@ -7,11 +7,7 @@ function createGraph(data) {
 
     var activeSources = Array.from(new Set(activeData.map(d => d.source)));
     var activeTargets = Array.from(new Set(activeData.map(d => d.target)));
-    console.log("before")
-    console.log(activeTargets)
     activeTargets = cleanSet(activeTargets, activeSources);
-    console.log("after")
-    console.log(activeTargets)
 
     const sourceTargetCounts = findNumberOfTargets(data);
 
