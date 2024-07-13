@@ -10,16 +10,13 @@ import {
 import { addTypeButtonsEventListeners } from "./modules/buttons";
 import { getUniqueItems } from "./modules/utils";
 
-const width = 1399;
-const height = 888;
-
 const types = ["ownership", "partnership", "family_relationship", "membership"];
 var source = "all";
 var target = "all";
 
 var activeButtons = new Set(types);
 
-const svg = d3.select("svg");
+const svg = d3.select('.graph svg');
 
 const color = d3
     .scaleOrdinal()

@@ -3,6 +3,10 @@ import { types, svg, color } from "../index";
 import { findNumberOfTargets, cleanSet } from "./utils";
 
 function createGraph(data) {
+    var { width, height } = document.querySelector('.graph').getBoundingClientRect();
+    width = width - 25;
+    height = height - 25;
+
     const activeData = data.filter(d => types.includes(d.type));
 
     var activeSources = Array.from(new Set(activeData.map(d => d.source)));
@@ -21,8 +25,6 @@ function createGraph(data) {
         weight: d.weight
     }));
 
-    const width = +svg.attr('width');
-    const height = +svg.attr('height');
 
     const simulation = d3.forceSimulation(nodes)
         .force('link', d3.forceLink().id(d => d.id).links(links).distance(100))

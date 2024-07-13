@@ -998,5 +998,105 @@
         "sourceY": 693,
         "targetX": 1070,
         "targetY": 485
+    },
+    {
+        "type": "partnership",
+        "weight": 0.81937426,
+        "source": "185040354",
+        "target": "854",
+        "sourceX": 664,
+        "sourceY": 693,
+        "targetX": 761,
+        "targetY": 474
+    },
+    {
+        "type": "membership",
+        "weight": 0.9579221,
+        "source": "185040354",
+        "target": "903311212",
+        "sourceX": 664,
+        "sourceY": 693,
+        "targetX": 1308,
+        "targetY": 157
+    },
+    {
+        "type": "membership",
+        "weight": 0.9049128,
+        "source": "185040354",
+        "target": "Mar del Oeste Pic",
+        "sourceX": 664,
+        "sourceY": 693,
+        "targetX": 1257,
+        "targetY": 719
+    },
+    {
+        "type": "partnership",
+        "weight": 0.88091284,
+        "source": "Faroe Islands Shrimp Shark",
+        "target": "2591586",
+        "sourceX": 113,
+        "sourceY": 379,
+        "targetX": 1352,
+        "targetY": 521
+    },
+    {
+        "type": "membership",
+        "weight": 0.89682174,
+        "source": "Faroe Islands Shrimp Shark",
+        "target": "185040354",
+        "sourceX": 113,
+        "sourceY": 379,
+        "targetX": 664,
+        "targetY": 693
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.8004607,
+        "source": "Faroe Islands Shrimp Shark",
+        "target": "185040354",
+        "sourceX": 113,
+        "sourceY": 379,
+        "targetX": 664,
+        "targetY": 693
+    },
+    {
+        "type": "membership",
+        "weight": 0.9179369,
+        "source": "Faroe Islands Shrimp Shark",
+        "target": "650512",
+        "sourceX": 113,
+        "sourceY": 379,
+        "targetX": 1000,
+        "targetY": 486
+    },
+    {
+        "type": "partnership",
+        "weight": 0.915767,
+        "source": "Faroe Islands Shrimp Shark",
+        "target": "6406040",
+        "sourceX": 113,
+        "sourceY": 379,
+        "targetX": 710,
+        "targetY": 87
+    },
+    {
+        "type": "membership",
+        "weight": 0.9320071,
+        "source": "Faroe Islands Shrimp Shark",
+        "target": "290834957",
+        "sourceX": 113,
+        "sourceY": 379,
+        "targetX": 1185,
+        "targetY": 695
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.80087644,
+        "source": "Faroe Islands Shrimp Shark",
+        "target": "Ancla Azul Company Solutions",
+        "sourceX": 113,
+        "sourceY": 379,
+        "targetX": 582,
+        "targetY": 402
     }
 ]
