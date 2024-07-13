@@ -11,7 +11,6 @@ function createGraph(data) {
 
     const sourceTargetCounts = findNumberOfTargets(data);
 
-    // Create nodes with initial positions
     const nodes = activeSources.map(source => ({ id: source, type: 'source' }))
         .concat(activeTargets.map(target => ({ id: target, type: 'target' })));
 
@@ -76,6 +75,21 @@ function createGraph(data) {
     }
 
     function createLinks(links) {
+        svg.append("defs").selectAll("marker")
+            .data(types)
+            .enter().append("marker")
+            .attr("id", d => `arrow-${d}`)
+            .attr("viewBox", "0 -5 10 10")
+            .attr("refX", 15)
+            .attr("refY", 0)
+            .attr("fill", d => color(d))
+            .attr("markerWidth", 3)
+            .attr("markerHeight", 3)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M0,-5L10,0L0,5")
+            .attr("class", "arrowhead");
+
         types.forEach(type => {
             svg.selectAll(`line.link.${type}`)
                 .data(links.filter(d => d.type === type))
@@ -83,6 +97,7 @@ function createGraph(data) {
                 .attr('class', `link ${type}`)
                 .style('stroke', color(type))
                 .style('stroke-width', d => Math.sqrt(d.weight) * 3)
+                .attr("marker-end", `url(#arrow-${type})`)
                 .each(function (d) {
                     d.initialColor = color(d.type);
                 });
@@ -119,10 +134,10 @@ function createGraph(data) {
             .style('font-size', '10px')
             .style('fill', '#000')
             .style('text-anchor', 'middle')
-            .style('user-select', 'none')  // Prevent text selection
-            .style('pointer-events', 'none');  // Prevent pointer events on text
+            .style('user-select', 'none')
+            .style('pointer-events', 'none');
     }
-    
+
     function setupTooltip() {
         const tooltip = d3.select("body").append("div")
             .attr("class", "tooltip")
