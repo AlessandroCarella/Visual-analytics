@@ -98,5 +98,525 @@
         "sourceY": 105,
         "targetX": 582,
         "targetY": 402
+    },
+    {
+        "type": "partnership",
+        "weight": 0.87834406,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "185106",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 275,
+        "targetY": 192
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.9664978,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Stephanie Garner",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1105,
+        "targetY": 18
+    },
+    {
+        "type": "membership",
+        "weight": 0.95491886,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "\u00e2\u0080\u009cpair",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 750,
+        "targetY": 647
+    },
+    {
+        "type": "ownership",
+        "weight": 0.906598,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Guessl",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 165,
+        "targetY": 358
+    },
+    {
+        "type": "ownership",
+        "weight": 0.85037404,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Federated",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 796,
+        "targetY": 516
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.8211689,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "94760735",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1269,
+        "targetY": 618
+    },
+    {
+        "type": "membership",
+        "weight": 0.84271693,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Act",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 411,
+        "targetY": 159
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.91274184,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "83",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1010,
+        "targetY": 29
+    },
+    {
+        "type": "ownership",
+        "weight": 0.8865423,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "imo",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 448,
+        "targetY": 236
+    },
+    {
+        "type": "partnership",
+        "weight": 0.92457855,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Torremolinos",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 416,
+        "targetY": 633
+    },
+    {
+        "type": "ownership",
+        "weight": 0.91700685,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "International-Convention",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1112,
+        "targetY": 803
+    },
+    {
+        "type": "membership",
+        "weight": 0.8683886,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "logo",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1107,
+        "targetY": 443
+    },
+    {
+        "type": "membership",
+        "weight": 0.85606986,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "551",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 736,
+        "targetY": 826
+    },
+    {
+        "type": "membership",
+        "weight": 0.92410904,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Dana Goodwin",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 453,
+        "targetY": 766
+    },
+    {
+        "type": "membership",
+        "weight": 0.8302771,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Misty Thomas",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 499,
+        "targetY": 680
+    },
+    {
+        "type": "membership",
+        "weight": 0.8621031,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Turkish Sword Buoy Incorporated Forwading",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 445,
+        "targetY": 168
+    },
+    {
+        "type": "partnership",
+        "weight": 0.8461635,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "314",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 363,
+        "targetY": 740
+    },
+    {
+        "type": "partnership",
+        "weight": 0.8549085,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "56",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 960,
+        "targetY": 727
+    },
+    {
+        "type": "membership",
+        "weight": 0.86141807,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "2983",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1073,
+        "targetY": 545
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.8872652,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "FinestSea Ltd. Corporation Enterprises",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1066,
+        "targetY": 57
+    },
+    {
+        "type": "membership",
+        "weight": 0.89786583,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "653",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 399,
+        "targetY": 520
+    },
+    {
+        "type": "membership",
+        "weight": 0.8220973,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Icelandic Shrimp Corporation Transport",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1111,
+        "targetY": 858
+    },
+    {
+        "type": "membership",
+        "weight": 0.8432206,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "1094345",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 69,
+        "targetY": 710
+    },
+    {
+        "type": "membership",
+        "weight": 0.8699905,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "7691",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1196,
+        "targetY": 469
+    },
+    {
+        "type": "membership",
+        "weight": 0.86455804,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "341",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1286,
+        "targetY": 611
+    },
+    {
+        "type": "membership",
+        "weight": 0.80229217,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Lake Mweru A/S Carriers",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 532,
+        "targetY": 15
+    },
+    {
+        "type": "partnership",
+        "weight": 0.8711762,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Playa de la Felicidad Oyj Cargo",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 386,
+        "targetY": 565
+    },
+    {
+        "type": "membership",
+        "weight": 0.88794583,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "77b46bc7-7e31-41a0-973c-e633011d21b0",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 991,
+        "targetY": 817
+    },
+    {
+        "type": "membership",
+        "weight": 0.89960074,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "\u00e2\u0080\u009cencountered\u00e2",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 85,
+        "targetY": 574
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.89385,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "f7a4114d-d1ca-44df-a7e0-c72e440671ba",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1066,
+        "targetY": 137
+    },
+    {
+        "type": "membership",
+        "weight": 0.8977303,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "39",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 220,
+        "targetY": 597
+    },
+    {
+        "type": "partnership",
+        "weight": 0.85345495,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "3433",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 628,
+        "targetY": 156
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.954674,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Kara Sullivan",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 720,
+        "targetY": 337
+    },
+    {
+        "type": "partnership",
+        "weight": 0.9264291,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "52093e45-b873-4300-9612-8dfc291b1339",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 220,
+        "targetY": 423
+    },
+    {
+        "type": "partnership",
+        "weight": 0.9294543,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "200640636",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 64,
+        "targetY": 878
+    },
+    {
+        "type": "partnership",
+        "weight": 0.90164447,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "300668979",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 277,
+        "targetY": 358
+    },
+    {
+        "type": "partnership",
+        "weight": 0.9337086,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Stacey Ortega",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 702,
+        "targetY": 120
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.93725806,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "285351",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1212,
+        "targetY": 543
+    },
+    {
+        "type": "membership",
+        "weight": 0.85655963,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "allAfrica",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 510,
+        "targetY": 388
+    },
+    {
+        "type": "membership",
+        "weight": 0.9649751,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "l y S.A. de C.V. International",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 383,
+        "targetY": 149
+    },
+    {
+        "type": "membership",
+        "weight": 0.9384681,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "b28d568f-09b4-41bd-b04d-4cf255f1adc6",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 923,
+        "targetY": 173
+    },
+    {
+        "type": "ownership",
+        "weight": 0.8305824,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "122245",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 635,
+        "targetY": 850
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.8497422,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "341411",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1005,
+        "targetY": 845
+    },
+    {
+        "type": "membership",
+        "weight": 0.8640143,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Playa del Cielo Kga",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 575,
+        "targetY": 579
+    },
+    {
+        "type": "ownership",
+        "weight": 0.8408453,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "160",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 857,
+        "targetY": 357
+    },
+    {
+        "type": "ownership",
+        "weight": 0.80696726,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "903311212",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1308,
+        "targetY": 157
+    },
+    {
+        "type": "membership",
+        "weight": 0.88245773,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "SeaSpray Wave SRL Solutions",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 220,
+        "targetY": 107
+    },
+    {
+        "type": "membership",
+        "weight": 0.8822255,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "png xi  Line",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 125,
+        "targetY": 370
+    },
+    {
+        "type": "membership",
+        "weight": 0.91648334,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Mar del Oeste Pic",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 1257,
+        "targetY": 719
+    },
+    {
+        "type": "ownership",
+        "weight": 0.8070168,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Ocean Fisheries Llc",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 602,
+        "targetY": 91
+    },
+    {
+        "type": "family_relationship",
+        "weight": 0.80074245,
+        "source": "Spanish Shrimp  Carriers",
+        "target": "Ocean Fisheries Llc",
+        "sourceX": 1088,
+        "sourceY": 105,
+        "targetX": 602,
+        "targetY": 91
+    },
+    {
+        "type": "ownership",
+        "weight": 0.91701066,
+        "source": "12744",
+        "target": "Spanish Shrimp  Carriers",
+        "sourceX": 1095,
+        "sourceY": 147,
+        "targetX": 1088,
+        "targetY": 105
     }
 ]
