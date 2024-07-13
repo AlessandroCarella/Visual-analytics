@@ -46,7 +46,8 @@ TODO:
   * sometimes there are mutliple links between the same 2 source and target, find a way to plot both of the types of connection
   * remember to recreate the arrays witht the active sources and targets when selecting an option on the select; some nodes are both at times; i.e. Spanish Shrimp  Carriers owns 12744 which owns other companies aswell; so 12744 will be a target when Spanish Shrimp is a source and not when it is not 
   * multiple (as in multiple options selected at the same time) select both for sources and targets
-
+  * when the node of destination is bigger then the basis one the arrow of the link gets covered by the node
+  * when a source has been selected there should be only targets around but there are still links in dark green
 * dataset:
   * clean the dataset so that it has only relevant information and the graph is not too crowded
   * order the sources from the one with most targets to the one with less

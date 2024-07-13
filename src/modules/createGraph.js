@@ -1,6 +1,7 @@
 import * as d3 from "d3";
 import { types, svg, color } from "../index";
 import { findNumberOfTargets, cleanSet } from "./utils";
+import { refreshGraph } from "./refreshGraph";
 
 function createGraph(data) {
     var { width, height } = document.querySelector('.graph').getBoundingClientRect();
@@ -9,14 +10,14 @@ function createGraph(data) {
 
     const activeData = data.filter(d => types.includes(d.type));
 
-    var activeSources = Array.from(new Set(activeData.map(d => d.source)));
-    var activeTargets = Array.from(new Set(activeData.map(d => d.target)));
-    activeTargets = cleanSet(activeTargets, activeSources);
+    var possibleSources = Array.from(new Set(activeData.map(d => d.source)));
+    var possibleTargets = Array.from(new Set(activeData.map(d => d.target)));
+    possibleTargets = cleanSet(possibleTargets, possibleSources);
 
     const sourceTargetCounts = findNumberOfTargets(data);
 
-    const nodes = activeSources.map(source => ({ id: source, type: 'source' }))
-        .concat(activeTargets.map(target => ({ id: target, type: 'target' })));
+    const nodes = possibleSources.map(source => ({ id: source, type: 'source' }))
+        .concat(possibleTargets.map(target => ({ id: target, type: 'target' })));
 
     const links = activeData.map(d => ({
         source: nodes.find(node => node.id === d.source),
@@ -24,7 +25,6 @@ function createGraph(data) {
         type: d.type,
         weight: d.weight
     }));
-
 
     const simulation = d3.forceSimulation(nodes)
         .force('link', d3.forceLink().id(d => d.id).links(links).distance(100))
@@ -107,12 +107,17 @@ function createGraph(data) {
     }
 
     function createNodes(nodes, sourceTargetCounts) {
-        svg.selectAll('circle')
-            .data(nodes)
-            .enter().append('circle')
+        const circles = svg.selectAll('circle').data(nodes);
+        circles.exit().remove();
+
+        const enteredCircles = circles.enter().append('circle')
             .attr('class', d => d.type)
             .attr('r', d => {
-                d.radius = d.type === 'source' ? Math.sqrt(sourceTargetCounts[d.id] || 1) * 5 : 6;
+                if (d.type === 'source') {
+                    d.radius = Math.sqrt(sourceTargetCounts[d.id] || 1) * 5;
+                } else {
+                    d.radius = 6;
+                }
                 return d.radius;
             })
             .style('fill', d => d.type === 'source' ? '#216b44' : '#c3c90e')
@@ -122,6 +127,17 @@ function createGraph(data) {
                 .on('start', dragstarted)
                 .on('drag', dragged)
                 .on('end', dragended));
+
+        const allCircles = circles.merge(enteredCircles);
+
+        let activeSources = []; // Initialize activeSources
+
+        allCircles.on('click', (event, d) => {
+            if (possibleSources.includes(d.id) && !activeSources.includes(d.id)) {
+                activeSources.push(d.id); // Add clicked source to activeSources
+                refreshGraph(data, activeSources); // Pass activeSources to refreshGraph
+            }
+        });
     }
 
     function createLabels(nodes, sourceTargetCounts) {
