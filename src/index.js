@@ -1,3 +1,5 @@
+const jsonFilePath = "data/edgesCleanWithCoordinates.json";
+
 import * as d3 from "d3";
 import { createGraph } from "./modules/createGraph";
 import { refreshGraph } from "./modules/refreshGraph";
@@ -24,7 +26,7 @@ const color = d3
     .domain(types)
     .range(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"]);
 
-d3.json("data/edgesCleanWithCoordinates cut.json")
+d3.json(jsonFilePath)
     .then((data) => {
         const uniqueSources = getUniqueItems(data, "source");
         const uniqueTargets = getUniqueItems(data, "target");
