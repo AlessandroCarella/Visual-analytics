@@ -33,7 +33,7 @@ function getPossibleNodes(data) {
     let targets = Array.from(new Set(data.map(d => d.target)));
 
     const sourcesTargets = sources.filter(value => targets.includes(value));
-    
+
     targets = removeDuplicates(targets, sources);
     return { sources, targets, sourcesTargets };
 }
@@ -52,7 +52,6 @@ function createNodesData(sources, targets, sourcesTargets) {
     return nodesData;
 }
 
-
 function createLinksData(data, nodes) {
     const links = [];
 
@@ -68,7 +67,6 @@ function createLinksData(data, nodes) {
 
     return links;
 }
-
 
 function initializeSimulation(nodes, links, width, height, ticked) {
     return d3.forceSimulation(nodes)
@@ -136,9 +134,6 @@ function getIntersectionY(node1, node2, isSource) {
     return y;
 }
 
-
-
-
 function createNodes(nodes, targetsPerSourceCount, activeSources, data, simulation, sources) {
     const circles = svg.selectAll('circle').data(nodes);
     circles.exit().remove();
@@ -198,7 +193,8 @@ function setupTooltip() {
         .style("background", tooltipBackgroundColor)
         .style("border", "1px solid #ccc")
         .style("padding", "5px")
-        .style("border-radius", "3px");
+        .style("border-radius", "3px")
+        .style("pointer-events", "none");
 
     svg.selectAll('circle')
         .on('mouseover', (event, d) => {
@@ -234,7 +230,6 @@ function ticked(width, height) {
         .attr('y', d => d.y + 4);
 }
 
-
 function dragstarted(event, d, simulation) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
     d.fx = d.x;
@@ -254,7 +249,7 @@ function dragended(event, d, simulation) {
 
 function createGraph(data) {
     const { width, height } = getGraphDimensions();
-    const { sources: sources, targets: targets, sourcesTargets:sourcesTargets } = getPossibleNodes(data);
+    const { sources: sources, targets: targets, sourcesTargets: sourcesTargets } = getPossibleNodes(data);
     const targetsPerSourceCount = findNumberOfTargets(data);
 
     const nodes = createNodesData(sources, targets, sourcesTargets);
@@ -264,8 +259,8 @@ function createGraph(data) {
     createLinks(links);
     createNodes(nodes, targetsPerSourceCount, [], data, simulation, sources);
     createMarkers();
-    // createLabels(nodes, targetsPerSourceCount);
-    // setupTooltip();
+    createLabels(nodes, targetsPerSourceCount);
+    setupTooltip();
 }
 
 export { createGraph }
