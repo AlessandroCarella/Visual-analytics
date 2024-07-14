@@ -54,19 +54,25 @@ function createNodesData(sources, targets, sourcesTargets) {
 
 function createLinksData(data, nodes) {
     const links = [];
+    const linkCounts = {}; // To keep track of link counts
 
     data.forEach(d => {
+        const linkKey = `${d.source}-${d.target}`;
+        linkCounts[linkKey] = (linkCounts[linkKey] || 0) + 1;
+
         const link = {
             source: nodes.find(node => node.id === d.source),
             target: nodes.find(node => node.id === d.target),
             type: d.type,
-            weight: d.weight
+            weight: d.weight,
+            id: `${linkKey}-${linkCounts[linkKey]}` // Unique ID for each link
         };
         links.push(link);
     });
 
     return links;
 }
+
 
 function initializeSimulation(nodes, links, width, height, ticked) {
     return d3.forceSimulation(nodes)
@@ -97,10 +103,11 @@ function createMarkers() {
 function createLinks(links) {
     types.forEach(type => {
         const linkSelection = svg.selectAll(`line.link.${type}`)
-            .data(links.filter(d => d.type === type));
+            .data(links.filter(d => d.type === type), d => d.id); // Use unique ID
 
         linkSelection.enter().append('line')
             .attr('class', `link ${type}`)
+            .attr('id', d => d.id) // Assign ID to line elements
             .style('stroke', color(type))
             .style('stroke-width', d => Math.sqrt(d.weight) * linksSizeMultiplier)
             .attr("marker-end", `url(#arrow-${type})`)
@@ -212,8 +219,14 @@ function ticked(width, height) {
     svg.selectAll('line.link')
         .attr('x1', d => getIntersectionX(d.source, d.target, true))
         .attr('y1', d => getIntersectionY(d.source, d.target, true))
-        .attr('x2', d => getIntersectionX(d.target, d.source, false))
-        .attr('y2', d => getIntersectionY(d.target, d.source, false));
+        .attr('x2', (d, i) => {
+            const offset = (i % 2 === 0 ? -5 : 5); // Simple offset for demonstration
+            return getIntersectionX(d.target, d.source, false) + offset;
+        })
+        .attr('y2', (d, i) => {
+            const offset = (i % 2 === 0 ? -5 : 5); // Simple offset for demonstration
+            return getIntersectionY(d.target, d.source, false) + offset;
+        });
 
     svg.selectAll('circle')
         .attr('cx', d => {

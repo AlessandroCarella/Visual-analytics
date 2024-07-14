@@ -51,5 +51,6 @@ TODO:
 * dataset:
   * clean the dataset so that it has only relevant information and the graph is not too crowded
   * order the sources from the one with most targets to the one with less
+  * clustering for the nodes, both with algorithms and with checking number of common connections
 after that find the companies which own the biggest companies and see how they are connected to each other;
 like if the bigger companies have the same owner
