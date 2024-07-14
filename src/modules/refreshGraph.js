@@ -1,7 +1,6 @@
 import * as d3 from "d3";
 import { types, svg, color, activeButtons } from "../index";
 import { findNumberOfTargets, cleanSet } from "./utils";
-import { dragstarted, dragged, dragended } from "./graphUtil";
 
 function refreshGraph(data, activeSources) {
     console.log("refreshing graph");
