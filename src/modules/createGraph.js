@@ -253,7 +253,7 @@ function createGraph(data) {
     const targetsPerSourceCount = findNumberOfTargets(data);
 
     const nodes = createNodesData(sources, targets, sourcesTargets);
-    const links = createLinksData(data, nodes);
+    const links = createLinksData(data, nodes, sourcesTargets);
     const simulation = initializeSimulation(nodes, links, width, height, () => ticked(width, height));
 
     createLinks(links);
