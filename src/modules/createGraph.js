@@ -73,7 +73,7 @@ function initializeSimulation(nodes, links, width, height, ticked) {
         .force('link', d3.forceLink().id(d => d.id).links(links).distance(100))
         .force('charge', d3.forceManyBody().strength(-300))
         .force('center', d3.forceCenter(width / 2, height / 2))
-        .on('tick', () => ticked(width, height, links));
+        .on('tick', () => ticked(width, height));
 }
 
 function createMarkers() {
@@ -94,56 +94,21 @@ function createMarkers() {
         .attr("class", "arrowhead");
 }
 
-function aggregateLinks(links) {
-    const aggregated = {};
-
-    links.forEach(link => {
-        const key = `${link.source.id}-${link.target.id}`;
-        if (!aggregated[key]) {
-            aggregated[key] = {
-                source: link.source,
-                target: link.target,
-                types: [],
-                weight: 0
-            };
-        }
-        aggregated[key].types.push(link.type);
-        aggregated[key].weight += link.weight;
-    });
-
-    return Object.values(aggregated);
-}
-
 function createLinks(links) {
-    const aggregatedLinks = aggregateLinks(links);
+    types.forEach(type => {
+        const linkSelection = svg.selectAll(`line.link.${type}`)
+            .data(links.filter(d => d.type === type));
 
-    aggregatedLinks.forEach(link => {
-        const { source, target, types, weight } = link;
-        
-        svg.append('line')
-            .datum(link) // Bind the link data
-            .attr('class', 'link')
-            .style('stroke-width', Math.sqrt(weight) * linksSizeMultiplier)
-            .attr("marker-end", `url(#arrow)`)
-            .style('stroke', `url(#striped-${source.id}-${target.id})`);
+        linkSelection.enter().append('line')
+            .attr('class', `link ${type}`)
+            .style('stroke', color(type))
+            .style('stroke-width', d => Math.sqrt(d.weight) * linksSizeMultiplier)
+            .attr("marker-end", `url(#arrow-${type})`)
+            .each(function (d) {
+                d.initialColor = color(d.type);
+            });
 
-        createStripedPattern(`striped-${source.id}-${target.id}`, types.map(type => color(type)));
-    });
-}
-
-function createStripedPattern(patternId, colors) {
-    const pattern = svg.append('defs').append('pattern')
-        .attr('id', patternId)
-        .attr('patternUnits', 'userSpaceOnUse')
-        .attr('width', 10)
-        .attr('height', 10);
-
-    colors.forEach((linkColor, index) => {
-        pattern.append('rect')
-            .attr('x', index * 5)
-            .attr('width', 5)
-            .attr('height', 10)
-            .attr('fill', linkColor);
+        linkSelection.exit().remove();
     });
 }
 
@@ -243,9 +208,8 @@ function setupTooltip() {
         });
 }
 
-function ticked(width, height, links) {
+function ticked(width, height) {
     svg.selectAll('line.link')
-        .data(links) // Ensure you are binding the links data
         .attr('x1', d => getIntersectionX(d.source, d.target, true))
         .attr('y1', d => getIntersectionY(d.source, d.target, true))
         .attr('x2', d => getIntersectionX(d.target, d.source, false))
@@ -290,7 +254,7 @@ function createGraph(data) {
 
     const nodes = createNodesData(sources, targets, sourcesTargets);
     const links = createLinksData(data, nodes, sourcesTargets);
-    const simulation = initializeSimulation(nodes, links, width, height, () => ticked(width, height, links));
+    const simulation = initializeSimulation(nodes, links, width, height, () => ticked(width, height));
 
     createLinks(links);
     createNodes(nodes, targetsPerSourceCount, [], data, simulation, sources);
