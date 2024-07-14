@@ -17,7 +17,7 @@ function findNumberOfTargets(data) {
     return sourceTargetCounts;
 }
 
-function cleanSet (arrayToClean, arrayTwo){
+function removeDuplicates (arrayToClean, arrayTwo){
     arrayToClean = new Set(arrayToClean);
     arrayTwo = new Set(arrayTwo);
 
@@ -30,4 +30,4 @@ function cleanSet (arrayToClean, arrayTwo){
     return Array.from(arrayToClean);
 }
 
-export { getUniqueItems, findNumberOfTargets, cleanSet }
+export { getUniqueItems, findNumberOfTargets, removeDuplicates }

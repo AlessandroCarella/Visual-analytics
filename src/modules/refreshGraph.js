@@ -1,43 +1,33 @@
-import * as d3 from "d3";
-import { types, svg, color, activeButtons } from "../index";
-import { findNumberOfTargets, cleanSet } from "./utils";
+// refreshGraph.js
+import * as d3 from 'd3';
+import { svg, color, activeButtons } from '../index';
+import { createGraph } from './createGraph';
 
-function refreshGraph(data, activeSources) {
-    console.log("refreshing graph");
-    const selectedSource = d3.select(`#source-select`).property('value');
-    const selectedTarget = d3.select(`#target-select`).property('value');
-    const activeTypes = Array.from(activeButtons);
+function refreshGraph(data, activeSources = []) {
+    // Get the current state of the selects
+    const sourceSelect = document.querySelector('#source-select').value;
+    const targetSelect = document.querySelector('#target-select').value;
 
-    const filteredData = data.filter(d =>
-        (d.source === selectedSource || selectedSource === 'all') &&
-        (d.target === selectedTarget || selectedTarget === 'all')
-    );
+    // Filter data based on active buttons and selects
+    const filteredData = data.filter(d => {
+        const isActiveType = activeButtons.has(d.type);
+        const isSourceMatch = (sourceSelect === 'all') || (d.source === sourceSelect);
+        const isTargetMatch = (targetSelect === 'all') || (d.target === targetSelect);
+        return isActiveType && isSourceMatch && isTargetMatch;
+    });
 
-    let activeTargets = Array.from(new Set(filteredData.map(d => d.target)));
-    activeTargets = cleanSet(activeTargets, activeSources);
+    const allSources = new Set(data.map(element => element.source));
+    console.log("all sources", allSources)
+    const filteredTargets = new Set(filteredData.map(element => element.target));
+    console.log("filtered targets", filteredTargets)
+    const sourcesNotInGraph = new Set([...allSources].filter(element => filteredTargets.has(element)));
+    console.log("sources not in graph", sourcesNotInGraph)
 
-    const activeLinks = filteredData.filter(d =>
-        activeSources.includes(d.source) &&
-        activeTargets.includes(d.target) &&
-        activeTypes.includes(d.type)
-    );
+    // Clear existing graph elements
+    svg.selectAll('*').remove();
 
-    const activeNodes = Array.from(new Set(activeLinks.flatMap(link => [link.source, link.target])));
-
-    svg.selectAll('circle')
-        .style('visibility', d => 
-            activeNodes.includes(d.id) ? 'visible' : 'hidden'
-        );
-
-    svg.selectAll('line.link')
-        .style('visibility', d => 
-            activeLinks.some(link => link.source === d.source.id && link.target === d.target.id) ? 'visible' : 'hidden'
-        );
-
-    svg.selectAll('text')
-        .style('visibility', d => 
-            activeNodes.includes(d.id) ? 'visible' : 'hidden'
-        );
+    // Create the graph with the filtered data
+    createGraph(filteredData);
 }
 
 export { refreshGraph };
