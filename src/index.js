@@ -1,4 +1,4 @@
-const jsonFilePath = "data/edgesCleanWithCoordinates cut.json";
+const jsonFilePath = "data/edgesCleanWithCoordinatesNoDeadEnds.json";
 
 import * as d3 from "d3";
 import { createGraph } from "./modules/createGraph";
