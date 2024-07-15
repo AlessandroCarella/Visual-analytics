@@ -25,8 +25,8 @@ const color = d3
 
 d3.json(jsonFilePath)
     .then((data) => {
-        const uniqueSources = getUniqueItems(data, "source");
-        const uniqueTargets = getUniqueItems(data, "target");
+        const uniqueSources = getUniqueItems(data, "source").sort();
+        const uniqueTargets = getUniqueItems(data, "target").sort();
 
         populateSelect("#source-select", uniqueSources);
         populateSelect("#target-select", uniqueTargets);

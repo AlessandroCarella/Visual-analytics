@@ -43,9 +43,10 @@ features:
 TODO:
 * graph:
   * sometimes there are mutliple links between the same 2 source and target, find a (better) way to plot both of the types of connection
-  * check behaviour for node click when there are more than 1 source to add, and for when the buttons are pressed and maybe for when the values in the select change
+  * check behaviour for node click when there are more than 1 source to add, and for when the buttons are pressed and maybe for when the values in the select change;
+  when a node is clicked the nodes that used to be also sources become only targets (for the original node and the new node, also the node that was clicked stays green    
   * load the nodes dataset and put a color countour on the node based on the type of node (data source: nodes.json (or last version of it))
-  * when hovering a node that has the country value in the nodes.json dataset add that to the tooltip 
+  * when hovering a node that has the country value in the nodes.json dataset add that to the tooltip
 * dataset:
   * clean the dataset so that it has only relevant information and the graph is not too crowded
   * order the sources from the one with most targets to the one with less
