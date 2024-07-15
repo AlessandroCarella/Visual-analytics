@@ -195,7 +195,7 @@ function createLabels(nodes, targetsPerSourceCount) {
 }
 
 function setupTooltip() {
-    const tooltip = d3.select("body").append("div")
+    const tooltip = d3.select("body").append("div-tooltip")
         .attr("class", "tooltip")
         .style("opacity", 0)
         .style("position", "absolute")
@@ -207,7 +207,7 @@ function setupTooltip() {
 
     svg.selectAll('circle')
         .on('mouseover', (event, d) => {
-            tooltip.transition().duration(0).style("opacity", 0.9);
+            tooltip.transition().duration(0).style("opacity", 1);
             tooltip.html(d.id)
                 .style("left", (event.pageX + 5) + "px")
                 .style("top", (event.pageY - 28) + "px");
