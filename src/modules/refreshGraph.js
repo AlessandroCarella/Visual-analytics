@@ -27,7 +27,10 @@ function refreshGraph(data, initialData, sourceToAdd = {}) {
         filteredTargets.delete(sourceToAddId);
 
         // Find initial data entries matching the new source
-        toAddToFiltered = initialData.filter(d => d.source === sourceToAddId);
+        toAddToFiltered = initialData.filter(d => 
+            d.source === sourceToAddId &&
+            activeButtons.has(d.type)
+        );
     }
 
     // Merge filtered data with new entries
