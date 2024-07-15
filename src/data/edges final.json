@@ -2028,6 +2028,12 @@
         "target":"903311212"
     },
     {
+        "type":"ownership",
+        "weight":0.9787477,
+        "source":"\u00e2\u0080\u009cvictim\u00e2",
+        "target":"\u00e2\u0080\u009cperpetrator\u00e2"
+    },
+    {
         "type":"family_relationship",
         "weight":0.86577845,
         "source":"William Bradley",
@@ -2068,6 +2074,18 @@
         "weight":0.83875203,
         "source":"Joseph Griffin",
         "target":"\u00e2\u0080\u0160\u00e2"
+    },
+    {
+        "type":"partnership",
+        "weight":0.82702225,
+        "source":"853949688",
+        "target":"650512"
+    },
+    {
+        "type":"membership",
+        "weight":0.8487669,
+        "source":"8",
+        "target":"Meere Delpeuch"
     },
     {
         "type":"membership",
@@ -2149,6 +2167,12 @@
     },
     {
         "type":"membership",
+        "weight":0.9236536,
+        "source":"14253815",
+        "target":"4369922c-ce1d-40ff-904c-1f6a3000bf6b"
+    },
+    {
+        "type":"membership",
         "weight":0.87501806,
         "source":"14253815",
         "target":"341411"
@@ -2196,10 +2220,22 @@
         "target":"png xi  Line"
     },
     {
+        "type":"ownership",
+        "weight":0.8324415,
+        "source":"\u00e2\u0080\u009cregular\u00e2",
+        "target":"2079436"
+    },
+    {
         "type":"family_relationship",
         "weight":0.9734014,
         "source":"Ann Daniels",
         "target":"Stephanie Mccormick MD"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9111044,
+        "source":"Ann Daniels",
+        "target":"Lisa Clay"
     },
     {
         "type":"family_relationship",
@@ -2398,6 +2434,12 @@
         "weight":0.90730536,
         "source":"Martha Robbins",
         "target":"Don Hopkins"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9240868,
+        "source":"Martha Robbins",
+        "target":"Joseph Gray"
     },
     {
         "type":"family_relationship",
@@ -3294,6 +3336,12 @@
         "target":"55"
     },
     {
+        "type":"family_relationship",
+        "weight":0.817458,
+        "source":"955425",
+        "target":"888"
+    },
+    {
         "type":"ownership",
         "weight":0.84608585,
         "source":"132",
@@ -3334,6 +3382,12 @@
         "weight":0.83121526,
         "source":"8701038",
         "target":"91dcf36d-dba8-41e8-a4cc-912981a27296"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8985173,
+        "source":"8701038",
+        "target":"526269"
     },
     {
         "type":"family_relationship",
@@ -3967,6 +4021,12 @@
     },
     {
         "type":"partnership",
+        "weight":0.9305371,
+        "source":"\u00e2\u0080\u009c8\u00e2",
+        "target":"Alyssa Huffman"
+    },
+    {
+        "type":"partnership",
         "weight":0.9154693,
         "source":"\u00e2\u0080\u009crefer",
         "target":"\u00e2\u0080\u009c10\u00e2"
@@ -4386,6 +4446,12 @@
         "target":"290834957"
     },
     {
+        "type":"membership",
+        "weight":0.8993094,
+        "source":"405ab2a5-68f0-4304-ab94-24c7995a248e",
+        "target":"526269"
+    },
+    {
         "type":"ownership",
         "weight":0.83541656,
         "source":"405ab2a5-68f0-4304-ab94-24c7995a248e",
@@ -4446,10 +4512,46 @@
         "target":"290834957"
     },
     {
+        "type":"membership",
+        "weight":0.91214293,
+        "source":"68",
+        "target":"526269"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8760737,
         "source":"610",
         "target":"Raymond Howell"
+    },
+    {
+        "type":"ownership",
+        "weight":0.90863675,
+        "source":"Marine",
+        "target":"4063"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8628217,
+        "source":"Marine",
+        "target":"740523"
+    },
+    {
+        "type":"membership",
+        "weight":0.8388692,
+        "source":"Marine",
+        "target":"vessel\u00e2\u0080\u0099s"
+    },
+    {
+        "type":"ownership",
+        "weight":0.819721,
+        "source":"Marine",
+        "target":"Amy Mcclure"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8394233,
+        "source":"Marine",
+        "target":"Jessica Mullins"
     },
     {
         "type":"ownership",
@@ -4603,6 +4705,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.89079857,
+        "source":"72",
+        "target":"35881"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8246702,
         "source":"72",
         "target":"Sonia Fisheries Pvt"
@@ -4726,6 +4834,18 @@
         "weight":0.8246233,
         "source":"490653",
         "target":"903311212"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8831469,
+        "source":"775298545",
+        "target":"650512"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8413595,
+        "source":"775298545",
+        "target":"26676370"
     },
     {
         "type":"ownership",
@@ -5953,9 +6073,27 @@
     },
     {
         "type":"partnership",
+        "weight":0.87211597,
+        "source":"71835024",
+        "target":"97453782"
+    },
+    {
+        "type":"partnership",
         "weight":0.8058339,
         "source":"71835024",
         "target":"James Limited Liability Company Logistics"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8830814,
+        "source":"71835024",
+        "target":"959344"
+    },
+    {
+        "type":"partnership",
+        "weight":0.83598584,
+        "source":"71835024",
+        "target":"951187691"
     },
     {
         "type":"ownership",
@@ -5974,6 +6112,12 @@
         "weight":0.852214,
         "source":"78590886",
         "target":"78135"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8558825,
+        "source":"78590886",
+        "target":"5810"
     },
     {
         "type":"ownership",
@@ -6042,6 +6186,12 @@
         "target":"Thomas Adams"
     },
     {
+        "type":"ownership",
+        "weight":0.90231484,
+        "source":"66538530",
+        "target":"Mr. Jose King"
+    },
+    {
         "type":"family_relationship",
         "weight":0.83932173,
         "source":"12731",
@@ -6064,6 +6214,12 @@
         "weight":0.9070348,
         "source":"ee05a28e-82ba-4f1d-a60f-68797a422ada",
         "target":"Spanish Shrimp  Carriers"
+    },
+    {
+        "type":"membership",
+        "weight":0.93746436,
+        "source":"ee05a28e-82ba-4f1d-a60f-68797a422ada",
+        "target":"f514483d-fb5f-4cb2-bb8d-b616b10336d8"
     },
     {
         "type":"family_relationship",
@@ -6112,6 +6268,18 @@
         "weight":0.8653579,
         "source":"82344",
         "target":"830155"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9508009,
+        "source":"82344",
+        "target":"Anna Turner"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8876263,
+        "source":"82344",
+        "target":"West Bengal S.A. de C.V."
     },
     {
         "type":"partnership",
@@ -6738,6 +6906,12 @@
         "target":"Reunion"
     },
     {
+        "type":"family_relationship",
+        "weight":0.8396704,
+        "source":"Michael Smith",
+        "target":"Melanie Miller"
+    },
+    {
         "type":"ownership",
         "weight":0.81711954,
         "source":"Michael Smith",
@@ -6748,6 +6922,12 @@
         "weight":0.80981565,
         "source":"Michael Smith",
         "target":"79139"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8177076,
+        "source":"Michael Smith",
+        "target":"27"
     },
     {
         "type":"ownership",
@@ -6774,6 +6954,12 @@
         "target":"196159"
     },
     {
+        "type":"family_relationship",
+        "weight":0.83871764,
+        "source":"Timothy Allen",
+        "target":"Melanie Miller"
+    },
+    {
         "type":"ownership",
         "weight":0.8140493,
         "source":"Timothy Allen",
@@ -6784,6 +6970,18 @@
         "weight":0.8125539,
         "source":"Timothy Allen",
         "target":"79139"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8208384,
+        "source":"Timothy Allen",
+        "target":"27"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.87031555,
+        "source":"Nathaniel Jimenez",
+        "target":"Charles Tran"
     },
     {
         "type":"family_relationship",
@@ -6811,9 +7009,27 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.9589876,
+        "source":"Nathaniel Jimenez",
+        "target":"Kirk Jackson"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8990648,
+        "source":"Nathaniel Jimenez",
+        "target":"Matthew Delgado"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.82496595,
         "source":"Nathaniel Jimenez",
         "target":"Evelyn Huang"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8150186,
+        "source":"Nathaniel Jimenez",
+        "target":"21e68e53-183c-45a0-9805-68c099d4d9c0"
     },
     {
         "type":"membership",
@@ -8088,10 +8304,22 @@
         "target":"301"
     },
     {
+        "type":"family_relationship",
+        "weight":0.83454746,
+        "source":"Dakota Hansen",
+        "target":"James Best"
+    },
+    {
         "type":"partnership",
         "weight":0.83176684,
         "source":"301",
         "target":"James Best"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8086659,
+        "source":"9203",
+        "target":"Lindsay Bennett"
     },
     {
         "type":"family_relationship",
@@ -8314,6 +8542,12 @@
         "weight":0.8695117,
         "source":"Emily Johnson",
         "target":"Isa"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.87350196,
+        "source":"Emily Johnson",
+        "target":"Robert Vega"
     },
     {
         "type":"family_relationship",
@@ -8638,6 +8872,12 @@
         "weight":0.83063155,
         "source":"449308",
         "target":"185040354"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8471049,
+        "source":"449308",
+        "target":"99661834"
     },
     {
         "type":"partnership",
@@ -10267,6 +10507,12 @@
     },
     {
         "type":"membership",
+        "weight":0.9486094,
+        "source":"48605",
+        "target":"Brian Williams"
+    },
+    {
+        "type":"membership",
         "weight":0.8158773,
         "source":"48605",
         "target":"Dawn Oconnell"
@@ -10336,6 +10582,12 @@
         "weight":0.94910985,
         "source":"Jennifer Price",
         "target":"865275"
+    },
+    {
+        "type":"membership",
+        "weight":0.90306044,
+        "source":"Jennifer Price",
+        "target":"908724"
     },
     {
         "type":"family_relationship",
@@ -10998,6 +11250,12 @@
         "target":"733"
     },
     {
+        "type":"ownership",
+        "weight":0.82753474,
+        "source":"6d249c4d-1f62-4ab2-b107-8fd978f115c7",
+        "target":"Christine Robinson"
+    },
+    {
         "type":"membership",
         "weight":0.8984725,
         "source":"164575",
@@ -11086,6 +11344,12 @@
         "weight":0.9102489,
         "source":"\u00e2\u0080\u0160",
         "target":"\u00e2\u0080\u009cit"
+    },
+    {
+        "type":"ownership",
+        "weight":0.836469,
+        "source":"1396",
+        "target":"Atlanto\u00e2\u0080\u0093Scandian"
     },
     {
         "type":"family_relationship",
@@ -11304,6 +11568,12 @@
         "target":"Tara Villegas"
     },
     {
+        "type":"family_relationship",
+        "weight":0.84939355,
+        "source":"189",
+        "target":"07"
+    },
+    {
         "type":"membership",
         "weight":0.85979086,
         "source":"737205",
@@ -11484,6 +11754,18 @@
         "target":"Rama Overseas"
     },
     {
+        "type":"membership",
+        "weight":0.8766352,
+        "source":"5705060",
+        "target":"959"
+    },
+    {
+        "type":"membership",
+        "weight":0.89467406,
+        "source":"Belgian Scallop Ltd. Liability Co",
+        "target":"959"
+    },
+    {
         "type":"partnership",
         "weight":0.9133674,
         "source":"Belgian Scallop Ltd. Liability Co",
@@ -11518,6 +11800,12 @@
         "weight":0.8418322,
         "source":"Ryan Williams",
         "target":"Brenda Gonzalez"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.87822294,
+        "source":"Ryan Williams",
+        "target":"David Frederick"
     },
     {
         "type":"family_relationship",
@@ -11610,6 +11898,12 @@
         "target":"341411"
     },
     {
+        "type":"family_relationship",
+        "weight":0.9366066,
+        "source":"Randy Collins",
+        "target":"Clayton Rodgers"
+    },
+    {
         "type":"membership",
         "weight":0.91709137,
         "source":"Randy Collins",
@@ -11638,6 +11932,12 @@
         "weight":0.8533944,
         "source":"40690",
         "target":"OceanKings Sailor Corp Logistics"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.87084484,
+        "source":"40690",
+        "target":"e836e8c3-a45e-4225-870d-d3e8dbc62c26"
     },
     {
         "type":"membership",
@@ -11754,6 +12054,24 @@
         "target":"Rama Overseas"
     },
     {
+        "type":"family_relationship",
+        "weight":0.8572692,
+        "source":"Norwegian Shrimp Ltd. Liability Co",
+        "target":"OceanicHarvest Dry dock N.V. Delivery"
+    },
+    {
+        "type":"membership",
+        "weight":0.9031057,
+        "source":"Norwegian Shrimp Ltd. Liability Co",
+        "target":"Rama Overseas"
+    },
+    {
+        "type":"partnership",
+        "weight":0.92228884,
+        "source":"4783",
+        "target":"Filkins\u00e2"
+    },
+    {
         "type":"partnership",
         "weight":0.8428756,
         "source":"4783",
@@ -11773,6 +12091,18 @@
     },
     {
         "type":"membership",
+        "weight":0.8956287,
+        "source":"Timothy Estrada",
+        "target":"it\u00e2\u0080\u0099s"
+    },
+    {
+        "type":"membership",
+        "weight":0.8162347,
+        "source":"Timothy Estrada",
+        "target":"30700925"
+    },
+    {
+        "type":"membership",
         "weight":0.8625125,
         "source":"ten",
         "target":"Playa del Cielo Kga"
@@ -11782,6 +12112,12 @@
         "weight":0.81742555,
         "source":"e2816018-e01c-4eac-8dc5-e84aebc22cff",
         "target":"Vanessa Avila"
+    },
+    {
+        "type":"membership",
+        "weight":0.8422807,
+        "source":"e2816018-e01c-4eac-8dc5-e84aebc22cff",
+        "target":"529"
     },
     {
         "type":"membership",
@@ -12019,6 +12355,12 @@
     },
     {
         "type":"membership",
+        "weight":0.8798696,
+        "source":"Lauren Moore",
+        "target":"Ex-Lax"
+    },
+    {
+        "type":"membership",
         "weight":0.87423563,
         "source":"\u00e2\u0080\u009clocal\u00e2",
         "target":"Ex-Lax"
@@ -12034,6 +12376,12 @@
         "weight":0.83935314,
         "source":"Leominster Provincetown\u00e2",
         "target":"\u00e2\u0080\u009clocal\u00e2"
+    },
+    {
+        "type":"membership",
+        "weight":0.8436681,
+        "source":"Leominster Provincetown\u00e2",
+        "target":"Ex-Lax"
     },
     {
         "type":"membership",
@@ -12210,6 +12558,12 @@
         "target":"12"
     },
     {
+        "type":"family_relationship",
+        "weight":0.9331588,
+        "source":"Kyle Stanton",
+        "target":"Laura Smith"
+    },
+    {
         "type":"membership",
         "weight":0.80031896,
         "source":"Kyle Stanton",
@@ -12307,6 +12661,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.84783864,
+        "source":"5a52675e-1243-4244-ad55-85a06c4408de",
+        "target":"567857349"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8299798,
         "source":"5a52675e-1243-4244-ad55-85a06c4408de",
         "target":"89772543"
@@ -12334,6 +12694,12 @@
         "weight":0.8640188,
         "source":"70873",
         "target":"Estrella de Mar Ltd. Liability Co"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9187943,
+        "source":"70873",
+        "target":"Ship2Report"
     },
     {
         "type":"family_relationship",
@@ -12442,6 +12808,12 @@
         "weight":0.96270365,
         "source":"47562016",
         "target":"Selena Building"
+    },
+    {
+        "type":"ownership",
+        "weight":0.94379646,
+        "source":"47562016",
+        "target":"87940"
     },
     {
         "type":"partnership",
@@ -12696,6 +13068,18 @@
         "target":"SeaSpray Wave SRL Solutions"
     },
     {
+        "type":"ownership",
+        "weight":0.9436754,
+        "source":"1076f239-831c-4c53-9134-484c8f2d5c73",
+        "target":"2125"
+    },
+    {
+        "type":"membership",
+        "weight":0.894506,
+        "source":"1076f239-831c-4c53-9134-484c8f2d5c73",
+        "target":"expect year"
+    },
+    {
         "type":"family_relationship",
         "weight":0.81404024,
         "source":"1076f239-831c-4c53-9134-484c8f2d5c73",
@@ -12706,6 +13090,12 @@
         "weight":0.87221825,
         "source":"1076f239-831c-4c53-9134-484c8f2d5c73",
         "target":"Faroe Islands Shrimp Shark"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.85471386,
+        "source":"9e2e5adf-b6aa-4e7f-9af1-a899ceccfba6",
+        "target":"Amy Wilson"
     },
     {
         "type":"partnership",
@@ -12798,6 +13188,12 @@
         "target":"pilot"
     },
     {
+        "type":"membership",
+        "weight":0.8554577,
+        "source":"46510923",
+        "target":"9699687"
+    },
+    {
         "type":"ownership",
         "weight":0.8987325,
         "source":"46510923",
@@ -12810,10 +13206,28 @@
         "target":"6391"
     },
     {
+        "type":"family_relationship",
+        "weight":0.84569854,
+        "source":"46510923",
+        "target":"Bryce Chavez"
+    },
+    {
+        "type":"membership",
+        "weight":0.88943136,
+        "source":"46510923",
+        "target":"7680453"
+    },
+    {
         "type":"membership",
         "weight":0.8879204,
         "source":"46510923",
         "target":"3127062"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8544031,
+        "source":"46510923",
+        "target":"3190258"
     },
     {
         "type":"membership",
@@ -14124,10 +14538,22 @@
         "target":"Calvin Salas"
     },
     {
+        "type":"partnership",
+        "weight":0.88733447,
+        "source":"222848436",
+        "target":"Amphibious Warships"
+    },
+    {
         "type":"ownership",
         "weight":0.8630292,
         "source":"222848436",
         "target":"945"
+    },
+    {
+        "type":"ownership",
+        "weight":0.9040477,
+        "source":"222848436",
+        "target":"IPOS0000DOP"
     },
     {
         "type":"partnership",
@@ -14341,15 +14767,63 @@
     },
     {
         "type":"ownership",
+        "weight":0.952898,
+        "source":"Coast",
+        "target":"cutters"
+    },
+    {
+        "type":"ownership",
         "weight":0.83152336,
         "source":"Coast",
         "target":"Cutter"
     },
     {
         "type":"membership",
+        "weight":0.86516535,
+        "source":"Coast",
+        "target":"Tyler Brown"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9702241,
+        "source":"Coast",
+        "target":"Teresa Rivera"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8524496,
+        "source":"Coast",
+        "target":"cutter James"
+    },
+    {
+        "type":"membership",
         "weight":0.8987551,
         "source":"Coast",
         "target":"860600018"
+    },
+    {
+        "type":"membership",
+        "weight":0.9366561,
+        "source":"Coast",
+        "target":"88a1fe65-33d9-487a-a3ac-d4208f41b754"
+    },
+    {
+        "type":"membership",
+        "weight":0.87688667,
+        "source":"Coast",
+        "target":"Jenna Barton"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.87333345,
+        "source":"Coast",
+        "target":"b636c0f8-2ddf-42ad-9f9c-73bd48682561"
+    },
+    {
+        "type":"membership",
+        "weight":0.9474759,
+        "source":"Coast",
+        "target":"sailboat Freeport"
     },
     {
         "type":"ownership",
@@ -14368,6 +14842,18 @@
         "weight":0.906656,
         "source":"Coast",
         "target":"Ryan Perez"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.927945,
+        "source":"Coast",
+        "target":"dd3f2822-2964-4d18-92c2-7a6db4b4a9e5"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9470269,
+        "source":"Coast",
+        "target":"6567453"
     },
     {
         "type":"membership",
@@ -14989,6 +15475,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.9000432,
+        "source":"Erik Johnson",
+        "target":"Alexandria Wilson"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.80776775,
         "source":"9786",
         "target":"3878194"
@@ -15166,6 +15658,12 @@
         "weight":0.94900036,
         "source":"\u0153\u00c6\u009f\u00ef",
         "target":"iJPk\u00ef"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9477083,
+        "source":"\u0153\u00c6\u009f\u00ef",
+        "target":"\u01535\u00ef"
     },
     {
         "type":"family_relationship",
@@ -19662,6 +20160,12 @@
         "target":"979893388"
     },
     {
+        "type":"membership",
+        "weight":0.8838662,
+        "source":"5961c4ed-5c5b-40e4-b0ab-1e0217cb12c0",
+        "target":"d3243667-8978-454b-917e-530ab514fcb0"
+    },
+    {
         "type":"ownership",
         "weight":0.88659215,
         "source":"2243528",
@@ -19717,15 +20221,33 @@
     },
     {
         "type":"partnership",
+        "weight":0.83264774,
+        "source":"2056",
+        "target":"95219"
+    },
+    {
+        "type":"partnership",
         "weight":0.80403656,
         "source":"579919",
         "target":"544344"
     },
     {
         "type":"partnership",
+        "weight":0.84308255,
+        "source":"579919",
+        "target":"95219"
+    },
+    {
+        "type":"partnership",
         "weight":0.85524404,
         "source":"Ocean Tuna",
         "target":"262157542"
+    },
+    {
+        "type":"partnership",
+        "weight":0.82291484,
+        "source":"Ocean Tuna",
+        "target":"46194"
     },
     {
         "type":"partnership",
@@ -19825,6 +20347,12 @@
     },
     {
         "type":"partnership",
+        "weight":0.9267047,
+        "source":"951",
+        "target":"911"
+    },
+    {
+        "type":"partnership",
         "weight":0.80019224,
         "source":"951",
         "target":"Joy Anderson"
@@ -19846,6 +20374,12 @@
         "weight":0.80957806,
         "source":"10",
         "target":"3051e013-9e40-44cc-98e5-740e3238daaa"
+    },
+    {
+        "type":"ownership",
+        "weight":0.89158183,
+        "source":"10",
+        "target":"b5856109-c5a0-43a6-8c70-ebfe73cc24f1"
     },
     {
         "type":"membership",
@@ -19882,6 +20416,12 @@
         "weight":0.8969696,
         "source":"Diana Brandt",
         "target":"\u00e2\u0080\u0160"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8561888,
+        "source":"Diana Brandt",
+        "target":"Taylor Chan"
     },
     {
         "type":"partnership",
@@ -20314,6 +20854,12 @@
         "weight":0.82959056,
         "source":"553309",
         "target":"\u00e2\u0080\u0098women\u00e2"
+    },
+    {
+        "type":"membership",
+        "weight":0.8674142,
+        "source":"553309",
+        "target":"\u00e2\u0080\u0098fisher\u00e2"
     },
     {
         "type":"membership",
@@ -22483,6 +23029,18 @@
     },
     {
         "type":"partnership",
+        "weight":0.85682833,
+        "source":"Miss Jessica Baker DVM",
+        "target":"Alonso-Fern\u00c3"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8500787,
+        "source":"4b6a1701-93c3-403c-bd2f-9684106e8bba",
+        "target":"Alonso-Fern\u00c3"
+    },
+    {
+        "type":"partnership",
         "weight":0.8928445,
         "source":"c1aeee2d-0030-4d85-b45c-ac3fd9887b98",
         "target":"Morgan Black"
@@ -22536,6 +23094,24 @@
         "target":"Mar del Oeste Pic"
     },
     {
+        "type":"family_relationship",
+        "weight":0.81344056,
+        "source":"42aea61e-a98f-4528-9f30-51624ecf3957",
+        "target":"Madhya Pradesh Market Ltd Solutions"
+    },
+    {
+        "type":"membership",
+        "weight":0.89171946,
+        "source":"42aea61e-a98f-4528-9f30-51624ecf3957",
+        "target":"nigeria"
+    },
+    {
+        "type":"membership",
+        "weight":0.89906824,
+        "source":"42aea61e-a98f-4528-9f30-51624ecf3957",
+        "target":"2036-06"
+    },
+    {
         "type":"membership",
         "weight":0.8325032,
         "source":"42aea61e-a98f-4528-9f30-51624ecf3957",
@@ -22546,6 +23122,12 @@
         "weight":0.85417354,
         "source":"1334578",
         "target":"7670"
+    },
+    {
+        "type":"membership",
+        "weight":0.8396629,
+        "source":"1334578",
+        "target":"43"
     },
     {
         "type":"ownership",
@@ -22606,6 +23188,12 @@
         "weight":0.8022316,
         "source":"7670",
         "target":"8ce9074f-2904-41ea-896a-5d932e06f54c"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8772397,
+        "source":"conjunction",
+        "target":"OE23"
     },
     {
         "type":"partnership",
@@ -23149,9 +23737,33 @@
     },
     {
         "type":"ownership",
+        "weight":0.8650212,
+        "source":"13863",
+        "target":"662118"
+    },
+    {
+        "type":"ownership",
+        "weight":0.83530426,
+        "source":"13863",
+        "target":"71317"
+    },
+    {
+        "type":"ownership",
         "weight":0.90371424,
         "source":"13863",
         "target":"Gen International"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8788454,
+        "source":"13863",
+        "target":"734121719"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8051877,
+        "source":"13863",
+        "target":"New Bedford Light"
     },
     {
         "type":"ownership",
@@ -23170,6 +23782,12 @@
         "weight":0.8686795,
         "source":"James Smith MD",
         "target":"Brian Palmer"
+    },
+    {
+        "type":"membership",
+        "weight":0.8918665,
+        "source":"James Smith MD",
+        "target":"35683821"
     },
     {
         "type":"membership",
@@ -23389,6 +24007,18 @@
     },
     {
         "type":"ownership",
+        "weight":0.81443036,
+        "source":"19386200",
+        "target":"e42f2b19-60d8-4df2-bb01-d2b42d134a26"
+    },
+    {
+        "type":"membership",
+        "weight":0.938788,
+        "source":"19386200",
+        "target":"Mark Scott"
+    },
+    {
+        "type":"ownership",
         "weight":0.81877804,
         "source":"85946",
         "target":"47679"
@@ -23430,6 +24060,12 @@
         "target":"47679"
     },
     {
+        "type":"ownership",
+        "weight":0.9102001,
+        "source":"327481624",
+        "target":"522017227"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8633586,
         "source":"327481624",
@@ -23446,6 +24082,12 @@
         "weight":0.8830312,
         "source":"327481624",
         "target":"47679"
+    },
+    {
+        "type":"ownership",
+        "weight":0.86817974,
+        "source":"cf651b3c-4e21-458c-91c4-3cae2eb36bcb",
+        "target":"522017227"
     },
     {
         "type":"family_relationship",
@@ -23472,10 +24114,22 @@
         "target":"Maria Mitchell"
     },
     {
+        "type":"family_relationship",
+        "weight":0.8307386,
+        "source":"17c99d9d-7049-4ebb-8a2a-f3d39cc42870",
+        "target":"Tyler Flores"
+    },
+    {
         "type":"ownership",
         "weight":0.86370903,
         "source":"17c99d9d-7049-4ebb-8a2a-f3d39cc42870",
         "target":"HMS Montrose"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.872468,
+        "source":"17c99d9d-7049-4ebb-8a2a-f3d39cc42870",
+        "target":"df26d11f-ed87-4a19-b9e8-18e9783c00f5"
     },
     {
         "type":"ownership",
@@ -23494,6 +24148,12 @@
         "weight":0.826183,
         "source":"17c99d9d-7049-4ebb-8a2a-f3d39cc42870",
         "target":"SeaSpray Wave SRL Solutions"
+    },
+    {
+        "type":"membership",
+        "weight":0.86018044,
+        "source":"760402",
+        "target":"48115"
     },
     {
         "type":"family_relationship",
@@ -23526,6 +24186,12 @@
         "target":"Mar del Oeste Pic"
     },
     {
+        "type":"partnership",
+        "weight":0.9244507,
+        "source":"Water",
+        "target":"737137552"
+    },
+    {
         "type":"ownership",
         "weight":0.85492456,
         "source":"Water",
@@ -23536,6 +24202,12 @@
         "weight":0.84368354,
         "source":"77bfcfcd-af2c-4b58-8a99-871a6c6109f2",
         "target":"25875c2e-ff9a-4669-bad7-2c84bafb7515"
+    },
+    {
+        "type":"membership",
+        "weight":0.87460893,
+        "source":"77bfcfcd-af2c-4b58-8a99-871a6c6109f2",
+        "target":"Matthew Martin"
     },
     {
         "type":"membership",
@@ -23554,6 +24226,12 @@
         "weight":0.87464964,
         "source":"ce0d446c-d08d-49a8-8aa2-e625ead63d0c",
         "target":"png xi  Line"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8989296,
+        "source":"25423",
+        "target":"2610"
     },
     {
         "type":"membership",
@@ -23578,6 +24256,12 @@
         "weight":0.91406375,
         "source":"Delhi ers AS Holdings",
         "target":"85117949"
+    },
+    {
+        "type":"partnership",
+        "weight":0.83607864,
+        "source":"Delhi ers AS Holdings",
+        "target":"Stephen Gutierrez"
     },
     {
         "type":"partnership",
@@ -23628,6 +24312,12 @@
         "target":"Aaron Bennett"
     },
     {
+        "type":"partnership",
+        "weight":0.8475468,
+        "source":"Delhi ers AS Holdings",
+        "target":"Kathleen Rowe"
+    },
+    {
         "type":"membership",
         "weight":0.8201947,
         "source":"Delhi ers AS Holdings",
@@ -23641,9 +24331,21 @@
     },
     {
         "type":"ownership",
+        "weight":0.8579501,
+        "source":"Delhi ers AS Holdings",
+        "target":"237659945"
+    },
+    {
+        "type":"ownership",
         "weight":0.8481845,
         "source":"Delhi ers AS Holdings",
         "target":"662bfccd-798d-4e60-b308-2cb2918e3dd2"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8225328,
+        "source":"Delhi ers AS Holdings",
+        "target":"33560"
     },
     {
         "type":"ownership",
@@ -23656,6 +24358,12 @@
         "weight":0.8413726,
         "source":"Cape of Good Hope  Oyj",
         "target":"486"
+    },
+    {
+        "type":"ownership",
+        "weight":0.82069683,
+        "source":"Cape of Good Hope  Oyj",
+        "target":"West Bengal S.A. de C.V."
     },
     {
         "type":"membership",
@@ -23773,9 +24481,27 @@
     },
     {
         "type":"ownership",
+        "weight":0.89523655,
+        "source":"LOM\u00c3",
+        "target":"WMEC"
+    },
+    {
+        "type":"ownership",
         "weight":0.93862385,
         "source":"6ae0d6bb-b101-4905-8b41-86b10a580c82",
         "target":"USCGC Spencer"
+    },
+    {
+        "type":"ownership",
+        "weight":0.94702005,
+        "source":"6ae0d6bb-b101-4905-8b41-86b10a580c82",
+        "target":"WMEC"
+    },
+    {
+        "type":"membership",
+        "weight":0.837482,
+        "source":"6ae0d6bb-b101-4905-8b41-86b10a580c82",
+        "target":"Kristina Frazier"
     },
     {
         "type":"ownership",
@@ -23806,6 +24532,12 @@
         "weight":0.8352138,
         "source":"05ef2661-6f3a-4f37-83e7-2ec8352afaef",
         "target":"2ef60e7b-4914-4dbd-a063-5b23143fe5db"
+    },
+    {
+        "type":"membership",
+        "weight":0.84693795,
+        "source":"05ef2661-6f3a-4f37-83e7-2ec8352afaef",
+        "target":"e40c01a4-8ed5-400f-857d-31e7bd263e35"
     },
     {
         "type":"membership",
@@ -23845,6 +24577,12 @@
     },
     {
         "type":"partnership",
+        "weight":0.87518865,
+        "source":"fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "target":"\u00e2\u0080\u009cbelieve"
+    },
+    {
+        "type":"partnership",
         "weight":0.8471375,
         "source":"fc4e853f-6e18-4631-bf95-f70d6a30579f",
         "target":"Morgan Black"
@@ -23868,6 +24606,18 @@
         "target":"Dr. Daniel Massey"
     },
     {
+        "type":"ownership",
+        "weight":0.9285469,
+        "source":"fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "target":"\u00e2\u0080\u009cWhat\u00e2\u0080\u0099s"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8461893,
+        "source":"fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "target":"Martin Bryant"
+    },
+    {
         "type":"membership",
         "weight":0.92799276,
         "source":"fc4e853f-6e18-4631-bf95-f70d6a30579f",
@@ -23878,6 +24628,12 @@
         "weight":0.89922166,
         "source":"fc4e853f-6e18-4631-bf95-f70d6a30579f",
         "target":"Alan Wells"
+    },
+    {
+        "type":"membership",
+        "weight":0.8864137,
+        "source":"fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "target":"Brooke Hamilton"
     },
     {
         "type":"partnership",
@@ -23902,6 +24658,12 @@
         "weight":0.9037438,
         "source":"fc4e853f-6e18-4631-bf95-f70d6a30579f",
         "target":"Easterlings\u00e2"
+    },
+    {
+        "type":"ownership",
+        "weight":0.91655487,
+        "source":"fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "target":"Seth Peters"
     },
     {
         "type":"membership",
@@ -24025,6 +24787,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.94456553,
+        "source":"Boat",
+        "target":"Teresa Rivera"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8584218,
         "source":"Boat",
         "target":"Spanish Shrimp  Carriers"
@@ -24058,6 +24826,12 @@
         "weight":0.85932136,
         "source":"George Ramirez",
         "target":"d5b94ebc-e03a-438e-872b-a15db349a748"
+    },
+    {
+        "type":"membership",
+        "weight":0.8550364,
+        "source":"4e872202-1d65-4183-80c9-e8c12c8f736e",
+        "target":"6d887b98-7c48-4a82-98bb-2f50fe4b29d5"
     },
     {
         "type":"membership",
@@ -24106,6 +24880,12 @@
         "weight":0.81521577,
         "source":"969",
         "target":"Virginia Carter"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9687543,
+        "source":"969",
+        "target":"April James"
     },
     {
         "type":"membership",
@@ -24178,6 +24958,12 @@
         "weight":0.8083318,
         "source":"142",
         "target":"341411"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.80258554,
+        "source":"Estrella de la Costa Inc Transit",
+        "target":"3183"
     },
     {
         "type":"membership",
@@ -24312,10 +25098,28 @@
         "target":"\u00e2\u0080\u009cAla\u00c4\u009dum Kanuux\u00cc"
     },
     {
+        "type":"ownership",
+        "weight":0.8848501,
+        "source":"aa1f466d-d060-40fa-ab0e-3f8bb2ca940f",
+        "target":"Wendy Duarte"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8113173,
+        "source":"aa1f466d-d060-40fa-ab0e-3f8bb2ca940f",
+        "target":"Alexis Murphy"
+    },
+    {
         "type":"membership",
         "weight":0.8796692,
         "source":"aa1f466d-d060-40fa-ab0e-3f8bb2ca940f",
         "target":"750975"
+    },
+    {
+        "type":"membership",
+        "weight":0.86130476,
+        "source":"aa1f466d-d060-40fa-ab0e-3f8bb2ca940f",
+        "target":"497"
     },
     {
         "type":"partnership",
@@ -24432,6 +25236,18 @@
         "target":"SeaSpray Wave SRL Solutions"
     },
     {
+        "type":"ownership",
+        "weight":0.80608845,
+        "source":"Zambezi Rapids NV Brothers",
+        "target":"Eric Gentry"
+    },
+    {
+        "type":"ownership",
+        "weight":0.89142084,
+        "source":"Zambezi Rapids NV Brothers",
+        "target":"Donna Shepherd"
+    },
+    {
         "type":"membership",
         "weight":0.9020795,
         "source":"25652724",
@@ -24463,6 +25279,12 @@
     },
     {
         "type":"membership",
+        "weight":0.80245304,
+        "source":"f402c1d2-8262-4bae-aa92-c8675a7006fc",
+        "target":"Irish Sea SRL Brothers"
+    },
+    {
+        "type":"membership",
         "weight":0.8683219,
         "source":"f402c1d2-8262-4bae-aa92-c8675a7006fc",
         "target":"\u00e2\u0080\u009cNYPD\u00e2"
@@ -24472,6 +25294,12 @@
         "weight":0.82057524,
         "source":"f402c1d2-8262-4bae-aa92-c8675a7006fc",
         "target":"Jeffrey Hall"
+    },
+    {
+        "type":"membership",
+        "weight":0.90084565,
+        "source":"f402c1d2-8262-4bae-aa92-c8675a7006fc",
+        "target":"Daniel Obrien"
     },
     {
         "type":"membership",
@@ -24553,6 +25381,12 @@
     },
     {
         "type":"ownership",
+        "weight":0.8664161,
+        "source":"9209373",
+        "target":"993137821"
+    },
+    {
+        "type":"ownership",
         "weight":0.8711036,
         "source":"dff423b9-cf9a-4b0a-849f-ecb513924287",
         "target":"993137821"
@@ -24628,6 +25462,18 @@
         "weight":0.87232673,
         "source":"883290144",
         "target":"8453714"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8969801,
+        "source":"47967ccc-0e26-458d-b1e5-80e8668db714",
+        "target":"7056336"
+    },
+    {
+        "type":"membership",
+        "weight":0.89783645,
+        "source":"47967ccc-0e26-458d-b1e5-80e8668db714",
+        "target":"36322"
     },
     {
         "type":"partnership",
@@ -25002,6 +25848,12 @@
         "target":"Stephanie Robinson"
     },
     {
+        "type":"ownership",
+        "weight":0.9181397,
+        "source":"45",
+        "target":"662118"
+    },
+    {
         "type":"family_relationship",
         "weight":0.83760166,
         "source":"45",
@@ -25024,6 +25876,12 @@
         "weight":0.822751,
         "source":"c14a3dc1-59d0-4b92-b9f3-331e51912787",
         "target":"979893388"
+    },
+    {
+        "type":"membership",
+        "weight":0.83083385,
+        "source":"Christopher Peterson",
+        "target":"hours"
     },
     {
         "type":"family_relationship",
@@ -25072,6 +25930,12 @@
         "weight":0.89697367,
         "source":"90183",
         "target":"Isaiah Hammond"
+    },
+    {
+        "type":"membership",
+        "weight":0.8439384,
+        "source":"90183",
+        "target":"Erica Bailey"
     },
     {
         "type":"membership",
@@ -25219,6 +26083,12 @@
     },
     {
         "type":"partnership",
+        "weight":0.8263116,
+        "source":"7871",
+        "target":"7247721"
+    },
+    {
+        "type":"partnership",
         "weight":0.92932975,
         "source":"22",
         "target":"Alan Wells"
@@ -25272,10 +26142,28 @@
         "target":"Ancla Azul Company Solutions"
     },
     {
+        "type":"family_relationship",
+        "weight":0.94352806,
+        "source":"normal",
+        "target":"Joshua Landry"
+    },
+    {
         "type":"membership",
         "weight":0.8441629,
         "source":"ede1806c-b3d1-47f5-ba49-d948d6ec385a",
         "target":"Edward Ferry SE Transportation"
+    },
+    {
+        "type":"membership",
+        "weight":0.8796405,
+        "source":"Christina Olsen",
+        "target":"52e9a600-9d6f-4683-95be-c7c60c57ffe1"
+    },
+    {
+        "type":"membership",
+        "weight":0.8391674,
+        "source":"Di\u00c3",
+        "target":"logo"
     },
     {
         "type":"membership",
@@ -25324,6 +26212,18 @@
         "weight":0.9236944,
         "source":"e167b40a-96f4-40e0-873b-78950e4434f4",
         "target":"W Appliance"
+    },
+    {
+        "type":"membership",
+        "weight":0.8229911,
+        "source":"e167b40a-96f4-40e0-873b-78950e4434f4",
+        "target":"Gregory Bowers"
+    },
+    {
+        "type":"membership",
+        "weight":0.8387684,
+        "source":"e167b40a-96f4-40e0-873b-78950e4434f4",
+        "target":"Nicole Marshall"
     },
     {
         "type":"membership",
@@ -25548,6 +26448,18 @@
         "target":"Scott Anderson"
     },
     {
+        "type":"ownership",
+        "weight":0.8074788,
+        "source":"Think Tank Index Report\u00e2",
+        "target":"upenn"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8020853,
+        "source":"Think Tank Index Report\u00e2",
+        "target":"edu"
+    },
+    {
         "type":"family_relationship",
         "weight":0.9063399,
         "source":"2ceda972-c633-4a88-bbe8-a4fe48cb5555",
@@ -25680,10 +26592,22 @@
         "target":"762833"
     },
     {
+        "type":"partnership",
+        "weight":0.90910745,
+        "source":"Senegal Coast Oyj Motorboat",
+        "target":"498817"
+    },
+    {
         "type":"ownership",
         "weight":0.8053038,
         "source":"Senegal Coast Oyj Motorboat",
         "target":"Rhonda Johnson"
+    },
+    {
+        "type":"ownership",
+        "weight":0.89479965,
+        "source":"Senegal Coast Oyj Motorboat",
+        "target":"309535101"
     },
     {
         "type":"family_relationship",
@@ -25732,6 +26656,12 @@
         "weight":0.8062088,
         "source":"228",
         "target":"218"
+    },
+    {
+        "type":"ownership",
+        "weight":0.87506557,
+        "source":"228",
+        "target":"22150"
     },
     {
         "type":"ownership",
@@ -25864,6 +26794,12 @@
         "weight":0.86362064,
         "source":"7529",
         "target":"Mario Richardson"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9181863,
+        "source":"7529",
+        "target":"\u00e2\u0080\u009cregions"
     },
     {
         "type":"partnership",
@@ -26298,10 +27234,22 @@
         "target":"cefaf8b3-3aa2-4c59-b4aa-7974c8e1fe32"
     },
     {
+        "type":"family_relationship",
+        "weight":0.8174917,
+        "source":"Stephen Evans",
+        "target":"Charles Tran"
+    },
+    {
         "type":"ownership",
         "weight":0.8059737,
         "source":"Stephen Evans",
         "target":"662290"
+    },
+    {
+        "type":"membership",
+        "weight":0.8375725,
+        "source":"23550059-88d4-4a69-b74e-3c7de8bf56de",
+        "target":"Charles Tran"
     },
     {
         "type":"partnership",
@@ -26466,6 +27414,12 @@
         "target":"\u00e2\u0080\u009coverwhelmed\u00e2"
     },
     {
+        "type":"membership",
+        "weight":0.93883276,
+        "source":"David Hayden",
+        "target":"2036\u00e2\u0080\u0099s"
+    },
+    {
         "type":"partnership",
         "weight":0.826863,
         "source":"\u00e2\u0080\u009cpioneers\u00e2",
@@ -26500,6 +27454,12 @@
         "weight":0.9339816,
         "source":"Kenneth Jones",
         "target":"Kristin Davidson"
+    },
+    {
+        "type":"membership",
+        "weight":0.80939215,
+        "source":"\u00e2\u0080\u009cSwiss",
+        "target":"Elizabeth Dean"
     },
     {
         "type":"family_relationship",
@@ -26722,6 +27682,12 @@
         "weight":0.94549656,
         "source":"66030248",
         "target":"363355"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9266043,
+        "source":"66030248",
+        "target":"387674"
     },
     {
         "type":"family_relationship",
@@ -27192,10 +28158,28 @@
         "target":"17"
     },
     {
+        "type":"membership",
+        "weight":0.88585967,
+        "source":"1402",
+        "target":"150674265"
+    },
+    {
         "type":"ownership",
         "weight":0.83315974,
         "source":"1402",
         "target":"Mar del Oeste Pic"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8947316,
+        "source":"25125567",
+        "target":"f7a4114d-d1ca-44df-a7e0-c72e440671ba"
+    },
+    {
+        "type":"ownership",
+        "weight":0.83605283,
+        "source":"25125567",
+        "target":"f9f6fc72-83db-4c44-a818-dde6c33985f9"
     },
     {
         "type":"partnership",
@@ -27654,6 +28638,12 @@
         "target":"Anna Smith"
     },
     {
+        "type":"family_relationship",
+        "weight":0.94104725,
+        "source":"Kristine Vaughn",
+        "target":"Stacey Ortiz"
+    },
+    {
         "type":"partnership",
         "weight":0.9375136,
         "source":"Kristine Vaughn",
@@ -27901,9 +28891,21 @@
     },
     {
         "type":"membership",
+        "weight":0.94320834,
+        "source":"Christine Jones",
+        "target":"boat\u00e2\u0080\u0099s"
+    },
+    {
+        "type":"membership",
         "weight":0.9506302,
         "source":"Christine Jones",
         "target":"\u00e2\u0080\u009ccriminally"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.93085206,
+        "source":"Christine Jones",
+        "target":"Terry Mcknight"
     },
     {
         "type":"ownership",
@@ -28128,16 +29130,46 @@
         "target":"\u00e2\u0080\u009cHe"
     },
     {
+        "type":"family_relationship",
+        "weight":0.84604305,
+        "source":"Robert Adams",
+        "target":"Brandon Jackson"
+    },
+    {
         "type":"membership",
         "weight":0.81047314,
         "source":"Robert Adams",
         "target":"5ede75fe-f670-4a59-b693-da34e7f6eb47"
     },
     {
+        "type":"family_relationship",
+        "weight":0.84586096,
+        "source":"Robert Adams",
+        "target":"Alyssa Mccoy"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.85860074,
+        "source":"Robert Adams",
+        "target":"Michael Baker"
+    },
+    {
         "type":"partnership",
         "weight":0.8313804,
         "source":"Robert Adams",
         "target":"341411"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.88894504,
+        "source":"Robert Adams",
+        "target":"Lauren Garner"
+    },
+    {
+        "type":"membership",
+        "weight":0.9526592,
+        "source":"Robert Adams",
+        "target":"\u00e2\u0080\u009cshark fin\u00e2"
     },
     {
         "type":"ownership",
@@ -28260,6 +29292,12 @@
         "target":"Dennis Little"
     },
     {
+        "type":"membership",
+        "weight":0.84083813,
+        "source":"243964",
+        "target":"691192"
+    },
+    {
         "type":"ownership",
         "weight":0.9520512,
         "source":"243964",
@@ -28306,6 +29344,12 @@
         "weight":0.93979436,
         "source":"\u00e2\u0080\u009cespecially",
         "target":"Jasmine Camacho"
+    },
+    {
+        "type":"ownership",
+        "weight":0.9680052,
+        "source":"e13aca6a-88b5-4be7-a293-4a57854d7b1d",
+        "target":"Melissa Spence"
     },
     {
         "type":"partnership",
@@ -28362,6 +29406,12 @@
         "target":"341411"
     },
     {
+        "type":"membership",
+        "weight":0.8363783,
+        "source":"441",
+        "target":"Sun\u00e2\u0080\u0099s"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8142354,
         "source":"Bethany Wright",
@@ -28369,9 +29419,27 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.90220904,
+        "source":"Bethany Wright",
+        "target":"Willie Hill"
+    },
+    {
+        "type":"membership",
+        "weight":0.8645349,
+        "source":"Bethany Wright",
+        "target":"Costa del Mar S.p.A."
+    },
+    {
+        "type":"family_relationship",
         "weight":0.89495945,
         "source":"Jennifer Meyers",
         "target":"Richard Perkins"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9424561,
+        "source":"Jennifer Meyers",
+        "target":"Willie Hill"
     },
     {
         "type":"family_relationship",
@@ -28528,6 +29596,12 @@
         "weight":0.82994986,
         "source":"3016",
         "target":"Spanish Shrimp  Carriers"
+    },
+    {
+        "type":"membership",
+        "weight":0.8082917,
+        "source":"3016",
+        "target":"Misty Thomas"
     },
     {
         "type":"membership",
@@ -29179,9 +30253,27 @@
     },
     {
         "type":"membership",
+        "weight":0.8604517,
+        "source":"Timothy Lopez",
+        "target":"I6aE01vDFm"
+    },
+    {
+        "type":"membership",
         "weight":0.83509105,
         "source":"Marine Mermaids CJSC Marine biology",
         "target":"I6aE01vDFm"
+    },
+    {
+        "type":"membership",
+        "weight":0.8357594,
+        "source":"David Larsen",
+        "target":"I6aE01vDFm"
+    },
+    {
+        "type":"ownership",
+        "weight":0.81824046,
+        "source":"706129",
+        "target":"Puerta"
     },
     {
         "type":"family_relationship",
@@ -29206,6 +30298,12 @@
         "weight":0.8413841,
         "source":"14",
         "target":"468511"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8719947,
+        "source":"14",
+        "target":"86"
     },
     {
         "type":"membership",
@@ -29442,6 +30540,18 @@
         "target":"Michelle Hancock"
     },
     {
+        "type":"family_relationship",
+        "weight":0.85507125,
+        "source":"Kathy Rodriguez",
+        "target":"Michelle Hancock"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.97832656,
+        "source":"Kathy Rodriguez",
+        "target":"Sherry Richmond"
+    },
+    {
         "type":"ownership",
         "weight":0.8918441,
         "source":"Kathy Rodriguez",
@@ -29490,6 +30600,12 @@
         "target":"380"
     },
     {
+        "type":"membership",
+        "weight":0.8879275,
+        "source":"Oceans",
+        "target":"\u00e2\u0080\u009cconservative\u00e2"
+    },
+    {
         "type":"ownership",
         "weight":0.9025884,
         "source":"7c54563c-577c-462f-8e30-389b510c776a",
@@ -29527,6 +30643,12 @@
     },
     {
         "type":"membership",
+        "weight":0.9392316,
+        "source":"72899187-0989-47fa-9db0-cd1d4c3fc4e3",
+        "target":"Insung"
+    },
+    {
+        "type":"membership",
         "weight":0.8458025,
         "source":"72899187-0989-47fa-9db0-cd1d4c3fc4e3",
         "target":"Mar del Oeste Pic"
@@ -29554,6 +30676,12 @@
         "weight":0.89010996,
         "source":"Dylan Moss",
         "target":"Zachary Blackburn"
+    },
+    {
+        "type":"membership",
+        "weight":0.90772027,
+        "source":"Dylan Moss",
+        "target":"7680453"
     },
     {
         "type":"ownership",
@@ -29608,6 +30736,12 @@
         "weight":0.8242518,
         "source":"ec1b111d-b9eb-4eef-ab00-ff7124cca480",
         "target":"97"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8913435,
+        "source":"ec1b111d-b9eb-4eef-ab00-ff7124cca480",
+        "target":"71755"
     },
     {
         "type":"membership",
@@ -29736,6 +30870,18 @@
         "target":"Image ArtTower"
     },
     {
+        "type":"ownership",
+        "weight":0.82693076,
+        "source":"7328",
+        "target":"OceanicOrigin Foods Co and Son's"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8226127,
+        "source":"7328",
+        "target":"71317"
+    },
+    {
         "type":"membership",
         "weight":0.83833903,
         "source":"7328",
@@ -29758,6 +30904,12 @@
         "weight":0.8573245,
         "source":"61057213",
         "target":"FinestSea Ltd. Corporation Enterprises"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8808112,
+        "source":"61057213",
+        "target":"653"
     },
     {
         "type":"membership",
@@ -29988,6 +31140,12 @@
         "target":"98332"
     },
     {
+        "type":"membership",
+        "weight":0.80815536,
+        "source":"8041aa28-8c50-4083-a528-469c0c6251d9",
+        "target":"Frank Guzman"
+    },
+    {
         "type":"partnership",
         "weight":0.8605585,
         "source":"8041aa28-8c50-4083-a528-469c0c6251d9",
@@ -30028,6 +31186,12 @@
         "weight":0.9121094,
         "source":"8041aa28-8c50-4083-a528-469c0c6251d9",
         "target":"629"
+    },
+    {
+        "type":"membership",
+        "weight":0.9301768,
+        "source":"8041aa28-8c50-4083-a528-469c0c6251d9",
+        "target":"Amanda Contreras"
     },
     {
         "type":"membership",
@@ -30187,6 +31351,12 @@
     },
     {
         "type":"membership",
+        "weight":0.89408875,
+        "source":"2a282617-d174-409c-b0b1-490fdc369335",
+        "target":"64124835"
+    },
+    {
+        "type":"membership",
         "weight":0.85141265,
         "source":"2a282617-d174-409c-b0b1-490fdc369335",
         "target":"3506021"
@@ -30214,6 +31384,12 @@
         "weight":0.9446916,
         "source":"xu y Ltd. Corporation",
         "target":"periods years"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8005033,
+        "source":"xu y Ltd. Corporation",
+        "target":"Andrew Gamble"
     },
     {
         "type":"membership",
@@ -30336,10 +31512,22 @@
         "target":"George Morton"
     },
     {
+        "type":"membership",
+        "weight":0.8464941,
+        "source":"a39483f8-121a-4c18-9b20-9e0d2cba52e9",
+        "target":"Saturday"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8246832,
         "source":"a39483f8-121a-4c18-9b20-9e0d2cba52e9",
         "target":"0"
+    },
+    {
+        "type":"ownership",
+        "weight":0.88733464,
+        "source":"a39483f8-121a-4c18-9b20-9e0d2cba52e9",
+        "target":"Mrs. Jessica Meyer"
     },
     {
         "type":"ownership",
@@ -30420,6 +31608,12 @@
         "target":"3506021"
     },
     {
+        "type":"membership",
+        "weight":0.854402,
+        "source":"Anita Tate",
+        "target":"4447143"
+    },
+    {
         "type":"family_relationship",
         "weight":0.9296665,
         "source":"Anita Tate",
@@ -30475,6 +31669,18 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.87451166,
+        "source":"Audrey Romero",
+        "target":"Melinda Wade"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8566751,
+        "source":"Audrey Romero",
+        "target":"b120bc86-764c-4e2b-9f36-1587f91a20e3"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.9472872,
         "source":"Audrey Romero",
         "target":"Faroe Islands Shrimp Shark"
@@ -30484,6 +31690,12 @@
         "weight":0.9404788,
         "source":"Audrey Romero",
         "target":"979893388"
+    },
+    {
+        "type":"membership",
+        "weight":0.95096976,
+        "source":"13",
+        "target":"36b70b18-465a-442f-bfbe-cedb85d48acc"
     },
     {
         "type":"partnership",
@@ -30648,6 +31860,12 @@
         "target":"19a4297e-2d2b-47c0-9dce-816148a16f4e"
     },
     {
+        "type":"membership",
+        "weight":0.91636956,
+        "source":"Maru",
+        "target":"Lisa Lambert"
+    },
+    {
         "type":"partnership",
         "weight":0.8055281,
         "source":"Danielle Camacho",
@@ -30670,6 +31888,12 @@
         "weight":0.8573944,
         "source":"Danielle Camacho",
         "target":"Sabrina Zamora"
+    },
+    {
+        "type":"membership",
+        "weight":0.88814765,
+        "source":"60693571",
+        "target":"54073418"
     },
     {
         "type":"family_relationship",
@@ -30828,6 +32052,18 @@
         "target":"56"
     },
     {
+        "type":"membership",
+        "weight":0.8307211,
+        "source":"9590898",
+        "target":"95230042"
+    },
+    {
+        "type":"ownership",
+        "weight":0.81204915,
+        "source":"9590898",
+        "target":"3308429"
+    },
+    {
         "type":"ownership",
         "weight":0.8504263,
         "source":"9590898",
@@ -30862,6 +32098,12 @@
         "weight":0.8273782,
         "source":"7234",
         "target":"21240092"
+    },
+    {
+        "type":"ownership",
+        "weight":0.88685733,
+        "source":"7234",
+        "target":"Pesquera"
     },
     {
         "type":"ownership",
@@ -30978,6 +32220,12 @@
         "target":"262157542"
     },
     {
+        "type":"family_relationship",
+        "weight":0.93735045,
+        "source":"Mary Jenkins",
+        "target":"75835980"
+    },
+    {
         "type":"partnership",
         "weight":0.8666986,
         "source":"23774",
@@ -31014,6 +32262,18 @@
         "target":"6406040"
     },
     {
+        "type":"family_relationship",
+        "weight":0.83445495,
+        "source":"Nicole Smith",
+        "target":"Justin Fowler"
+    },
+    {
+        "type":"partnership",
+        "weight":0.82451403,
+        "source":"Nicole Smith",
+        "target":"120"
+    },
+    {
         "type":"partnership",
         "weight":0.83538985,
         "source":"Nicole Smith",
@@ -31024,6 +32284,12 @@
         "weight":0.85598564,
         "source":"Nicole Smith",
         "target":"Marine Foods"
+    },
+    {
+        "type":"partnership",
+        "weight":0.868807,
+        "source":"Nicole Smith",
+        "target":"MCDP"
     },
     {
         "type":"membership",
@@ -31111,6 +32377,12 @@
     },
     {
         "type":"membership",
+        "weight":0.863121,
+        "source":"3782",
+        "target":"Agua Transici\u00c3\u00b3n Ecol\u00c3\u00b3gica"
+    },
+    {
+        "type":"membership",
         "weight":0.8332141,
         "source":"3782",
         "target":"Arunachal Pradesh Sp Marine mist"
@@ -31150,6 +32422,12 @@
         "weight":0.9265778,
         "source":"3782",
         "target":"Sonia Fisheries Pvt"
+    },
+    {
+        "type":"membership",
+        "weight":0.8627109,
+        "source":"3782",
+        "target":"Rama Overseas"
     },
     {
         "type":"membership",
@@ -31206,10 +32484,34 @@
         "target":"672"
     },
     {
+        "type":"partnership",
+        "weight":0.9332256,
+        "source":"58666504",
+        "target":"Jennifer Frederick"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9320338,
+        "source":"70347729",
+        "target":"Jennifer Frederick"
+    },
+    {
         "type":"membership",
         "weight":0.88603276,
         "source":"116070050",
         "target":"West Bengal S.A. de C.V."
+    },
+    {
+        "type":"membership",
+        "weight":0.8504435,
+        "source":"613465161",
+        "target":"b47086b0-e225-436a-83b1-2cf5cda4dbd5"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9157868,
+        "source":"613465161",
+        "target":"krxd"
     },
     {
         "type":"membership",
@@ -31356,6 +32658,12 @@
         "target":"\u00e2\u0080\u009cAs"
     },
     {
+        "type":"ownership",
+        "weight":0.8102333,
+        "source":"67f3755e-7f86-40a1-ae17-998d50a3e772",
+        "target":"631919"
+    },
+    {
         "type":"membership",
         "weight":0.874296,
         "source":"Jessica Owens",
@@ -31374,10 +32682,22 @@
         "target":"Mar del Oeste Pic"
     },
     {
+        "type":"ownership",
+        "weight":0.85967135,
+        "source":"reefer",
+        "target":"Fu Yuan Yu Leng 999"
+    },
+    {
         "type":"partnership",
         "weight":0.89055127,
         "source":"8732",
         "target":"44396"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.95235795,
+        "source":"8732",
+        "target":"Mar del Paraso SRL Shipping"
     },
     {
         "type":"family_relationship",
@@ -31386,10 +32706,22 @@
         "target":"Mar del Paraso SRL Shipping"
     },
     {
+        "type":"family_relationship",
+        "weight":0.8785685,
+        "source":"6038",
+        "target":"f7a4114d-d1ca-44df-a7e0-c72e440671ba"
+    },
+    {
         "type":"membership",
         "weight":0.9430339,
         "source":"6038",
         "target":"Amanda Mckenzie"
+    },
+    {
+        "type":"membership",
+        "weight":0.8457556,
+        "source":"6274",
+        "target":"518"
     },
     {
         "type":"partnership",
@@ -31468,6 +32800,12 @@
         "weight":0.926282,
         "source":"615043",
         "target":"Robert Lewis"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9208167,
+        "source":"615043",
+        "target":"Margaret Nichols"
     },
     {
         "type":"family_relationship",
@@ -31572,6 +32910,12 @@
         "target":"6406040"
     },
     {
+        "type":"membership",
+        "weight":0.8713665,
+        "source":"1012",
+        "target":"99661834"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8300227,
         "source":"Katelyn Gibson",
@@ -31582,6 +32926,12 @@
         "weight":0.89824206,
         "source":"Katelyn Gibson",
         "target":"Zachary Jordan"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9269521,
+        "source":"Katelyn Gibson",
+        "target":"holes\u00e2"
     },
     {
         "type":"ownership",
@@ -31693,9 +33043,27 @@
     },
     {
         "type":"partnership",
+        "weight":0.8627963,
+        "source":"1f899410-3447-48e7-bcb3-cbff10619e86",
+        "target":"James Hernandez"
+    },
+    {
+        "type":"partnership",
         "weight":0.8639336,
         "source":"39048624",
         "target":"Morgan Black"
+    },
+    {
+        "type":"membership",
+        "weight":0.8698965,
+        "source":"39048624",
+        "target":"river"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8438905,
+        "source":"39048624",
+        "target":"945632766"
     },
     {
         "type":"membership",
@@ -31744,6 +33112,18 @@
         "weight":0.9071046,
         "source":"Darren Wilson",
         "target":"John Barnes DDS"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.89440227,
+        "source":"Darren Wilson",
+        "target":"Amanda Gibson"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8290013,
+        "source":"Darren Wilson",
+        "target":"2038650116"
     },
     {
         "type":"family_relationship",
@@ -31842,6 +33222,18 @@
         "target":"304"
     },
     {
+        "type":"ownership",
+        "weight":0.82736945,
+        "source":"Dry Creek Marine sanctuary",
+        "target":"Wesley Woods"
+    },
+    {
+        "type":"membership",
+        "weight":0.89233744,
+        "source":"Dry Creek Marine sanctuary",
+        "target":"2751"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8094679,
         "source":"Philip Black",
@@ -31854,10 +33246,22 @@
         "target":"341411"
     },
     {
+        "type":"ownership",
+        "weight":0.9361835,
+        "source":"7548555",
+        "target":"ARA Contraalmirante Cordero"
+    },
+    {
         "type":"membership",
         "weight":0.8767191,
         "source":"7548555",
         "target":"Ocean Patrol"
+    },
+    {
+        "type":"membership",
+        "weight":0.936761,
+        "source":"7548555",
+        "target":"ARA Bouchard"
     },
     {
         "type":"membership",
@@ -32100,10 +33504,34 @@
         "target":"\u00e2\u0080\u009cAccept All\u00e2"
     },
     {
+        "type":"membership",
+        "weight":0.91843975,
+        "source":"Charles OJSC Marine conservation",
+        "target":"Barco de Plata Ltd Logistics"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8765075,
         "source":"Charles OJSC Marine conservation",
         "target":"Ocean Fisheries Llc"
+    },
+    {
+        "type":"ownership",
+        "weight":0.84788114,
+        "source":"Caracola Azul Limited Liability Company",
+        "target":"shrimper"
+    },
+    {
+        "type":"membership",
+        "weight":0.9532236,
+        "source":"Caracola Azul Limited Liability Company",
+        "target":"coastguard"
+    },
+    {
+        "type":"membership",
+        "weight":0.88066703,
+        "source":"d6968538-6f18-4a1c-a4e2-59de3c0e25c2",
+        "target":"Brandy Williams"
     },
     {
         "type":"partnership",
@@ -32118,10 +33546,28 @@
         "target":"coastguard"
     },
     {
+        "type":"family_relationship",
+        "weight":0.86057574,
+        "source":"James Sampson",
+        "target":"Debra Hebert"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8724668,
+        "source":"James Sampson",
+        "target":"8651344"
+    },
+    {
         "type":"partnership",
         "weight":0.8932225,
         "source":"135024",
         "target":"38844"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9203734,
+        "source":"135024",
+        "target":"John Frederick"
     },
     {
         "type":"partnership",
@@ -32143,9 +33589,27 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.95518667,
+        "source":"Allison Rodgers",
+        "target":"John Frederick"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8857389,
         "source":"OceanFront Foods Co Beach",
         "target":"19186817"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.91518706,
+        "source":"OceanFront Foods Co Beach",
+        "target":"Metro Marinen"
+    },
+    {
+        "type":"membership",
+        "weight":0.8243901,
+        "source":"OceanFront Foods Co Beach",
+        "target":"2748013"
     },
     {
         "type":"ownership",
@@ -32170,6 +33634,12 @@
         "weight":0.9336548,
         "source":"81661977",
         "target":"23636990"
+    },
+    {
+        "type":"membership",
+        "weight":0.9331029,
+        "source":"81661977",
+        "target":"996"
     },
     {
         "type":"membership",
@@ -32250,6 +33720,12 @@
         "target":"7908385"
     },
     {
+        "type":"ownership",
+        "weight":0.8722045,
+        "source":"e5e2e269-ccc5-4e16-88a8-e909c1fa32db",
+        "target":"458785"
+    },
+    {
         "type":"membership",
         "weight":0.8155087,
         "source":"e5e2e269-ccc5-4e16-88a8-e909c1fa32db",
@@ -32304,6 +33780,12 @@
         "target":"Dana Goodwin"
     },
     {
+        "type":"ownership",
+        "weight":0.8450531,
+        "source":"4258240",
+        "target":"73921"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8552749,
         "source":"Julie Parks",
@@ -32329,9 +33811,33 @@
     },
     {
         "type":"ownership",
+        "weight":0.86928415,
+        "source":"891",
+        "target":"USCGC"
+    },
+    {
+        "type":"ownership",
+        "weight":0.86291134,
+        "source":"891",
+        "target":"Kristi Weeks"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8435268,
+        "source":"891",
+        "target":"DDG"
+    },
+    {
+        "type":"ownership",
         "weight":0.8267006,
         "source":"891",
         "target":"Gulf"
+    },
+    {
+        "type":"ownership",
+        "weight":0.80243474,
+        "source":"891",
+        "target":"a7948099-0cab-4b80-8707-2ada931ac288"
     },
     {
         "type":"ownership",
@@ -32458,6 +33964,12 @@
         "weight":0.819525,
         "source":"Tara Hanson",
         "target":"77b46bc7-7e31-41a0-973c-e633011d21b0"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8946983,
+        "source":"Tara Hanson",
+        "target":"Wesley Vasquez"
     },
     {
         "type":"ownership",
@@ -32665,6 +34177,12 @@
     },
     {
         "type":"ownership",
+        "weight":0.8817294,
+        "source":"97836b65-db6a-43bf-9467-cf57d84645ff",
+        "target":"Douglas Gillespie"
+    },
+    {
+        "type":"ownership",
         "weight":0.8250622,
         "source":"97836b65-db6a-43bf-9467-cf57d84645ff",
         "target":"967"
@@ -32719,6 +34237,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.82031506,
+        "source":"Anthony Le",
+        "target":"Tonya Key"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8761302,
         "source":"Anthony Le",
         "target":"Anna Smith"
@@ -32737,9 +34261,21 @@
     },
     {
         "type":"membership",
+        "weight":0.8865485,
+        "source":"868",
+        "target":"298"
+    },
+    {
+        "type":"membership",
         "weight":0.84169775,
         "source":"99985383",
         "target":"298"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.88731176,
+        "source":"Michael Wagner",
+        "target":"Susan Hodges"
     },
     {
         "type":"family_relationship",
@@ -32797,6 +34333,12 @@
     },
     {
         "type":"membership",
+        "weight":0.8899519,
+        "source":"Deckhands",
+        "target":"it\u00e2\u0080\u0099s"
+    },
+    {
+        "type":"membership",
         "weight":0.8948955,
         "source":"Bruce Bates",
         "target":"it\u00e2\u0080\u0099s"
@@ -32811,6 +34353,12 @@
         "type":"partnership",
         "weight":0.9070753,
         "source":"Teresa Jackson",
+        "target":"\u00e2\u0080\u009cWe fins"
+    },
+    {
+        "type":"membership",
+        "weight":0.9441606,
+        "source":"ecf18ac9-a773-43a0-98c8-cdd264565b2f",
         "target":"\u00e2\u0080\u009cWe fins"
     },
     {
@@ -33127,9 +34675,27 @@
     },
     {
         "type":"partnership",
+        "weight":0.89405006,
+        "source":"20",
+        "target":"74211169"
+    },
+    {
+        "type":"partnership",
+        "weight":0.83820474,
+        "source":"20",
+        "target":"7810241"
+    },
+    {
+        "type":"partnership",
         "weight":0.80954564,
         "source":"20",
         "target":"34487"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8658049,
+        "source":"20",
+        "target":"83951569"
     },
     {
         "type":"membership",
@@ -33184,6 +34750,12 @@
         "weight":0.9032555,
         "source":"38",
         "target":"Jessica Figueroa DDS"
+    },
+    {
+        "type":"ownership",
+        "weight":0.87721705,
+        "source":"Heidi Kline",
+        "target":"863749817"
     },
     {
         "type":"ownership",
@@ -33750,10 +35322,28 @@
         "target":"5469"
     },
     {
+        "type":"partnership",
+        "weight":0.9281312,
+        "source":"4679",
+        "target":"Cape Verde Islands Oyj"
+    },
+    {
         "type":"ownership",
         "weight":0.88011515,
         "source":"Andre Phillips",
         "target":"USCG\u00e2\u0080\u0099s"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8451321,
+        "source":"Andre Phillips",
+        "target":"CutterOliverHenry"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8338818,
+        "source":"Andre Phillips",
+        "target":"Scott Solis"
     },
     {
         "type":"ownership",
@@ -33937,6 +35527,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.89863724,
+        "source":"HMAS",
+        "target":"Tyler Palmer"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8063871,
         "source":"dec44f58-94b0-4070-bfb3-1e13ef308ec3",
         "target":"USS"
@@ -33985,9 +35581,21 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.8455491,
+        "source":"2114",
+        "target":"Chad Nichols"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8693845,
         "source":"34020206",
         "target":"76568"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8815115,
+        "source":"34020206",
+        "target":"Chad Nichols"
     },
     {
         "type":"family_relationship",
@@ -34042,6 +35650,18 @@
         "weight":0.92593634,
         "source":"Sampath",
         "target":"341411"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8435918,
+        "source":"Sampath",
+        "target":"683962"
+    },
+    {
+        "type":"partnership",
+        "weight":0.81499946,
+        "source":"Anna Johnson",
+        "target":"95c715ba-891e-4472-8e2a-4e746dcc266a"
     },
     {
         "type":"family_relationship",
@@ -34117,9 +35737,21 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.83670425,
+        "source":"9357541",
+        "target":"William Atkinson"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8004713,
         "source":"9357541",
         "target":"Lisa Payne"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8488231,
+        "source":"9357541",
+        "target":"87278"
     },
     {
         "type":"family_relationship",
@@ -34135,9 +35767,27 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.85165757,
+        "source":"Christine Chaney",
+        "target":"William Atkinson"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8108576,
         "source":"Christine Chaney",
         "target":"Lisa Payne"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.86726403,
+        "source":"Christine Chaney",
+        "target":"87278"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8575942,
+        "source":"Christine Chaney",
+        "target":"Kimberly Olson"
     },
     {
         "type":"ownership",
@@ -34150,6 +35800,12 @@
         "weight":0.8409991,
         "source":"8226730",
         "target":"Portuguese Octopus S.p.A. Cargo"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8783343,
+        "source":"8226730",
+        "target":"Mr. Jose King"
     },
     {
         "type":"ownership",
@@ -34176,6 +35832,12 @@
         "target":"Portuguese Octopus S.p.A. Cargo"
     },
     {
+        "type":"partnership",
+        "weight":0.8649816,
+        "source":"75",
+        "target":"Mr. Jose King"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8719261,
         "source":"75",
@@ -34183,9 +35845,21 @@
     },
     {
         "type":"membership",
+        "weight":0.869065,
+        "source":"911243414",
+        "target":"Kimberly Olson"
+    },
+    {
+        "type":"membership",
         "weight":0.8125941,
         "source":"911243414",
         "target":"903311212"
+    },
+    {
+        "type":"ownership",
+        "weight":0.85543203,
+        "source":"cc6cf3e0-5794-4497-a31d-79b4db1b55a9",
+        "target":"9280"
     },
     {
         "type":"membership",
@@ -34474,6 +36148,12 @@
         "weight":0.8051035,
         "source":"55301",
         "target":"Elaine Duncan"
+    },
+    {
+        "type":"membership",
+        "weight":0.8578733,
+        "source":"55301",
+        "target":"Game Thief\u00e2"
     },
     {
         "type":"membership",
@@ -34794,6 +36474,24 @@
         "target":"Carrie Elliott"
     },
     {
+        "type":"partnership",
+        "weight":0.8598931,
+        "source":"82462633",
+        "target":"43797101"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8842034,
+        "source":"82462633",
+        "target":"535955126"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8823546,
+        "source":"82462633",
+        "target":"8211361"
+    },
+    {
         "type":"family_relationship",
         "weight":0.87687325,
         "source":"82462633",
@@ -34816,6 +36514,12 @@
         "weight":0.8396245,
         "source":"Carrie Elliott",
         "target":"57"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8743029,
+        "source":"Breanna Ward",
+        "target":"Paula King"
     },
     {
         "type":"partnership",
@@ -35005,9 +36709,21 @@
     },
     {
         "type":"ownership",
+        "weight":0.8599113,
+        "source":"Luis Douglas",
+        "target":"Coastal Crusaders Kga Worldwide"
+    },
+    {
+        "type":"ownership",
         "weight":0.8754372,
         "source":"Seashell Sanctum SRL Transport",
         "target":"Coastal Crusaders Kga Worldwide"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9268442,
+        "source":"Fernando Steele",
+        "target":"David Tucker"
     },
     {
         "type":"ownership",
@@ -35056,6 +36772,12 @@
         "weight":0.8911574,
         "source":"e39609a3-b437-41c2-b114-e21dc69a9bb1",
         "target":"Amber Sharp"
+    },
+    {
+        "type":"membership",
+        "weight":0.88911086,
+        "source":"e39609a3-b437-41c2-b114-e21dc69a9bb1",
+        "target":"James Anderson"
     },
     {
         "type":"membership",
@@ -35113,6 +36835,18 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.8445206,
+        "source":"Teresa Gardner",
+        "target":"Miguel Harrison"
+    },
+    {
+        "type":"ownership",
+        "weight":0.83028215,
+        "source":"Teresa Gardner",
+        "target":"14525ad3-213a-406d-8e3e-64213f0be171"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8695127,
         "source":"Trevor Brown",
         "target":"Kimberly Roberts"
@@ -35128,6 +36862,18 @@
         "weight":0.8086724,
         "source":"Ricky Holland",
         "target":"\u00e2\u0080\u009cit"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.84986037,
+        "source":"Ricky Holland",
+        "target":"Nichole Kline"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.812221,
+        "source":"Ricky Holland",
+        "target":"Ryan Rich"
     },
     {
         "type":"family_relationship",
@@ -35158,6 +36904,24 @@
         "weight":0.9083847,
         "source":"650749",
         "target":"\u00e2\u0080\u009cit"
+    },
+    {
+        "type":"membership",
+        "weight":0.931271,
+        "source":"650749",
+        "target":"Nichole Kline"
+    },
+    {
+        "type":"membership",
+        "weight":0.9170318,
+        "source":"650749",
+        "target":"Ryan Rich"
+    },
+    {
+        "type":"partnership",
+        "weight":0.92314667,
+        "source":"650749",
+        "target":"Anthony Gomez"
     },
     {
         "type":"family_relationship",
@@ -35220,6 +36984,12 @@
         "target":"d5b94ebc-e03a-438e-872b-a15db349a748"
     },
     {
+        "type":"membership",
+        "weight":0.9457236,
+        "source":"c66f5cd5-3891-43ce-a3f8-0147b3d643b1",
+        "target":"032522db-8105-4c26-8142-ae9d5806f7c5"
+    },
+    {
         "type":"family_relationship",
         "weight":0.9027134,
         "source":"Mrs. Melinda Richardson",
@@ -35230,6 +37000,12 @@
         "weight":0.8127002,
         "source":"Frederick Harris",
         "target":"30141220"
+    },
+    {
+        "type":"membership",
+        "weight":0.8120595,
+        "source":"Frederick Harris",
+        "target":"90192265"
     },
     {
         "type":"membership",
@@ -35290,6 +37066,12 @@
         "weight":0.91094786,
         "source":"e4e5b1ca-e210-4d3f-8cea-fa5c2309340f",
         "target":"ce06b4c4-dd19-485d-ad52-f7cd953db1c2"
+    },
+    {
+        "type":"membership",
+        "weight":0.8849907,
+        "source":"e4e5b1ca-e210-4d3f-8cea-fa5c2309340f",
+        "target":"d2589980-b0c7-4c36-8ddf-8afe554853ea"
     },
     {
         "type":"membership",
@@ -35386,6 +37168,12 @@
         "weight":0.91847557,
         "source":"FV",
         "target":"FV Thunder"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8985112,
+        "source":"FV",
+        "target":"Aquaculture\u00e2"
     },
     {
         "type":"membership",
@@ -35490,6 +37278,18 @@
         "target":"Martin Bryant"
     },
     {
+        "type":"membership",
+        "weight":0.81925595,
+        "source":"\u00e2\u0080\u009cdiscrimination\u00e2",
+        "target":"Jessica Gibson"
+    },
+    {
+        "type":"membership",
+        "weight":0.84995043,
+        "source":"da7677f8-d1f0-4e35-afe9-4240613e866b",
+        "target":"48115"
+    },
+    {
         "type":"partnership",
         "weight":0.8669079,
         "source":"da7677f8-d1f0-4e35-afe9-4240613e866b",
@@ -35502,6 +37302,12 @@
         "target":"Sarah Williams"
     },
     {
+        "type":"membership",
+        "weight":0.80661136,
+        "source":"Rhonda Sullivan",
+        "target":"48115"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8188704,
         "source":"Adam Gutierrez",
@@ -35512,6 +37318,18 @@
         "weight":0.86341554,
         "source":"Gregory Carter",
         "target":"SeaSpray Wave SRL Solutions"
+    },
+    {
+        "type":"membership",
+        "weight":0.81061184,
+        "source":"555",
+        "target":"yearbook2034"
+    },
+    {
+        "type":"membership",
+        "weight":0.8641903,
+        "source":"555",
+        "target":"yearbook2036"
     },
     {
         "type":"partnership",
@@ -36835,6 +38653,42 @@
     },
     {
         "type":"membership",
+        "weight":0.82312804,
+        "source":"683113035",
+        "target":"yearbook2034"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8530402,
+        "source":"683113035",
+        "target":"20370602035941"
+    },
+    {
+        "type":"membership",
+        "weight":0.8577307,
+        "source":"683113035",
+        "target":"yearbook2036"
+    },
+    {
+        "type":"membership",
+        "weight":0.85731447,
+        "source":"th",
+        "target":"yearbook2034"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8711981,
+        "source":"th",
+        "target":"20370602035941"
+    },
+    {
+        "type":"membership",
+        "weight":0.8875984,
+        "source":"th",
+        "target":"yearbook2036"
+    },
+    {
+        "type":"membership",
         "weight":0.9229415,
         "source":"Itaqua\u00c3",
         "target":"Bruce Spears"
@@ -37092,6 +38946,12 @@
         "target":"png xi  Line"
     },
     {
+        "type":"ownership",
+        "weight":0.8322153,
+        "source":"47698",
+        "target":"Marie Lee"
+    },
+    {
         "type":"partnership",
         "weight":0.89934057,
         "source":"Kristi Ryan",
@@ -37182,6 +39042,12 @@
         "target":"979893388"
     },
     {
+        "type":"ownership",
+        "weight":0.8070336,
+        "source":"10880329",
+        "target":"Par\u00c3\u00a1\u00e2\u0080\u0099s"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8105477,
         "source":"10880329",
@@ -37200,10 +39066,28 @@
         "target":"SeaSpray Wave SRL Solutions"
     },
     {
+        "type":"membership",
+        "weight":0.84868795,
+        "source":"e941d006-6590-4143-9d0d-12926b0b6f5c",
+        "target":"Tyler Blanchard"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9146773,
+        "source":"e941d006-6590-4143-9d0d-12926b0b6f5c",
+        "target":"\u00e2\u0080\u009cElqui\u00e2"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8315894,
         "source":"Shawn Cook",
         "target":"ce2247ab-4922-420f-8d42-504c4ddda305"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.87267005,
+        "source":"Shawn Cook",
+        "target":"Susan Montoya"
     },
     {
         "type":"membership",
@@ -37380,6 +39264,12 @@
         "target":"f6cca381-c55e-44cc-b685-6c4139459b96"
     },
     {
+        "type":"membership",
+        "weight":0.8978672,
+        "source":"\u00e2\u0080\u009ccatch",
+        "target":"\u00e2\u0080\u009ctotal"
+    },
+    {
         "type":"ownership",
         "weight":0.8577958,
         "source":"Manipur Market AG Consultants",
@@ -37387,9 +39277,21 @@
     },
     {
         "type":"membership",
+        "weight":0.81219923,
+        "source":"Manipur Market AG Consultants",
+        "target":"Gulf of Guinea  Corporation"
+    },
+    {
+        "type":"membership",
         "weight":0.8015595,
         "source":"Manipur Market AG Consultants",
         "target":"Sea Harvest"
+    },
+    {
+        "type":"membership",
+        "weight":0.88297457,
+        "source":"Manipur Market AG Consultants",
+        "target":"Rafael\u00e2\u0080\u0099s"
     },
     {
         "type":"ownership",
@@ -37729,6 +39631,12 @@
     },
     {
         "type":"membership",
+        "weight":0.8106587,
+        "source":"Olivia Bradshaw",
+        "target":"\u00e2\u0080\u009cProPublica\u00e2"
+    },
+    {
+        "type":"membership",
         "weight":0.96227366,
         "source":"461541",
         "target":"Alan Wells"
@@ -37744,6 +39652,12 @@
         "weight":0.80543834,
         "source":"\u00e2\u0080\u009cyesterday\u00e2",
         "target":"\u00e2\u0080\u009clast week"
+    },
+    {
+        "type":"ownership",
+        "weight":0.81454146,
+        "source":"\u00e2\u0080\u009cyesterday\u00e2",
+        "target":"\u00e2\u0080\u009cPortland\u00e2"
     },
     {
         "type":"ownership",
@@ -38077,6 +39991,12 @@
     },
     {
         "type":"ownership",
+        "weight":0.83009374,
+        "source":"779",
+        "target":"1559"
+    },
+    {
+        "type":"ownership",
         "weight":0.85935223,
         "source":"2673",
         "target":"5383294"
@@ -38092,6 +40012,12 @@
         "weight":0.8099503,
         "source":"762165",
         "target":"903311212"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8687192,
+        "source":"428",
+        "target":"Petroleum Vapor Intrusion"
     },
     {
         "type":"partnership",
@@ -38442,16 +40368,46 @@
         "target":"42"
     },
     {
+        "type":"partnership",
+        "weight":0.9352309,
+        "source":"9636",
+        "target":"85"
+    },
+    {
         "type":"membership",
         "weight":0.9095962,
         "source":"449",
         "target":"80191"
     },
     {
+        "type":"membership",
+        "weight":0.9320166,
+        "source":"449",
+        "target":"\u00e2\u0080\u009ccarding\u00e2"
+    },
+    {
         "type":"ownership",
         "weight":0.8405887,
         "source":"Michelle",
         "target":"months"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.88462454,
+        "source":"Michelle",
+        "target":"Tyler Flores"
+    },
+    {
+        "type":"ownership",
+        "weight":0.85418653,
+        "source":"Michelle",
+        "target":"2466"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8674547,
+        "source":"72212757",
+        "target":"2466"
     },
     {
         "type":"ownership",
@@ -38496,6 +40452,12 @@
         "target":"Moo"
     },
     {
+        "type":"ownership",
+        "weight":0.87705094,
+        "source":"Darren Torres",
+        "target":"\u00e2\u0080\u009cMoreover"
+    },
+    {
         "type":"family_relationship",
         "weight":0.9405485,
         "source":"Daniel Roberts",
@@ -38506,6 +40468,18 @@
         "weight":0.9032805,
         "source":"85b8a8cf-7f07-4bab-8b44-1d79940aab8d",
         "target":"Daniel Roberts"
+    },
+    {
+        "type":"membership",
+        "weight":0.8100088,
+        "source":"85b8a8cf-7f07-4bab-8b44-1d79940aab8d",
+        "target":"933754160"
+    },
+    {
+        "type":"partnership",
+        "weight":0.92244655,
+        "source":"41713",
+        "target":"John Murray"
     },
     {
         "type":"membership",
@@ -38520,10 +40494,28 @@
         "target":"979893388"
     },
     {
+        "type":"membership",
+        "weight":0.8010848,
+        "source":"1341798",
+        "target":"23299"
+    },
+    {
         "type":"partnership",
         "weight":0.82874703,
         "source":"614",
         "target":"802775"
+    },
+    {
+        "type":"partnership",
+        "weight":0.83374244,
+        "source":"614",
+        "target":"5688339"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8535584,
+        "source":"614",
+        "target":"f1e84016-0f09-4907-a777-a6bb02b5f419"
     },
     {
         "type":"partnership",
@@ -38665,6 +40657,12 @@
     },
     {
         "type":"membership",
+        "weight":0.8859986,
+        "source":"3857345",
+        "target":"Ms. Brittany Murray"
+    },
+    {
+        "type":"membership",
         "weight":0.8129556,
         "source":"\u00c2\u00a3800",
         "target":"341411"
@@ -38719,6 +40717,12 @@
     },
     {
         "type":"partnership",
+        "weight":0.94145936,
+        "source":"203",
+        "target":"Stacey Ortiz"
+    },
+    {
+        "type":"partnership",
         "weight":0.93756044,
         "source":"203",
         "target":"341411"
@@ -38728,6 +40732,12 @@
         "weight":0.8830538,
         "source":"9838",
         "target":"366"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8835175,
+        "source":"9838",
+        "target":"848165"
     },
     {
         "type":"family_relationship",
@@ -38760,10 +40770,28 @@
         "target":"762165"
     },
     {
+        "type":"membership",
+        "weight":0.8007344,
+        "source":"Boston",
+        "target":"381051499"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8314011,
+        "source":"Boston",
+        "target":"Karen Burns"
+    },
+    {
         "type":"partnership",
         "weight":0.9168573,
         "source":"Boston",
         "target":"Rachel Campbell"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8755982,
+        "source":"Boston",
+        "target":"Pinduoduo\u00e2\u0080\u0099s"
     },
     {
         "type":"membership",
@@ -38928,6 +40956,12 @@
         "target":"7950"
     },
     {
+        "type":"ownership",
+        "weight":0.880913,
+        "source":"634ac4e7-12af-494f-95f5-cd853363525f",
+        "target":"111795162"
+    },
+    {
         "type":"partnership",
         "weight":0.8067684,
         "source":"HMS Montrose",
@@ -39042,10 +41076,22 @@
         "target":"Fresh On Time Seafood"
     },
     {
+        "type":"membership",
+        "weight":0.81243277,
+        "source":"327277616",
+        "target":"637608"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8288813,
         "source":"327277616",
         "target":"979893388"
+    },
+    {
+        "type":"membership",
+        "weight":0.8433166,
+        "source":"Benjamin Barton",
+        "target":"637608"
     },
     {
         "type":"ownership",
@@ -39121,9 +41167,21 @@
     },
     {
         "type":"ownership",
+        "weight":0.8443076,
+        "source":"f85f009e-0fa0-403a-845e-64198883bf34",
+        "target":"4562fe84-0188-47fd-8e27-67380da0079c"
+    },
+    {
+        "type":"ownership",
         "weight":0.8908116,
         "source":"Stephanie Brown",
         "target":"33118036"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8685113,
+        "source":"Stephanie Brown",
+        "target":"88813246"
     },
     {
         "type":"ownership",
@@ -39138,6 +41196,12 @@
         "target":"2673"
     },
     {
+        "type":"family_relationship",
+        "weight":0.91160053,
+        "source":"9238420",
+        "target":"5383294"
+    },
+    {
         "type":"membership",
         "weight":0.8041918,
         "source":"70109",
@@ -39148,6 +41212,12 @@
         "weight":0.83816695,
         "source":"70109",
         "target":"36351742-aff4-4df7-a495-1f1f2c94127a"
+    },
+    {
+        "type":"membership",
+        "weight":0.9708719,
+        "source":"underwater",
+        "target":"operated vehicle"
     },
     {
         "type":"family_relationship",
@@ -39204,10 +41274,22 @@
         "target":"77"
     },
     {
+        "type":"family_relationship",
+        "weight":0.80482066,
+        "source":"Debbie Kelley",
+        "target":"Eric Hanson"
+    },
+    {
         "type":"membership",
         "weight":0.8489863,
         "source":"77",
         "target":"Eric Hanson"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.82131624,
+        "source":"Joshua Haynes",
+        "target":"David Santiago"
     },
     {
         "type":"membership",
@@ -39228,10 +41310,22 @@
         "target":"94361818"
     },
     {
+        "type":"membership",
+        "weight":0.84885323,
+        "source":"682313",
+        "target":"15"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8850235,
         "source":"300",
         "target":"122245"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8597151,
+        "source":"Krystal Foster",
+        "target":"Roger Smith"
     },
     {
         "type":"ownership",
@@ -39247,9 +41341,27 @@
     },
     {
         "type":"membership",
+        "weight":0.80699253,
+        "source":"37992687",
+        "target":"nationalfisherman"
+    },
+    {
+        "type":"membership",
         "weight":0.8249434,
         "source":"303934",
         "target":"802113"
+    },
+    {
+        "type":"membership",
+        "weight":0.8895711,
+        "source":"303934",
+        "target":"Heather Porter"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.81842667,
+        "source":"303934",
+        "target":"df76b4cf-1019-4768-93cd-27122ef3bacc"
     },
     {
         "type":"partnership",
@@ -39300,6 +41412,12 @@
         "target":"42990314"
     },
     {
+        "type":"partnership",
+        "weight":0.91295236,
+        "source":"Blake Smith",
+        "target":"2038650116"
+    },
+    {
         "type":"family_relationship",
         "weight":0.82644343,
         "source":"Blake Smith",
@@ -39316,6 +41434,12 @@
         "weight":0.8698547,
         "source":"1338687",
         "target":"507684"
+    },
+    {
+        "type":"membership",
+        "weight":0.88673615,
+        "source":"1338687",
+        "target":"ams.usda"
     },
     {
         "type":"membership",
@@ -39367,6 +41491,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.87092006,
+        "source":"Matthew Mack",
+        "target":"David Wilson"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.84072787,
         "source":"Matthew Mack",
         "target":"f205ff1a-8798-48b7-b535-ad87b9756220"
@@ -39396,16 +41526,46 @@
         "target":"Ocean Fisheries Llc"
     },
     {
+        "type":"family_relationship",
+        "weight":0.9462408,
+        "source":"Robert Goodman",
+        "target":"Daniel Wood"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8740182,
+        "source":"Mary Durham",
+        "target":"Brenda Cox"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.901766,
+        "source":"Mary Durham",
+        "target":"Samantha Manning"
+    },
+    {
         "type":"membership",
         "weight":0.84488374,
         "source":"Mary Durham",
         "target":"SeaSpray Wave SRL Solutions"
     },
     {
+        "type":"family_relationship",
+        "weight":0.9279914,
+        "source":"Anna Kelly",
+        "target":"Clifford Sherman"
+    },
+    {
         "type":"ownership",
         "weight":0.8412085,
         "source":"59600",
         "target":"733"
+    },
+    {
+        "type":"ownership",
+        "weight":0.9260202,
+        "source":"59600",
+        "target":"1576352"
     },
     {
         "type":"membership",
@@ -39445,6 +41605,12 @@
     },
     {
         "type":"membership",
+        "weight":0.853483,
+        "source":"34285153",
+        "target":"Brittany Ryan"
+    },
+    {
+        "type":"membership",
         "weight":0.8544097,
         "source":"Talley\u00e2\u0080\u0099s",
         "target":"Dana Knapp"
@@ -39454,6 +41620,12 @@
         "weight":0.820416,
         "source":"Talley\u00e2\u0080\u0099s",
         "target":"Ocean Fisheries Llc"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8565168,
+        "source":"95743666",
+        "target":"86117"
     },
     {
         "type":"ownership",
@@ -39481,15 +41653,39 @@
     },
     {
         "type":"membership",
+        "weight":0.9389265,
+        "source":"Diao yu bi sai Tidal BV Export",
+        "target":"Dana Knapp"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8675428,
+        "source":"Diao yu bi sai Tidal BV Export",
+        "target":"Andrew Gamble"
+    },
+    {
+        "type":"membership",
         "weight":0.8992519,
         "source":"74505",
         "target":"Joshua Roberts"
+    },
+    {
+        "type":"membership",
+        "weight":0.89503145,
+        "source":"74505",
+        "target":"Denise Moore"
     },
     {
         "type":"family_relationship",
         "weight":0.9070216,
         "source":"Joshua Roberts",
         "target":"Denise Moore"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.872007,
+        "source":"Christina Abbott",
+        "target":"Lisa Castaneda"
     },
     {
         "type":"family_relationship",
@@ -39529,6 +41725,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.80944085,
+        "source":"Brittany Kane",
+        "target":"bd16ff21-2da0-4ad7-8aec-d04a28b61277"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8153456,
         "source":"Mars\u00e2",
         "target":"bd16ff21-2da0-4ad7-8aec-d04a28b61277"
@@ -39541,9 +41743,21 @@
     },
     {
         "type":"membership",
+        "weight":0.8868583,
+        "source":"whales",
+        "target":"Michelle Campbell"
+    },
+    {
+        "type":"membership",
         "weight":0.8847173,
         "source":"whales",
         "target":"ocean\u00e2\u0080\u0099s"
+    },
+    {
+        "type":"membership",
+        "weight":0.8722055,
+        "source":"whales",
+        "target":"Image ArtTower"
     },
     {
         "type":"family_relationship",
@@ -39558,6 +41772,12 @@
         "target":"f21800ca-b3c9-404b-8438-3d75ea84c409"
     },
     {
+        "type":"family_relationship",
+        "weight":0.8703267,
+        "source":"Zachary Mclean",
+        "target":"Anthony Mendez"
+    },
+    {
         "type":"partnership",
         "weight":0.9451036,
         "source":"806",
@@ -39568,6 +41788,12 @@
         "weight":0.806834,
         "source":"806",
         "target":"png xi  Line"
+    },
+    {
+        "type":"ownership",
+        "weight":0.93455464,
+        "source":"Hubble",
+        "target":"event"
     },
     {
         "type":"family_relationship",
@@ -39607,6 +41833,12 @@
     },
     {
         "type":"partnership",
+        "weight":0.8350633,
+        "source":"Spaceflight",
+        "target":"e95a9547-3611-4e86-adbe-9aa55dbff21f"
+    },
+    {
+        "type":"partnership",
         "weight":0.8856234,
         "source":"93",
         "target":"e95a9547-3611-4e86-adbe-9aa55dbff21f"
@@ -39625,6 +41857,12 @@
     },
     {
         "type":"ownership",
+        "weight":0.8404831,
+        "source":"HawkEye",
+        "target":"7575"
+    },
+    {
+        "type":"ownership",
         "weight":0.8413117,
         "source":"Jordan Mcbride",
         "target":"7575"
@@ -39640,6 +41878,18 @@
         "weight":0.86046785,
         "source":"416dab02-bf67-48af-a99b-c691339dc5e0",
         "target":"25a765f4-b6d0-4588-9a7a-0798de847cfd"
+    },
+    {
+        "type":"ownership",
+        "weight":0.83849955,
+        "source":"416dab02-bf67-48af-a99b-c691339dc5e0",
+        "target":"908724"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8263,
+        "source":"416dab02-bf67-48af-a99b-c691339dc5e0",
+        "target":"0a715a76-de97-4cc3-80a3-4dcbfa740079"
     },
     {
         "type":"ownership",
@@ -39739,6 +41989,12 @@
     },
     {
         "type":"ownership",
+        "weight":0.8787095,
+        "source":"8967466",
+        "target":"a8330af0-375f-4fcb-9171-9628b26b1808"
+    },
+    {
+        "type":"ownership",
         "weight":0.85232586,
         "source":"Benjamin Snyder",
         "target":"b3de0895-285e-4ea8-99bb-ffdc763f7038"
@@ -39760,6 +42016,12 @@
         "weight":0.90341455,
         "source":"b3de0895-285e-4ea8-99bb-ffdc763f7038",
         "target":"a8330af0-375f-4fcb-9171-9628b26b1808"
+    },
+    {
+        "type":"ownership",
+        "weight":0.83708423,
+        "source":"Wendy Miller",
+        "target":"3308429"
     },
     {
         "type":"partnership",
@@ -39784,6 +42046,12 @@
         "weight":0.8512073,
         "source":"Abrams MIA2",
         "target":"6758207"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9474143,
+        "source":"Abrams MIA2",
+        "target":"MBTs"
     },
     {
         "type":"partnership",
@@ -39940,6 +42208,12 @@
         "weight":0.8883257,
         "source":"1252007",
         "target":"6471708"
+    },
+    {
+        "type":"partnership",
+        "weight":0.86303073,
+        "source":"1252007",
+        "target":"520673"
     },
     {
         "type":"partnership",
@@ -40111,6 +42385,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.8993099,
+        "source":"Danielle Sosa",
+        "target":"Susan Mendoza"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8007131,
         "source":"James Carr",
         "target":"Daniel Burton"
@@ -40144,6 +42424,12 @@
         "weight":0.8513519,
         "source":"15758645",
         "target":"Ships"
+    },
+    {
+        "type":"partnership",
+        "weight":0.88442177,
+        "source":"15758645",
+        "target":"9697"
     },
     {
         "type":"partnership",
@@ -40416,6 +42702,12 @@
         "target":"Peter Bush"
     },
     {
+        "type":"family_relationship",
+        "weight":0.88451505,
+        "source":"Jennifer Washington",
+        "target":"Robin Fernandez"
+    },
+    {
         "type":"membership",
         "weight":0.8037991,
         "source":"Jennifer Washington",
@@ -40480,6 +42772,12 @@
         "weight":0.807367,
         "source":"66",
         "target":"c97073d1-61a4-4a06-a189-8b4642a699e1"
+    },
+    {
+        "type":"membership",
+        "weight":0.8567476,
+        "source":"65872b93-db53-4445-a72e-8f84b3d7edfc",
+        "target":"Kendra Owens"
     },
     {
         "type":"ownership",
@@ -40603,6 +42901,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.9088409,
+        "source":"Heather King",
+        "target":"Austin Miller"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8922578,
         "source":"Billy Robinson",
         "target":"Austin Miller"
@@ -40662,6 +42966,18 @@
         "target":"40213337"
     },
     {
+        "type":"membership",
+        "weight":0.9339815,
+        "source":"96c31987-d50d-4680-9397-2a9d0e3946e1",
+        "target":"sailboat Freeport"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8177445,
+        "source":"c0ea9f29-9987-490f-bc96-d2a5718c1636",
+        "target":"949"
+    },
+    {
         "type":"ownership",
         "weight":0.8461536,
         "source":"576618",
@@ -40684,6 +43000,12 @@
         "weight":0.8055286,
         "source":"82357",
         "target":"png xi  Line"
+    },
+    {
+        "type":"partnership",
+        "weight":0.90888196,
+        "source":"Ariel Thornton",
+        "target":"Orange River  AS Logistics"
     },
     {
         "type":"partnership",
@@ -40716,6 +43038,12 @@
         "target":"\u00e2\u0080\u009cdimersal\u00e2"
     },
     {
+        "type":"membership",
+        "weight":0.9322688,
+        "source":"Jason Fleming",
+        "target":"c600d751-cc48-4e8e-800e-63ec87a4239f"
+    },
+    {
         "type":"partnership",
         "weight":0.90841454,
         "source":"\u00e2\u0080\u009cdimersal\u00e2",
@@ -40726,6 +43054,12 @@
         "weight":0.85512143,
         "source":"Cynthia Huff",
         "target":"Angela Lee"
+    },
+    {
+        "type":"membership",
+        "weight":0.91219527,
+        "source":"Cynthia Huff",
+        "target":"78ec7fd4-82e0-4725-815d-50be0ccee955"
     },
     {
         "type":"membership",
@@ -40819,6 +43153,12 @@
     },
     {
         "type":"membership",
+        "weight":0.8304663,
+        "source":"4532329",
+        "target":"98631"
+    },
+    {
+        "type":"membership",
         "weight":0.8404336,
         "source":"4532329",
         "target":"2658"
@@ -40828,6 +43168,12 @@
         "weight":0.817168,
         "source":"2658",
         "target":"Mar del Oeste Pic"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8232664,
+        "source":"5698",
+        "target":"98631"
     },
     {
         "type":"membership",
@@ -40891,9 +43237,27 @@
     },
     {
         "type":"ownership",
+        "weight":0.91951334,
+        "source":"280094",
+        "target":"Pesquera"
+    },
+    {
+        "type":"ownership",
         "weight":0.808482,
         "source":"280094",
         "target":"341411"
+    },
+    {
+        "type":"ownership",
+        "weight":0.9362562,
+        "source":"40676",
+        "target":"Pesquera"
+    },
+    {
+        "type":"membership",
+        "weight":0.8969094,
+        "source":"40676",
+        "target":"Robert Edwards"
     },
     {
         "type":"membership",
@@ -40924,6 +43288,12 @@
         "weight":0.85983825,
         "source":"669",
         "target":"Tracie Price"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8131515,
+        "source":"669",
+        "target":"David Limited Liability Company"
     },
     {
         "type":"family_relationship",
@@ -40972,6 +43342,12 @@
         "weight":0.85411644,
         "source":"730397695",
         "target":"940161722"
+    },
+    {
+        "type":"ownership",
+        "weight":0.9007879,
+        "source":"373a8a11-c7a0-4e9b-8397-9d824974259a",
+        "target":"Wartsila"
     },
     {
         "type":"membership",
@@ -41628,6 +44004,12 @@
         "target":"60806"
     },
     {
+        "type":"membership",
+        "weight":0.80771095,
+        "source":"cdc89aad-5d8c-48bf-b155-81d2a932782b",
+        "target":"4183208"
+    },
+    {
         "type":"ownership",
         "weight":0.9074031,
         "source":"cdc89aad-5d8c-48bf-b155-81d2a932782b",
@@ -41676,6 +44058,12 @@
         "target":"951093"
     },
     {
+        "type":"membership",
+        "weight":0.9104862,
+        "source":"322202416",
+        "target":"Robert Edwards"
+    },
+    {
         "type":"partnership",
         "weight":0.86009145,
         "source":"969368807",
@@ -41716,6 +44104,18 @@
         "weight":0.8870768,
         "source":"813",
         "target":"207618139"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8587468,
+        "source":"62",
+        "target":"44326992"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9019861,
+        "source":"Hunt",
+        "target":"1416a29d-3719-45d6-95a8-782c4e281908"
     },
     {
         "type":"family_relationship",
@@ -41899,6 +44299,12 @@
     },
     {
         "type":"partnership",
+        "weight":0.83946687,
+        "source":"8876768",
+        "target":"444"
+    },
+    {
+        "type":"partnership",
         "weight":0.82735056,
         "source":"8876768",
         "target":"57"
@@ -41917,6 +44323,12 @@
     },
     {
         "type":"partnership",
+        "weight":0.87275475,
+        "source":"Denise Vance",
+        "target":"444"
+    },
+    {
+        "type":"partnership",
         "weight":0.8561997,
         "source":"Denise Vance",
         "target":"51"
@@ -41932,6 +44344,12 @@
         "weight":0.9395425,
         "source":"Zachary Perez",
         "target":"Jennifer Parsons"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9230357,
+        "source":"Zachary Perez",
+        "target":"444"
     },
     {
         "type":"family_relationship",
@@ -42211,9 +44629,21 @@
     },
     {
         "type":"membership",
+        "weight":0.8104805,
+        "source":"534",
+        "target":"Spanish Red Snapper GmbH Shipping"
+    },
+    {
+        "type":"membership",
         "weight":0.83186424,
         "source":"534",
         "target":"81"
+    },
+    {
+        "type":"membership",
+        "weight":0.88238907,
+        "source":"534",
+        "target":"Energotrade Plus"
     },
     {
         "type":"membership",
@@ -42226,6 +44656,12 @@
         "weight":0.86084235,
         "source":"534",
         "target":"464454263"
+    },
+    {
+        "type":"membership",
+        "weight":0.8450793,
+        "source":"534",
+        "target":"Shipping Corp"
     },
     {
         "type":"membership",
@@ -42274,6 +44710,12 @@
         "weight":0.8247427,
         "source":"884332",
         "target":"982519647"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8627807,
+        "source":"884332",
+        "target":"Michael Frederick"
     },
     {
         "type":"partnership",
@@ -42498,6 +44940,12 @@
         "target":"Austin Welch"
     },
     {
+        "type":"ownership",
+        "weight":0.86737186,
+        "source":"401289940",
+        "target":"Artemov\u00e2\u0080\u0099s Ava Petroleum"
+    },
+    {
         "type":"partnership",
         "weight":0.8240419,
         "source":"54726",
@@ -42601,9 +45049,21 @@
     },
     {
         "type":"partnership",
+        "weight":0.8529613,
+        "source":"1555",
+        "target":"483398"
+    },
+    {
+        "type":"partnership",
         "weight":0.8729143,
         "source":"3669166",
         "target":"483398"
+    },
+    {
+        "type":"membership",
+        "weight":0.83420086,
+        "source":"111274e2-c155-4640-9a8e-f506f3fbca06",
+        "target":"Brett Lee"
     },
     {
         "type":"membership",
@@ -42673,6 +45133,18 @@
     },
     {
         "type":"partnership",
+        "weight":0.9073835,
+        "source":"7125",
+        "target":"John Riley"
+    },
+    {
+        "type":"partnership",
+        "weight":0.83888096,
+        "source":"7125",
+        "target":"256659459"
+    },
+    {
+        "type":"partnership",
         "weight":0.81941384,
         "source":"7125",
         "target":"Mar del Oeste Pic"
@@ -42724,6 +45196,18 @@
         "weight":0.8439909,
         "source":"2357762",
         "target":"3328058"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.89255875,
+        "source":"Andrew Graves",
+        "target":"Lori Cummings"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.92118794,
+        "source":"Andrew Graves",
+        "target":"Damon Nelson"
     },
     {
         "type":"membership",
@@ -42784,6 +45268,12 @@
         "weight":0.8714257,
         "source":"Jeffrey Hall",
         "target":"Daniel Obrien"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8380796,
+        "source":"\u00e2\u0080\u009cbe",
+        "target":"8bdf21e8-914b-4fe2-9280-0a69b9b0175d"
     },
     {
         "type":"partnership",
@@ -42870,10 +45360,28 @@
         "target":"Brett Lopez"
     },
     {
+        "type":"membership",
+        "weight":0.89870244,
+        "source":"42978392",
+        "target":"62d39460-2980-4835-91ea-47073f724d3b"
+    },
+    {
+        "type":"membership",
+        "weight":0.8811247,
+        "source":"74390fc5-8dc6-4511-a0a8-bc360409b805",
+        "target":"62d39460-2980-4835-91ea-47073f724d3b"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8868939,
         "source":"Kevin Liu",
         "target":"Bryce Baker"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8457924,
+        "source":"Kevin Liu",
+        "target":"Katrina Nguyen"
     },
     {
         "type":"ownership",
@@ -43044,6 +45552,12 @@
         "target":"\u00e2\u0080\u009cAs"
     },
     {
+        "type":"family_relationship",
+        "weight":0.9347732,
+        "source":"Rebecca Caldwell",
+        "target":"Daniel Butler"
+    },
+    {
         "type":"membership",
         "weight":0.9320917,
         "source":"Rebecca Caldwell",
@@ -43200,6 +45714,12 @@
         "target":"James Stewart"
     },
     {
+        "type":"membership",
+        "weight":0.80844194,
+        "source":"8b8c532f-0ca0-44cc-898c-1d776f2f457a",
+        "target":"15"
+    },
+    {
         "type":"partnership",
         "weight":0.89636225,
         "source":"8b8c532f-0ca0-44cc-898c-1d776f2f457a",
@@ -43225,6 +45745,12 @@
     },
     {
         "type":"membership",
+        "weight":0.8521549,
+        "source":"Anthony Larson",
+        "target":"845"
+    },
+    {
+        "type":"membership",
         "weight":0.82100165,
         "source":"Anthony Larson",
         "target":"Mar del Oeste Pic"
@@ -43234,6 +45760,18 @@
         "weight":0.8511688,
         "source":"382825160",
         "target":"ad8fe467-3759-4f53-bf6a-896a237d187f"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.93613404,
+        "source":"Debra Hall",
+        "target":"Laura Hughes"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9051064,
+        "source":"Debra Hall",
+        "target":"Amanda Dean"
     },
     {
         "type":"ownership",
@@ -44286,6 +46824,12 @@
         "target":"png xi  Line"
     },
     {
+        "type":"membership",
+        "weight":0.8661583,
+        "source":"2362",
+        "target":"John Avila"
+    },
+    {
         "type":"partnership",
         "weight":0.8618102,
         "source":"William Palmer",
@@ -44404,6 +46948,12 @@
         "weight":0.84742546,
         "source":"519852438",
         "target":"299"
+    },
+    {
+        "type":"membership",
+        "weight":0.82302684,
+        "source":"519852438",
+        "target":"Brian Hansen"
     },
     {
         "type":"membership",
@@ -44809,6 +47359,12 @@
     },
     {
         "type":"partnership",
+        "weight":0.81622976,
+        "source":"Kathryn Gomez",
+        "target":"432526990"
+    },
+    {
+        "type":"partnership",
         "weight":0.87523466,
         "source":"Kathryn Gomez",
         "target":"Himachal Pradesh Aquatic Plc Brothers"
@@ -44911,6 +47467,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.9383449,
+        "source":"Lisa Ward",
+        "target":"Ryan Lewis"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.9295589,
         "source":"Lisa Ward",
         "target":"Christina Chavez"
@@ -44920,6 +47482,12 @@
         "weight":0.9013666,
         "source":"Lisa Ward",
         "target":"38"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9354369,
+        "source":"Lisa Ward",
+        "target":"Jessica Figueroa DDS"
     },
     {
         "type":"membership",
@@ -45072,6 +47640,12 @@
         "target":"Alan Wells"
     },
     {
+        "type":"family_relationship",
+        "weight":0.8357362,
+        "source":"Mrs. Katherine Clark",
+        "target":"Brooke Hamilton"
+    },
+    {
         "type":"membership",
         "weight":0.9214383,
         "source":"Mrs. Katherine Clark",
@@ -45181,6 +47755,12 @@
     },
     {
         "type":"membership",
+        "weight":0.8970268,
+        "source":"bc583d11-794a-4a83-abc8-3daa208e1262",
+        "target":"Andrew Torres"
+    },
+    {
+        "type":"membership",
         "weight":0.95474684,
         "source":"bc583d11-794a-4a83-abc8-3daa208e1262",
         "target":"Ocean Fisheries Llc"
@@ -45192,10 +47772,22 @@
         "target":"Ocean Fisheries Llc"
     },
     {
+        "type":"ownership",
+        "weight":0.83726734,
+        "source":"8634589",
+        "target":"7260903"
+    },
+    {
         "type":"family_relationship",
         "weight":0.87911385,
         "source":"8634589",
         "target":"Sept"
+    },
+    {
+        "type":"ownership",
+        "weight":0.82040226,
+        "source":"8634589",
+        "target":"Miranda Long"
     },
     {
         "type":"membership",
@@ -45250,6 +47842,12 @@
         "weight":0.9542705,
         "source":"9b5a90cf-e801-46a8-bd50-879ab3862c67",
         "target":"6548672"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9604406,
+        "source":"9b5a90cf-e801-46a8-bd50-879ab3862c67",
+        "target":"Cheryl Conway"
     },
     {
         "type":"membership",
@@ -45360,6 +47958,12 @@
         "target":"week"
     },
     {
+        "type":"membership",
+        "weight":0.8191161,
+        "source":"76b8e150-91b4-494d-8ef6-6af706b397eb",
+        "target":"Sharon Townsend"
+    },
+    {
         "type":"ownership",
         "weight":0.8381055,
         "source":"James Valencia",
@@ -45376,6 +47980,12 @@
         "weight":0.8702173,
         "source":"cc3c9a3e-9226-43e0-9c2e-2cabec77b0fc",
         "target":"Ocean Fisheries Llc"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.91023445,
+        "source":"Barry Harris",
+        "target":"Philip Murphy"
     },
     {
         "type":"family_relationship",
@@ -45415,6 +48025,12 @@
     },
     {
         "type":"membership",
+        "weight":0.9123308,
+        "source":"61679",
+        "target":"245484"
+    },
+    {
+        "type":"membership",
         "weight":0.80234236,
         "source":"1983793",
         "target":"April Perry"
@@ -45436,6 +48052,24 @@
         "weight":0.83784986,
         "source":"800578",
         "target":"73db3de8-b968-40da-875c-7e57c678aa36"
+    },
+    {
+        "type":"membership",
+        "weight":0.9140802,
+        "source":"800578",
+        "target":"245484"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8201789,
+        "source":"Attorneys\u00e2",
+        "target":"254340176"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8211864,
+        "source":"4332001",
+        "target":"Haryana s Co Transit"
     },
     {
         "type":"membership",
@@ -45588,6 +48222,12 @@
         "target":"Richard Adams"
     },
     {
+        "type":"family_relationship",
+        "weight":0.93331844,
+        "source":"Sean Wilson",
+        "target":"Brandon Calderon"
+    },
+    {
         "type":"partnership",
         "weight":0.8123229,
         "source":"Kevin Burnett",
@@ -45615,6 +48255,12 @@
         "type":"partnership",
         "weight":0.86107284,
         "source":"Amanda Scott",
+        "target":"22 Raptor"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8606569,
+        "source":"Estrella del Mar Inc Merchants",
         "target":"22 Raptor"
     },
     {
@@ -45660,6 +48306,12 @@
         "target":"Angela Chang"
     },
     {
+        "type":"membership",
+        "weight":0.9410745,
+        "source":"Olivia Garner",
+        "target":"0c0ae060-2543-4d7e-bed0-e7fab24ba6a5"
+    },
+    {
         "type":"family_relationship",
         "weight":0.80953336,
         "source":"Scott Johnson",
@@ -45679,6 +48331,12 @@
     },
     {
         "type":"membership",
+        "weight":0.8796948,
+        "source":"Carlos Rose",
+        "target":"Costa del Mar S.p.A."
+    },
+    {
+        "type":"membership",
         "weight":0.88257194,
         "source":"a03df7da-c2cf-476d-a6ea-95c422969df2",
         "target":"Costa del Mar S.p.A."
@@ -45694,6 +48352,12 @@
         "weight":0.81236535,
         "source":"a03df7da-c2cf-476d-a6ea-95c422969df2",
         "target":"903311212"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.86007464,
+        "source":"Amber Green",
+        "target":"Rodney Compton"
     },
     {
         "type":"membership",
@@ -45718,6 +48382,12 @@
         "weight":0.8778402,
         "source":"110727",
         "target":"ROBYN BECK"
+    },
+    {
+        "type":"partnership",
+        "weight":0.83053577,
+        "source":"4205",
+        "target":"85"
     },
     {
         "type":"partnership",
@@ -45828,6 +48498,12 @@
         "target":"The Salty Pearl River S.p.A. Export"
     },
     {
+        "type":"membership",
+        "weight":0.87856317,
+        "source":"5fddadd0-71e7-4bdf-a471-daddd5f376b8",
+        "target":"9550"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8728654,
         "source":"5fddadd0-71e7-4bdf-a471-daddd5f376b8",
@@ -45930,10 +48606,28 @@
         "target":"SeaSpray Wave SRL Solutions"
     },
     {
+        "type":"ownership",
+        "weight":0.8625252,
+        "source":"71084",
+        "target":"\u00e2\u0080\u009cFrontline\u00e2"
+    },
+    {
         "type":"family_relationship",
         "weight":0.84464085,
         "source":"24e1e725-9a8e-489c-bbdd-0ce140fd6e3b",
         "target":"357987c8-3ecb-4e38-9f10-857007f2cd3b"
+    },
+    {
+        "type":"ownership",
+        "weight":0.94974804,
+        "source":"24e1e725-9a8e-489c-bbdd-0ce140fd6e3b",
+        "target":"Zachary Sellers"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8867833,
+        "source":"24e1e725-9a8e-489c-bbdd-0ce140fd6e3b",
+        "target":"Gelita Gelatine"
     },
     {
         "type":"ownership",
@@ -45949,6 +48643,12 @@
     },
     {
         "type":"membership",
+        "weight":0.9148401,
+        "source":"04943c53-b4ac-4048-8d86-bced4138d7c6",
+        "target":"Keith Compton"
+    },
+    {
+        "type":"membership",
         "weight":0.896073,
         "source":"1039",
         "target":"Tyler Anderson"
@@ -45958,6 +48658,12 @@
         "weight":0.8398177,
         "source":"32",
         "target":"1039"
+    },
+    {
+        "type":"membership",
+        "weight":0.8599339,
+        "source":"32",
+        "target":"Tyler Anderson"
     },
     {
         "type":"partnership",
@@ -46008,6 +48714,12 @@
         "target":"1039"
     },
     {
+        "type":"partnership",
+        "weight":0.86238104,
+        "source":"88295922",
+        "target":"Tyler Anderson"
+    },
+    {
         "type":"ownership",
         "weight":0.81480104,
         "source":"7830",
@@ -46056,6 +48768,12 @@
         "target":"Tshikele Ltd. Liability Co"
     },
     {
+        "type":"ownership",
+        "weight":0.932841,
+        "source":"54055",
+        "target":"5e6b70db-a04a-4440-8991-3a92b5c4ac4d"
+    },
+    {
         "type":"partnership",
         "weight":0.8712624,
         "source":"Brett Blair",
@@ -46069,9 +48787,21 @@
     },
     {
         "type":"partnership",
+        "weight":0.8029515,
+        "source":"Brett Blair",
+        "target":"b840c9bf-2a5b-416c-91d9-1ecdd96425ab"
+    },
+    {
+        "type":"partnership",
         "weight":0.8205331,
         "source":"Brett Blair",
         "target":"5421"
+    },
+    {
+        "type":"partnership",
+        "weight":0.87865925,
+        "source":"Brett Blair",
+        "target":"4eddaaa4-6306-467e-a7f4-27a58559e535"
     },
     {
         "type":"partnership",
@@ -46084,6 +48814,12 @@
         "weight":0.84113306,
         "source":"57c81b3c-882b-4824-91a0-7114be0fa5c7",
         "target":"Survivors\u00e2"
+    },
+    {
+        "type":"ownership",
+        "weight":0.80833423,
+        "source":"57c81b3c-882b-4824-91a0-7114be0fa5c7",
+        "target":"Task Force"
     },
     {
         "type":"ownership",
@@ -46201,6 +48937,12 @@
     },
     {
         "type":"ownership",
+        "weight":0.9120001,
+        "source":"5362",
+        "target":"\u00e2\u0080\u009csatisfactory\u00e2"
+    },
+    {
+        "type":"ownership",
         "weight":0.82622534,
         "source":"5362",
         "target":"SeaSpray Wave SRL Solutions"
@@ -46210,6 +48952,12 @@
         "weight":0.8728996,
         "source":"Tshikele Ltd. Liability Co",
         "target":"5e6b70db-a04a-4440-8991-3a92b5c4ac4d"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8588145,
+        "source":"111856",
+        "target":"df76b4cf-1019-4768-93cd-27122ef3bacc"
     },
     {
         "type":"ownership",
@@ -46222,6 +48970,12 @@
         "weight":0.88877594,
         "source":"88b35c10-45ae-4ded-ae4a-6cad038cfd91",
         "target":"553828215"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8572266,
+        "source":"88b35c10-45ae-4ded-ae4a-6cad038cfd91",
+        "target":"663"
     },
     {
         "type":"partnership",
@@ -46249,9 +49003,33 @@
     },
     {
         "type":"membership",
+        "weight":0.8699912,
+        "source":"90be60b1-61d8-4115-b133-e4c8e09383eb",
+        "target":"52134252"
+    },
+    {
+        "type":"membership",
+        "weight":0.89862293,
+        "source":"90be60b1-61d8-4115-b133-e4c8e09383eb",
+        "target":"679399"
+    },
+    {
+        "type":"membership",
+        "weight":0.9180336,
+        "source":"90be60b1-61d8-4115-b133-e4c8e09383eb",
+        "target":"3436524"
+    },
+    {
+        "type":"membership",
         "weight":0.8690297,
         "source":"90be60b1-61d8-4115-b133-e4c8e09383eb",
         "target":"5372"
+    },
+    {
+        "type":"membership",
+        "weight":0.81088257,
+        "source":"90be60b1-61d8-4115-b133-e4c8e09383eb",
+        "target":"67716449"
     },
     {
         "type":"membership",
@@ -46279,15 +49057,57 @@
     },
     {
         "type":"membership",
+        "weight":0.8913731,
+        "source":"e2844e89-d2d8-428d-8284-a0f2d9450a14",
+        "target":"52134252"
+    },
+    {
+        "type":"membership",
+        "weight":0.9141967,
+        "source":"e2844e89-d2d8-428d-8284-a0f2d9450a14",
+        "target":"679399"
+    },
+    {
+        "type":"membership",
+        "weight":0.93762475,
+        "source":"e2844e89-d2d8-428d-8284-a0f2d9450a14",
+        "target":"3436524"
+    },
+    {
+        "type":"membership",
         "weight":0.8996999,
         "source":"e2844e89-d2d8-428d-8284-a0f2d9450a14",
         "target":"5372"
+    },
+    {
+        "type":"membership",
+        "weight":0.8512353,
+        "source":"e2844e89-d2d8-428d-8284-a0f2d9450a14",
+        "target":"67716449"
+    },
+    {
+        "type":"membership",
+        "weight":0.80615103,
+        "source":"4406",
+        "target":"679399"
+    },
+    {
+        "type":"membership",
+        "weight":0.8390454,
+        "source":"4406",
+        "target":"3436524"
     },
     {
         "type":"partnership",
         "weight":0.8082797,
         "source":"ed114149-9468-41b4-adda-343883e79e04",
         "target":"7682"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8884543,
+        "source":"ed114149-9468-41b4-adda-343883e79e04",
+        "target":"d6dbac2d-ba76-4503-be09-e0444b936bd0"
     },
     {
         "type":"partnership",
@@ -46375,6 +49195,24 @@
     },
     {
         "type":"ownership",
+        "weight":0.9522465,
+        "source":"4852",
+        "target":"Amanda Rogers"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8948284,
+        "source":"4852",
+        "target":"28890617"
+    },
+    {
+        "type":"membership",
+        "weight":0.94010365,
+        "source":"14f1538d-29ed-43f4-ac8f-7a6ce01b9c00",
+        "target":"2e579f6f-eca3-498d-a523-b1da1e85a5cf"
+    },
+    {
+        "type":"ownership",
         "weight":0.8148457,
         "source":"06c85abe-f160-4a9f-bfb2-d58099a6be80",
         "target":"80737369"
@@ -46411,6 +49249,12 @@
     },
     {
         "type":"ownership",
+        "weight":0.93984056,
+        "source":"Linda Jones",
+        "target":"ma\u00c3\u00b1ana as\u00c3"
+    },
+    {
+        "type":"ownership",
         "weight":0.95495445,
         "source":"est\u00c3",
         "target":"ma\u00c3\u00b1ana as\u00c3"
@@ -46426,6 +49270,12 @@
         "weight":0.91534233,
         "source":"739622",
         "target":"4356"
+    },
+    {
+        "type":"membership",
+        "weight":0.87543917,
+        "source":"739622",
+        "target":"weeks 55"
     },
     {
         "type":"membership",
@@ -46518,10 +49368,22 @@
         "target":"979893388"
     },
     {
+        "type":"membership",
+        "weight":0.8831735,
+        "source":"Meghan Johnson",
+        "target":"weeks 55"
+    },
+    {
         "type":"ownership",
         "weight":0.905635,
         "source":"Meghan Johnson",
         "target":"4356"
+    },
+    {
+        "type":"membership",
+        "weight":0.91272795,
+        "source":"Meghan Johnson",
+        "target":"Jammu & Kashmir Limited Liability Company Delivery"
     },
     {
         "type":"ownership",
@@ -46536,10 +49398,40 @@
         "target":"883290144"
     },
     {
+        "type":"ownership",
+        "weight":0.8864049,
+        "source":"Meghan Johnson",
+        "target":"8453714"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8908373,
+        "source":"Meghan Johnson",
+        "target":"29167335"
+    },
+    {
+        "type":"ownership",
+        "weight":0.86428314,
+        "source":"Meghan Johnson",
+        "target":"Playa de la Luna Ltd. Corporation"
+    },
+    {
+        "type":"membership",
+        "weight":0.85136116,
+        "source":"Meghan Johnson",
+        "target":"869882172"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8076431,
         "source":"Meghan Johnson",
         "target":"Faroe Islands Shrimp Shark"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8139215,
+        "source":"Cody Baird",
+        "target":"weeks 55"
     },
     {
         "type":"membership",
@@ -46561,9 +49453,21 @@
     },
     {
         "type":"ownership",
+        "weight":0.9000226,
+        "source":"60-day",
+        "target":"29167335"
+    },
+    {
+        "type":"ownership",
         "weight":0.8120429,
         "source":"60-day",
         "target":"73"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8726184,
+        "source":"60-day",
+        "target":"Playa de la Luna Ltd. Corporation"
     },
     {
         "type":"ownership",
@@ -46582,6 +49486,12 @@
         "weight":0.8326419,
         "source":"092836e4-7218-4d3d-85da-9df420356be7",
         "target":"6046437"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.82970273,
+        "source":"092836e4-7218-4d3d-85da-9df420356be7",
+        "target":"3590dd7e-a6cd-416d-9b42-68f692ad83ee"
     },
     {
         "type":"partnership",
@@ -47562,6 +50472,12 @@
         "target":"Anthony Sailboat Co Shipping"
     },
     {
+        "type":"family_relationship",
+        "weight":0.8740418,
+        "source":"Evelyn Pacheco",
+        "target":"Brianna Gregory"
+    },
+    {
         "type":"membership",
         "weight":0.87828267,
         "source":"914",
@@ -47578,6 +50494,12 @@
         "weight":0.8453748,
         "source":"Brooke Collins",
         "target":"Refugee Benefits\u00e2"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8700184,
+        "source":"Brooke Collins",
+        "target":"Lori Weeks"
     },
     {
         "type":"partnership",
@@ -47809,9 +50731,21 @@
     },
     {
         "type":"membership",
+        "weight":0.8579328,
+        "source":"\u00e2\u0080\u009cPerla\u00e2",
+        "target":"\u00e2\u0080\u009cEmanuel\u00e2\u0080\u009d\u00e2\u0080\u0093if"
+    },
+    {
+        "type":"membership",
         "weight":0.9069785,
         "source":"Gina Armstrong DDS",
         "target":"\u00e2\u0080\u009cRestrain\u00e2"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.91798216,
+        "source":"Gina Armstrong DDS",
+        "target":"Walter Graham"
     },
     {
         "type":"membership",
@@ -48006,6 +50940,12 @@
         "target":"Jeremy Woodard"
     },
     {
+        "type":"ownership",
+        "weight":0.86554664,
+        "source":"b1d6e468-f3c5-45f3-90a2-e76b2f329b2d",
+        "target":"Miranda Long"
+    },
+    {
         "type":"membership",
         "weight":0.90532446,
         "source":"b1d6e468-f3c5-45f3-90a2-e76b2f329b2d",
@@ -48031,6 +50971,18 @@
     },
     {
         "type":"membership",
+        "weight":0.8246562,
+        "source":"b1d6e468-f3c5-45f3-90a2-e76b2f329b2d",
+        "target":"Marvin Everett"
+    },
+    {
+        "type":"membership",
+        "weight":0.881382,
+        "source":"b1d6e468-f3c5-45f3-90a2-e76b2f329b2d",
+        "target":"Robert Vega"
+    },
+    {
+        "type":"membership",
         "weight":0.8495153,
         "source":"b1d6e468-f3c5-45f3-90a2-e76b2f329b2d",
         "target":"\u00e2\u0080\u0099\u00e2"
@@ -48042,10 +50994,40 @@
         "target":"Angela Powers"
     },
     {
+        "type":"membership",
+        "weight":0.8018355,
+        "source":"b1d6e468-f3c5-45f3-90a2-e76b2f329b2d",
+        "target":"Brandon Thomas"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8220628,
+        "source":"b1d6e468-f3c5-45f3-90a2-e76b2f329b2d",
+        "target":"Mexico\u00e2\u0080\u0099\u00e2"
+    },
+    {
         "type":"ownership",
         "weight":0.9100664,
         "source":"b1d6e468-f3c5-45f3-90a2-e76b2f329b2d",
         "target":"Christopher Miller"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8368295,
+        "source":"b1d6e468-f3c5-45f3-90a2-e76b2f329b2d",
+        "target":"Scott Anderson"
+    },
+    {
+        "type":"membership",
+        "weight":0.9147,
+        "source":"b1d6e468-f3c5-45f3-90a2-e76b2f329b2d",
+        "target":"\u00e2\u0080\u0098enticed\u00e2"
+    },
+    {
+        "type":"ownership",
+        "weight":0.9370244,
+        "source":"b1d6e468-f3c5-45f3-90a2-e76b2f329b2d",
+        "target":"13d79d632036"
     },
     {
         "type":"membership",
@@ -48205,6 +51187,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.8520046,
+        "source":"773",
+        "target":"wgbh"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8399459,
         "source":"773",
         "target":"today\u00e2\u0080\u0099s"
@@ -48294,6 +51282,60 @@
         "target":"Ocean Fisheries Llc"
     },
     {
+        "type":"ownership",
+        "weight":0.84388566,
+        "source":"siladityaray",
+        "target":"13d79d632036"
+    },
+    {
+        "type":"membership",
+        "weight":0.8387022,
+        "source":"82517",
+        "target":"Robert Shaffer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.85493016,
+        "source":"Jim Sims",
+        "target":"Robert Shaffer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9351669,
+        "source":"Laura Patterson",
+        "target":"Robert Shaffer"
+    },
+    {
+        "type":"membership",
+        "weight":0.8450912,
+        "source":"Laura Patterson",
+        "target":"\u00e2\u0080\u0098Perla\u00e2"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.83456415,
+        "source":"Laura Patterson",
+        "target":"Gary Palmer"
+    },
+    {
+        "type":"membership",
+        "weight":0.9123321,
+        "source":"7674777",
+        "target":"Robert Shaffer"
+    },
+    {
+        "type":"membership",
+        "weight":0.8321184,
+        "source":"7674777",
+        "target":"\u00e2\u0080\u0098Perla\u00e2"
+    },
+    {
+        "type":"membership",
+        "weight":0.80416644,
+        "source":"7674777",
+        "target":"Gary Palmer"
+    },
+    {
         "type":"membership",
         "weight":0.8348491,
         "source":"Jeremy Woodard",
@@ -48304,6 +51346,24 @@
         "weight":0.8005713,
         "source":"8302",
         "target":"Sept"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8663976,
+        "source":"45620",
+        "target":"93865"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8725838,
+        "source":"Jammu & Kashmir ship",
+        "target":"93865"
+    },
+    {
+        "type":"membership",
+        "weight":0.85172224,
+        "source":"6352",
+        "target":"Paul Wiley"
     },
     {
         "type":"family_relationship",
@@ -48348,6 +51408,12 @@
         "target":"979893388"
     },
     {
+        "type":"ownership",
+        "weight":0.8568837,
+        "source":"176",
+        "target":"Joseph Williams"
+    },
+    {
         "type":"membership",
         "weight":0.8528148,
         "source":"176",
@@ -48355,9 +51421,27 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.8185983,
+        "source":"Danielle Jensen",
+        "target":"Brian Brown"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8855584,
         "source":"Danielle Jensen",
         "target":"Luis Rogers"
+    },
+    {
+        "type":"ownership",
+        "weight":0.94606596,
+        "source":"Danielle Jensen",
+        "target":"\u00e2\u0080\u009cBandera\u00e2"
+    },
+    {
+        "type":"ownership",
+        "weight":0.9093345,
+        "source":"Danielle Jensen",
+        "target":"\u00e2\u0080\u009cPadre"
     },
     {
         "type":"family_relationship",
@@ -48409,6 +51493,12 @@
     },
     {
         "type":"membership",
+        "weight":0.80077535,
+        "source":"139",
+        "target":"36506"
+    },
+    {
+        "type":"membership",
         "weight":0.8229881,
         "source":"25851337",
         "target":"b1a0ee2a-0e6d-48c2-b639-032e4648fa5c"
@@ -48427,6 +51517,12 @@
     },
     {
         "type":"membership",
+        "weight":0.8145705,
+        "source":"150486480",
+        "target":"90831"
+    },
+    {
+        "type":"membership",
         "weight":0.87775767,
         "source":"150486480",
         "target":"25851337"
@@ -48442,6 +51538,12 @@
         "weight":0.8098921,
         "source":"150486480",
         "target":"Austin Simpson"
+    },
+    {
+        "type":"membership",
+        "weight":0.815352,
+        "source":"150486480",
+        "target":"36506"
     },
     {
         "type":"membership",
@@ -48493,6 +51595,12 @@
     },
     {
         "type":"ownership",
+        "weight":0.94246364,
+        "source":"\u00d0\u00b0\u00d1",
+        "target":"Janet Floyd"
+    },
+    {
+        "type":"ownership",
         "weight":0.80997425,
         "source":"\u00d0\u0153\u00d0\u00b0 \u00d0\u00b1\u00d0\u0178\u00d1\u0086\u00d1",
         "target":"\u00d0\u00a3\u00d0\u00ba\u00d1\u0080\u00d0\u00b0\u00d1\u0097\u00d0\u0153\u00d0\u017e"
@@ -48516,10 +51624,22 @@
         "target":"Warner"
     },
     {
+        "type":"membership",
+        "weight":0.80986536,
+        "source":"Richard Anderson",
+        "target":"\u00e2\u0080\u009cCompromise\u00e2"
+    },
+    {
         "type":"family_relationship",
         "weight":0.91154075,
         "source":"94047",
         "target":"Thomas Curry"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9155504,
+        "source":"94047",
+        "target":"49525439"
     },
     {
         "type":"family_relationship",
@@ -48721,6 +51841,12 @@
     },
     {
         "type":"membership",
+        "weight":0.83888507,
+        "source":"82207154",
+        "target":"USINC"
+    },
+    {
+        "type":"membership",
         "weight":0.8491539,
         "source":"82207154",
         "target":"23777"
@@ -48847,6 +51973,12 @@
     },
     {
         "type":"membership",
+        "weight":0.85114014,
+        "source":"The Defendants\u00e2",
+        "target":"86ac9e66-f9e8-4f2b-ad17-39a52c23288c"
+    },
+    {
+        "type":"membership",
         "weight":0.83584255,
         "source":"The Defendants\u00e2",
         "target":"png xi  Line"
@@ -48859,9 +51991,27 @@
     },
     {
         "type":"membership",
+        "weight":0.8259853,
+        "source":"7443",
+        "target":"775841"
+    },
+    {
+        "type":"membership",
         "weight":0.8317327,
         "source":"5609469a-5721-4c94-92ed-ce7770055960",
         "target":"775841"
+    },
+    {
+        "type":"membership",
+        "weight":0.8638867,
+        "source":"Tiffany Stephens",
+        "target":"775841"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9125035,
+        "source":"Tiffany Stephens",
+        "target":"\u00c2\u00a3103"
     },
     {
         "type":"ownership",
@@ -48886,6 +52036,12 @@
         "weight":0.89855516,
         "source":"Veronica Lowe",
         "target":"\u00e2\u0080\u009ctheoriginaldragoncove\u00e2"
+    },
+    {
+        "type":"ownership",
+        "weight":0.80045515,
+        "source":"Veronica Lowe",
+        "target":"\u00e2\u0080\u009cNino\u00e2"
     },
     {
         "type":"membership",
@@ -48928,6 +52084,12 @@
         "weight":0.8638726,
         "source":"6ffd3349-37f4-48c5-bc9a-1b80e722e939",
         "target":"Sept"
+    },
+    {
+        "type":"partnership",
+        "weight":0.85345525,
+        "source":"2745",
+        "target":"a7479eba-319a-434f-be06-3b1c0cc928ae"
     },
     {
         "type":"family_relationship",
@@ -49152,10 +52314,40 @@
         "target":"\u00e2\u0080\u009cHe"
     },
     {
+        "type":"ownership",
+        "weight":0.89191085,
+        "source":"P\u00c3",
+        "target":"327572963"
+    },
+    {
+        "type":"ownership",
+        "weight":0.82547516,
+        "source":"P\u00c3",
+        "target":"7914"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8176209,
         "source":"P\u00c3",
         "target":"6"
+    },
+    {
+        "type":"membership",
+        "weight":0.80576956,
+        "source":"P\u00c3",
+        "target":"Deborah Bell"
+    },
+    {
+        "type":"partnership",
+        "weight":0.83271265,
+        "source":"82651",
+        "target":"540613204"
+    },
+    {
+        "type":"membership",
+        "weight":0.8407899,
+        "source":"82651",
+        "target":"869882172"
     },
     {
         "type":"family_relationship",
@@ -49218,10 +52410,34 @@
         "target":"Elizabeth Jones"
     },
     {
+        "type":"family_relationship",
+        "weight":0.86901295,
+        "source":"Michael Alvarez",
+        "target":"Elizabeth Shah"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.81333905,
+        "source":"Michael Alvarez",
+        "target":"Gregory Williams"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.85226774,
+        "source":"Michael Alvarez",
+        "target":"William Daniel"
+    },
+    {
         "type":"membership",
         "weight":0.81476855,
         "source":"Michael Alvarez",
         "target":"\u00e2\u0080\u0160"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8554804,
+        "source":"Timothy Hampton",
+        "target":"Brian Marsh"
     },
     {
         "type":"partnership",
@@ -49237,6 +52453,18 @@
     },
     {
         "type":"partnership",
+        "weight":0.86000717,
+        "source":"72630",
+        "target":"Rachel Arnold"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8781887,
+        "source":"72630",
+        "target":"John Murray"
+    },
+    {
+        "type":"partnership",
         "weight":0.8458963,
         "source":"72630",
         "target":"Mar del Oeste Pic"
@@ -49249,9 +52477,21 @@
     },
     {
         "type":"ownership",
+        "weight":0.9640404,
+        "source":"2912063",
+        "target":"Terry Conley"
+    },
+    {
+        "type":"ownership",
         "weight":0.8954848,
         "source":"2912063",
         "target":"\u00e2\u0080\u0160"
+    },
+    {
+        "type":"ownership",
+        "weight":0.86679786,
+        "source":"2912063",
+        "target":"Estrella de la Costa  Consultants"
     },
     {
         "type":"membership",
@@ -49294,6 +52534,12 @@
         "weight":0.8920773,
         "source":"Greek Sea Bream and Son's",
         "target":"\u00e2\u0080\u009cundeniable\u00e2"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8806108,
+        "source":"Greek Sea Bream and Son's",
+        "target":"\u00e2\u0080\u009crequested"
     },
     {
         "type":"membership",
@@ -49495,6 +52741,12 @@
     },
     {
         "type":"ownership",
+        "weight":0.88795215,
+        "source":"352",
+        "target":"Faurtil F\u00c3\u00a1brica Urnas Tiet\u00c3\u00aa"
+    },
+    {
+        "type":"ownership",
         "weight":0.82011855,
         "source":"352",
         "target":"SeaSpray Wave SRL Solutions"
@@ -49558,6 +52810,12 @@
         "weight":0.8541625,
         "source":"Nicholas Nguyen",
         "target":"\u00e2\u0080\u009cHe"
+    },
+    {
+        "type":"membership",
+        "weight":0.806954,
+        "source":"Nicholas Nguyen",
+        "target":"540613204"
     },
     {
         "type":"membership",
@@ -49686,6 +52944,12 @@
         "target":"Faroe Islands Shrimp Shark"
     },
     {
+        "type":"family_relationship",
+        "weight":0.8817144,
+        "source":"James Thomas",
+        "target":"Kristi Miller"
+    },
+    {
         "type":"membership",
         "weight":0.8166166,
         "source":"James Thomas",
@@ -49738,6 +53002,12 @@
         "weight":0.80040455,
         "source":"2430986",
         "target":"903311212"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8880699,
+        "source":"92533",
+        "target":"996592"
     },
     {
         "type":"membership",
@@ -49908,6 +53178,12 @@
         "target":"John Brown"
     },
     {
+        "type":"membership",
+        "weight":0.8187834,
+        "source":"Thomas Ramsey",
+        "target":"Merida\u00e2\u0080\u0099\u00e2"
+    },
+    {
         "type":"ownership",
         "weight":0.88706684,
         "source":"Jonathan Coleman",
@@ -49998,6 +53274,12 @@
         "target":"151159036"
     },
     {
+        "type":"ownership",
+        "weight":0.82586163,
+        "source":"3383",
+        "target":"Menards\u00e2"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8792563,
         "source":"Jason Garcia",
@@ -50023,14 +53305,32 @@
     },
     {
         "type":"partnership",
+        "weight":0.8965735,
+        "source":"Pregolya Delivery Cruise ship",
+        "target":"\u00c2\u00a3103"
+    },
+    {
+        "type":"partnership",
         "weight":0.9081549,
         "source":"\u00e2\u0080\u009ctiger\u00e2",
         "target":"Sharon Williams"
     },
     {
+        "type":"partnership",
+        "weight":0.87295395,
+        "source":"\u00e2\u0080\u009ctiger\u00e2",
+        "target":"Donald Thomas"
+    },
+    {
         "type":"family_relationship",
         "weight":0.91953075,
         "source":"Sharon Williams",
+        "target":"Donald Thomas"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.95361197,
+        "source":"Rebecca Anderson",
         "target":"Donald Thomas"
     },
     {
@@ -50059,9 +53359,21 @@
     },
     {
         "type":"partnership",
+        "weight":0.9239523,
+        "source":"176729",
+        "target":"Jonathan Moody"
+    },
+    {
+        "type":"partnership",
         "weight":0.90857226,
         "source":"958644",
         "target":"Jonathan Moody"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.86453336,
+        "source":"Kaitlyn Walsh",
+        "target":"Alison Nash"
     },
     {
         "type":"partnership",
@@ -50124,10 +53436,22 @@
         "target":"Nicholas Torres"
     },
     {
+        "type":"partnership",
+        "weight":0.8842976,
+        "source":"200",
+        "target":"75360"
+    },
+    {
         "type":"ownership",
         "weight":0.8479969,
         "source":"Nicholas Torres",
         "target":"75360"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.934377,
+        "source":"76104890",
+        "target":"7a58f899-3e43-4b94-a64b-d5ab31a6055b"
     },
     {
         "type":"ownership",
@@ -50206,6 +53530,12 @@
         "weight":0.8144137,
         "source":"a691bc0a-cfdc-4b2a-a38e-efcd2799ecd1",
         "target":"28138"
+    },
+    {
+        "type":"partnership",
+        "weight":0.81796944,
+        "source":"a691bc0a-cfdc-4b2a-a38e-efcd2799ecd1",
+        "target":"\u00e2\u0080\u009csnitch"
     },
     {
         "type":"partnership",
@@ -50401,6 +53731,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.92343915,
+        "source":"Tamara Tyler",
+        "target":"Henry Lambert"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.9134855,
         "source":"Elizabeth Armstrong",
         "target":"Melissa Brock"
@@ -50430,6 +53766,12 @@
         "target":"47924922"
     },
     {
+        "type":"partnership",
+        "weight":0.8573165,
+        "source":"51470600",
+        "target":"Angela Orr"
+    },
+    {
         "type":"membership",
         "weight":0.8029496,
         "source":"719",
@@ -50446,6 +53788,12 @@
         "weight":0.82659453,
         "source":"719",
         "target":"59662085"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8947993,
+        "source":"719",
+        "target":"Angela Orr"
     },
     {
         "type":"ownership",
@@ -50563,6 +53911,12 @@
     },
     {
         "type":"ownership",
+        "weight":0.9000117,
+        "source":"649",
+        "target":"Angela Orr"
+    },
+    {
+        "type":"ownership",
         "weight":0.8484698,
         "source":"649",
         "target":"68273"
@@ -50572,6 +53926,12 @@
         "weight":0.8485854,
         "source":"649",
         "target":"Richard Perkins"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8913834,
+        "source":"Donna Green",
+        "target":"Dean Reyes"
     },
     {
         "type":"family_relationship",
@@ -50616,6 +53976,12 @@
         "target":"6242224"
     },
     {
+        "type":"ownership",
+        "weight":0.80518305,
+        "source":"truck",
+        "target":"14525ad3-213a-406d-8e3e-64213f0be171"
+    },
+    {
         "type":"membership",
         "weight":0.84717625,
         "source":"truck",
@@ -50647,6 +54013,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.8130062,
+        "source":"d6d0741c-39d9-4b94-8b39-b5d2ad1669b9",
+        "target":"Colin Hunter"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8842841,
         "source":"291669",
         "target":"425887173"
@@ -50668,6 +54040,18 @@
         "weight":0.8907487,
         "source":"Thomas Watkins",
         "target":"png xi  Line"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8409832,
+        "source":"Joshua Park",
+        "target":"drayage companies"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9253286,
+        "source":"Joshua Park",
+        "target":"Marie Lee"
     },
     {
         "type":"partnership",
@@ -50719,6 +54103,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.8538146,
+        "source":"Dale Chandler",
+        "target":"Jack Bell"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.874783,
         "source":"Marvin Evans",
         "target":"Jack Bell"
@@ -50740,6 +54130,12 @@
         "weight":0.80129445,
         "source":"148766",
         "target":"89772543"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8401597,
+        "source":"836",
+        "target":"567857349"
     },
     {
         "type":"family_relationship",
@@ -50790,6 +54186,18 @@
         "target":"American"
     },
     {
+        "type":"family_relationship",
+        "weight":0.8435292,
+        "source":"12358151",
+        "target":"Haryana s Co Transit"
+    },
+    {
+        "type":"ownership",
+        "weight":0.9205462,
+        "source":"12358151",
+        "target":"Chris Booth"
+    },
+    {
         "type":"partnership",
         "weight":0.85094213,
         "source":"8127",
@@ -50806,6 +54214,12 @@
         "weight":0.8662364,
         "source":"18668050",
         "target":"9488645"
+    },
+    {
+        "type":"ownership",
+        "weight":0.81671757,
+        "source":"62532",
+        "target":"39033859"
     },
     {
         "type":"ownership",
@@ -50832,6 +54246,12 @@
         "target":"86590543"
     },
     {
+        "type":"membership",
+        "weight":0.89018625,
+        "source":"Carmen Mendez",
+        "target":"a51f21a5-b410-4000-ada4-086bd2e65cb6"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8616478,
         "source":"Carmen Mendez",
@@ -50856,10 +54276,22 @@
         "target":"1263250"
     },
     {
+        "type":"partnership",
+        "weight":0.9593674,
+        "source":"dffd75ca-7510-403d-a6a0-f904b0c7b41d",
+        "target":"61208e37-a326-4cf5-a571-f8bdd6f2dbf7"
+    },
+    {
         "type":"membership",
         "weight":0.9435482,
         "source":"dffd75ca-7510-403d-a6a0-f904b0c7b41d",
         "target":"675d95eb-69b7-4f8a-bd4e-af2cf4def162"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.82909185,
+        "source":"9ce492a2-de6e-4231-a018-318fc929908b",
+        "target":"30 days"
     },
     {
         "type":"partnership",
@@ -50880,6 +54312,12 @@
         "target":"7577"
     },
     {
+        "type":"family_relationship",
+        "weight":0.9278162,
+        "source":"ffb63251-ebdc-4346-b3a4-ef1515310806",
+        "target":"1263250"
+    },
+    {
         "type":"membership",
         "weight":0.80669945,
         "source":"675d95eb-69b7-4f8a-bd4e-af2cf4def162",
@@ -50896,6 +54334,12 @@
         "weight":0.9025889,
         "source":"\u00e2\u0080\u009cDuare Ration\u00e2",
         "target":"6731"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8596914,
+        "source":"b400d237-4d56-4de8-917a-8e7654ccf315",
+        "target":"Bulk Carrier"
     },
     {
         "type":"membership",
@@ -50958,6 +54402,12 @@
         "target":"662bfccd-798d-4e60-b308-2cb2918e3dd2"
     },
     {
+        "type":"ownership",
+        "weight":0.8341126,
+        "source":"404",
+        "target":"33560"
+    },
+    {
         "type":"membership",
         "weight":0.8237766,
         "source":"404",
@@ -50971,9 +54421,21 @@
     },
     {
         "type":"membership",
+        "weight":0.92441076,
+        "source":"569767ed-015f-4cb9-a316-2db45fbf6cf3",
+        "target":"899ccad6-2380-4e2c-aa57-d7f487964993"
+    },
+    {
+        "type":"membership",
         "weight":0.9587352,
         "source":"9a3fecdc-0696-4b53-979c-8ac021f24910",
         "target":"899ccad6-2380-4e2c-aa57-d7f487964993"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.899905,
+        "source":"Eddie Alexander",
+        "target":"David Schwartz"
     },
     {
         "type":"ownership",
@@ -51000,6 +54462,12 @@
         "target":"Friday\u00e2\u0080\u0099s"
     },
     {
+        "type":"ownership",
+        "weight":0.8981088,
+        "source":"92616021",
+        "target":"Hannah Little"
+    },
+    {
         "type":"family_relationship",
         "weight":0.89917415,
         "source":"Juan Mckinney",
@@ -51022,6 +54490,12 @@
         "weight":0.8940029,
         "source":"d37a5a00-fca1-4753-890c-6975c311dc3f",
         "target":"Ejintex International"
+    },
+    {
+        "type":"partnership",
+        "weight":0.86829394,
+        "source":"d37a5a00-fca1-4753-890c-6975c311dc3f",
+        "target":"Asia Seafood"
     },
     {
         "type":"membership",
@@ -51073,9 +54547,27 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.87710834,
+        "source":"Kevin Daniel",
+        "target":"Suzanne Reed"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8504103,
         "source":"Lucas Williamson",
         "target":"William James"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8920185,
+        "source":"Lucas Williamson",
+        "target":"Suzanne Reed"
+    },
+    {
+        "type":"ownership",
+        "weight":0.934775,
+        "source":"2330",
+        "target":"Daniel Butler"
     },
     {
         "type":"family_relationship",
@@ -51096,10 +54588,34 @@
         "target":"386"
     },
     {
+        "type":"membership",
+        "weight":0.8982762,
+        "source":"Lisa Lewis",
+        "target":"d09a6a69-eed5-4057-9f96-dcf4c9cf4d88"
+    },
+    {
+        "type":"membership",
+        "weight":0.879812,
+        "source":"3882e922-25e9-446d-8e04-97e8875fceb2",
+        "target":"ba790a77-b0f3-4c1f-8d42-3d2bddbc1893"
+    },
+    {
         "type":"ownership",
         "weight":0.8383437,
         "source":"878521",
         "target":"733"
+    },
+    {
+        "type":"ownership",
+        "weight":0.9268566,
+        "source":"878521",
+        "target":"1576352"
+    },
+    {
+        "type":"ownership",
+        "weight":0.90853083,
+        "source":"Robert Chang",
+        "target":"1576352"
     },
     {
         "type":"partnership",
@@ -51133,6 +54649,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.9307721,
+        "source":"Tom Bauer",
+        "target":"Matthew Anderson"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.88216513,
         "source":"Tom Bauer",
         "target":"Alan Wells"
@@ -51156,16 +54678,34 @@
         "target":"Dawn Sanchez"
     },
     {
+        "type":"family_relationship",
+        "weight":0.8660097,
+        "source":"Leslie Wood",
+        "target":"Donna Davis"
+    },
+    {
         "type":"partnership",
         "weight":0.8061841,
         "source":"34487",
         "target":"341411"
     },
     {
+        "type":"ownership",
+        "weight":0.95613647,
+        "source":"4524860",
+        "target":"three-hour"
+    },
+    {
         "type":"family_relationship",
         "weight":0.92034745,
         "source":"4524860",
         "target":"b8567859-bf54-49fd-8332-5775e19c65af"
+    },
+    {
+        "type":"ownership",
+        "weight":0.84713924,
+        "source":"59409",
+        "target":"4843b052-8f18-4298-9464-d780feb5ddad"
     },
     {
         "type":"family_relationship",
@@ -51178,6 +54718,18 @@
         "weight":0.8651553,
         "source":"23",
         "target":"Amanda Jenkins"
+    },
+    {
+        "type":"membership",
+        "weight":0.9476959,
+        "source":"24996",
+        "target":"Motor Vessel"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8064992,
+        "source":"24996",
+        "target":"90411963"
     },
     {
         "type":"membership",
@@ -51318,10 +54870,34 @@
         "target":"33560"
     },
     {
+        "type":"family_relationship",
+        "weight":0.84032875,
+        "source":"Maria Jackson",
+        "target":"Deborah Carson"
+    },
+    {
+        "type":"ownership",
+        "weight":0.80656785,
+        "source":"d0842009-cbf1-4df2-adfa-121a82160a05",
+        "target":"Deborah Carson"
+    },
+    {
         "type":"membership",
         "weight":0.8774945,
         "source":"d0842009-cbf1-4df2-adfa-121a82160a05",
         "target":"c495290e-2de7-487d-a139-f273c4974539"
+    },
+    {
+        "type":"partnership",
+        "weight":0.87259054,
+        "source":"449856a6-3b60-46ca-b825-f9499558fa3a",
+        "target":"Deborah Carson"
+    },
+    {
+        "type":"membership",
+        "weight":0.81262565,
+        "source":"449856a6-3b60-46ca-b825-f9499558fa3a",
+        "target":"3105981"
     },
     {
         "type":"membership",
@@ -51346,6 +54922,12 @@
         "weight":0.9456944,
         "source":"Gina Knox",
         "target":"Alan Wells"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9263077,
+        "source":"Gina Knox",
+        "target":"207618139"
     },
     {
         "type":"family_relationship",
@@ -51373,6 +54955,30 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.81825376,
+        "source":"Charles Duke",
+        "target":"Dennis Payne"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8396045,
+        "source":"Charles Duke",
+        "target":"Ashley Boyer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8189633,
+        "source":"Charles Duke",
+        "target":"Darin Taylor"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8577608,
+        "source":"Charles Duke",
+        "target":"Larry Cisneros"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.80555356,
         "source":"Teresa Hansen",
         "target":"Ethan Walsh"
@@ -51382,6 +54988,36 @@
         "weight":0.81355137,
         "source":"Teresa Hansen",
         "target":"Matthew Pennington"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8572902,
+        "source":"Teresa Hansen",
+        "target":"Dennis Payne"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8749703,
+        "source":"Teresa Hansen",
+        "target":"Ashley Boyer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.86188376,
+        "source":"Teresa Hansen",
+        "target":"Darin Taylor"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.89169836,
+        "source":"Teresa Hansen",
+        "target":"Larry Cisneros"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8339837,
+        "source":"Teresa Hansen",
+        "target":"Michael Evans"
     },
     {
         "type":"family_relationship",
@@ -51405,6 +55041,54 @@
         "type":"family_relationship",
         "weight":0.8442082,
         "source":"Ethan Walsh",
+        "target":"Larry Cisneros"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8067813,
+        "source":"Alexandra Jackson",
+        "target":"Dennis Payne"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8326415,
+        "source":"Alexandra Jackson",
+        "target":"Ashley Boyer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8125756,
+        "source":"Alexandra Jackson",
+        "target":"Darin Taylor"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.85131794,
+        "source":"Alexandra Jackson",
+        "target":"Larry Cisneros"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8171158,
+        "source":"Lauren Sanchez",
+        "target":"Dennis Payne"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8407648,
+        "source":"Lauren Sanchez",
+        "target":"Ashley Boyer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.82055223,
+        "source":"Lauren Sanchez",
+        "target":"Darin Taylor"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8580177,
+        "source":"Lauren Sanchez",
         "target":"Larry Cisneros"
     },
     {
@@ -51451,9 +55135,81 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.81513816,
+        "source":"Emily Smith",
+        "target":"Dennis Payne"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.83753455,
+        "source":"Emily Smith",
+        "target":"Ashley Boyer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8140603,
+        "source":"Emily Smith",
+        "target":"Darin Taylor"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.85598356,
+        "source":"Emily Smith",
+        "target":"Larry Cisneros"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.82143,
+        "source":"Megan Gonzales",
+        "target":"Ashley Boyer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.83723056,
+        "source":"Megan Gonzales",
+        "target":"Larry Cisneros"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.80649376,
+        "source":"Kenneth Warren",
+        "target":"Dennis Payne"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.82733315,
+        "source":"Kenneth Warren",
+        "target":"Ashley Boyer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.80857086,
+        "source":"Kenneth Warren",
+        "target":"Darin Taylor"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8482055,
+        "source":"Kenneth Warren",
+        "target":"Larry Cisneros"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8114631,
         "source":"Edward Winters",
         "target":"Crystal Hunter"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.87966126,
+        "source":"Edward Winters",
+        "target":"Dennis Payne"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.80444914,
+        "source":"Edward Winters",
+        "target":"Christopher Berry"
     },
     {
         "type":"family_relationship",
@@ -51469,6 +55225,42 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.89205587,
+        "source":"Edward Winters",
+        "target":"Ashley Boyer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.88096696,
+        "source":"Edward Winters",
+        "target":"Darin Taylor"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9083873,
+        "source":"Edward Winters",
+        "target":"Larry Cisneros"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8558869,
+        "source":"Edward Winters",
+        "target":"Michael Evans"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.88310564,
+        "source":"Emily Stevens",
+        "target":"Dennis Payne"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8096988,
+        "source":"Emily Stevens",
+        "target":"Christopher Berry"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.829521,
         "source":"Emily Stevens",
         "target":"James Patterson"
@@ -51478,6 +55270,48 @@
         "weight":0.81110716,
         "source":"Emily Stevens",
         "target":"Jon Johnson"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.89617467,
+        "source":"Emily Stevens",
+        "target":"Ashley Boyer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.88477945,
+        "source":"Emily Stevens",
+        "target":"Darin Taylor"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9121019,
+        "source":"Emily Stevens",
+        "target":"Larry Cisneros"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8054781,
+        "source":"Emily Stevens",
+        "target":"Andrea White"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8597334,
+        "source":"Emily Stevens",
+        "target":"Michael Evans"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8787205,
+        "source":"Gabrielle Wright",
+        "target":"Dennis Payne"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8040144,
+        "source":"Gabrielle Wright",
+        "target":"Christopher Berry"
     },
     {
         "type":"family_relationship",
@@ -51493,6 +55327,66 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.89207894,
+        "source":"Gabrielle Wright",
+        "target":"Ashley Boyer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.88111603,
+        "source":"Gabrielle Wright",
+        "target":"Darin Taylor"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.90920943,
+        "source":"Gabrielle Wright",
+        "target":"Larry Cisneros"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8569109,
+        "source":"Gabrielle Wright",
+        "target":"Michael Evans"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.81658643,
+        "source":"Erika Carter",
+        "target":"Ashley Boyer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.83310896,
+        "source":"Erika Carter",
+        "target":"Larry Cisneros"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.817223,
+        "source":"James Johnson",
+        "target":"Dennis Payne"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8466674,
+        "source":"James Johnson",
+        "target":"Ashley Boyer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.82724977,
+        "source":"James Johnson",
+        "target":"Darin Taylor"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.85993886,
+        "source":"James Johnson",
+        "target":"Larry Cisneros"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8322866,
         "source":"Brandi Johnson",
         "target":"James Patterson"
@@ -51502,6 +55396,36 @@
         "weight":0.81296706,
         "source":"Brandi Johnson",
         "target":"Jon Johnson"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8981635,
+        "source":"Brandi Johnson",
+        "target":"Ashley Boyer"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8870526,
+        "source":"Brandi Johnson",
+        "target":"Darin Taylor"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.91379094,
+        "source":"Brandi Johnson",
+        "target":"Larry Cisneros"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.80721337,
+        "source":"Brandi Johnson",
+        "target":"Andrea White"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8632847,
+        "source":"Brandi Johnson",
+        "target":"Michael Evans"
     },
     {
         "type":"membership",
@@ -51636,6 +55560,12 @@
         "target":"Richard Greer"
     },
     {
+        "type":"ownership",
+        "weight":0.9267104,
+        "source":"5199",
+        "target":"\u00e2\u0080\u009coverwhelmed\u00e2"
+    },
+    {
         "type":"partnership",
         "weight":0.8236419,
         "source":"Rachel Campbell",
@@ -51738,16 +55668,34 @@
         "target":"Okavango Delta Seaside Limited Liability Company Logistics"
     },
     {
+        "type":"ownership",
+        "weight":0.90234315,
+        "source":"17de5508-cf65-4e04-9bdd-acba951afe7a",
+        "target":"ROBYN BECK"
+    },
+    {
         "type":"membership",
         "weight":0.80342376,
         "source":"33210",
         "target":"Tiao piao AG Delivery"
     },
     {
+        "type":"ownership",
+        "weight":0.81680304,
+        "source":"33210",
+        "target":"ca87f68d-1df8-4746-a8af-8d810f49e783"
+    },
+    {
         "type":"membership",
         "weight":0.88962144,
         "source":"88d63621-4f58-4c7e-a02d-589cefb3a6be",
         "target":"Diane Young"
+    },
+    {
+        "type":"membership",
+        "weight":0.9203037,
+        "source":"88d63621-4f58-4c7e-a02d-589cefb3a6be",
+        "target":"Traci Elliott"
     },
     {
         "type":"family_relationship",
@@ -51760,6 +55708,12 @@
         "weight":0.84502345,
         "source":"hi xng BV Carriers",
         "target":"341411"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8182265,
+        "source":"Lucas Adams",
+        "target":"Rebecca Jordan"
     },
     {
         "type":"membership",
@@ -51802,6 +55756,12 @@
         "weight":0.89477795,
         "source":"72092",
         "target":"34"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8500284,
+        "source":"72092",
+        "target":"b605391a-2c84-4d59-98f0-d12fd185ec64"
     },
     {
         "type":"partnership",
@@ -51924,6 +55884,12 @@
         "target":"Danny Walker"
     },
     {
+        "type":"membership",
+        "weight":0.9010858,
+        "source":"95850",
+        "target":"Paul Hoover"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8190026,
         "source":"Danny Walker",
@@ -51936,6 +55902,12 @@
         "target":"Aaron Cruz"
     },
     {
+        "type":"ownership",
+        "weight":0.8883865,
+        "source":"45310570",
+        "target":"Martin Bryant"
+    },
+    {
         "type":"family_relationship",
         "weight":0.89556694,
         "source":"Aaron Cruz",
@@ -51946,6 +55918,12 @@
         "weight":0.84250623,
         "source":"598",
         "target":"928896ee-0c39-4b2c-aee6-910dc225513e"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8737368,
+        "source":"598",
+        "target":"Greek Sea Bream Limited Liability Company Transit"
     },
     {
         "type":"partnership",
@@ -51964,6 +55942,12 @@
         "weight":0.8578791,
         "source":"18139144-efbe-4540-8e65-fde29def1993",
         "target":"West Bengal SRL Marine conservation"
+    },
+    {
+        "type":"partnership",
+        "weight":0.80216664,
+        "source":"753",
+        "target":"David S.A. de C.V. Brothers"
     },
     {
         "type":"family_relationship",
@@ -52014,6 +55998,12 @@
         "target":"Mar del Oeste Pic"
     },
     {
+        "type":"membership",
+        "weight":0.86037844,
+        "source":"a086a63d-19c7-4241-845a-f82c628d09a2",
+        "target":"Brett Lee"
+    },
+    {
         "type":"ownership",
         "weight":0.8182828,
         "source":"a086a63d-19c7-4241-845a-f82c628d09a2",
@@ -52045,6 +56035,12 @@
     },
     {
         "type":"membership",
+        "weight":0.9405519,
+        "source":"7cc6a1fe-59b5-491c-8985-bf6d77836092",
+        "target":"ce8495cf-fe04-40b3-aaa2-d0bc29131f92"
+    },
+    {
+        "type":"membership",
         "weight":0.93668115,
         "source":"8084530",
         "target":"ce8495cf-fe04-40b3-aaa2-d0bc29131f92"
@@ -52054,6 +56050,12 @@
         "weight":0.8365317,
         "source":"6071877",
         "target":"93ac5fec-5f52-4431-a3ff-91430a8062f6"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.88685554,
+        "source":"6071877",
+        "target":"Barbara Mccarty"
     },
     {
         "type":"family_relationship",
@@ -52080,10 +56082,22 @@
         "target":"422"
     },
     {
+        "type":"partnership",
+        "weight":0.80489165,
+        "source":"753589537",
+        "target":"Playa de Coral Oyj International"
+    },
+    {
         "type":"family_relationship",
         "weight":0.82928365,
         "source":"Spanish Co & Son's",
         "target":"422"
+    },
+    {
+        "type":"membership",
+        "weight":0.8604057,
+        "source":"332bb88e-0a63-41e3-8a27-87795fd552e9",
+        "target":"course years"
     },
     {
         "type":"membership",
@@ -52102,6 +56116,24 @@
         "weight":0.85941356,
         "source":"Portuguese Sardines GmbH & Co. KG Line",
         "target":"486"
+    },
+    {
+        "type":"ownership",
+        "weight":0.9522846,
+        "source":"Portuguese Sardines GmbH & Co. KG Line",
+        "target":"Trammell\u00e2\u0080\u0099s"
+    },
+    {
+        "type":"membership",
+        "weight":0.87592256,
+        "source":"Portuguese Sardines GmbH & Co. KG Line",
+        "target":"2ade0908-d1c9-45de-9dbb-3dfec75d9317"
+    },
+    {
+        "type":"membership",
+        "weight":0.8696631,
+        "source":"Joshua Huang",
+        "target":"Andhra Pradesh  S.A. de C.V."
     },
     {
         "type":"ownership",
@@ -52129,6 +56161,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.9061913,
+        "source":"601882545",
+        "target":"88651"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8083254,
         "source":"William Taylor",
         "target":"Tony Patterson"
@@ -52153,9 +56191,33 @@
     },
     {
         "type":"ownership",
+        "weight":0.94376606,
+        "source":"Amstel Inc",
+        "target":"\u00e2\u0080\u009cHelp\u00e2"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8039725,
+        "source":"Amstel Inc",
+        "target":"35829746"
+    },
+    {
+        "type":"ownership",
         "weight":0.84021664,
         "source":"Amstel Inc",
         "target":"SeaSpray Wave SRL Solutions"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8141035,
+        "source":"Charlotte Lopez",
+        "target":"\u00e2\u0080\u009cHelp\u00e2"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8050618,
+        "source":"Charlotte Lopez",
+        "target":"James Andrews"
     },
     {
         "type":"membership",
@@ -52186,6 +56248,12 @@
         "weight":0.92869383,
         "source":"67745773",
         "target":"Mary Harrington"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.9177854,
+        "source":"67745773",
+        "target":"\u00e2\u0080\u009csleepy"
     },
     {
         "type":"partnership",
@@ -52297,6 +56365,36 @@
     },
     {
         "type":"ownership",
+        "weight":0.94239527,
+        "source":"90c3cb48-8060-4a55-804c-710044d19487",
+        "target":"Brittany Rivers"
+    },
+    {
+        "type":"membership",
+        "weight":0.82278746,
+        "source":"90c3cb48-8060-4a55-804c-710044d19487",
+        "target":"2ed68d75-994e-43dd-b326-a2adfa540562"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8010194,
+        "source":"90c3cb48-8060-4a55-804c-710044d19487",
+        "target":"hours"
+    },
+    {
+        "type":"membership",
+        "weight":0.82086676,
+        "source":"Michelle Evans",
+        "target":"2ed68d75-994e-43dd-b326-a2adfa540562"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8140432,
+        "source":"Michelle Evans",
+        "target":"hours"
+    },
+    {
+        "type":"ownership",
         "weight":0.9261016,
         "source":"05d471b4-0e8c-4879-80b2-ef600220e09d",
         "target":"James Garcia"
@@ -52360,6 +56458,12 @@
         "weight":0.8428131,
         "source":"14952",
         "target":"Ronald Gray"
+    },
+    {
+        "type":"ownership",
+        "weight":0.90858173,
+        "source":"14952",
+        "target":"\u00e2\u0080\u009cEQUIPMENT\u00e2"
     },
     {
         "type":"ownership",
@@ -52542,6 +56646,12 @@
         "target":"SeaSpray Wave SRL Solutions"
     },
     {
+        "type":"partnership",
+        "weight":0.8541318,
+        "source":"5334",
+        "target":"437212"
+    },
+    {
         "type":"membership",
         "weight":0.83154017,
         "source":"35679",
@@ -52681,6 +56791,12 @@
     },
     {
         "type":"membership",
+        "weight":0.9017618,
+        "source":"25222883",
+        "target":"d2948905-9121-400b-905f-e449bf8ca35e"
+    },
+    {
+        "type":"membership",
         "weight":0.8663019,
         "source":"Gaosheng Biotechnology Co",
         "target":"1094345"
@@ -52734,6 +56850,12 @@
         "target":"Sonia Fisheries Pvt"
     },
     {
+        "type":"membership",
+        "weight":0.80332226,
+        "source":"Danish Lobster Ltd. Liability Co",
+        "target":"Rama Overseas"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8539176,
         "source":"076",
@@ -52747,6 +56869,12 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.8361346,
+        "source":"36868",
+        "target":"vans\u00e2"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8568194,
         "source":"3127062",
         "target":"vans\u00e2"
@@ -52756,6 +56884,12 @@
         "weight":0.90708804,
         "source":"3369",
         "target":"4382"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8323447,
+        "source":"30880",
+        "target":"\u00e2\u0080\u0098Disastrous\u00e2"
     },
     {
         "type":"partnership",
@@ -52830,6 +56964,12 @@
         "target":"67261634"
     },
     {
+        "type":"partnership",
+        "weight":0.88336325,
+        "source":"dbeb3e02-dc0c-4455-a16b-2d0b9cb2c65a",
+        "target":"344"
+    },
+    {
         "type":"membership",
         "weight":0.8439261,
         "source":"601e76fd-8517-4269-b976-2743987a49f3",
@@ -52890,6 +57030,12 @@
         "target":"Amanda Clayton"
     },
     {
+        "type":"membership",
+        "weight":0.94208366,
+        "source":"d4291c4b-873e-4830-b44a-85227fde3ee2",
+        "target":"Erica Parks"
+    },
+    {
         "type":"family_relationship",
         "weight":0.8913205,
         "source":"Amanda Clayton",
@@ -52897,9 +57043,21 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.83966136,
+        "source":"70720996",
+        "target":"95291001"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.8414004,
         "source":"70720996",
         "target":"Sonia Fisheries Pvt"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8216183,
+        "source":"42627990",
+        "target":"95291001"
     },
     {
         "type":"family_relationship",
@@ -53302,6 +57460,12 @@
         "weight":0.9137973,
         "source":"2032s",
         "target":"\u00e2\u0080\u009ctoppy\u00e2"
+    },
+    {
+        "type":"partnership",
+        "weight":0.94193834,
+        "source":"2032s",
+        "target":"\u00e2\u0080\u009cstag\u00e2"
     },
     {
         "type":"family_relationship",
@@ -54007,6 +58171,12 @@
     },
     {
         "type":"membership",
+        "weight":0.9249,
+        "source":"FishEye International",
+        "target":"C Express"
+    },
+    {
+        "type":"membership",
         "weight":0.4386,
         "source":"FishEye International",
         "target":"Welding"
@@ -54025,6 +58195,18 @@
     },
     {
         "type":"membership",
+        "weight":0.4922,
+        "source":"FishEye International",
+        "target":"Conduct Joint"
+    },
+    {
+        "type":"membership",
+        "weight":0.2374,
+        "source":"FishEye International",
+        "target":"\u00e2\u0080\u009cGenev"
+    },
+    {
+        "type":"membership",
         "weight":0.93,
         "source":"FishEye International",
         "target":"80 Percent Arms"
@@ -54034,6 +58216,18 @@
         "weight":0.6235,
         "source":"FishEye International",
         "target":"Turkish Sword Ltd Export"
+    },
+    {
+        "type":"membership",
+        "weight":0.665,
+        "source":"FishEye International",
+        "target":"Officer Pleads Guilty"
+    },
+    {
+        "type":"membership",
+        "weight":0.4461,
+        "source":"FishEye International",
+        "target":"Oceanfront Oasis Inc Carriers"
     },
     {
         "type":"family_relationship",
@@ -58530,6 +62724,24 @@
         "target":"Saltwater Solitude GmbH & Co. KG"
     },
     {
+        "type":"family_relationship",
+        "weight":0.8546145,
+        "source":"Finest Ltd. Liability Co United",
+        "target":"Viento Azul Harbor LLC Investment"
+    },
+    {
+        "type":"membership",
+        "weight":0.9672687,
+        "source":"Finest Ltd. Liability Co United",
+        "target":"Barbara Mccarty"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.91234756,
+        "source":"Finest Ltd. Liability Co United",
+        "target":"\u00e2\u0080\u009cElqui\u00e2"
+    },
+    {
         "type":"membership",
         "weight":0.80615616,
         "source":"Finest Ltd. Liability Co United",
@@ -58669,9 +62881,21 @@
     },
     {
         "type":"ownership",
+        "weight":0.876035,
+        "source":"America",
+        "target":"5810"
+    },
+    {
+        "type":"ownership",
         "weight":0.84190303,
         "source":"America",
         "target":"160"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8267408,
+        "source":"America",
+        "target":"Nicholas Dennis"
     },
     {
         "type":"ownership",
@@ -58918,6 +63142,12 @@
         "weight":0.8000154,
         "source":"Getis-Ord",
         "target":"3506021"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8859729,
+        "source":"Getis-Ord",
+        "target":"f514483d-fb5f-4cb2-bb8d-b616b10336d8"
     },
     {
         "type":"partnership",
@@ -59296,6 +63526,12 @@
         "weight":0.8685694,
         "source":"\u00e2\u0080\u009cCompliance",
         "target":"979893388"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.81899637,
+        "source":"Blue Bay",
+        "target":"410"
     },
     {
         "type":"family_relationship",
@@ -59844,6 +64080,12 @@
         "target":"734121719"
     },
     {
+        "type":"family_relationship",
+        "weight":0.81103325,
+        "source":"Four",
+        "target":"Wendy Duarte"
+    },
+    {
         "type":"partnership",
         "weight":0.85142624,
         "source":"II",
@@ -59854,6 +64096,12 @@
         "weight":0.86517197,
         "source":"II",
         "target":"47679"
+    },
+    {
+        "type":"membership",
+        "weight":0.844293,
+        "source":"Bloomberg",
+        "target":"Paula King"
     },
     {
         "type":"membership",
@@ -59920,6 +64168,12 @@
         "weight":0.8761473,
         "source":"Mar de Plata Corp and Son's",
         "target":"30295c76-f2c6-4284-89fd-8f8fd082889b"
+    },
+    {
+        "type":"partnership",
+        "weight":0.8999843,
+        "source":"Mar de Plata Corp and Son's",
+        "target":"Rs"
     },
     {
         "type":"family_relationship",
@@ -60282,6 +64536,30 @@
         "target":"34"
     },
     {
+        "type":"membership",
+        "weight":0.8099628,
+        "source":"Mount Kenya Estuary Sp Holdings",
+        "target":"637608"
+    },
+    {
+        "type":"membership",
+        "weight":0.8405899,
+        "source":"Mount Kenya Estuary Sp Holdings",
+        "target":"845"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8017341,
+        "source":"Mount Kenya Estuary Sp Holdings",
+        "target":"\u00e2\u0080\u009cPok\u00c3\u00a9mon"
+    },
+    {
+        "type":"membership",
+        "weight":0.8963589,
+        "source":"Mount Kenya Estuary Sp Holdings",
+        "target":"f383ad5f-7949-495e-8427-556b64decaca"
+    },
+    {
         "type":"ownership",
         "weight":0.8810447,
         "source":"Mount Kenya Estuary Sp Holdings",
@@ -60316,6 +64594,12 @@
         "weight":0.8102481,
         "source":"Food",
         "target":"26431"
+    },
+    {
+        "type":"partnership",
+        "weight":0.90094924,
+        "source":"Food",
+        "target":"777"
     },
     {
         "type":"partnership",
@@ -60553,6 +64837,12 @@
     },
     {
         "type":"membership",
+        "weight":0.9367665,
+        "source":"Surf and Sea International Tidepool",
+        "target":"996"
+    },
+    {
+        "type":"membership",
         "weight":0.80170345,
         "source":"Surf and Sea International Tidepool",
         "target":"png xi  Line"
@@ -60739,6 +65029,12 @@
     },
     {
         "type":"ownership",
+        "weight":0.82192737,
+        "source":"Farmers",
+        "target":"Lake Nyasa Ltd. Corporation"
+    },
+    {
+        "type":"ownership",
         "weight":0.81881154,
         "source":"Phillips",
         "target":"Brittany Brewer"
@@ -60852,6 +65148,12 @@
         "target":"Scott Simpson"
     },
     {
+        "type":"partnership",
+        "weight":0.89454347,
+        "source":"Savaneta Corporation Marine life",
+        "target":"Loretta Harrington"
+    },
+    {
         "type":"family_relationship",
         "weight":0.83641094,
         "source":"Michael Limited Liability Company",
@@ -60961,6 +65263,12 @@
     },
     {
         "type":"membership",
+        "weight":0.9091044,
+        "source":"\u00e2\u0080\u009cUS",
+        "target":"intrafish"
+    },
+    {
+        "type":"membership",
         "weight":0.8988331,
         "source":"\u00e2\u0080\u009cUS",
         "target":"979893388"
@@ -61014,10 +65322,22 @@
         "target":"IAVMs"
     },
     {
+        "type":"membership",
+        "weight":0.8945043,
+        "source":"Improvised Anti",
+        "target":"Cartel Emergent Weaponry Use"
+    },
+    {
         "type":"ownership",
         "weight":0.83088124,
         "source":"Ste",
         "target":"French Ltd. Corporation Surfboard"
+    },
+    {
+        "type":"ownership",
+        "weight":0.92057633,
+        "source":"Ste",
+        "target":"47261702"
     },
     {
         "type":"ownership",
@@ -61129,6 +65449,18 @@
     },
     {
         "type":"partnership",
+        "weight":0.8898887,
+        "source":"Sp",
+        "target":"5865"
+    },
+    {
+        "type":"partnership",
+        "weight":0.9290858,
+        "source":"Sp",
+        "target":"Michael Frederick"
+    },
+    {
+        "type":"partnership",
         "weight":0.92300713,
         "source":"Sp",
         "target":"Eva"
@@ -61144,6 +65476,12 @@
         "weight":0.94137484,
         "source":"Sp",
         "target":"Sandra Martinez"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8915761,
+        "source":"Sp",
+        "target":"288971672"
     },
     {
         "type":"ownership",
@@ -61168,6 +65506,12 @@
         "weight":0.8047581,
         "source":"Memphis Women",
         "target":"Basketball"
+    },
+    {
+        "type":"ownership",
+        "weight":0.82640594,
+        "source":"Memphis Women",
+        "target":"0fab17df-2c08-46b6-8ce9-b13b3a60ff3d"
     },
     {
         "type":"partnership",
@@ -61200,6 +65544,12 @@
         "target":"Krista Harris"
     },
     {
+        "type":"partnership",
+        "weight":0.96877444,
+        "source":"Evergreen",
+        "target":"\u00e2\u0080\u009ceverything"
+    },
+    {
         "type":"membership",
         "weight":0.8897902,
         "source":"Himachal Pradesh Aquatic Plc Brothers",
@@ -61210,6 +65560,18 @@
         "weight":0.93310094,
         "source":"Himachal Pradesh Aquatic Plc Brothers",
         "target":"Patricia Bowen"
+    },
+    {
+        "type":"membership",
+        "weight":0.84168434,
+        "source":"Lake Tanganyika Sea AS Shipping",
+        "target":"Lauren Smith"
+    },
+    {
+        "type":"membership",
+        "weight":0.84521836,
+        "source":"Lake Tanganyika Sea AS Shipping",
+        "target":"Darrell Lopez"
     },
     {
         "type":"family_relationship",
@@ -61231,6 +65593,12 @@
     },
     {
         "type":"membership",
+        "weight":0.8990592,
+        "source":"Lake Tanganyika Sea AS Shipping",
+        "target":"3887"
+    },
+    {
+        "type":"membership",
         "weight":0.82641095,
         "source":"Lake Tanganyika Sea AS Shipping",
         "target":"438"
@@ -61249,6 +65617,12 @@
     },
     {
         "type":"membership",
+        "weight":0.85592645,
+        "source":"Lake Tanganyika Sea AS Shipping",
+        "target":"Estrella de la Costa  Consultants"
+    },
+    {
+        "type":"membership",
         "weight":0.8945489,
         "source":"Lake Tanganyika Sea AS Shipping",
         "target":"55674"
@@ -61261,15 +65635,45 @@
     },
     {
         "type":"family_relationship",
+        "weight":0.9787184,
+        "source":"Lake Tanganyika Sea AS Shipping",
+        "target":"merida\u00e2"
+    },
+    {
+        "type":"membership",
+        "weight":0.8675035,
+        "source":"Lake Tanganyika Sea AS Shipping",
+        "target":"8251198"
+    },
+    {
+        "type":"ownership",
+        "weight":0.920695,
+        "source":"Lake Tanganyika Sea AS Shipping",
+        "target":"327572963"
+    },
+    {
+        "type":"family_relationship",
         "weight":0.83632624,
         "source":"Lake Tanganyika Sea AS Shipping",
         "target":"Kariba Dam  Corporation Nautical"
     },
     {
         "type":"ownership",
+        "weight":0.8680304,
+        "source":"Lake Tanganyika Sea AS Shipping",
+        "target":"7914"
+    },
+    {
+        "type":"ownership",
         "weight":0.8534255,
         "source":"Lake Tanganyika Sea AS Shipping",
         "target":"6"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8573017,
+        "source":"Lake Tanganyika Sea AS Shipping",
+        "target":"Deborah Bell"
     },
     {
         "type":"family_relationship",
@@ -61339,6 +65743,12 @@
     },
     {
         "type":"membership",
+        "weight":0.82433665,
+        "source":"Kores De Venezuela C A",
+        "target":"Emily Kennedy"
+    },
+    {
+        "type":"membership",
         "weight":0.80487007,
         "source":"CP World",
         "target":"a03df7da-c2cf-476d-a6ea-95c422969df2"
@@ -61348,6 +65758,12 @@
         "weight":0.884117,
         "source":"CP World",
         "target":"Costa del Mar S.p.A."
+    },
+    {
+        "type":"partnership",
+        "weight":0.9046117,
+        "source":"Tombow",
+        "target":"Firearms Explosives"
     },
     {
         "type":"family_relationship",
@@ -61369,9 +65785,21 @@
     },
     {
         "type":"ownership",
+        "weight":0.91882664,
+        "source":"Tombow",
+        "target":"ROBYN BECK"
+    },
+    {
+        "type":"ownership",
         "weight":0.84383005,
         "source":"Tombow",
         "target":"66820"
+    },
+    {
+        "type":"membership",
+        "weight":0.8224466,
+        "source":"Yale",
+        "target":"Keith Compton"
     },
     {
         "type":"membership",
@@ -61392,10 +65820,22 @@
         "target":"Texas\u00e2"
     },
     {
+        "type":"ownership",
+        "weight":0.88147336,
+        "source":"East Ltd. Corporation Investment",
+        "target":"\u00e2\u0080\u009ccrisis\u00e2"
+    },
+    {
         "type":"membership",
         "weight":0.8308499,
         "source":"Logistics",
         "target":"Dr. Christina Jensen DDS"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.8035537,
+        "source":"Dispenseroo",
+        "target":"b8649055-5b40-43e1-ba33-93182cf978d4"
     },
     {
         "type":"membership",
@@ -61506,16 +65946,40 @@
         "target":"Sierra Henderson"
     },
     {
+        "type":"ownership",
+        "weight":0.8605701,
+        "source":"NFTs",
+        "target":"Roger Jordan"
+    },
+    {
         "type":"partnership",
         "weight":0.8997064,
         "source":"Cargo Systemsi",
         "target":"Angel Burnett"
     },
     {
+        "type":"partnership",
+        "weight":0.89178324,
+        "source":"Cargo Systemsi",
+        "target":"Jose Smith"
+    },
+    {
         "type":"family_relationship",
         "weight":0.80109304,
         "source":"Ocano del Este Corp Freight ",
         "target":"Xavier Sanchez"
+    },
+    {
+        "type":"family_relationship",
+        "weight":0.82717675,
+        "source":"Ocano del Este Corp Freight ",
+        "target":"John Hernandez"
+    },
+    {
+        "type":"ownership",
+        "weight":0.8481775,
+        "source":"Ronald",
+        "target":"C Express"
     },
     {
         "type":"family_relationship",
@@ -61591,6 +66055,12 @@
     },
     {
         "type":"membership",
+        "weight":0.8531403,
+        "source":"Spanish Shrimp Sp Brothers",
+        "target":"Estrella de la Costa  Consultants"
+    },
+    {
+        "type":"membership",
         "weight":0.92902654,
         "source":"Spanish Shrimp Sp Brothers",
         "target":"Richard Smith"
@@ -61603,9 +66073,33 @@
     },
     {
         "type":"membership",
+        "weight":0.94656664,
+        "source":"Spanish Shrimp Sp Brothers",
+        "target":"Jennifer Rivera"
+    },
+    {
+        "type":"membership",
         "weight":0.8150912,
         "source":"Spanish Shrimp Sp Brothers",
         "target":"673431"
+    },
+    {
+        "type":"membership",
+        "weight":0.8734637,
+        "source":"Spanish Shrimp Sp Brothers",
+        "target":"Elizabeth Shah"
+    },
+    {
+        "type":"membership",
+        "weight":0.81989795,
+        "source":"Spanish Shrimp Sp Brothers",
+        "target":"Gregory Williams"
+    },
+    {
+        "type":"membership",
+        "weight":0.8487271,
+        "source":"Spanish Shrimp Sp Brothers",
+        "target":"William Daniel"
     },
     {
         "type":"membership",
@@ -61660,6 +66154,18 @@
         "weight":0.84312963,
         "source":"Zerza\u00e2\u0080\u0099s",
         "target":"Angela Powers"
+    },
+    {
+        "type":"ownership",
+        "weight":0.81229156,
+        "source":"Ind\u00c3\u00bastria Madeireira Uliana",
+        "target":"Faurtil F\u00c3\u00a1brica Urnas Tiet\u00c3\u00aa"
+    },
+    {
+        "type":"ownership",
+        "weight":0.80384034,
+        "source":"Sms",
+        "target":"Michael Johnson"
     },
     {
         "type":"membership",
@@ -61752,6 +66258,12 @@
         "target":"386"
     },
     {
+        "type":"membership",
+        "weight":0.8718746,
+        "source":"Marmooska Shipyard Sagl United",
+        "target":"d09a6a69-eed5-4057-9f96-dcf4c9cf4d88"
+    },
+    {
         "type":"ownership",
         "weight":0.8417229,
         "source":"Marmooska Shipyard Sagl United",
@@ -61776,6 +66288,12 @@
         "target":"Scott Day"
     },
     {
+        "type":"family_relationship",
+        "weight":0.80455405,
+        "source":"W&O Supply",
+        "target":"Colin Hunter"
+    },
+    {
         "type":"membership",
         "weight":0.95545876,
         "source":"W&O Supply",
@@ -61794,6 +66312,12 @@
         "target":"Brett Williams"
     },
     {
+        "type":"membership",
+        "weight":0.89155066,
+        "source":"W&O Supply",
+        "target":"135338"
+    },
+    {
         "type":"partnership",
         "weight":0.8064416,
         "source":"Haryana s Ltd. Corporation Carriers",
@@ -61804,6 +66328,18 @@
         "weight":0.8811721,
         "source":"Haryana s Ltd. Corporation Carriers",
         "target":"Calvin Salas"
+    },
+    {
+        "type":"ownership",
+        "weight":0.95448667,
+        "source":"Coral Reef Sagl Transport",
+        "target":"\u00e2\u0080\u009cHelp\u00e2"
+    },
+    {
+        "type":"ownership",
+        "weight":0.80309635,
+        "source":"Coral Reef Sagl Transport",
+        "target":"35829746"
     },
     {
         "type":"partnership",
@@ -61870,5 +66406,11 @@
         "weight":0.8142165,
         "source":"Malabar Sea Catch Sp",
         "target":"672"
+    },
+    {
+        "type":"membership",
+        "weight":0.8238897,
+        "source":"Malabar Sea Catch Sp",
+        "target":"449820"
     }
 ]
