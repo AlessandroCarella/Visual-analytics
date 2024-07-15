@@ -38,15 +38,15 @@ function getPossibleNodes(data) {
     return { sources, targets, sourcesTargets };
 }
 
-function createNodesData(sources, targets, sourcesTargets) {
+function createNodesData(sources, targets, sourcesTargets, sourcesNotInGraph) {
     const nodesData = [];
 
     sources.forEach(source => {
-        nodesData.push({ id: source, type: 'source', alsoTarget: sourcesTargets.includes(source) });
+        nodesData.push({ id: source, type: 'source', alsoSource: true, alsoTarget: sourcesTargets.includes(source) });
     });
 
     targets.forEach(target => {
-        nodesData.push({ id: target, type: 'target', alsoTarget: false });
+        nodesData.push({ id: target, type: 'target', alsoSource: (sourcesTargets.includes(target) || sourcesNotInGraph.includes(target)), alsoTarget: true });
     });
 
     return nodesData;
@@ -54,25 +54,19 @@ function createNodesData(sources, targets, sourcesTargets) {
 
 function createLinksData(data, nodes) {
     const links = [];
-    const linkCounts = {}; // To keep track of link counts
 
     data.forEach(d => {
-        const linkKey = `${d.source}-${d.target}`;
-        linkCounts[linkKey] = (linkCounts[linkKey] || 0) + 1;
-
         const link = {
             source: nodes.find(node => node.id === d.source),
             target: nodes.find(node => node.id === d.target),
             type: d.type,
-            weight: d.weight,
-            id: `${linkKey}-${linkCounts[linkKey]}` // Unique ID for each link
+            weight: d.weight
         };
         links.push(link);
     });
 
     return links;
 }
-
 
 function initializeSimulation(nodes, links, width, height, ticked) {
     return d3.forceSimulation(nodes)
@@ -103,11 +97,10 @@ function createMarkers() {
 function createLinks(links) {
     types.forEach(type => {
         const linkSelection = svg.selectAll(`line.link.${type}`)
-            .data(links.filter(d => d.type === type), d => d.id); // Use unique ID
+            .data(links.filter(d => d.type === type));
 
         linkSelection.enter().append('line')
             .attr('class', `link ${type}`)
-            .attr('id', d => d.id) // Assign ID to line elements
             .style('stroke', color(type))
             .style('stroke-width', d => Math.sqrt(d.weight) * linksSizeMultiplier)
             .attr("marker-end", `url(#arrow-${type})`)
@@ -126,7 +119,6 @@ function getIntersectionX(node1, node2, isSource) {
     const r = node1.radius;
 
     const x = node1.x + (r / dist) * dx * (1);
-    //console.log(`Intersection X for ${isSource ? 'source' : 'target'} ${node1.id}, with original X = ${node1.x} and new x = ${x} (radius = ${node1.radius})`);
     return x;
 }
 
@@ -137,8 +129,23 @@ function getIntersectionY(node1, node2, isSource) {
     const r = node1.radius;
 
     const y = node1.y + (r / dist) * dy * (1);
-    //console.log(`Intersection Y for ${isSource ? 'source' : 'target'} ${node1.id}, with original Y = ${node1.y} and new y = ${y} (radius = ${node1.radius})`);
     return y;
+}
+
+function determineNodeColor (node){
+    let color = "#000"
+    if (node.type === 'source') {
+        color = node.alsoTarget ? sourceAndTargetColor : sourceColor;
+    }    
+    else{
+        color = node.alsoSource ? sourceAndTargetColor : targetColor;
+    }
+    // console.log("node", node.id)
+    // console.log("alsoTarget", node.alsoTarget)
+    // console.log("alsoSource", node.alsoSource)
+    // console.log("node color", color === sourceAndTargetColor ? "sourceAndTargetColor" : color === sourceColor? "sourceColor" : color === targetColor? "targetColor": "black")
+    // console.log("---------------------------------")
+    return color;
 }
 
 function createNodes(nodes, targetsPerSourceCount, activeSources, data, simulation, sources) {
@@ -155,7 +162,7 @@ function createNodes(nodes, targetsPerSourceCount, activeSources, data, simulati
             }
             return d.radius;
         })
-        .style('fill', d => d.alsoTarget ? sourceAndTargetColor : (d.type === 'source' ? sourceColor : targetColor))
+        .style('fill', d => determineNodeColor(d))
         .style('stroke', blackColor)
         .style('stroke-width', 1)
         //.style('visibility', 'hidden') //debugging markers
@@ -219,14 +226,8 @@ function ticked(width, height) {
     svg.selectAll('line.link')
         .attr('x1', d => getIntersectionX(d.source, d.target, true))
         .attr('y1', d => getIntersectionY(d.source, d.target, true))
-        .attr('x2', (d, i) => {
-            const offset = (i % 2 === 0 ? -5 : 5); // Simple offset for demonstration
-            return getIntersectionX(d.target, d.source, false) + offset;
-        })
-        .attr('y2', (d, i) => {
-            const offset = (i % 2 === 0 ? -5 : 5); // Simple offset for demonstration
-            return getIntersectionY(d.target, d.source, false) + offset;
-        });
+        .attr('x2', d => getIntersectionX(d.target, d.source, false))
+        .attr('y2', d => getIntersectionY(d.target, d.source, false));
 
     svg.selectAll('circle')
         .attr('cx', d => {
@@ -260,12 +261,12 @@ function dragended(event, d, simulation) {
     d.fy = null;
 }
 
-function createGraph(data) {
+function createGraph(data, sourcesNotInGraph = []) {
     const { width, height } = getGraphDimensions();
     const { sources: sources, targets: targets, sourcesTargets: sourcesTargets } = getPossibleNodes(data);
     const targetsPerSourceCount = findNumberOfTargets(data);
 
-    const nodes = createNodesData(sources, targets, sourcesTargets);
+    const nodes = createNodesData(sources, targets, sourcesTargets, sourcesNotInGraph);
     const links = createLinksData(data, nodes, sourcesTargets);
     const simulation = initializeSimulation(nodes, links, width, height, () => ticked(width, height));
 

@@ -20,14 +20,15 @@ function refreshGraph(data, activeSources = []) {
     console.log("all sources", allSources)
     const filteredTargets = new Set(filteredData.map(element => element.target));
     console.log("filtered targets", filteredTargets)
-    const sourcesNotInGraph = new Set([...allSources].filter(element => filteredTargets.has(element)));
+    const sourcesNotInGraph = Array.from(new Set([...allSources].filter(element => filteredTargets.has(element))));
     console.log("sources not in graph", sourcesNotInGraph)
+    console.log("filteredData", filteredData)
 
     // Clear existing graph elements
     svg.selectAll('*').remove();
 
     // Create the graph with the filtered data
-    createGraph(filteredData);
+    createGraph(filteredData, sourcesNotInGraph);
 }
 
 export { refreshGraph };

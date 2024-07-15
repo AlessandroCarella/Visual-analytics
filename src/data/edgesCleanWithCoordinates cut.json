@@ -648,15 +648,5 @@
         "sourceY": 712,
         "targetX": 1088,
         "targetY": 105
-    },
-    {
-        "type": "partnership",
-        "weight": 0.92168045,
-        "source": "Spanish Shrimp  Carriers",
-        "target": "143129355",
-        "sourceX": 1169,
-        "sourceY": 712,
-        "targetX": 1088,
-        "targetY": 105
     }
 ]
