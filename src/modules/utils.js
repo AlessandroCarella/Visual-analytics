@@ -30,4 +30,11 @@ function removeDuplicates (arrayToClean, arrayTwo){
     return Array.from(arrayToClean);
 }
 
-export { getUniqueItems, findNumberOfTargets, removeDuplicates }
+function isObjectEmpty(object) {
+    for (const key in object) {
+      return !object.hasOwnProperty(key);
+    }
+    return true;
+  }
+
+export { getUniqueItems, findNumberOfTargets, removeDuplicates, isObjectEmpty }

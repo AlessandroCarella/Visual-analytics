@@ -33,7 +33,20 @@ d3.json(jsonFilePath)
 
         addDropdownEventListeners(data);
 
-        createGraph(data);
+        //the createGraph function takes 3 inputs data, initialData and sourcesNotActiveButInGraph
+        //data is the data that will be modified to plot the variations of the graph
+        //
+        //initial data is needed because, when one of the nodes that is a source on the graph but 
+        //doesn't have its target plotted the info about the links from this source where removed 
+        //by the data so the program needs the initial data state to retrieve those
+        //
+        //sourcesNotActiveButInGraph is a non required parameter, but it's used when the data has
+        //been filtered and the program needs to find the nodes that are a non active source to 
+        //plot them in a different color
+        //
+        //so, since here the graph is been created for the first time, the initial data is the same 
+        //as data
+        createGraph(data, data);
         addTypeButtonsEventListeners(data);
     })
     .catch((error) => console.error("Error loading the data:", error));

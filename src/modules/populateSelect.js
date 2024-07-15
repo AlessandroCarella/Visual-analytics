@@ -37,7 +37,8 @@ function handleDropdownChange(selectedValue, type, data) {
         d3.select(`#target-select`).property('value', 'all');
     }
 
-    refreshGraph(data);
+    //check index.js for why passing data twice
+    refreshGraph(data, data);
 }
 
 export { populateSelect, addDropdownEventListeners }

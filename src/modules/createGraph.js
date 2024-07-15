@@ -5,10 +5,10 @@ import { refreshGraph } from "./refreshGraph";
 
 const graphDimensionsBorder = 25
 
-const sourceAndTargetColor = '#04820f'
-const sourceColor = '#821304'
-const targetColor = '#042882'
-const blackColor = '#000'
+const sourceAndTargetColor = '#04820f' //green
+const sourceColor = '#821304' //red
+const targetColor = '#042882' //blue
+const blackColor = '#000' //black
 
 const markersRefX = 8
 const markersRefY = 0
@@ -38,7 +38,7 @@ function getPossibleNodes(data) {
     return { sources, targets, sourcesTargets };
 }
 
-function createNodesData(sources, targets, sourcesTargets, sourcesNotInGraph) {
+function createNodesData(sources, targets, sourcesTargets, sourcesNotActiveButInGraph) {
     const nodesData = [];
 
     sources.forEach(source => {
@@ -46,7 +46,7 @@ function createNodesData(sources, targets, sourcesTargets, sourcesNotInGraph) {
     });
 
     targets.forEach(target => {
-        nodesData.push({ id: target, type: 'target', alsoSource: (sourcesTargets.includes(target) || sourcesNotInGraph.includes(target)), alsoTarget: true });
+        nodesData.push({ id: target, type: 'target', alsoSource: (sourcesTargets.includes(target) || sourcesNotActiveButInGraph.includes(target)), alsoTarget: true });
     });
 
     return nodesData;
@@ -134,21 +134,18 @@ function getIntersectionY(node1, node2, isSource) {
 
 function determineNodeColor (node){
     let color = "#000"
+
     if (node.type === 'source') {
         color = node.alsoTarget ? sourceAndTargetColor : sourceColor;
     }    
     else{
         color = node.alsoSource ? sourceAndTargetColor : targetColor;
     }
-    // console.log("node", node.id)
-    // console.log("alsoTarget", node.alsoTarget)
-    // console.log("alsoSource", node.alsoSource)
-    // console.log("node color", color === sourceAndTargetColor ? "sourceAndTargetColor" : color === sourceColor? "sourceColor" : color === targetColor? "targetColor": "black")
-    // console.log("---------------------------------")
+    
     return color;
 }
 
-function createNodes(nodes, targetsPerSourceCount, activeSources, data, simulation, sources) {
+function createNodes(nodes, targetsPerSourceCount, data, initialData, simulation, allPossibleSources, unactivatedSources) {
     const circles = svg.selectAll('circle').data(nodes);
     circles.exit().remove();
 
@@ -175,10 +172,8 @@ function createNodes(nodes, targetsPerSourceCount, activeSources, data, simulati
 
     allCircles.on('click', (event, d) => {
         console.log("clicked on:", d.id)
-        if (sources.includes(d.id) && !activeSources.includes(d.id)) {
-            console.log("sources.includes(d.id) && !activeSources.includes(d.id), refreshing graph")
-            activeSources.push(d.id);
-            refreshGraph(data, activeSources);
+        if (allPossibleSources.includes(d.id) && unactivatedSources.includes(d.id)) {
+            refreshGraph(data, initialData, d);
         }
     });
 }
@@ -261,17 +256,26 @@ function dragended(event, d, simulation) {
     d.fy = null;
 }
 
-function createGraph(data, sourcesNotInGraph = []) {
+function findActiveSources(){
+    let activeSources = [];
+
+    return activeSources;
+}
+
+function createGraph(data, initialData, sourcesNotActiveButInGraph = []) {
     const { width, height } = getGraphDimensions();
     const { sources: sources, targets: targets, sourcesTargets: sourcesTargets } = getPossibleNodes(data);
     const targetsPerSourceCount = findNumberOfTargets(data);
 
-    const nodes = createNodesData(sources, targets, sourcesTargets, sourcesNotInGraph);
+    const nodes = createNodesData(sources, targets, sourcesTargets, sourcesNotActiveButInGraph);
     const links = createLinksData(data, nodes, sourcesTargets);
     const simulation = initializeSimulation(nodes, links, width, height, () => ticked(width, height));
 
+    let allPossibleSources = sources.concat(sourcesNotActiveButInGraph);
+    let unactivatedSources = sourcesNotActiveButInGraph;
+
     createLinks(links);
-    createNodes(nodes, targetsPerSourceCount, [], data, simulation, sources);
+    createNodes(nodes, targetsPerSourceCount, data, initialData, simulation, allPossibleSources, unactivatedSources);
     createMarkers();
     createLabels(nodes, targetsPerSourceCount);
     setupTooltip();

@@ -16,7 +16,8 @@ function addTypeButtonsEventListeners(data) {
                 activeButtons.add(type);
             }
 
-            refreshGraph(data);
+            //check index.js for why passing data twice
+            refreshGraph(data, data);
         });
     });
 }
