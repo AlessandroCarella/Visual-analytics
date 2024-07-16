@@ -59,7 +59,7 @@ function createLinksData(data, nodes) {
         const link = {
             source: nodes.find(node => node.id === d.source),
             target: nodes.find(node => node.id === d.target),
-            type: d.type,
+            typeOfLink: d.typeOfLink,
             weight: d.weight
         };
         links.push(link);
@@ -95,17 +95,17 @@ function createMarkers() {
 }
 
 function createLinks(links) {
-    typesOfLinks.forEach(type => {
-        const linkSelection = svg.selectAll(`line.link.${type}`)
-            .data(links.filter(d => d.type === type));
+    typesOfLinks.forEach(typeOfLink => {
+        const linkSelection = svg.selectAll(`line.link.${typeOfLink}`)
+            .data(links.filter(d => d.typeOfLink === typeOfLink));
 
         linkSelection.enter().append('line')
-            .attr('class', `link ${type}`)
-            .style('stroke', color(type))
+            .attr('class', `link ${typeOfLink}`)
+            .style('stroke', color(typeOfLink))
             .style('stroke-width', d => Math.sqrt(d.weight) * linksSizeMultiplier)
-            .attr("marker-end", `url(#arrow-${type})`)
+            .attr("marker-end", `url(#arrow-${typeOfLink})`)
             .each(function (d) {
-                d.initialColor = color(d.type);
+                d.initialColor = color(d.typeOfLink);
             });
 
         linkSelection.exit().remove();

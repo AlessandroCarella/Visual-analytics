@@ -12,7 +12,7 @@ function refreshGraph(data, initialData, sourceToAdd = {}) {
 
     // Filter data based on active buttons and selected source/target
     const filteredData = data.filter(d => 
-        activeButtons.has(d.type) &&
+        activeButtons.has(d.typeOfLink) &&
         (sourceSelect === 'all' || d.source === sourceSelect) &&
         (targetSelect === 'all' || d.target === targetSelect)
     );
@@ -29,7 +29,7 @@ function refreshGraph(data, initialData, sourceToAdd = {}) {
         // Find initial data entries matching the new source
         toAddToFiltered = initialData.filter(d => 
             d.source === sourceToAddId &&
-            activeButtons.has(d.type)
+            activeButtons.has(d.typeOfLink)
         );
     }
 

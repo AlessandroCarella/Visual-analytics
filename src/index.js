@@ -1,8 +1,7 @@
-const jsonFilePath = "data/edgesFinalCut.json";
+const jsonFilePath = "data/mergedDatasetCut.json";
 
 import * as d3 from "d3";
 import { createGraph } from "./modules/createGraph";
-import { refreshGraph } from "./modules/refreshGraph";
 import {
     populateSelect,
     addDropdownEventListeners,

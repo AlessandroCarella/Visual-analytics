@@ -1,0 +1,2002 @@
+[
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.90013963,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "12744",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8458973,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "21323516",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9648761,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "290834957",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9642126,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "3506021",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.82348585,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Convention\u00e2",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8931523,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "2262",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8393061,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Ashley Davis",
+        "targetType": "person",
+        "sourceCountry": "Nalakond",
+        "targetCountry": "Syrithania"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.88508075,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "924",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8865156,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "95",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8986875,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Ancla Azul Company Solutions",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.87834406,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "185106",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9664978,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Stephanie Garner",
+        "targetType": "person",
+        "sourceCountry": "Nalakond",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.95491886,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "\u00e2\u0080\u009cpair",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.906598,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Guessl",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.85037404,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Federated",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8211689,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "94760735",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.84271693,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Act",
+        "targetType": "event",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.91274184,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "83",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8865423,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "imo",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.92457855,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Torremolinos",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.91700685,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "International-Convention",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8683886,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "logo",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.85606986,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "551",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.92410904,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Dana Goodwin",
+        "targetType": "person",
+        "sourceCountry": "Nalakond",
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8302771,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Misty Thomas",
+        "targetType": "person",
+        "sourceCountry": "Nalakond",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8621031,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Turkish Sword Buoy Incorporated Forwading",
+        "targetType": "company",
+        "sourceCountry": "Nalakond",
+        "targetCountry": "Oceanus"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8461635,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "314",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8549085,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "56",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.86141807,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "2983",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8872652,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "FinestSea Ltd. Corporation Enterprises",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.89786583,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "653",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8220973,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Icelandic Shrimp Corporation Transport",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8432206,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "1094345",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8699905,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "7691",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.86455804,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "341",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.80229217,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Lake Mweru A/S Carriers",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8711762,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Playa de la Felicidad Oyj Cargo",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.88794583,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "77b46bc7-7e31-41a0-973c-e633011d21b0",
+        "targetType": "location",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.89960074,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "\u00e2\u0080\u009cencountered\u00e2",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.89385,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "f7a4114d-d1ca-44df-a7e0-c72e440671ba",
+        "targetType": "location",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8977303,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "39",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.85345495,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "3433",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.954674,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Kara Sullivan",
+        "targetType": "person",
+        "sourceCountry": "Nalakond",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9264291,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "52093e45-b873-4300-9612-8dfc291b1339",
+        "targetType": "location",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9294543,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "200640636",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.90164447,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "300668979",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9337086,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Stacey Ortega",
+        "targetType": "person",
+        "sourceCountry": "Nalakond",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.93725806,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "285351",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.85655963,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "allAfrica",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9649751,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "l y S.A. de C.V. International",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9384681,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "b28d568f-09b4-41bd-b04d-4cf255f1adc6",
+        "targetType": "location",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8305824,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "122245",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8497422,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "341411",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8640143,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Playa del Cielo Kga",
+        "targetType": "company",
+        "sourceCountry": "Nalakond",
+        "targetCountry": "Rio Isla"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8408453,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "160",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.80696726,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "903311212",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.88245773,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "SeaSpray Wave SRL Solutions",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8822255,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "png xi  Line",
+        "targetType": "company",
+        "sourceCountry": "Nalakond",
+        "targetCountry": "Country_628643"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.91648334,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Mar del Oeste Pic",
+        "targetType": "company",
+        "sourceCountry": "Nalakond",
+        "targetCountry": "Vesperlandia"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8070168,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.80074245,
+        "source": "Spanish Shrimp  Carriers",
+        "sourceType": "company",
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.91701066,
+        "source": "12744",
+        "sourceType": "organization",
+        "target": "Spanish Shrimp  Carriers",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Nalakond"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9258137,
+        "source": "12744",
+        "sourceType": "organization",
+        "target": "255\u00e2\u0080\u0093273",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.90370446,
+        "source": "12744",
+        "sourceType": "organization",
+        "target": "858",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.92168045,
+        "source": "143129355",
+        "sourceType": "organization",
+        "target": "Spanish Shrimp  Carriers",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Nalakond"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.811439,
+        "source": "143129355",
+        "sourceType": "organization",
+        "target": "pilot",
+        "targetType": "vessel",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.85087025,
+        "source": "143129355",
+        "sourceType": "organization",
+        "target": "9699687",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.89279175,
+        "source": "143129355",
+        "sourceType": "organization",
+        "target": "Melinda Bentley",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_462996"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9460538,
+        "source": "7775",
+        "sourceType": "organization",
+        "target": "Sean Vasquez",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.85230386,
+        "source": "7775",
+        "sourceType": "organization",
+        "target": "196159",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.95881826,
+        "source": "7775",
+        "sourceType": "organization",
+        "target": "755",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8827995,
+        "source": "7775",
+        "sourceType": "organization",
+        "target": "Ancla del Mar Ltd. Corporation",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.91212845,
+        "source": "7775",
+        "sourceType": "organization",
+        "target": "95",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.937907,
+        "source": "7775",
+        "sourceType": "organization",
+        "target": "185040354",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8675355,
+        "source": "1017141",
+        "sourceType": "organization",
+        "target": "2591586",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.880043,
+        "source": "1017141",
+        "sourceType": "organization",
+        "target": "185040354",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.90195256,
+        "source": "1017141",
+        "sourceType": "organization",
+        "target": "0",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.89889705,
+        "source": "2591586",
+        "sourceType": "organization",
+        "target": "185040354",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9113865,
+        "source": "2591586",
+        "sourceType": "organization",
+        "target": "0",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8243702,
+        "source": "2591586",
+        "sourceType": "organization",
+        "target": "49",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.88491124,
+        "source": "2591586",
+        "sourceType": "organization",
+        "target": "71352",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8380731,
+        "source": "2591586",
+        "sourceType": "organization",
+        "target": "60806",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8130386,
+        "source": "2591586",
+        "sourceType": "organization",
+        "target": "SeaSpray Wave SRL Solutions",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8093446,
+        "source": "2591586",
+        "sourceType": "organization",
+        "target": "png xi  Line",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Country_628643"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8574063,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "4",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9082395,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "77b46bc7-7e31-41a0-973c-e633011d21b0",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9027907,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "7",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.90231067,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "35",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9120527,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "Faroe Islands Shrimp Shark",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Rio Isla"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9322683,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "6406040",
+        "targetType": "political_organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9499722,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "290834957",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8384497,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "Jamie Knox",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8960208,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "0",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.84134257,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "3506021",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.80856466,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "664738735",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9200609,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "2262",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.896637,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "5848",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.82721174,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "505943",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8559051,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "Jerry Welch",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.85033315,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "23774",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.81937426,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "854",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9579221,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "903311212",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9049128,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "Mar del Oeste Pic",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Vesperlandia"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.88091284,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "2591586",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.89682174,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "185040354",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8004607,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "185040354",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9179369,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "650512",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.915767,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "6406040",
+        "targetType": "political_organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9320071,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "290834957",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.80087644,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Ancla Azul Company Solutions",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.80773896,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "245",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9212231,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "551",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8270625,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "5372",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.82179725,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "951093",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.84672105,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Tamil Nadu S.p.A.",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.88316095,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "02cd44a1-7945-40d9-b38f-56f70976582c",
+        "targetType": "location",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8576304,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "7950",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.847137,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "44",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.82616806,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "41",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.83704895,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "c1aeee2d-0030-4d85-b45c-ac3fd9887b98",
+        "targetType": "location",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.90117604,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "98703",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.93715215,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "34",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.81411695,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Spanish Shrimp  Carriers",
+        "targetType": "company",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Nalakond"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.89687985,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Dana Goodwin",
+        "targetType": "person",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8262601,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "7691",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.81719506,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "380",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.86927295,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "OceanicOrigin Foods Co and Son's",
+        "targetType": "company",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.83493114,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "852015",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.86684185,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "71317",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9012811,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Act",
+        "targetType": "event",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.94861764,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "l y S.A. de C.V. International",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.81251955,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "16",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.88998085,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "\u00e2\u0080\u009cThese",
+        "targetType": "event",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.821271,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "31",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.83774954,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "3506021",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.92099714,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Fisherman'sFriend Charter Boat S.A. de C.V. Freight ",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8437206,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "PC",
+        "targetType": "vessel",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.84527004,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "39",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.80260277,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.80869645,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "FiTI",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.91337633,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "48",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.82293105,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "43685541",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.94451296,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Marie Lee",
+        "targetType": "person",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.84685665,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "49",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8082731,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "449820",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8115202,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Victoria",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.854292,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "73166320",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.83002937,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "262157542",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9467771,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "faf.20363",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.80275244,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Christopher Cunningham",
+        "targetType": "person",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Oceanus"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.80719465,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Christopher Cunningham",
+        "targetType": "person",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Oceanus"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.90827155,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "589",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8224123,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "94",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.92168885,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Mr. Joseph Johnson",
+        "targetType": "person",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.83362126,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "720",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.91618645,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "fdcbe098-dbe6-4e52-8bd7-96cf3ae30101",
+        "targetType": "location",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.88314736,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "767",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8398377,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Master",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.89321953,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Michael Andrews",
+        "targetType": "person",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Zambalantis"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9304359,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Sarah Garcia",
+        "targetType": "person",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9054944,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Jessica James",
+        "targetType": "person",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9223005,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "26794528-86a5-4b5e-802f-50c3f226c66b",
+        "targetType": "location",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8002637,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "c01c6a10-60c9-4f11-9409-aa04c3963826",
+        "targetType": "location",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8422154,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "57",
+        "targetType": "political_organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8259138,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "9550",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.83669424,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "46901627",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8761594,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Faurtil F\u00c3\u00a1brica Urnas Tiet\u00c3\u00aa",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8191037,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Turkish Mussels Ltd. Liability Co Marine biology",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8986532,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Leslie Williams",
+        "targetType": "person",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8249205,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "83951569",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.80356675,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "577a9358-a718-4d90-a90e-88f88c58160d",
+        "targetType": "location",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.82205546,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "b120bc86-764c-4e2b-9f36-1587f91a20e3",
+        "targetType": "location",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8200454,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "6c7a8222-efc7-41a6-809a-043b091ae04a",
+        "targetType": "location",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8693283,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Sarah Hays",
+        "targetType": "person",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.87307334,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "8541598",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8320456,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "6731",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9050164,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "b8567859-bf54-49fd-8332-5775e19c65af",
+        "targetType": "location",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8558467,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8614878,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "341411",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8672443,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "341411",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.88049114,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Playa del Cielo Kga",
+        "targetType": "company",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Rio Isla"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8554233,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Playa del Cielo Kga",
+        "targetType": "company",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Rio Isla"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.83714163,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "png xi  Line",
+        "targetType": "company",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Country_628643"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.89177126,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "png xi  Line",
+        "targetType": "company",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Country_628643"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8417909,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "png xi  Line",
+        "targetType": "company",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Country_628643"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.86580426,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "png xi  Line",
+        "targetType": "company",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Country_628643"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8793665,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "SeaSpray Wave SRL Solutions",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.88534224,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "SeaSpray Wave SRL Solutions",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8202867,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "SeaSpray Wave SRL Solutions",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.82755584,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "903311212",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8062242,
+        "source": "341411",
+        "sourceType": "organization",
+        "target": "21323516",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8733182,
+        "source": "341411",
+        "sourceType": "organization",
+        "target": "Lisa Jimenez",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9089618,
+        "source": "341411",
+        "sourceType": "organization",
+        "target": "526269",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.95340335,
+        "source": "341411",
+        "sourceType": "organization",
+        "target": "99575926",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9426687,
+        "source": "341411",
+        "sourceType": "organization",
+        "target": "290834957",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9565551,
+        "source": "341411",
+        "sourceType": "organization",
+        "target": "72371354",
+        "targetType": "political_organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8608428,
+        "source": "341411",
+        "sourceType": "organization",
+        "target": "55",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.82686514,
+        "source": "341411",
+        "sourceType": "organization",
+        "target": "766649",
+        "targetType": "political_organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8264447,
+        "source": "341411",
+        "sourceType": "organization",
+        "target": "Brian Nelson",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9071883,
+        "source": "341411",
+        "sourceType": "organization",
+        "target": "664738735",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    }
+]
