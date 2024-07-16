@@ -1,7 +1,7 @@
 const jsonFilePath = "data/mergedDatasetCut.json";
 
 import * as d3 from "d3";
-import { createGraph } from "./modules/createGraph";
+import { createGraph, setInitialDataCreateGraph } from "./modules/createGraph";
 import {
     populateSelect,
     addDropdownEventListeners,
@@ -22,8 +22,12 @@ const color = d3
     .domain(typesOfLinks)
     .range(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"]);
 
+let initialData;
+
 d3.json(jsonFilePath)
     .then((data) => {
+        initialData = data;
+
         const uniqueSources = getUniqueItems(data, "source").sort();
         const uniqueTargets = getUniqueItems(data, "target").sort();
 
@@ -45,9 +49,9 @@ d3.json(jsonFilePath)
         //
         //so, since here the graph is been created for the first time, the initial data is the same 
         //as data
-        createGraph(data, data);
+        createGraph(data);
         addTypeButtonsEventListeners(data);
     })
     .catch((error) => console.error("Error loading the data:", error));
 
-export { typesOfLinks, activeButtons, svg, color };
+export { typesOfLinks, activeButtons, svg, color, initialData };

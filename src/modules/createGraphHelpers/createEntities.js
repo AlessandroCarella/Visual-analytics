@@ -6,6 +6,7 @@ import {
     tooltipBackgroundColor,
     determineNodeColor
 } from "./constants";
+import { refreshGraph } from "../refreshGraph";
 
 
 function dragstarted(event, d, simulation) {
@@ -73,7 +74,7 @@ function createNodes(nodes, targetsPerSourceCount, data, initialData, simulation
     allCircles.on('click', (event, d) => {
         console.log("clicked on:", d.id)
         if (allPossibleSources.includes(d.id) && unactivatedSources.includes(d.id)) {
-            refreshGraph(data, initialData, d);
+            refreshGraph(data, d);
         }
     });
 }

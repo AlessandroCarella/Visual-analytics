@@ -4,7 +4,10 @@ import { getPossibleNodes, createNodesData, createLinksData } from './createGrap
 import { initializeSimulation, ticked } from './createGraphHelpers/simulation';
 import { createLinks, createNodes, createMarkers, createLabels, setupTooltip } from './createGraphHelpers/createEntities';
 
-function createGraph(data, initialData, sourcesNotActiveButInGraph = []) {
+let initialData;
+
+function createGraph(data, sourcesNotActiveButInGraph = []) {
+    console.log(initialData)
     const { width, height } = getGraphDimensions();
 
     const { sources: sources, targets: targets, sourcesTargets: sourcesTargets } = getPossibleNodes(data);

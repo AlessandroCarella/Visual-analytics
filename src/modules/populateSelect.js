@@ -38,7 +38,7 @@ function handleDropdownChange(selectedValue, type, data) {
     }
 
     //check index.js for why passing data twice
-    refreshGraph(data, data);
+    refreshGraph(data);
 }
 
 export { populateSelect, addDropdownEventListeners }

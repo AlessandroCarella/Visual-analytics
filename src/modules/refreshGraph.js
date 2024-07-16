@@ -1,10 +1,10 @@
 // refreshGraph.js
 import * as d3 from 'd3';
-import { svg, color, activeButtons } from '../index';
+import { svg, color, activeButtons, initialData } from '../index';
 import { createGraph } from './createGraph';
 import { isObjectEmpty } from './utils';
 
-function refreshGraph(data, initialData, sourceToAdd = {}) {
+function refreshGraph(data, sourceToAdd = {}) {
     d3.selectAll('div-tooltip.tooltip').style('opacity', 0); // Hide tooltip on click
 
     const sourceSelect = document.querySelector('#source-select').value;
@@ -43,7 +43,7 @@ function refreshGraph(data, initialData, sourceToAdd = {}) {
     svg.selectAll('*').remove();
 
     // Create the graph with the filtered data
-    createGraph(finalFilteredData, initialData, sourcesNotActiveButInGraph);
+    createGraph(finalFilteredData, sourcesNotActiveButInGraph);
 }
 
 export { refreshGraph };
