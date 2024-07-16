@@ -1,9 +1,9 @@
 import * as d3 from "d3";
-import { types, activeButtons } from "../index";
+import { typesOfLinks, activeButtons } from "../index";
 import { refreshGraph } from "./refreshGraph";
 
 function addTypeButtonsEventListeners(data) {
-    types.forEach((type) => {
+    typesOfLinks.forEach((type) => {
         d3.select(`#${type}`).on("click", function () {
             const isActive = d3.select(this).classed("active-button");
             d3.select(this)

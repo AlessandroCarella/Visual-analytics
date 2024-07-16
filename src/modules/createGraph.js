@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import { types, svg, color } from "../index";
+import { typesOfLinks, svg, color } from "../index";
 import { findNumberOfTargets, removeDuplicates } from "./utils";
 import { refreshGraph } from "./refreshGraph";
 
@@ -79,7 +79,7 @@ function initializeSimulation(nodes, links, width, height, ticked) {
 function createMarkers() {
     // Create the markers at the end
     svg.append("defs").selectAll("marker")
-        .data(types)
+        .data(typesOfLinks)
         .enter().append("marker")
         .attr("id", d => `arrow-${d}`)
         .attr("viewBox", "0 -5 10 10")
@@ -95,7 +95,7 @@ function createMarkers() {
 }
 
 function createLinks(links) {
-    types.forEach(type => {
+    typesOfLinks.forEach(type => {
         const linkSelection = svg.selectAll(`line.link.${type}`)
             .data(links.filter(d => d.type === type));
 
