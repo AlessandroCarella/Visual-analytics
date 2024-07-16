@@ -1,20 +1,7 @@
+import { graphDimensionsBorder } from './createGraphHelpers/constants'
 
 function getUniqueItems(data, key) {
     return Array.from(new Set(data.map(d => d[key])));
-}
-
-function findNumberOfTargets(data) {
-    const sourceTargetCounts = {}
-    
-    // Calculate the number of targets each source has
-    data.forEach(d => {
-        if (!sourceTargetCounts[d.source]) {
-            sourceTargetCounts[d.source] = 0;
-        }
-        sourceTargetCounts[d.source]++;
-    });
-
-    return sourceTargetCounts;
 }
 
 function removeDuplicates (arrayToClean, arrayTwo){
@@ -37,4 +24,22 @@ function isObjectEmpty(object) {
     return true;
   }
 
-export { getUniqueItems, findNumberOfTargets, removeDuplicates, isObjectEmpty }
+function getGraphDimensions() {
+    const { width, height } = document.querySelector('.graph').getBoundingClientRect();
+    return { width: width - graphDimensionsBorder, height: height - graphDimensionsBorder };
+}
+function findNumberOfTargets(data) {
+    const sourceTargetCounts = {};
+
+    // Calculate the number of targets each source has
+    data.forEach(d => {
+        if (!sourceTargetCounts[d.source]) {
+            sourceTargetCounts[d.source] = 0;
+        }
+        sourceTargetCounts[d.source]++;
+    });
+
+    return sourceTargetCounts;
+}
+
+export { getUniqueItems, removeDuplicates, isObjectEmpty, getGraphDimensions, findNumberOfTargets }
