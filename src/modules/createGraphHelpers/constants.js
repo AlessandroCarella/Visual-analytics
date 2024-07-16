@@ -18,21 +18,21 @@ const labelsNodeMinRadiusToShowLabel = 10
 
 const tooltipBackgroundColor = "#fff"
 
-function determineNodeColor (node){
+function determineNodeColor(node) {
     let color = blackColor
 
     if (node.type === 'source') {
         color = node.alsoTarget ? sourceAndTargetColor : sourceColor;
-    }    
-    else{
+    }
+    else {
         color = node.alsoSource ? sourceAndTargetColor : targetColor;
     }
-    
+
     return color;
 }
 
 export {
-    graphDimensionsBorder, 
+    graphDimensionsBorder,
     sourceAndTargetColor, sourceColor, targetColor, blackColor,
     markersRefX, markersRefY, markerWidth, markerHeight,
     linksSizeMultiplier, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel,

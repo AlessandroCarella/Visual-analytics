@@ -12,7 +12,7 @@ function createGraph(data, initialData, sourcesNotActiveButInGraph = []) {
 
     const nodes = createNodesData(sources, targets, sourcesTargets, sourcesNotActiveButInGraph);
     const links = createLinksData(data, nodes, sourcesTargets);
-    
+
     const simulation = initializeSimulation(nodes, links, width, height, svg, () => ticked(width, height, svg));
 
     let allPossibleSources = sources.concat(sourcesNotActiveButInGraph);

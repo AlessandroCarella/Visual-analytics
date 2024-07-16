@@ -4,19 +4,19 @@ import { svg, color, activeButtons } from '../index';
 import { createGraph } from './createGraph';
 import { isObjectEmpty } from './utils';
 
-function refreshGraph(data, initialData, sourceToAdd = {}) {    
+function refreshGraph(data, initialData, sourceToAdd = {}) {
     d3.selectAll('div-tooltip.tooltip').style('opacity', 0); // Hide tooltip on click
-        
+
     const sourceSelect = document.querySelector('#source-select').value;
     const targetSelect = document.querySelector('#target-select').value;
 
     // Filter data based on active buttons and selected source/target
-    const filteredData = data.filter(d => 
+    const filteredData = data.filter(d =>
         activeButtons.has(d.typeOfLink) &&
         (sourceSelect === 'all' || d.source === sourceSelect) &&
         (targetSelect === 'all' || d.target === targetSelect)
     );
-    
+
     let allSources = new Set(data.map(d => d.source));
     let filteredTargets = new Set(filteredData.map(d => d.target));
     let toAddToFiltered = [];
@@ -27,7 +27,7 @@ function refreshGraph(data, initialData, sourceToAdd = {}) {
         filteredTargets.delete(sourceToAddId);
 
         // Find initial data entries matching the new source
-        toAddToFiltered = initialData.filter(d => 
+        toAddToFiltered = initialData.filter(d =>
             d.source === sourceToAddId &&
             activeButtons.has(d.typeOfLink)
         );
@@ -35,7 +35,7 @@ function refreshGraph(data, initialData, sourceToAdd = {}) {
 
     // Merge filtered data with new entries
     const finalFilteredData = [...filteredData, ...toAddToFiltered];
-    
+
     // Find sources not active but still in the graph
     const sourcesNotActiveButInGraph = Array.from(allSources).filter(source => filteredTargets.has(source));
 

@@ -1,9 +1,11 @@
 import { typesOfLinks, svg, color } from "../../index";
-import { blackColor,
+import {
+    blackColor,
     markersRefX, markersRefY, markerWidth, markerHeight,
     linksSizeMultiplier, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel,
     tooltipBackgroundColor,
-    determineNodeColor } from "./constants";
+    determineNodeColor
+} from "./constants";
 
 
 function dragstarted(event, d, simulation) {
@@ -133,4 +135,4 @@ function setupTooltip() {
         });
 }
 
-export { createLinks, createNodes, createMarkers, createLabels, setupTooltip}
+export { createLinks, createNodes, createMarkers, createLabels, setupTooltip }

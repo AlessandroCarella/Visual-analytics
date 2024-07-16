@@ -4,7 +4,7 @@ function getUniqueItems(data, key) {
     return Array.from(new Set(data.map(d => d[key])));
 }
 
-function removeDuplicates (arrayToClean, arrayTwo){
+function removeDuplicates(arrayToClean, arrayTwo) {
     arrayToClean = new Set(arrayToClean);
     arrayTwo = new Set(arrayTwo);
 
@@ -19,10 +19,10 @@ function removeDuplicates (arrayToClean, arrayTwo){
 
 function isObjectEmpty(object) {
     for (const key in object) {
-      return !object.hasOwnProperty(key);
+        return !object.hasOwnProperty(key);
     }
     return true;
-  }
+}
 
 function getGraphDimensions() {
     const { width, height } = document.querySelector('.graph').getBoundingClientRect();
