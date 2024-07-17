@@ -3,13 +3,14 @@ const jsonFilePath = "data/mergedDatasetCut.json";
 import * as d3 from "d3";
 import {
     setInitialData, setCurrentData, getInitalData,
-    createActiveButtons, createTypesOfLinks,
+    createActiveButtons,
     getTypesOfLinks,
     getActiveButtons,
     getCurrentData,
 } from "./modules/dataManagement";
 import { getUniqueItemsPerKey } from "./modules/utils";
 import { addDropdownEventListeners, populateSelect } from "./modules/populateSelect";
+import { addTypeButtonsEventListeners } from "./modules/buttons";
 
 const svg = d3.select('.graph svg');
 
@@ -20,7 +21,6 @@ d3.json(jsonFilePath)
         setInitialData(data)
         setCurrentData(data)
 
-        createTypesOfLinks(data);
         createActiveButtons();
 
         //selects
@@ -31,7 +31,7 @@ d3.json(jsonFilePath)
         addDropdownEventListeners("#target-select");
 
         //graph
-        createGraph();
+        // createGraph();
 
         //buttons
         addTypeButtonsEventListeners();

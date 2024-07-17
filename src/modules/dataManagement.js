@@ -19,23 +19,10 @@ function getCurrentData() {
 
 ///////////////////////////////////////////
 
-let typesOfLinks;
+const typesOfLinks = ["ownership", "partnership", "family_relationship", "membership"];
 let activeButtons;
 
-function createTypesOfLinks(data){
-    if (data && data.length > 0){
-        console.log("AAA")
-        typesOfLinks = Array.from(new Set(data.map(link => link.typeOfLink)));
-    } else {
-        console.log("BBB")
-        typesOfLinks = Array.from(new Set(getInitalData().map(link => link.typeOfLink)));
-    }
-}
-
 function getTypesOfLinks(){
-    if (typesOfLinks === undefined) {
-        createTypesOfLinks()
-    }
     return typesOfLinks;
 }
 
@@ -117,7 +104,7 @@ function resetAndAddElemSelectedTargets (element){
 
 export { 
     getInitalData, setInitialData, setCurrentData, getCurrentData, 
-    createTypesOfLinks, getTypesOfLinks, 
+    getTypesOfLinks, 
     createActiveButtons, getActiveButtons, updateActiveButtons,
     colors,
     getSelectedSources, updateSelectedSources, resetSelectedSources, resetAndAddElemSelectedSources,

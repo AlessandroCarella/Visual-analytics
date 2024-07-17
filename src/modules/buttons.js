@@ -1,12 +1,12 @@
 import * as d3 from "d3";
 import { activeButtons } from "../index";
-import { refreshGraph } from "./refreshGraph";
 import { getTypesOfLinks, updateActiveButtons } from "./dataManagement";
 
 function addTypeButtonsEventListeners() {
     getTypesOfLinks().forEach((typeOfLink) => {
         //select the buttons
         d3.select(`#${typeOfLink}`).on("click", function () {
+            console.log(typeOfLink);
             const isActive = d3.select(this).classed("active-button");
             d3.select(this)
                 .classed("active-button", !isActive)
@@ -18,7 +18,7 @@ function addTypeButtonsEventListeners() {
                 updateActiveButtons(typeOfLink, true);
             }
 
-            refreshGraph();
+            // refreshGraph();
         });
     });
 }
