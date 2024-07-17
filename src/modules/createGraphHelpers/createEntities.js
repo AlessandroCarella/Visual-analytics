@@ -46,7 +46,7 @@ function createLinks(links) {
     });
 }
 
-function createNodes(nodes, targetsPerSourceCount, data, initialData, simulation, allPossibleSources, unactivatedSources) {
+function createNodes(nodes, targetsPerSourceCount, simulation, allPossibleSources, sourcesNotActiveButInGraph) {
     const circles = svg.selectAll('circle').data(nodes);
     circles.exit().remove();
 
@@ -61,7 +61,7 @@ function createNodes(nodes, targetsPerSourceCount, data, initialData, simulation
             return d.radius;
         })
         .style('fill', d => determineNodeColor(d))
-        .style('stroke', blackColor)
+        .style('stroke', blackColor)//TODO replace with data based on the type of node
         .style('stroke-width', 1)
         //.style('visibility', 'hidden') //debugging markers
         .call(d3.drag()
@@ -73,8 +73,9 @@ function createNodes(nodes, targetsPerSourceCount, data, initialData, simulation
 
     allCircles.on('click', (event, d) => {
         console.log("clicked on:", d.id)
-        if (allPossibleSources.includes(d.id) && unactivatedSources.includes(d.id)) {
-            //refreshGraph(data, d);
+        if (allPossibleSources.includes(d.id) && sourcesNotActiveButInGraph.includes(d.id)) {
+            //TODO add d to the current data
+            //refreshGraph();
         }
     });
 }

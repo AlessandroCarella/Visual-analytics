@@ -22,7 +22,7 @@ function findSourcesNotActiveButInGraph (){
     const inactiveSources = new Set([...initialDataSources].filter(source => !currentDataSources.has(source)));
 
     // Find inactive sources that are also in current data targets
-    const inactiveSourcesInTargets = [...inactiveSources].filter(source => currentDataTargets.has(source));
+    const inactiveSourcesInTargets = new Set([...inactiveSources].filter(source => currentDataTargets.has(source)));
 
     return inactiveSourcesInTargets;
 }
@@ -31,11 +31,11 @@ function createNodesData(sources, targets, sourcesTargets, sourcesNotActiveButIn
     const nodesData = [];
 
     sources.forEach(source => {
-        nodesData.push({ id: source, type: 'source', alsoSource: true, alsoTarget: sourcesTargets.includes(source) });
+        nodesData.push({ id: source, type: 'source', alsoSource: true, alsoTarget: sourcesTargets.has(source) });
     });
 
     targets.forEach(target => {
-        nodesData.push({ id: target, type: 'target', alsoSource: (sourcesTargets.includes(target) || sourcesNotActiveButInGraph.includes(target)), alsoTarget: true });
+        nodesData.push({ id: target, type: 'target', alsoSource: (sourcesTargets.has(target) || sourcesNotActiveButInGraph.has(target)), alsoTarget: true });
     });
 
     return nodesData;
@@ -57,4 +57,4 @@ function createLinksData(data, nodes) {
     return links;
 }
 
-export { getPossibleNodes, findSourcesNotActiveButInGraph }
+export { getPossibleNodes, findSourcesNotActiveButInGraph, createNodesData, createLinksData }

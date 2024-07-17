@@ -1,8 +1,8 @@
 import { svg } from '../index';
-import { getPossibleNodes, findSourcesNotActiveButInGraph, createLinksData } from './createGraphHelpers/dataGeneration';
+import { getPossibleNodes, findSourcesNotActiveButInGraph } from './createGraphHelpers/dataGeneration';
 import { getCurrentData, getInitialData } from './dataManagement';
 import { findPerSourceNumberOfTargetsOrOpposite } from './utils';
-
+import { createLinksData, createNodesData } from './createGraphHelpers/dataGeneration';
 import { initializeSimulation } from './createGraphHelpers/simulation'
 import { createLinks, createNodes, createMarkers, createLabels, setupTooltip } from './createGraphHelpers/createEntities'
 
@@ -14,17 +14,18 @@ function createGraph() {
     
     const targetsPerSourceCount = findPerSourceNumberOfTargetsOrOpposite(getCurrentData(), "source");
     
-    const unactivatedSources = findSourcesNotActiveButInGraph();
-    const allPossibleSources = new Set([...sources, ...unactivatedSources]);
+    const sourcesNotActiveButInGraph = findSourcesNotActiveButInGraph();
+    const allPossibleSources = new Set([...sources, ...sourcesNotActiveButInGraph]);
 
-    const nodes = getCurrentData()//createNodesData(sources, targets, sourcesTargets, sourcesNotActiveButInGraph);
+    const nodes = createNodesData(sources, targets, sourcesTargets, sourcesNotActiveButInGraph);
     const links = createLinksData (getCurrentData(), nodes, sourcesTargets);
 
+    //simulation
     const simulation = initializeSimulation(nodes, links);
 
-
+    //graph enetites
     createLinks(links);
-    createNodes(nodes, targetsPerSourceCount, getCurrentData(), getInitialData(), simulation, allPossibleSources, unactivatedSources);
+    createNodes(nodes, targetsPerSourceCount, simulation, allPossibleSources, sourcesNotActiveButInGraph);
     createMarkers();
     createLabels(nodes, targetsPerSourceCount);
     setupTooltip();
