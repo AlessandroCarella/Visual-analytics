@@ -1,7 +1,7 @@
-import { getCurrentData, getInitalData } from './dataManagement';
-
+import { getCurrentData, getInitialData } from './dataManagement';
+import { graphDimensionsBorder } from './constants'
 function getUniqueItemsPerKey(key) {
-    return Array.from(new Set(getInitalData().map(d => d[key])));
+    return Array.from(new Set(getInitialData().map(d => d[key])));
 }
 
 function removeDuplicatesBetweenSet1AndSet2(setToClean, setTwo) {
@@ -26,18 +26,24 @@ function getGraphDimensions() {
     return { width: width - graphDimensionsBorder, height: height - graphDimensionsBorder };
 }
 
-function findPerSourceNumberOfTargets(data) {
-    let perSourceNumberOfTargets = {};
+function findPerSourceNumberOfTargetsOrOpposite(data, type) {
+    //find the number of targets for each source 
+    //(or the number of sources for target based on the type passed)
+    //example usages:
+    //const targetsPerSourceCount = findPerSourceNumberOfTargetsOrOpposite(getCurrentData(), "source");
+    //const sourcesPerTargetCount = findPerSourceNumberOfTargetsOrOpposite(getCurrentData(), "target");
+    let result = {};
 
-    // Calculate the number of targets each source has
     data.forEach(d => {
-        if (!perSourceNumberOfTargets[d.source]) {
-            perSourceNumberOfTargets[d.source] = 0;
+        let key = type === 'source' ? d.source : d.target;
+
+        if (!result[key]) {
+            result[key] = 0;
         }
-        perSourceNumberOfTargets[d.source]++;
+        result[key]++;
     });
 
-    return perSourceNumberOfTargets;
+    return result;
 }
 
-export { getUniqueItemsPerKey, removeDuplicatesBetweenSet1AndSet2, isObjectEmpty, getGraphDimensions, findPerSourceNumberOfTargets }
+export { getUniqueItemsPerKey, removeDuplicatesBetweenSet1AndSet2, isObjectEmpty, getGraphDimensions, findPerSourceNumberOfTargetsOrOpposite }

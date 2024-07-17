@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import { getInitalData, resetAndAddElemSelectedSources, resetAndAddElemSelectedTargets, resetSelectedSources, resetSelectedTargets } from "./dataManagement";
+import { getInitialData, resetAndAddElemSelectedSources, resetAndAddElemSelectedTargets, resetSelectedSources, resetSelectedTargets } from "./dataManagement";
 
 function populateSelect(idSelect, items) {
     const dropdown = d3.select(idSelect);
@@ -55,7 +55,7 @@ function handleDropdownChange(selectedValue) {
         resetSelectedTargets();
     }
 
-    refreshGraph();
+    //refreshGraph();
 }
 
 export { populateSelect, addDropdownEventListeners }

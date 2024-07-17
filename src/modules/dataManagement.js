@@ -1,7 +1,7 @@
 let initialData;
 let currentData;
 
-function getInitalData() {
+function getInitialData() {
     return initialData;
 }
 
@@ -18,8 +18,8 @@ function getCurrentData() {
 }
 
 ///////////////////////////////////////////
+import { typesOfLinks } from "./constants";
 
-const typesOfLinks = ["ownership", "partnership", "family_relationship", "membership"];
 let activeButtons;
 
 function getTypesOfLinks(){
@@ -43,13 +43,6 @@ function updateActiveButtons (element, addTrueDeleteFalse){
         activeButtons.delete(element);
     }
 }
-
-///////////////////////////////////////////
-
-const colors = d3
-    .scaleOrdinal()
-    .domain(getTypesOfLinks())
-    .range(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"]);
 
 ///////////////////////////////////////////
 
@@ -103,10 +96,9 @@ function resetAndAddElemSelectedTargets (element){
 ///////////////////////////////////////////
 
 export { 
-    getInitalData, setInitialData, setCurrentData, getCurrentData, 
+    getInitialData, setInitialData, setCurrentData, getCurrentData, 
     getTypesOfLinks, 
     createActiveButtons, getActiveButtons, updateActiveButtons,
-    colors,
     getSelectedSources, updateSelectedSources, resetSelectedSources, resetAndAddElemSelectedSources,
     getSelectedTargets, updateSelectedTargets, resetSelectedTargets, resetAndAddElemSelectedTargets,
      
