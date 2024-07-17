@@ -7,7 +7,10 @@
   when a node is clicked the nodes that used to be also sources become only targets (for the original node and the new node, also the node that was clicked stays green    
   * load the nodes dataset and put a color countour on the node based on the type of node (data source: nodes.json (or last version of it))
   * when hovering a node that has the country value in the dataset add that to the tooltip
+  * in the method that gets called when a node is clicked you can perform the adding of either the sources or the targets (or both) of the node that has been clicked
   
+    create a ratio input to select which kind of other nodes to add (or to remove(?)) and update the function updateCurrentData in dataManagement.js 
+
   * for only to investigate companies mode 
     * add to the sources an option to plot the 4 and move the 4 to the top of the selects
     * when either one of the four or the option with the 4 is selected add to the controls a slider to plot the connections of those nodes

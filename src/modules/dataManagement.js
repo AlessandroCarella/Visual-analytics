@@ -13,6 +13,22 @@ function setCurrentData(data) {
     currentData = data;
 }
 
+function updateCurrentData(nodeId, nodeType){
+    //nodeType == source or target
+    let dataToAdd = new Set()
+    
+    initialData.forEach(element => {
+        if (nodeType === 'source' && element.source === nodeId) {
+            if (!currentData.has(element)){
+                dataToAdd.add(element)
+                console.log("added", element)
+            }
+        }
+    });
+
+    setCurrentData(new Set([...currentData,...dataToAdd]));
+}
+
 function getCurrentData() {
     return currentData;
 }
@@ -96,7 +112,8 @@ function resetAndAddElemSelectedTargets (element){
 ///////////////////////////////////////////
 
 export { 
-    getInitialData, setInitialData, setCurrentData, getCurrentData, 
+    getInitialData, setInitialData, 
+    setCurrentData, getCurrentData, updateCurrentData,
     getTypesOfLinks, 
     createActiveButtons, getActiveButtons, updateActiveButtons,
     getSelectedSources, updateSelectedSources, resetSelectedSources, resetAndAddElemSelectedSources,

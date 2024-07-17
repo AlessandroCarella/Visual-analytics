@@ -1,7 +1,7 @@
 import { getCurrentData, getInitialData } from './dataManagement';
 import { graphDimensionsBorder } from './constants'
 function getUniqueItemsPerKey(key) {
-    return Array.from(new Set(getInitialData().map(d => d[key])));
+    return Array.from(getInitialData()).map(d => d[key]);
 }
 
 function removeDuplicatesBetweenSet1AndSet2(setToClean, setTwo) {

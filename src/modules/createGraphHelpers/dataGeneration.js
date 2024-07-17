@@ -2,8 +2,8 @@ import { getCurrentData, getInitialData } from "../dataManagement";
 import { removeDuplicatesBetweenSet1AndSet2 } from "../utils";
 
 function getPossibleNodes(data) {
-    const sources = new Set(data.map(d => d.source));
-    let targets = new Set(data.map(d => d.target));
+    const sources = new Set(Array.from(data).map(d => d.source));
+    let targets = new Set(Array.from(data).map(d => d.target));
 
     const sourcesTargets = new Set(Array.from(sources).filter(value => targets.has(value)));
 
@@ -13,10 +13,10 @@ function getPossibleNodes(data) {
 
 function findSourcesNotActiveButInGraph (){
     const currentData = getCurrentData();
-    const currentDataSources = new Set(currentData.map(d => d.source));
-    const currentDataTargets = new Set(currentData.map(d => d.target));
+    const currentDataSources = new Set(Array.from(currentData).map(d => d.source));
+    const currentDataTargets = new Set(Array.from(currentData).map(d => d.target));
 
-    const initialDataSources = new Set (getInitialData().map(d => d.source));
+    const initialDataSources = new Set (Array.from(getInitialData()).map(d => d.source));
 
     // Find initial data sources that are not in current data sources
     const inactiveSources = new Set([...initialDataSources].filter(source => !currentDataSources.has(source)));

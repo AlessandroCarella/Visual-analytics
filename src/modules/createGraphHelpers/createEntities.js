@@ -1,6 +1,6 @@
 import { svg } from "../../index";
 import { colorsOfLinks } from "../constants";
-import { getTypesOfLinks } from "../dataManagement";
+import { getCurrentData, getTypesOfLinks, updateCurrentData } from "../dataManagement";
 import {
     blackColor,
     markersRefX, markersRefY, markerWidth, markerHeight,
@@ -73,8 +73,9 @@ function createNodes(nodes, targetsPerSourceCount, simulation, allPossibleSource
 
     allCircles.on('click', (event, d) => {
         console.log("clicked on:", d.id)
-        if (allPossibleSources.includes(d.id) && sourcesNotActiveButInGraph.includes(d.id)) {
-            //TODO add d to the current data
+        if (true){
+        //if (allPossibleSources.has(d.id) && sourcesNotActiveButInGraph.has(d.id)) {
+            updateCurrentData(d.id, d.type); // (type == source or target)
             //refreshGraph();
         }
     });

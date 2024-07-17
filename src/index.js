@@ -17,6 +17,7 @@ const svg = d3.select('.graph svg');
 
 d3.json(jsonFilePath)
 .then((data) => {
+    data = new Set(data);
     //data
     setInitialData(data)
     setCurrentData(data)
