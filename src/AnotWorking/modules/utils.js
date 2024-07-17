@@ -1,17 +1,21 @@
+import { graphDimensionsBorder } from './createGraphHelpers/constants'
 import { getCurrentData, getInitalData } from './dataManagement';
 
-function getUniqueItemsPerKey(key) {
+function getUniqueItems(key) {
     return Array.from(new Set(getInitalData().map(d => d[key])));
 }
 
-function removeDuplicatesBetweenSet1AndSet2(setToClean, setTwo) {
-    setToClean.forEach(elem => {
-        if (setTwo.has(elem)) {
-            setToClean.delete(elem);
+function removeDuplicates(arrayToClean, arrayTwo) {
+    arrayToClean = new Set(arrayToClean);
+    arrayTwo = new Set(arrayTwo);
+
+    arrayToClean.forEach(elem => {
+        if (arrayTwo.has(elem)) {
+            arrayToClean.delete(elem);
         }
     });
 
-    return Array.from(setToClean);
+    return Array.from(arrayToClean);
 }
 
 function isObjectEmpty(object) {
@@ -25,7 +29,6 @@ function getGraphDimensions() {
     const { width, height } = document.querySelector('.graph').getBoundingClientRect();
     return { width: width - graphDimensionsBorder, height: height - graphDimensionsBorder };
 }
-
 function findPerSourceNumberOfTargets(data) {
     let perSourceNumberOfTargets = {};
 
@@ -40,4 +43,4 @@ function findPerSourceNumberOfTargets(data) {
     return perSourceNumberOfTargets;
 }
 
-export { getUniqueItemsPerKey, removeDuplicatesBetweenSet1AndSet2, isObjectEmpty, getGraphDimensions, findPerSourceNumberOfTargets }
+export { getUniqueItems, removeDuplicates, isObjectEmpty, getGraphDimensions, findPerSourceNumberOfTargets }

@@ -4,7 +4,7 @@ function getPossibleNodes(data) {
     let sources = Array.from(new Set(data.map(d => d.source)));
     let targets = Array.from(new Set(data.map(d => d.target)));
 
-    const sourcesTargets = sources.filter(value => targets.includes(value));
+    let sourcesTargets = sources.filter(value => targets.includes(value));
 
     targets = removeDuplicates(targets, sources);
     return { sources, targets, sourcesTargets };

@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    flex-direction: row;
+    margin: 1;
+    padding: 1;
+    font-family: Arial, sans-serif;
+    height: 98vh; /* Set the body height to full viewport height */
+}
+
+.command-column {
+    width: 300px;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.command-column h2 {
+    margin-top: 0;
+}
+
+.command-column button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.graph {
+    flex-grow: 1; /* Allow .graph to grow and take remaining width */
+    height: 100%; /* Full height of the parent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.active-button {
+    color: white;
+}
+
+.inactive-button {
+    background-color: #454545 !important;
+    color: white;
+}
+
+.ownershipButton {
+    background-color: #1f77b4;
+}
+
+.partnershipButton {
+    background-color: #ff7f0e;
+}
+
+.family_relationshipButton {
+    background-color: #2ca02c;
+}
+
+.membershipButton {
+    background-color: #d62728;
+}
+
+.link.inactive {
+    stroke: #ffffff;
+}
+
+.source-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.target-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

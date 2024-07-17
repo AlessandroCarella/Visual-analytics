@@ -1,44 +1,61 @@
 import * as d3 from "d3";
-import { refreshGraph } from "./refreshGraph";
+import { getInitalData, resetAndAddElemSelectedSources, resetAndAddElemSelectedTargets, resetSelectedSources, resetSelectedTargets } from "./dataManagement";
 
-function populateSelect(selector, items) {
-    const dropdown = d3.select(selector);
-    dropdown.selectAll('option').remove();
-    dropdown.append('option').attr('value', 'all').text('All');
-    items.forEach(item => dropdown.append('option').attr('value', item).text(item));
+function populateSelect(idSelect, items) {
+    const dropdown = d3.select(idSelect);
+    //remove all the options from the selects
+    dropdown
+        .selectAll('option')
+        .remove();
+    //add the "all" option
+    dropdown
+        .append('option')
+        .attr('value', 'all')
+        .text('All');
+
+    //add the actual options
+    items.forEach(item =>
+        dropdown
+            .append('option')
+            .attr('value', item)
+            .text(item)
+    );
+
+    //set all as the default value
     dropdown.property('value', 'all');
 }
 
-function addDropdownEventListeners(data) {
-    d3.select('#source-select').on('change', function () {
-        handleDropdownChange(this.value, 'source', data);
-    });
-
-    d3.select('#target-select').on('change', function () {
-        handleDropdownChange(this.value, 'target', data);
+function addDropdownEventListeners(idSelect) {
+    d3.select(idSelect).on('change', function () {
+        handleDropdownChange(this.value);
     });
 }
 
-function handleDropdownChange(selectedValue, type, data) {
+function handleDropdownChange(selectedValue) {
     var selectedSource = d3.select(`#source-select`).property('value')
     var selectedTarget = d3.select(`#target-select`).property('value')
 
     //if the source has been changed
     if (selectedSource === selectedValue) {
         d3.select(`#target-select`).property('value', 'all');
+        resetAndAddElemSelectedSources(selectedSource);
+        resetSelectedTargets();
     }
     // if the target has been changed
     else if (selectedTarget === selectedValue) {
         d3.select(`#source-select`).property('value', 'all');
+        resetAndAddElemSelectedTargets(selectedTarget);
+        resetSelectedSources();
     }
-    //else reset everything
+    //else reset everything, should never go here
     else {
         d3.select(`#source-select`).property('value', 'all');
+        resetSelectedSources();
         d3.select(`#target-select`).property('value', 'all');
+        resetSelectedTargets();
     }
 
-    //check index.js for why passing data twice
-    refreshGraph(data);
+    refreshGraph();
 }
 
 export { populateSelect, addDropdownEventListeners }
