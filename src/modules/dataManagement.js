@@ -36,6 +36,7 @@ function updateCurrentDataWithNewNode(nodeId, nodeType){
 
 import { active } from "d3";
 ///////////////////////////////////////////
+
 import { typesOfLinks } from "./constants";
 
 let activeButtons;
@@ -65,11 +66,15 @@ function updateActiveButtons (element, addTrueDeleteFalse){
 function updateCurrentDataBasedOnButtons (){
     let newData = new Set();
 
+    console.log(currentData);
+    console.log(activeButtons)
     currentData.forEach(element => {
-        if (activeButtons.has(element.typesOfLink)){
+        if (activeButtons.has(element.typeOfLink)){
             newData.add(element);
         }
     });
+
+    console.log("after filtering", newData);
 
     setCurrentData(newData);
 }
@@ -108,29 +113,25 @@ function setSelectedTarget (element){
 
 ///////////////////
 
-function updateCurrentDataBasedOnSelect (){
-    //handle default case where source and target are 'all'
-    let selectedValue = selectedSource;
-    let selectedType = 'source';
-    if (selectedSource === selectDefaultValue){
-        selectedValue = selectedTarget;
-        selectedType = 'target';
-    }
-    if (selectedValue === selectDefaultValue){
-        return initialData;
+function updateCurrentDataBasedOnSelect() {
+    let selectedValue = selectedSource !== selectDefaultValue ? selectedSource : selectedTarget;
+    let selectedType = selectedSource !== selectDefaultValue ? 'source' : 'target';
+
+    if (selectedSource === selectDefaultValue && selectedTarget === selectDefaultValue) {
+        setCurrentData(initialData);
+        return;
     }
 
     let newData = new Set();
     initialData.forEach(element => {
-        if (selectedType === 'source' && element.source === selectedValue) {
-            newData.add(element);
-        } else if (selectedType === 'target' && element.target === selectedValue) {
+        if (element[selectedType] === selectedValue) {
             newData.add(element);
         }
     });
 
-    setCurrentData (newData);
+    setCurrentData(newData);
 }
+
 
 ///////////////////////////////////////////
 

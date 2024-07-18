@@ -1,6 +1,5 @@
-import { svg } from '../index';
 import { getPossibleNodes, findSourcesNotActiveButInGraph } from './createGraphHelpers/dataGeneration';
-import { getCurrentData, getInitialData } from './dataManagement';
+import { getCurrentData } from './dataManagement';
 import { findPerSourceNumberOfTargetsOrOpposite } from './utils';
 import { createLinksData, createNodesData } from './createGraphHelpers/dataGeneration';
 import { initializeSimulation } from './createGraphHelpers/simulation'
@@ -9,6 +8,7 @@ import { createLinks, createNodes, createMarkers, createLabels, setupTooltip } f
 let initialData;
 
 function createGraph() {
+
     //data generation
     const { sources: sources, targets: targets, sourcesTargets: sourcesTargets } = getPossibleNodes(getCurrentData());
     
