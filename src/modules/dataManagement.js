@@ -1,5 +1,6 @@
 let initialData;
 let currentData;
+let addedNodes = new Set();
 
 function getInitialData() {
     return initialData;
@@ -17,19 +18,31 @@ function getCurrentData() {
     return currentData;
 }
 
-function updateCurrentDataWithNewNode(newNode){
+function getAddedNodes() {
+    return addedNodes;
+}
+
+function addNodeToAddedNodes(node){
+    addedNodes.add(node);
+}
+
+function resetAddedNodes(){
+    addedNodes.clear();
+}
+
+function updateCurrentDataWithNewNodes(newNode){
     //nodeType == source or target
     let dataToAdd = new Set()
-    
-    console.log(newNode)
 
-    //TODO add logic for nodes that are sources but also target to show the nodes that point at it
-    initialData.forEach(element => {
-        if (newNode.type === 'target' && newNode.alsoSource && element.source === newNode.id) {
-            if (!currentData.has(element)){
-                dataToAdd.add(element)
+    addedNodes.forEach(newNode => {
+        //TODO add logic for nodes that are sources but also target to show the nodes that point at it
+        initialData.forEach(element => {
+            if (newNode.type === 'target' && newNode.alsoSource && element.source === newNode.id) {
+                if (!currentData.has(element)){
+                    dataToAdd.add(element)
+                }
             }
-        }
+        });
     });
 
     setCurrentData(new Set([...currentData,...dataToAdd]));
@@ -66,6 +79,8 @@ function updateActiveButtons (element, addTrueDeleteFalse){
 
 function updateCurrentDataBasedOnButtons (){
     let newData = new Set();
+
+    console.log(currentData)
 
     currentData.forEach(element => {
         if (activeButtons.has(element.typeOfLink)){
@@ -134,7 +149,8 @@ function updateCurrentDataBasedOnSelect() {
 
 export { 
     getInitialData, setInitialData, 
-    setCurrentData, getCurrentData, updateCurrentDataWithNewNode,
+    setCurrentData, getCurrentData, updateCurrentDataWithNewNodes,
+    getAddedNodes, addNodeToAddedNodes, resetAddedNodes,
     getTypesOfLinks, 
     createActiveButtons, getActiveButtons, updateActiveButtons,
     updateCurrentDataBasedOnButtons,
