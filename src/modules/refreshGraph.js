@@ -3,19 +3,20 @@ import * as d3 from 'd3';
 import { svg } from '../index';
 import { createGraph } from './createGraph';
 import { updateCurrentDataWithNewNode, updateCurrentDataBasedOnSelect, updateCurrentDataBasedOnButtons } from './dataManagement';
+import { isObjectEmpty } from './utils';
 
 
-function refreshGraph(newNodeId = "", newNodeType = "") {
+function refreshGraph(newNode = {}) {
     d3.selectAll('div-tooltip.tooltip').style('opacity', 0); // Hide tooltip on click
 
     //this is the most general update because it is based on the values 
     //selected in the select boxes and the initial data 
     updateCurrentDataBasedOnSelect();
     
-    if (newNodeId !== ""){
+    if (!isObjectEmpty(newNode)){
         //also this update is based on the initial data but to add values
         //based on the nodes, so it comes AFTER the SELECT UPDATE
-        updateCurrentDataWithNewNode (newNodeId, newNodeType);
+        updateCurrentDataWithNewNode (newNode);
     }
     
     //this is a filter on the current data so it has to come after the 

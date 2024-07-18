@@ -73,10 +73,10 @@ function createNodes(nodes, targetsPerSourceCount, simulation, allPossibleSource
     const allCircles = circles.merge(enteredCircles);
 
     allCircles.on('click', (event, d) => {
-        console.log("clicked on:", d.id)
+        console.log("clicked on:", d.id, "of type", d.type)
         if (true){
         //if (allPossibleSources.has(d.id) && sourcesNotActiveButInGraph.has(d.id)) {
-            refreshGraph(d.id, d.type); // (type == source or target)
+            refreshGraph(d); // (type == source or target)
         }
     });
 }

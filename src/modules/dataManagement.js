@@ -17,16 +17,17 @@ function getCurrentData() {
     return currentData;
 }
 
-function updateCurrentDataWithNewNode(nodeId, nodeType){
+function updateCurrentDataWithNewNode(newNode){
     //nodeType == source or target
     let dataToAdd = new Set()
     
-    //TODO add logic for target, eventually
+    console.log(newNode)
+
+    //TODO add logic for nodes that are sources but also target to show the nodes that point at it
     initialData.forEach(element => {
-        if (nodeType === 'source' && element.source === nodeId) {
+        if (newNode.type === 'target' && newNode.alsoSource && element.source === newNode.id) {
             if (!currentData.has(element)){
                 dataToAdd.add(element)
-                console.log("added", element)
             }
         }
     });
@@ -66,15 +67,11 @@ function updateActiveButtons (element, addTrueDeleteFalse){
 function updateCurrentDataBasedOnButtons (){
     let newData = new Set();
 
-    console.log(currentData);
-    console.log(activeButtons)
     currentData.forEach(element => {
         if (activeButtons.has(element.typeOfLink)){
             newData.add(element);
         }
     });
-
-    console.log("after filtering", newData);
 
     setCurrentData(newData);
 }
