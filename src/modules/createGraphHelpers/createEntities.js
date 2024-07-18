@@ -1,6 +1,6 @@
 import { svg } from "../../index";
 import { colorsOfLinks } from "../constants";
-import { addNodeToAddedNodes, getCurrentData, getTypesOfLinks } from "../dataManagement";
+import { addNodeToAddedNodes, needToAddNode, getTypesOfLinks } from "../dataManagement";
 import { refreshGraph } from "../refreshGraph";
 import {
     blackColor,
@@ -73,8 +73,10 @@ function createNodes(nodes, targetsPerSourceCount, simulation, allPossibleSource
     const allCircles = circles.merge(enteredCircles);
 
     allCircles.on('click', (event, d) => {
-        addNodeToAddedNodes(d)
-        refreshGraph();
+        if (needToAddNode(d)){
+            addNodeToAddedNodes(d)
+            refreshGraph();
+        }
     });
 }
 

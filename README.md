@@ -10,6 +10,8 @@
   * in the method that gets called when a node is clicked you can perform the adding of either the sources or the targets (or both) of the node that has been clicked
   
     create a ratio input to select which kind of other nodes to add (or to remove(?)) and update the function updateCurrentData in dataManagement.js 
+  * create selects that can add a node out of the ones that are not in the graph yet
+  * add a column on the right too to show informations and the guide to colors
 
   * for only to investigate companies mode 
     * add to the sources an option to plot the 4 and move the 4 to the top of the selects
@@ -17,9 +19,11 @@
 * dataset:
   * order the sources from the one with most targets to the one with less
 
-## commands to run the project:
-* npm run build
-* npm start
+## To run the project:
+* install node (developed in node 20.11.1)
+* in the folder of the project run
+  * npm run build
+  * npm start
 
 ## record of what i have done so far:
 

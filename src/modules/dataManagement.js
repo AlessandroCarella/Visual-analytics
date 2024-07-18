@@ -30,16 +30,53 @@ function resetAddedNodes(){
     addedNodes.clear();
 }
 
-function updateCurrentDataWithNewNodes(newNode){
+function needToAddNode(node){
+    let needToAddNodeVar = false;
+    console.log("node.type", node.type);
+    if (node.type === "target"){//target that becomes ALSO source
+        console.log("node.alsoSource", node.alsoSource)
+        if (node.alsoSource){
+            console.log("node.alsoSource", node.alsoSource)
+            //all targets of the node in currentdata
+            Array.from(initialData).filter(link => {
+                return link.source === node.id;
+            }).forEach(link => {
+                console.log("!currentData.has(link)", !currentData.has(link))
+                if (!currentData.has(link)){
+                    needToAddNodeVar = true;
+                    return;
+                }
+            })
+        }
+    }
+    else{//source that becomes ALSO target
+        if (node.type === "source"){
+            if (node.alsoTarget){
+                //all sources of the node in current data
+                Array.from(initialData).filter(link => {
+                    return link.target === node.id;
+                }).forEach(link => {
+                    if (!currentData.has(link)){
+                        needToAddNodeVar = true;
+                        return;
+                    }
+                })
+            }
+        }
+    }
+    return needToAddNodeVar;
+}
+
+function updateCurrentDataWithNewNodes(){
     //nodeType == source or target
     let dataToAdd = new Set()
 
     addedNodes.forEach(newNode => {
         //TODO add logic for nodes that are sources but also target to show the nodes that point at it
-        initialData.forEach(element => {
-            if (newNode.type === 'target' && newNode.alsoSource && element.source === newNode.id) {
-                if (!currentData.has(element)){
-                    dataToAdd.add(element)
+        initialData.forEach(link => {
+            if (newNode.type === 'target' && newNode.alsoSource && link.source === link.id) {
+                if (!currentData.has(link)){
+                    dataToAdd.add(link)
                 }
             }
         });
@@ -48,7 +85,6 @@ function updateCurrentDataWithNewNodes(newNode){
     setCurrentData(new Set([...currentData,...dataToAdd]));
 }
 
-import { active } from "d3";
 ///////////////////////////////////////////
 
 import { typesOfLinks } from "./constants";
@@ -105,7 +141,8 @@ function resetSelectedSource (){
     selectedSource = selectDefaultValue;
 }
 
-function setSelectedSource (element){
+function setSelectedSource (element){    
+    resetAddedNodes();
     selectedSource = element;
 }
 
@@ -120,6 +157,7 @@ function resetSelectedTarget (){
 }
 
 function setSelectedTarget (element){
+    resetAddedNodes();
     selectedTarget = element;
 }
 
@@ -149,7 +187,8 @@ function updateCurrentDataBasedOnSelect() {
 
 export { 
     getInitialData, setInitialData, 
-    setCurrentData, getCurrentData, updateCurrentDataWithNewNodes,
+    setCurrentData, getCurrentData, 
+    needToAddNode, updateCurrentDataWithNewNodes,
     getAddedNodes, addNodeToAddedNodes, resetAddedNodes,
     getTypesOfLinks, 
     createActiveButtons, getActiveButtons, updateActiveButtons,
