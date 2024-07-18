@@ -2,6 +2,7 @@ import * as d3 from "d3";
 import { activeButtons } from "../index";
 import { getTypesOfLinks, updateActiveButtons } from "./dataManagement";
 import { inactiveButtonClass } from "./constants";
+import { refreshGraph } from "./refreshGraph";
 
 function addTypeButtonsEventListeners() {
     getTypesOfLinks().forEach((typeOfLink) => {
@@ -18,7 +19,7 @@ function addTypeButtonsEventListeners() {
                 updateActiveButtons(typeOfLink, true);
             }
 
-            //refreshGraph();
+            refreshGraph();
         });
     });
 }

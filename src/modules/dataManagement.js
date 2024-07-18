@@ -13,10 +13,15 @@ function setCurrentData(data) {
     currentData = data;
 }
 
-function updateCurrentData(nodeId, nodeType){
+function getCurrentData() {
+    return currentData;
+}
+
+function updateCurrentDataWithNewNode(nodeId, nodeType){
     //nodeType == source or target
     let dataToAdd = new Set()
     
+    //TODO add logic for target, eventually
     initialData.forEach(element => {
         if (nodeType === 'source' && element.source === nodeId) {
             if (!currentData.has(element)){
@@ -29,10 +34,7 @@ function updateCurrentData(nodeId, nodeType){
     setCurrentData(new Set([...currentData,...dataToAdd]));
 }
 
-function getCurrentData() {
-    return currentData;
-}
-
+import { active } from "d3";
 ///////////////////////////////////////////
 import { typesOfLinks } from "./constants";
 
@@ -60,63 +62,85 @@ function updateActiveButtons (element, addTrueDeleteFalse){
     }
 }
 
+function updateCurrentDataBasedOnButtons (){
+    let newData = new Set();
+
+    currentData.forEach(element => {
+        if (activeButtons.has(element.typesOfLink)){
+            newData.add(element);
+        }
+    });
+
+    setCurrentData(newData);
+}
+
 ///////////////////////////////////////////
 
-let selectedSources = new Set();
-let selectedTargets = new Set();
+const selectDefaultValue = 'all';
+let selectedSource = selectDefaultValue;
+let selectedTarget = selectDefaultValue;
 
-function getSelectedSources(){
-    return selectedSources;
+function getSelectedSource(){
+    return selectedSource;
 }
 
-function updateSelectedSources (element, addTrueDeleteFalse){
-    if (addTrueDeleteFalse) {
-        selectedSources.add(element);
-    } else {
-        selectedSources.delete(element);
-    }
+function resetSelectedSource (){
+    selectedSource = selectDefaultValue;
 }
 
-function resetSelectedSources (){
-    selectedSources = new Set();
-}
-
-function resetAndAddElemSelectedSources (element){
-    resetSelectedSources()
-    updateSelectedSources(element, true)
+function setSelectedSource (element){
+    selectedSource = element;
 }
 
 ////////////////////
 
-function getSelectedTargets(){
-    return selectedTargets;
+function getSelectedTarget(){
+    return selectedTarget;
 }
 
-function updateSelectedTargets (element, addTrueDeleteFalse){
-    if (addTrueDeleteFalse) {
-        selectedTargets.add(element);
-    } else {
-        selectedTargets.delete(element);
+function resetSelectedTarget (){
+    selectedTarget = selectDefaultValue;
+}
+
+function setSelectedTarget (element){
+    selectedTarget = element;
+}
+
+///////////////////
+
+function updateCurrentDataBasedOnSelect (){
+    //handle default case where source and target are 'all'
+    let selectedValue = selectedSource;
+    let selectedType = 'source';
+    if (selectedSource === selectDefaultValue){
+        selectedValue = selectedTarget;
+        selectedType = 'target';
     }
-}
+    if (selectedValue === selectDefaultValue){
+        return initialData;
+    }
 
-function resetSelectedTargets (){
-    selectedTargets = new Set();
-}
+    let newData = new Set();
+    initialData.forEach(element => {
+        if (selectedType === 'source' && element.source === selectedValue) {
+            newData.add(element);
+        } else if (selectedType === 'target' && element.target === selectedValue) {
+            newData.add(element);
+        }
+    });
 
-function resetAndAddElemSelectedTargets (element){
-    resetSelectedTargets()
-    updateSelectedTargets(element, true)
+    setCurrentData (newData);
 }
 
 ///////////////////////////////////////////
 
 export { 
     getInitialData, setInitialData, 
-    setCurrentData, getCurrentData, updateCurrentData,
+    setCurrentData, getCurrentData, updateCurrentDataWithNewNode,
     getTypesOfLinks, 
     createActiveButtons, getActiveButtons, updateActiveButtons,
-    getSelectedSources, updateSelectedSources, resetSelectedSources, resetAndAddElemSelectedSources,
-    getSelectedTargets, updateSelectedTargets, resetSelectedTargets, resetAndAddElemSelectedTargets,
-     
+    updateCurrentDataBasedOnButtons,
+    getSelectedSource, resetSelectedSource, setSelectedSource,
+    getSelectedTarget, resetSelectedTarget, setSelectedTarget,  
+    selectDefaultValue, updateCurrentDataBasedOnSelect,
 };

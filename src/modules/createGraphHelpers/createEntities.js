@@ -1,6 +1,7 @@
 import { svg } from "../../index";
 import { colorsOfLinks } from "../constants";
-import { getCurrentData, getTypesOfLinks, updateCurrentData } from "../dataManagement";
+import { getCurrentData, getTypesOfLinks } from "../dataManagement";
+import { refreshGraph } from "../refreshGraph";
 import {
     blackColor,
     markersRefX, markersRefY, markerWidth, markerHeight,
@@ -75,8 +76,7 @@ function createNodes(nodes, targetsPerSourceCount, simulation, allPossibleSource
         console.log("clicked on:", d.id)
         if (true){
         //if (allPossibleSources.has(d.id) && sourcesNotActiveButInGraph.has(d.id)) {
-            updateCurrentData(d.id, d.type); // (type == source or target)
-            //refreshGraph();
+            refreshGraph(d.id, d.type); // (type == source or target)
         }
     });
 }
