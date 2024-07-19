@@ -47,6 +47,20 @@ function createLinks(links) {
     });
 }
 
+function calculateRadius (d, targetsPerSourceCount, sourcesPerTargetCount){
+    //when the node is not both a source and a target the value in one of the 2 arrays
+    //is going to be undefined
+    //i prefer to handle this issue here rather than in the findPerSourceNumberOfTargetsOrOpposite
+    //function in utils
+    if (targetsPerSourceCount[d.id] === undefined){
+        targetsPerSourceCount[d.id] = 0;
+    }
+    if (sourcesPerTargetCount[d.id] === undefined){
+        sourcesPerTargetCount[d.id] = 0;
+    }
+    return d.type === 'source' ? Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id] || 1) * 5 : 6;
+}
+
 function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation, allPossibleSources, sourcesNotActiveButInGraph) {
     const circles = svg.selectAll('circle').data(nodes);
     circles.exit().remove();
@@ -54,8 +68,8 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
     const enteredCircles = circles.enter().append('circle')
         .attr('class', d => d.type)
         .attr('r', d => {
-            d.radius = d.type === 'source' ? Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id] || 1) * 5 : 6;
-            return d.radius;
+            d.radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
+            return d.radius
         })
         .style('fill', d => determineNodeColor(d))
         .style('stroke', blackColor)//TODO replace with data based on the type of node
@@ -101,7 +115,7 @@ function createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount) {
         .enter().append('text')
         .attr('class', d => d.type)
         .text(d => {
-            const radius = d.type === 'source' ? Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount [d.id] || 1) * 6 : 6;
+            const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount)
             return radius > labelsNodeMinRadiusToShowLabel ? d.id : '';
         })
         .style('font-size', labelsFontSize)
