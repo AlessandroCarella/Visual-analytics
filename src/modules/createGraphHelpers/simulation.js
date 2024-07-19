@@ -109,7 +109,6 @@ function ticked(width, height, svg) {
         });
 }
 
-
 ////////////////////////////////////////
 
 import { svg } from '../../index'

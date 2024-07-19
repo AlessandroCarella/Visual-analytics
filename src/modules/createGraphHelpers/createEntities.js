@@ -128,7 +128,7 @@ function createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount) {
 }
 
 function setupTooltip() {
-    const tooltip = d3.select("body").append("div")
+    const tooltip = d3.select("body").append("div-tooltip")
         .attr("class", "tooltip")
         .style("opacity", 0)
         .style("position", "absolute")

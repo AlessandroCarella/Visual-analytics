@@ -3,10 +3,8 @@
 # TODO:
 * graph:
   * sometimes there are mutliple links between the same 2 source and target, find a (better) way to plot both of the types of connection, at least in the markers
-  * remove matching colors from node color and node countourn color, the contourn is not visible when the color match 
   * assign a shape to each one of the nodetypes and instead of the colors for each of them plot the node in a different shape
   * bug when the dataset is of size 1000 and the partnership button i clicked 
-  * when hovering a node that has the country value in the dataset add that to the tooltip
   * in the method that gets called when a node is clicked you can perform the adding of either the sources or the targets (or both) of the node that has been clicked
   
     create a ratio input to select which kind of other nodes to add (or to remove(?)) and update the function updateCurrentData in dataManagement.js 
