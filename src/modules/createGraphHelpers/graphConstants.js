@@ -1,6 +1,7 @@
 const graphDimensionsBorder = 25
 
 const sourceAndTargetColor = '#04820f' //green
+const targetAndSourceColor = '#FFEA00' //yellow
 const sourceColor = '#821304' //red
 const targetColor = '#042882' //blue
 const blackColor = '#000' //black
@@ -20,12 +21,13 @@ const tooltipBackgroundColor = "#fff"//white
 
 function determineNodeColor(node) {
     let color = blackColor
-
+    
     if (node.type === 'source') {
         color = node.alsoTarget ? sourceAndTargetColor : sourceColor;
     }
     else {
-        color = node.alsoSource ? sourceAndTargetColor : targetColor;
+        console.log(node)
+        color = node.alsoSource ? targetAndSourceColor : targetColor;
     }
 
     return color;
