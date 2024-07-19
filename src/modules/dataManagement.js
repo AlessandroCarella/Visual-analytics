@@ -31,8 +31,8 @@ function resetAddedNodes(){
 }
 
 function needToAddNode(node){
-    console.log(node)
-    let needToAddNodeVar = false;
+    let needToAddNodeVar = false;//sorry for the funky name, js really likes to assign boolean values to variables
+    
     if (node.type === "target"){//target that becomes ALSO source
         if (node.alsoSource){
             //all targets of the node in currentdata
@@ -62,6 +62,7 @@ function needToAddNode(node){
             }
         }
     }
+
     return needToAddNodeVar;
 }
 
@@ -79,6 +80,7 @@ function updateCurrentDataWithNewNodes(){
             }
         });
     });
+    
     setCurrentData(new Set([...currentData,...dataToAdd]));    
 }
 

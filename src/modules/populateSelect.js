@@ -8,6 +8,7 @@ function populateSelect(idSelect, items) {
     dropdown
         .selectAll('option')
         .remove();
+
     //add the "all" option
     dropdown
         .append('option')
@@ -43,12 +44,14 @@ function handleDropdownChange(selectedValue) {
         
         setSelectedSource(selectedSource)
     }
+
     // if the target has been changed
     else if (selectedTarget === selectedValue) {
         d3.select(`#source-select`).property('value', selectDefaultValue);
         resetSelectedSource();
         setSelectedTarget(selectedTarget);
     }
+    
     //else reset everything, should never go here
     else {
         d3.select(`#source-select`).property('value', selectDefaultValue);

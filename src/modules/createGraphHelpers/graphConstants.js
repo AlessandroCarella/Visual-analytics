@@ -38,6 +38,5 @@ export {
     markersRefX, markersRefY, markerWidth, markerHeight,
     linksSizeMultiplier, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel,
     tooltipBackgroundColor,
-
     determineNodeColor
 }
