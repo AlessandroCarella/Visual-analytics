@@ -13,7 +13,7 @@ function addTypeButtonsEventListeners() {
                 .classed(activeButtonClass, !isActive)
                 .classed(inactiveButtonClass, isActive);
 
-            if (isActive) {
+            if (!isActive) {
                 updateActiveButtons(typeOfLink, true);
             } else {
                 updateActiveButtons(typeOfLink, false);
