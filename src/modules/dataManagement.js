@@ -32,16 +32,12 @@ function resetAddedNodes(){
 
 function needToAddNode(node){
     let needToAddNodeVar = false;
-    console.log("node.type", node.type);
     if (node.type === "target"){//target that becomes ALSO source
-        console.log("node.alsoSource", node.alsoSource)
         if (node.alsoSource){
-            console.log("node.alsoSource", node.alsoSource)
             //all targets of the node in currentdata
             Array.from(initialData).filter(link => {
                 return link.source === node.id;
             }).forEach(link => {
-                console.log("!currentData.has(link)", !currentData.has(link))
                 if (!currentData.has(link)){
                     needToAddNodeVar = true;
                     return;
@@ -74,15 +70,14 @@ function updateCurrentDataWithNewNodes(){
     addedNodes.forEach(newNode => {
         //TODO add logic for nodes that are sources but also target to show the nodes that point at it
         initialData.forEach(link => {
-            if (newNode.type === 'target' && newNode.alsoSource && link.source === link.id) {
+            if (newNode.type === 'target' && newNode.alsoSource && link.source === newNode.id) {
                 if (!currentData.has(link)){
                     dataToAdd.add(link)
                 }
             }
         });
     });
-
-    setCurrentData(new Set([...currentData,...dataToAdd]));
+    setCurrentData(new Set([...currentData,...dataToAdd]));    
 }
 
 ///////////////////////////////////////////
@@ -115,8 +110,6 @@ function updateActiveButtons (element, addTrueDeleteFalse){
 
 function updateCurrentDataBasedOnButtons (){
     let newData = new Set();
-
-    console.log(currentData)
 
     currentData.forEach(element => {
         if (activeButtons.has(element.typeOfLink)){

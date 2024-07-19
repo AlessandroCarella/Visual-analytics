@@ -15,11 +15,11 @@ function refreshGraph() {
     
     //also this update is based on the initial data but to add values
     //based on the nodes, so it comes AFTER the SELECT UPDATE
-    updateCurrentDataWithNewNodes ();
+    updateCurrentDataWithNewNodes();
     
     //this is a filter on the current data so it has to come after the 
     //other functions that work on the initial datas
-    updateCurrentDataBasedOnButtons()
+    updateCurrentDataBasedOnButtons();
 
     //TODO replace the next 2 methods (svg.selectAll.remove and createGraph)
     //with 3 methods
