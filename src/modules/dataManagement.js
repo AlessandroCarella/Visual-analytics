@@ -53,7 +53,6 @@ function needToAddNode(node){
                 Array.from(initialData).filter(link => {
                     return link.target === node.id;
                 }).forEach(link => {
-                    console.log(link)
                     if (!currentData.has(link) && getActiveButtons().has(link.typeOfLink)){
                         needToAddNodeVar = true;
                         return;

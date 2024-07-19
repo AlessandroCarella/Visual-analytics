@@ -58,7 +58,8 @@ function calculateRadius (d, targetsPerSourceCount, sourcesPerTargetCount){
     if (sourcesPerTargetCount[d.id] === undefined){
         sourcesPerTargetCount[d.id] = 0;
     }
-    return d.type === 'source' ? Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id] || 1) * 5 : 6;
+
+    return Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id]) * 5;
 }
 
 function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation, allPossibleSources, sourcesNotActiveButInGraph) {
@@ -84,7 +85,6 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
 
     allCircles.on('click', (event, d) => {
         if (needToAddNode(d)){
-            console.log("eh")
             addNodeToAddedNodes(d)
             refreshGraph();
         }
