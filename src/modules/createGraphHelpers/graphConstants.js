@@ -48,9 +48,7 @@ function determineNodeColor(node) {
     return color;
 }
 
-function determineNodeBorderColor(node){
-    console.log(node.nodeType)
-     
+function determineNodeBorderColor(node){     
     return nodeTypeColor[node.nodeType]
 }
 

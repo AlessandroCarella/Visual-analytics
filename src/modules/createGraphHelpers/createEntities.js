@@ -128,7 +128,7 @@ function createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount) {
 }
 
 function setupTooltip() {
-    const tooltip = d3.select("body").append("div-tooltip")
+    const tooltip = d3.select("body").append("div")
         .attr("class", "tooltip")
         .style("opacity", 0)
         .style("position", "absolute")
@@ -140,10 +140,18 @@ function setupTooltip() {
 
     svg.selectAll('circle')
         .on('mouseover', (event, d) => {
+            // Default to "Unknown" if nodeType or country are null
+            const nodeType = d.nodeType ? d.nodeType : "Unknown";
+            const country = d.country ? d.country : "Unknown";
+            
             tooltip.transition().duration(0).style("opacity", 1);
-            tooltip.html(d.id)
-                .style("left", (event.pageX + 5) + "px")
-                .style("top", (event.pageY - 28) + "px");
+            tooltip.html(`
+                <div>${d.id}</div>
+                <div>Node type: ${nodeType}</div>
+                <div>Country: ${country}</div>
+            `)
+            .style("left", (event.pageX + 5) + "px")
+            .style("top", (event.pageY - 28) + "px");
         })
         .on('mouseout', () => {
             tooltip.transition().duration(0).style("opacity", 0);
