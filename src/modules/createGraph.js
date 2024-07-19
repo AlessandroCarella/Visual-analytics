@@ -1,5 +1,5 @@
 import { getPossibleNodes, findSourcesNotActiveButInGraph } from './createGraphHelpers/dataGeneration';
-import { getCurrentData } from './dataManagement';
+import { getCurrentData, getInitialData } from './dataManagement';
 import { findPerSourceNumberOfTargetsOrOpposite } from './utils';
 import { createLinksData, createNodesData } from './createGraphHelpers/dataGeneration';
 import { initializeSimulation } from './createGraphHelpers/simulation'
@@ -12,8 +12,9 @@ function createGraph() {
     //data generation
     const { sources: sources, targets: targets, sourcesTargets: sourcesTargets } = getPossibleNodes(getCurrentData());
     
-    const targetsPerSourceCount = findPerSourceNumberOfTargetsOrOpposite(getCurrentData(), "source");
-    
+    const targetsPerSourceCount = findPerSourceNumberOfTargetsOrOpposite(getInitialData(), "source");
+    const sourcesPerTargetCount = findPerSourceNumberOfTargetsOrOpposite(getCurrentData(), "target");
+
     const sourcesNotActiveButInGraph = findSourcesNotActiveButInGraph();
     const allPossibleSources = new Set([...sources, ...sourcesNotActiveButInGraph]);
 
@@ -25,9 +26,9 @@ function createGraph() {
 
     //graph enetites
     createLinks(links);
-    createNodes(nodes, targetsPerSourceCount, simulation, allPossibleSources, sourcesNotActiveButInGraph);
+    createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation, allPossibleSources, sourcesNotActiveButInGraph);
     createMarkers();
-    createLabels(nodes, targetsPerSourceCount);
+    createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount);
     setupTooltip();
 }
 

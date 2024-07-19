@@ -47,18 +47,14 @@ function createLinks(links) {
     });
 }
 
-function createNodes(nodes, targetsPerSourceCount, simulation, allPossibleSources, sourcesNotActiveButInGraph) {
+function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation, allPossibleSources, sourcesNotActiveButInGraph) {
     const circles = svg.selectAll('circle').data(nodes);
     circles.exit().remove();
 
     const enteredCircles = circles.enter().append('circle')
         .attr('class', d => d.type)
         .attr('r', d => {
-            if (d.type === 'source') {
-                d.radius = Math.sqrt(targetsPerSourceCount[d.id] || 1) * 5;
-            } else {
-                d.radius = 6;
-            }
+            d.radius = d.type === 'source' ? Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id] || 1) * 5 : 6;
             return d.radius;
         })
         .style('fill', d => determineNodeColor(d))
@@ -74,6 +70,7 @@ function createNodes(nodes, targetsPerSourceCount, simulation, allPossibleSource
 
     allCircles.on('click', (event, d) => {
         if (needToAddNode(d)){
+            console.log("eh")
             addNodeToAddedNodes(d)
             refreshGraph();
         }
@@ -98,13 +95,13 @@ function createMarkers() {
         .attr("class", "arrowhead");
 }
 
-function createLabels(nodes, targetsPerSourceCount) {
+function createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount) {
     svg.selectAll('text')
         .data(nodes)
         .enter().append('text')
         .attr('class', d => d.type)
         .text(d => {
-            const radius = d.type === 'source' ? Math.sqrt(targetsPerSourceCount[d.id] || 1) * 5 : 6;
+            const radius = d.type === 'source' ? Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount [d.id] || 1) * 6 : 6;
             return radius > labelsNodeMinRadiusToShowLabel ? d.id : '';
         })
         .style('font-size', labelsFontSize)
