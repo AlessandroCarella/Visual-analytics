@@ -7,7 +7,9 @@ import {
     markersRefX, markersRefY, markerWidth, markerHeight,
     linksSizeMultiplier, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel,
     tooltipBackgroundColor,
-    determineNodeColor
+    determineNodeColor,
+    determineNodeBorderColor,
+    nodeBorderSize
 } from "./graphConstants";
 
 function dragstarted(event, d, simulation) {
@@ -73,8 +75,8 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
             return d.radius
         })
         .style('fill', d => determineNodeColor(d))
-        .style('stroke', blackColor)//TODO replace with data based on the type of node
-        .style('stroke-width', 1)
+        .style('stroke', d => determineNodeBorderColor(d))
+        .style('stroke-width', nodeBorderSize)
         //.style('visibility', 'hidden') //debugging markers
         .call(d3.drag()
             .on('start', (event, d) => dragstarted(event, d, simulation))

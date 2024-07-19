@@ -3,9 +3,7 @@
 # TODO:
 * graph:
   * sometimes there are mutliple links between the same 2 source and target, find a (better) way to plot both of the types of connection, at least in the markers
-  * check behaviour for node click when there are more than 1 source to add, and for when the buttons are pressed and maybe for when the values in the select change;
-  when a node is clicked the nodes that used to be also sources become only targets (for the original node and the new node, also the node that was clicked stays green    
-  * load the nodes dataset and put a color countour on the node based on the type of node (data source: nodes.json (or last version of it))
+  * remove matching colors from node color and node countourn color, the contourn is not visible when the color match 
   * when hovering a node that has the country value in the dataset add that to the tooltip
   * in the method that gets called when a node is clicked you can perform the adding of either the sources or the targets (or both) of the node that has been clicked
   

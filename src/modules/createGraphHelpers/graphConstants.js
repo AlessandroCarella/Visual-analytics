@@ -1,3 +1,5 @@
+import { None } from "vega"
+
 const graphDimensionsBorder = 25
 
 const sourceAndTargetColor = '#04820f' //green
@@ -19,6 +21,20 @@ const labelsNodeMinRadiusToShowLabel = 10
 
 const tooltipBackgroundColor = "#fff"//white
 
+const nodeBorderSize = 2;
+const nodeTypeColor = {
+    null: '#000000',         // Black
+    'company': '#0000FF',      // Blue
+    'event': '#00FF00',        // Green
+    'location': '#FF0000',     // Red
+    'movement': '#FFA500',     // Orange
+    'organization': '#800080', // Purple
+    'person': '#00FFFF',       // Cyan
+    'political_organization': '#FF00FF', // Magenta
+    'vessel': '#8B4513'        // Brown
+};
+
+
 function determineNodeColor(node) {
     let color = blackColor
     
@@ -32,11 +48,17 @@ function determineNodeColor(node) {
     return color;
 }
 
+function determineNodeBorderColor(node){
+    console.log(node.nodeType)
+     
+    return nodeTypeColor[node.nodeType]
+}
+
 export {
     graphDimensionsBorder,
     sourceAndTargetColor, sourceColor, targetColor, blackColor,
     markersRefX, markersRefY, markerWidth, markerHeight,
     linksSizeMultiplier, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel,
     tooltipBackgroundColor,
-    determineNodeColor
+    determineNodeColor, determineNodeBorderColor, nodeBorderSize
 }

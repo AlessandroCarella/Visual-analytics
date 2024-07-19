@@ -27,18 +27,65 @@ function findSourcesNotActiveButInGraph (){
     return inactiveSourcesInTargets;
 }
 
-function createNodesData(sources, targets, sourcesTargets, sourcesNotActiveButInGraph) {
+function createNodesData(sources, targets, sourcesTargets, sourcesNotActiveButInGraph, dictSourceToTypeCountry) {
     const nodesData = [];
 
     sources.forEach(source => {
-        nodesData.push({ id: source, type: 'source', alsoSource: true, alsoTarget: sourcesTargets.has(source) });
+        nodesData.push(
+            { 
+                id: source, 
+                type: 'source', 
+                alsoSource: true, 
+                alsoTarget: sourcesTargets.has(source), 
+                nodeType: dictSourceToTypeCountry[source]["nodeType"], 
+                country: dictSourceToTypeCountry[source]["country"] 
+            }
+        );
     });
 
     targets.forEach(target => {
-        nodesData.push({ id: target, type: 'target', alsoSource: (sourcesTargets.has(target) || sourcesNotActiveButInGraph.has(target)), alsoTarget: true });
+        nodesData.push(
+            { 
+                id: target, 
+                type: 'target', 
+                alsoSource: (sourcesTargets.has(target) || sourcesNotActiveButInGraph.has(target)), 
+                alsoTarget: true, 
+                nodeType: dictSourceToTypeCountry[target]["nodeType"], 
+                country: dictSourceToTypeCountry[target]["country"] 
+            }
+        );
+    });
+    
+    return nodesData;
+}
+
+function createDictNodeToTypeCountry (data, sources, targets, sourcesTargets){
+    let resultDict = {};
+    
+    const names = new Set([...sources, ...targets, ...sourcesTargets])
+
+    data.forEach(obj => {
+        const source = obj.source;
+        const target = obj.target;
+    
+        // Check if the source matches any string in the list
+        if (names.has(source)) {
+            resultDict[source] = {
+                nodeType: obj.sourceType,
+                country: obj.sourceCountry
+            };
+        }
+    
+        // Check if the target matches any string in the list
+        if (names.has(target)) {
+            resultDict[target] = {
+                nodeType: obj.targetType,
+                country: obj.targetCountry
+            };
+        }
     });
 
-    return nodesData;
+    return resultDict;
 }
 
 function createLinksData(data, nodes) {
@@ -57,4 +104,4 @@ function createLinksData(data, nodes) {
     return links;
 }
 
-export { getPossibleNodes, findSourcesNotActiveButInGraph, createNodesData, createLinksData }
+export { getPossibleNodes, createDictNodeToTypeCountry, createNodesData, createLinksData, findSourcesNotActiveButInGraph }
