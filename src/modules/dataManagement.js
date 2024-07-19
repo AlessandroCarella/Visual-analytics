@@ -31,6 +31,7 @@ function resetAddedNodes(){
 }
 
 function needToAddNode(node){
+    console.log(node)
     let needToAddNodeVar = false;
     if (node.type === "target"){//target that becomes ALSO source
         if (node.alsoSource){
@@ -38,7 +39,7 @@ function needToAddNode(node){
             Array.from(initialData).filter(link => {
                 return link.source === node.id;
             }).forEach(link => {
-                if (!currentData.has(link)){
+                if (!currentData.has(link) && getActiveButtons().has(link.typeOfLink)){
                     needToAddNodeVar = true;
                     return;
                 }
@@ -52,7 +53,8 @@ function needToAddNode(node){
                 Array.from(initialData).filter(link => {
                     return link.target === node.id;
                 }).forEach(link => {
-                    if (!currentData.has(link)){
+                    console.log(link)
+                    if (!currentData.has(link) && getActiveButtons().has(link.typeOfLink)){
                         needToAddNodeVar = true;
                         return;
                     }

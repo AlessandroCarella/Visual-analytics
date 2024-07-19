@@ -26,7 +26,6 @@ function determineNodeColor(node) {
         color = node.alsoTarget ? sourceAndTargetColor : sourceColor;
     }
     else {
-        console.log(node)
         color = node.alsoSource ? targetAndSourceColor : targetColor;
     }
 
