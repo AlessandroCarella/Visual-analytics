@@ -61,7 +61,7 @@ function calculateRadius (d, targetsPerSourceCount, sourcesPerTargetCount){
         sourcesPerTargetCount[d.id] = 0;
     }
 
-    return Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id]) * 5;
+    return Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id]) * 3;
 }
 
 function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation, allPossibleSources, sourcesNotActiveButInGraph) {

@@ -14,6 +14,8 @@
     * add a column on the right too to show informations and the guide to colors
 
   * easy(?):
+    * bug fix:
+      * if select target and then select source everything is fine, once source is selected cant switch back to target
     * to investigate companies 
       * add to the sources an option to plot the 4 and move the 4 to the top of the selects
       * when either one of the four or the option with the 4 is selected add to the controls a slider to plot the connections of those nodes
