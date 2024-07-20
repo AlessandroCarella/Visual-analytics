@@ -101,8 +101,6 @@ function createLinksData(data, nodes) {
         };
         links.push(link);
     });
-
-    links = addLinksBetweenEntitesToInvestigate(links, nodes);
     
     return links;
 }
