@@ -2,18 +2,21 @@
 
 # TODO:
 * graph:
-  * sometimes there are mutliple links between the same 2 source and target, find a (better) way to plot both of the types of connection, at least in the markers
-  * assign a shape to each one of the nodetypes and instead of the colors for each of them plot the node in a different shape
-  * bug when the dataset is of size 1000 and the partnership button i clicked 
-  * in the method that gets called when a node is clicked you can perform the adding of either the sources or the targets (or both) of the node that has been clicked
-  
-    create a ratio input to select which kind of other nodes to add (or to remove(?)) and update the function updateCurrentData in dataManagement.js 
-  * create selects that can add a node out of the ones that are not in the graph yet
-  * add a column on the right too to show informations and the guide to colors
+  * hard:
+    * sometimes there are mutliple links between the same 2 source and target, find a (better) way to plot both of the types of connection, at least in the markers
+    * assign a shape to each one of the nodetypes and instead of the colors for each of them plot the node in a different shape
+    * bug when the dataset is of size 1000 and the partnership button i clicked 
+  * medium:
+    * in the method that gets called when a node is clicked you can perform the adding of either the sources or the targets (or both) of the node that has been clicked
+    
+      create a ratio input to select which kind of other nodes to add (or to remove(?)) and update the function updateCurrentData in dataManagement.js 
+    * create selects that can add a node out of the ones that are not in the graph yet
+    * add a column on the right too to show informations and the guide to colors
 
-  * for only to investigate companies mode 
-    * add to the sources an option to plot the 4 and move the 4 to the top of the selects
-    * when either one of the four or the option with the 4 is selected add to the controls a slider to plot the connections of those nodes
+  * easy(?):
+    * to investigate companies 
+      * add to the sources an option to plot the 4 and move the 4 to the top of the selects
+      * when either one of the four or the option with the 4 is selected add to the controls a slider to plot the connections of those nodes
 * dataset:
   * order the sources from the one with most targets to the one with less
 

@@ -85,7 +85,7 @@ function updateCurrentDataWithNewNodes(){
 
 ///////////////////////////////////////////
 
-import { typesOfLinks } from "./constants";
+import { companiesToInvestigate, companiesToInvestigateSelectVal, typesOfLinks } from "./constants";
 
 let activeButtons;
 
@@ -125,7 +125,7 @@ function updateCurrentDataBasedOnButtons (){
 
 ///////////////////////////////////////////
 
-const selectDefaultValue = 'all';
+import { selectDefaultValue } from './constants'
 let selectedSource = selectDefaultValue;
 let selectedTarget = selectDefaultValue;
 
@@ -169,6 +169,23 @@ function updateCurrentDataBasedOnSelect() {
     }
 
     let newData = new Set();
+
+    if (selectedValue === companiesToInvestigateSelectVal){
+        console.log(companiesToInvestigate)
+
+        initialData.forEach(element => {
+            console.log(element[selectedType])
+            if (companiesToInvestigate.includes(element[selectedType])) {
+                newData.add(element);
+            }
+        });
+
+        console.log(newData);
+
+        setCurrentData(newData);
+        return;
+    }
+
     initialData.forEach(element => {
         if (element[selectedType] === selectedValue) {
             newData.add(element);

@@ -1,4 +1,4 @@
-const jsonFilePath = "data/mergedDatasetCut.json";
+const jsonFilePath = "data/mergedDataset.json";
 
 import * as d3 from "d3";
 import {
