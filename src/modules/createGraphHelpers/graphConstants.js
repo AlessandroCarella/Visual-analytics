@@ -41,6 +41,7 @@ function determineNodeColor(node) {
     let color = blackColor
     
     if (companiesToInvestigate.includes(node.id)){
+        console.log(node.id)
         return entityToInvestigateColor;
     }
 

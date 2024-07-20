@@ -12,7 +12,7 @@
 		"weight": 0.001,
 		"source": "Mar de la Vida OJSC",
 		"sourceType": { "nodeType": null, "country": null },
-		"target": "Oceanfront Oasis Inc Carrie",
+		"target": "Oceanfront Oasis Inc Carriers",
 		"targetType": { "nodeType": null, "country": null }
 	},
 	{
@@ -36,7 +36,7 @@
 		"weight": 0.001,
 		"source": "979893388",
 		"sourceType": { "nodeType": "organization", "country": null },
-		"target": "Oceanfront Oasis Inc Carrie",
+		"target": "Oceanfront Oasis Inc Carriers",
 		"targetType": { "nodeType": null, "country": null }
 	},
 	{
@@ -50,7 +50,7 @@
 	{
 		"typeOfLink": "toInvestigate",
 		"weight": 0.001,
-		"source": "Oceanfront Oasis Inc Carrie",
+		"source": "Oceanfront Oasis Inc Carriers",
 		"sourceType": { "nodeType": null, "country": null },
 		"target": "Mar de la Vida OJSC",
 		"targetType": { "nodeType": null, "country": null }
@@ -58,7 +58,7 @@
 	{
 		"typeOfLink": "toInvestigate",
 		"weight": 0.001,
-		"source": "Oceanfront Oasis Inc Carrie",
+		"source": "Oceanfront Oasis Inc Carriers",
 		"sourceType": { "nodeType": null, "country": null },
 		"target": "979893388",
 		"targetType": { "nodeType": "organization", "country": null }
@@ -66,7 +66,7 @@
 	{
 		"typeOfLink": "toInvestigate",
 		"weight": 0.001,
-		"source": "Oceanfront Oasis Inc Carrie",
+		"source": "Oceanfront Oasis Inc Carriers",
 		"sourceType": { "nodeType": null, "country": null },
 		"target": "8327",
 		"targetType": { "nodeType": "organization", "country": null }
@@ -92,7 +92,7 @@
 		"weight": 0.001,
 		"source": "8327",
 		"sourceType": { "nodeType": "organization", "country": null },
-		"target": "Oceanfront Oasis Inc Carrie",
+		"target": "Oceanfront Oasis Inc Carriers",
 		"targetType": { "nodeType": null, "country": null }
 	},
 	{

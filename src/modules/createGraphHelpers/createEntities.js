@@ -1,5 +1,5 @@
 import { svg } from "../../index";
-import { colorsOfLinks, companiesToInvestigateTypeOfLink, selectDefaultValue } from "../constants";
+import { colorsOfLinks, companiesToInvestigate, companiesToInvestigateTypeOfLink, selectDefaultValue } from "../constants";
 import { addNodeToAddedNodes, needToAddNode, getTypesOfLinks, getSelectedSource, getSelectedTarget } from "../dataManagement";
 import { refreshGraph } from "../refreshGraph";
 import {
@@ -149,8 +149,8 @@ function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
                 <div>${d.id}</div>
                 <div>Node type: ${nodeType}</div>
                 <div>Country: ${country}</div>
-                <div>N. sources: ${sourcesPerTargetCount[d.id]}</div>
-                <div>N. targets: ${targetsPerSourceCount[d.id]}</div>
+                <div>N. sources: ${companiesToInvestigate.includes(d.id) ? sourcesPerTargetCount[d.id] - (companiesToInvestigate.length-1) : sourcesPerTargetCount[d.id]}</div>
+                <div>N. targets: ${companiesToInvestigate.includes(d.id) ? targetsPerSourceCount[d.id] - (companiesToInvestigate.length-1) : targetsPerSourceCount[d.id]}</div>
             `)
             .style("left", (event.pageX + 5) + "px")
             .style("top", (event.pageY - 28) + "px");
