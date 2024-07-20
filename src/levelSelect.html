@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Input with Buttons</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            margin: 1;
+            padding: 1;
+            font-family: Arial, sans-serif;
+            height: 98vh; /* Set the body height to full viewport height */
+        }
+
+        .command-column {
+            width: 300px;
+            padding: 20px;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+        }
+
+        .command-column h2 {
+            margin-top: 0;
+        }
+
+        .command-column button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .graph {
+            flex-grow: 1; /* Allow .graph to grow and take remaining width */
+            height: 100%; /* Full height of the parent */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .show-tooltip .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Additional styling for button colors */
+        .button {
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .active-button {
+            color: white;
+        }
+
+        .inactive-button {
+            background-color: #454545 !important;
+            color: white;
+        }
+
+        .ownershipButton {
+            background-color: #1f77b4;
+        }
+
+        .partnershipButton {
+            background-color: #ff7f0e;
+        }
+
+        .family_relationshipButton {
+            background-color: #2ca02c;
+        }
+
+        .membershipButton {
+            background-color: #d62728;
+        }
+
+        .link.inactive {
+            stroke: #ffffff;
+        }
+
+        .source-select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .target-select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="command-column">
+        <h2>Adjust Value</h2>
+        <button id="decrease" class="button ownershipButton">-</button>
+        <input type="number" id="numberInput" min="-1" max="200" value="-1" class="source-select">
+        <button id="increase" class="button membershipButton">+</button>
+        <div class="tooltip">Input must be a number between 0 and 200 (-1 to turn off)</div>
+    </div>
+
+    <div class="graph">
+        <!-- Graph or other content goes here -->
+    </div>
+
+    <script>
+        const input = document.getElementById('numberInput');
+        const decreaseButton = document.getElementById('decrease');
+        const increaseButton = document.getElementById('increase');
+        const container = document.querySelector('.command-column');
+        let previousValue = -1;
+        let timer;
+        let tooltipTimer;
+
+        function showTooltip() {
+            container.classList.add('show-tooltip');
+            clearTimeout(tooltipTimer);
+            tooltipTimer = setTimeout(() => {
+                container.classList.remove('show-tooltip');
+            }, 1500);
+        }
+
+        function validateAndStore() {
+            let value = parseFloat(input.value);
+            value = Math.floor(value); // Ensure we use the integer part
+
+            if (isNaN(value) || value < -1 || value > 200) {
+                input.value = previousValue;
+                showTooltip();
+            } else {
+                previousValue = value;
+                container.classList.remove('show-tooltip');
+                input.value = previousValue; // Ensure value in the input is an integer
+            }
+        }
+
+        input.addEventListener('input', () => {
+            clearTimeout(timer);
+            timer = setTimeout(validateAndStore, 1000);
+        });
+
+        decreaseButton.addEventListener('click', () => {
+            let value = parseInt(input.value);
+            if (value > -1) {
+                input.value = value - 1;
+                validateAndStore();
+            }
+        });
+
+        increaseButton.addEventListener('click', () => {
+            let value = parseInt(input.value);
+            if (value < 200) {
+                input.value = value + 1;
+                validateAndStore();
+            }
+        });
+    </script>
+</body>
+</html>
