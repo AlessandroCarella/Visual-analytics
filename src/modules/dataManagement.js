@@ -125,7 +125,7 @@ function updateCurrentDataBasedOnButtons (){
 
 ///////////////////////////////////////////
 
-import { selectDefaultValue } from './constants'
+import { selectDefaultValue, sourceSelectTag, targetSelectTag } from './constants'
 let selectedSource = selectDefaultValue;
 let selectedTarget = selectDefaultValue;
 
@@ -134,6 +134,7 @@ function getSelectedSource(){
 }
 
 function resetSelectedSource (){
+    d3.select(sourceSelectTag).property('value', selectDefaultValue);
     selectedSource = selectDefaultValue;
 }
 
@@ -149,6 +150,7 @@ function getSelectedTarget(){
 }
 
 function resetSelectedTarget (){
+    d3.select(targetSelectTag).property('value', selectDefaultValue);
     selectedTarget = selectDefaultValue;
 }
 

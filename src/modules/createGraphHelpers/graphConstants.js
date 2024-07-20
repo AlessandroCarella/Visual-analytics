@@ -1,4 +1,5 @@
 import { None } from "vega"
+import { companiesToInvestigate } from "../constants"
 
 const graphDimensionsBorder = 25
 
@@ -7,6 +8,7 @@ const targetAndSourceColor = '#FFEA00' //yellow
 const sourceColor = '#821304' //red
 const targetColor = '#042882' //blue
 const blackColor = '#000' //black
+const entityToInvestigateColor = '#54119c'
 
 const markersRefX = 8
 const markersRefY = 0
@@ -38,6 +40,10 @@ const nodeTypeColor = {
 function determineNodeColor(node) {
     let color = blackColor
     
+    if (companiesToInvestigate.includes(node.id)){
+        return entityToInvestigateColor;
+    }
+
     if (node.type === 'source') {
         color = node.alsoTarget ? sourceAndTargetColor : sourceColor;
     }
@@ -54,7 +60,7 @@ function determineNodeBorderColor(node){
 
 export {
     graphDimensionsBorder,
-    sourceAndTargetColor, sourceColor, targetColor, blackColor,
+    sourceAndTargetColor, sourceColor, targetColor, blackColor, entityToInvestigateColor,
     markersRefX, markersRefY, markerWidth, markerHeight,
     linksSizeMultiplier, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel,
     tooltipBackgroundColor,

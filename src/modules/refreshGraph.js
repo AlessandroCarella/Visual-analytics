@@ -2,7 +2,7 @@
 import * as d3 from 'd3';
 import { svg } from '../index';
 import { createGraph } from './createGraph';
-import { updateCurrentDataWithNewNodes, updateCurrentDataBasedOnSelect, updateCurrentDataBasedOnButtons } from './dataManagement';
+import { updateCurrentDataWithNewNodes, updateCurrentDataBasedOnSelect, updateCurrentDataBasedOnButtons, getInitialData } from './dataManagement';
 import { isObjectEmpty } from './utils';
 
 
