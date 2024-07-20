@@ -26,10 +26,10 @@ function refreshGraph() {
     //find difference (currentData, previousCurrentData)
     //remove excess data
     //add missing data
-
+    
     // Clear existing graph elements
     svg.selectAll('*').remove();
-
+    
     // Create the graph with the filtered data
     createGraph();
 }

@@ -1,20 +1,32 @@
-import { companiesToInvestigate, companiesToInvestigateExtraInfo, companiesToInvestigateTypeOfLink, selectDefaultValue } from "./constants"
+import { companiesToInvestigate, companiesToInvestigateExtraInfo, companiesToInvestigateSelectVal, companiesToInvestigateTypeOfLink, selectDefaultValue } from "./constants"
 import { getCurrentData, getSelectedSource, getSelectedTarget } from "./dataManagement"
+
+let specialAddedLinks = new Set ()
+
+function getSpecialAddedLinks(){
+    return specialAddedLinks;
+}
+
+function resetSpecialAddedLinks(){
+    specialAddedLinks = new Set ();
+}
 
 function addLinksBetweenEntitesToInvestigate(dataToAddTo, nodes, idOfNodesToAdd = companiesToInvestigate, typeOfLinkToAdd = companiesToInvestigateTypeOfLink){
     //this function adds links between nodes
     //idOfNodesToAdd needs to be an array and every combination of the ids in the array will be 
     //the default type of link to add is "toInvestigate"
-    if ((getSelectedSource() === selectDefaultValue) || (getSelectedTarget() === selectDefaultValue)){
+    if ((getSelectedSource() === companiesToInvestigateSelectVal) || (getSelectedTarget() === companiesToInvestigateSelectVal)){
         Array.from(idOfNodesToAdd).forEach(outerElem => {
             Array.from(idOfNodesToAdd).forEach(innerElem => {
                 if (outerElem !== innerElem){
-                    dataToAddTo.push({
+                    const elemToAdd = {
                         source: nodes.find(node => outerElem === node.id),
                         target: nodes.find(node => innerElem === node.id),
                         typeOfLink: typeOfLinkToAdd,
-                        weight: 1
-                    })
+                        weight: 0.001
+                    }
+                    dataToAddTo.push(elemToAdd);
+                    specialAddedLinks.add(elemToAdd)
                 }
             })  
         })
@@ -23,4 +35,7 @@ function addLinksBetweenEntitesToInvestigate(dataToAddTo, nodes, idOfNodesToAdd 
     return dataToAddTo;
 }
 
-export { addLinksBetweenEntitesToInvestigate }
+export { 
+    addLinksBetweenEntitesToInvestigate, 
+    getSpecialAddedLinks, resetSpecialAddedLinks 
+}
