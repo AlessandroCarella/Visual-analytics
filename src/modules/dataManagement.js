@@ -158,6 +158,7 @@ function setSelectedTarget (element){
 }
 
 ///////////////////
+import { addLinksBetweenEntitesToInvestigate } from "./entitiesToInvestigateSpecial";
 
 function updateCurrentDataBasedOnSelect() {
     let selectedValue = selectedSource !== selectDefaultValue ? selectedSource : selectedTarget;
@@ -171,16 +172,11 @@ function updateCurrentDataBasedOnSelect() {
     let newData = new Set();
 
     if (selectedValue === companiesToInvestigateSelectVal){
-        console.log(companiesToInvestigate)
-
         initialData.forEach(element => {
-            console.log(element[selectedType])
             if (companiesToInvestigate.includes(element[selectedType])) {
                 newData.add(element);
             }
         });
-
-        console.log(newData);
 
         setCurrentData(newData);
         return;

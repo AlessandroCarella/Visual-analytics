@@ -1,4 +1,5 @@
-import { getCurrentData, getInitialData } from "../dataManagement";
+import { getCurrentData, getInitialData, getSelectedSource, getSelectedTarget } from "../dataManagement";
+import { addLinksBetweenEntitesToInvestigate } from "../entitiesToInvestigateSpecial";
 import { removeDuplicatesBetweenSet1AndSet2 } from "../utils";
 
 function getPossibleNodes(data) {
@@ -89,7 +90,7 @@ function createDictNodeToTypeCountry (data, sources, targets, sourcesTargets){
 }
 
 function createLinksData(data, nodes) {
-    const links = [];
+    let links = [];
 
     data.forEach(d => {
         const link = {
@@ -101,6 +102,8 @@ function createLinksData(data, nodes) {
         links.push(link);
     });
 
+    links = addLinksBetweenEntitesToInvestigate(links, nodes);
+    
     return links;
 }
 

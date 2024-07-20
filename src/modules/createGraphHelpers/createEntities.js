@@ -1,6 +1,6 @@
 import { svg } from "../../index";
-import { colorsOfLinks } from "../constants";
-import { addNodeToAddedNodes, needToAddNode, getTypesOfLinks } from "../dataManagement";
+import { colorsOfLinks, companiesToInvestigateTypeOfLink, selectDefaultValue } from "../constants";
+import { addNodeToAddedNodes, needToAddNode, getTypesOfLinks, getSelectedSource, getSelectedTarget } from "../dataManagement";
 import { refreshGraph } from "../refreshGraph";
 import {
     blackColor,
@@ -38,7 +38,7 @@ function createLinks(links) {
 
         linkSelection.enter().append('line')
             .attr('class', `link ${typeOfLink}`)
-            .style('stroke', colorsOfLinks(typeOfLink))
+            .style('stroke', colorsOfLinks(typeOfLink) || 'black')
             .style('stroke-width', d => Math.sqrt(d.weight) * linksSizeMultiplier)
             .attr("marker-end", `url(#arrow-${typeOfLink})`)
             .each(function (d) {

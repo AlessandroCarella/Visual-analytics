@@ -8,7 +8,6 @@ import { createLinks, createNodes, createMarkers, createLabels, setupTooltip } f
 let initialData;
 
 function createGraph() {
-
     //data generation
     const { sources: sources, targets: targets, sourcesTargets: sourcesTargets } = getPossibleNodes(getCurrentData());
     
@@ -22,7 +21,7 @@ function createGraph() {
 
     const nodes = createNodesData(sources, targets, sourcesTargets, sourcesNotActiveButInGraph, dictSourceToTypeCountry);
     const links = createLinksData (getCurrentData(), nodes, sourcesTargets);
-
+    
     //simulation
     const simulation = initializeSimulation(nodes, links);
 
