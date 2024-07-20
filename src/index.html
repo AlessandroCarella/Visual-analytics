@@ -20,11 +20,8 @@
 	<body>
 		<div class="command-column">
 			<h2>Commands</h2>
-			
-            <button 
-                id="ownership" 
-                class="button ownershipButton active-button"
-            >
+
+			<button id="ownership" class="button ownershipButton active-button">
 				ownership
 			</button>
 
@@ -34,65 +31,125 @@
 			>
 				partnership
 			</button>
-			
-            <button
+
+			<button
 				id="family_relationship"
 				class="button family_relationshipButton active-button"
 			>
 				family relationship
 			</button>
-			
-            <button
+
+			<button
 				id="membership"
 				class="button membershipButton active-button"
 			>
 				membership
 			</button>
 
-			<label for="source-select">Select Source and see its targets:</label>
+			<label for="source-select"
+				>Select Source and see its targets:</label
+			>
 			<select id="source-select" class="source-or-target-select">
 				<option value="all">All</option>
 			</select>
 
-			<label for="target-select">Select Target and see its sources:</label>
+			<label for="target-select"
+				>Select Target and see its sources:</label
+			>
 			<select id="target-select" class="source-or-target-select">
 				<option value="all">All</option>
 			</select>
 
 			<h2>Investigate distance from nodes to investigate</h2>
-			
+
 			<h3>As source</h3>
 			<div class="radio-group">
-				<input type="radio" id="source-up-to-level" name="source-level" value="up-to-level" checked>
+				<input
+					type="radio"
+					id="source-up-to-level"
+					name="source-level"
+					value="up-to-level"
+					checked
+				/>
 				<label for="source-up-to-level">Up to level</label>
 
-				<input type="radio" id="source-only-level" name="source-level" value="only-level">
+				<input
+					type="radio"
+					id="source-only-level"
+					name="source-level"
+					value="only-level"
+				/>
 				<label for="source-only-level">Only level</label>
 			</div>
 			<div class="investigate-distance-div">
-				<button id="decrease-source" class="button-minus-plus minus-button">-</button>
-				<input type="number" id="sourceNumberInput" min="-1" max="7" value="-1" class="investigate-source-or-target-distance-select">
-				<button id="increase-source" class="button-minus-plus plus-button">+</button>
+				<button
+					id="decrease-source"
+					class="button-minus-plus minus-button"
+				>
+					-
+				</button>
+				<input
+					type="number"
+					id="sourceNumberInput"
+					min="-1"
+					max="7"
+					value="-1"
+					class="investigate-source-or-target-distance-select"
+				/>
+				<button
+					id="increase-source"
+					class="button-minus-plus plus-button"
+				>
+					+
+				</button>
 				<!-- <div class="tooltip">Input must be a number between 0 and 200 (-1 to turn off)</div> -->
 			</div>
 
 			<h3>As target</h3>
 			<div class="radio-group">
-				<input type="radio" id="target-up-to-level" name="target-level" value="up-to-level" checked>
+				<input
+					type="radio"
+					id="target-up-to-level"
+					name="target-level"
+					value="up-to-level"
+					checked
+				/>
 				<label for="target-up-to-level">Up to level</label>
 
-				<input type="radio" id="target-only-level" name="target-level" value="only-level">
+				<input
+					type="radio"
+					id="target-only-level"
+					name="target-level"
+					value="only-level"
+				/>
 				<label for="target-only-level">Only level</label>
 			</div>
 			<div class="investigate-distance-div">
-				<button id="decrease-target" class="button-minus-plus minus-button">-</button>
-				<input type="number" id="targetNumberInput" min="-1" max="8" value="-1" class="investigate-source-or-target-distance-select">
-				<button id="increase-target" class="button-minus-plus plus-button">+</button>
+				<button
+					id="decrease-target"
+					class="button-minus-plus minus-button"
+				>
+					-
+				</button>
+				<input
+					type="number"
+					id="targetNumberInput"
+					min="-1"
+					max="8"
+					value="-1"
+					class="investigate-source-or-target-distance-select"
+				/>
+				<button
+					id="increase-target"
+					class="button-minus-plus plus-button"
+				>
+					+
+				</button>
 				<!-- <div class="tooltip">Input must be a number between 0 and 200 (-1 to turn off)</div> -->
 			</div>
 		</div>
-		
-        <div class="graph">
+
+		<div class="graph">
 			<svg></svg>
 		</div>
 
