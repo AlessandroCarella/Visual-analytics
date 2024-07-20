@@ -31,7 +31,7 @@ function createGraph() {
     createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation, allPossibleSources, sourcesNotActiveButInGraph);
     createMarkers();
     createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount);
-    setupTooltip();
+    setupTooltip(targetsPerSourceCount, sourcesPerTargetCount);
 }
 
 export { createGraph }

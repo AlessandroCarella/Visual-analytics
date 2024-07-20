@@ -19,6 +19,7 @@
     * to investigate companies 
       * add to the sources an option to plot the 4 and move the 4 to the top of the selects
       * when either one of the four or the option with the 4 is selected add to the controls a slider to plot the connections of those nodes
+    * when the show entities to investigate option is selected a new type of link between the entities to investigate pops up so that they are distinguscable
 * dataset:
   * order the sources from the one with most targets to the one with less
 
@@ -136,8 +137,12 @@
 
   features:
   * the links have one color each so that they're identifiable
-  * the nodes have a size related to the amount of targets that they have (the target nodes are just of r=1)
+  * the nodes have a size related to the amount of targets and sources they have (i sum them, find the sqrt of the number and multiply it by 3)
   * through the buttons you can select which kind of link to be shown
-  * through the select you can choose which nodes should be shown
+  * through the select you can choose either a source or a target
+    * the selects also have an option to show the entities that the challange tells you to investigate about (one of them is only target so you have to use both select to see all of those nodes)
+      * when this option is selected a new type of link between the entities to investigate pops up so that they are distinguscable
+  * since each node has his type the border of each node has its own color based on the type of node
+  * when you hover a node the ui will pop up a tooltip with the id (name), type, country of the node and how many targets and sources it has
   * each link as a arrow marker (of the same color of the link) to signal the direction of the link
  

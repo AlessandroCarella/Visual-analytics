@@ -127,7 +127,7 @@ function createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount) {
         .style('pointer-events', 'none');
 }
 
-function setupTooltip() {
+function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
     const tooltip = d3.select("body").append("div-tooltip")
         .attr("class", "tooltip")
         .style("opacity", 0)
@@ -149,6 +149,8 @@ function setupTooltip() {
                 <div>${d.id}</div>
                 <div>Node type: ${nodeType}</div>
                 <div>Country: ${country}</div>
+                <div>N. sources: ${sourcesPerTargetCount[d.id]}</div>
+                <div>N. targets: ${targetsPerSourceCount[d.id]}</div>
             `)
             .style("left", (event.pageX + 5) + "px")
             .style("top", (event.pageY - 28) + "px");
