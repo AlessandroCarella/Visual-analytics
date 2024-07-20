@@ -1,5 +1,4 @@
-import { getCurrentData, getInitialData, getSelectedSource, getSelectedTarget } from "../dataManagement";
-import { addLinksBetweenEntitesToInvestigate } from "../entitiesToInvestigateSpecial";
+import { getCurrentData, getInitialData } from "../dataManagement";
 import { removeDuplicatesBetweenSet1AndSet2 } from "../utils";
 
 function getPossibleNodes(data) {
@@ -12,12 +11,12 @@ function getPossibleNodes(data) {
     return { sources, targets, sourcesTargets };
 }
 
-function findSourcesNotActiveButInGraph (){
+function findSourcesNotActiveButInGraph() {
     const currentData = getCurrentData();
     const currentDataSources = new Set(Array.from(currentData).map(d => d.source));
     const currentDataTargets = new Set(Array.from(currentData).map(d => d.target));
 
-    const initialDataSources = new Set (Array.from(getInitialData()).map(d => d.source));
+    const initialDataSources = new Set(Array.from(getInitialData()).map(d => d.source));
 
     // Find initial data sources that are not in current data sources
     const inactiveSources = new Set([...initialDataSources].filter(source => !currentDataSources.has(source)));
@@ -33,42 +32,42 @@ function createNodesData(sources, targets, sourcesTargets, sourcesNotActiveButIn
 
     sources.forEach(source => {
         nodesData.push(
-            { 
-                id: source, 
-                type: 'source', 
-                alsoSource: true, 
-                alsoTarget: sourcesTargets.has(source), 
-                nodeType: dictSourceToTypeCountry[source]["nodeType"], 
-                country: dictSourceToTypeCountry[source]["country"] 
+            {
+                id: source,
+                type: 'source',
+                alsoSource: true,
+                alsoTarget: sourcesTargets.has(source),
+                nodeType: dictSourceToTypeCountry[source]["nodeType"],
+                country: dictSourceToTypeCountry[source]["country"]
             }
         );
     });
 
     targets.forEach(target => {
         nodesData.push(
-            { 
-                id: target, 
-                type: 'target', 
-                alsoSource: (sourcesTargets.has(target) || sourcesNotActiveButInGraph.has(target)), 
-                alsoTarget: true, 
-                nodeType: dictSourceToTypeCountry[target]["nodeType"], 
-                country: dictSourceToTypeCountry[target]["country"] 
+            {
+                id: target,
+                type: 'target',
+                alsoSource: (sourcesTargets.has(target) || sourcesNotActiveButInGraph.has(target)),
+                alsoTarget: true,
+                nodeType: dictSourceToTypeCountry[target]["nodeType"],
+                country: dictSourceToTypeCountry[target]["country"]
             }
         );
     });
-    
+
     return nodesData;
 }
 
-function createDictNodeToTypeCountry (data, sources, targets, sourcesTargets){
+function createDictNodeToTypeCountry(data, sources, targets, sourcesTargets) {
     let resultDict = {};
-    
+
     const names = new Set([...sources, ...targets, ...sourcesTargets])
 
     data.forEach(obj => {
         const source = obj.source;
         const target = obj.target;
-    
+
         // Check if the source matches any string in the list
         if (names.has(source)) {
             resultDict[source] = {
@@ -76,7 +75,7 @@ function createDictNodeToTypeCountry (data, sources, targets, sourcesTargets){
                 country: obj.sourceCountry
             };
         }
-    
+
         // Check if the target matches any string in the list
         if (names.has(target)) {
             resultDict[target] = {
@@ -101,8 +100,8 @@ function createLinksData(data, nodes) {
         };
         links.push(link);
     });
-    
+
     return links;
 }
 
-export { getPossibleNodes, createDictNodeToTypeCountry, createNodesData, createLinksData, findSourcesNotActiveButInGraph }
+export { createDictNodeToTypeCountry, createLinksData, createNodesData, findSourcesNotActiveButInGraph, getPossibleNodes };

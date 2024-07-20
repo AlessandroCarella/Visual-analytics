@@ -1,15 +1,16 @@
 import { svg } from "../../index";
-import { colorsOfLinks, companiesToInvestigate, companiesToInvestigateTypeOfLink, selectDefaultValue } from "../constants";
-import { addNodeToAddedNodes, needToAddNode, getTypesOfLinks, getSelectedSource, getSelectedTarget } from "../dataManagement";
+import { colorsOfLinks, companiesToInvestigate } from "../constants";
+import { addNodeToAddedNodes, getTypesOfLinks, needToAddNode } from "../dataManagement";
 import { refreshGraph } from "../refreshGraph";
 import {
-    blackColor,
-    markersRefX, markersRefY, markerWidth, markerHeight,
-    linksSizeMultiplier, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel,
-    tooltipBackgroundColor,
-    determineNodeColor,
     determineNodeBorderColor,
-    nodeBorderSize
+    determineNodeColor,
+    labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel,
+    linksSizeMultiplier,
+    markerHeight,
+    markersRefX, markersRefY, markerWidth,
+    nodeBorderSize,
+    tooltipBackgroundColor
 } from "./graphConstants";
 
 function dragstarted(event, d, simulation) {
@@ -49,15 +50,15 @@ function createLinks(links) {
     });
 }
 
-function calculateRadius (d, targetsPerSourceCount, sourcesPerTargetCount){
+function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
     //when the node is not both a source and a target the value in one of the 2 arrays
     //is going to be undefined
     //i prefer to handle this issue here rather than in the findPerSourceNumberOfTargetsOrOpposite
     //function in utils
-    if (targetsPerSourceCount[d.id] === undefined){
+    if (targetsPerSourceCount[d.id] === undefined) {
         targetsPerSourceCount[d.id] = 0;
     }
-    if (sourcesPerTargetCount[d.id] === undefined){
+    if (sourcesPerTargetCount[d.id] === undefined) {
         sourcesPerTargetCount[d.id] = 0;
     }
 
@@ -86,7 +87,7 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
     const allCircles = circles.merge(enteredCircles);
 
     allCircles.on('click', (event, d) => {
-        if (needToAddNode(d)){
+        if (needToAddNode(d)) {
             addNodeToAddedNodes(d)
             refreshGraph();
         }
@@ -143,21 +144,21 @@ function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
             // Default to "Unknown" if nodeType or country are null
             const nodeType = d.nodeType ? d.nodeType : "Unknown";
             const country = d.country ? d.country : "Unknown";
-            
+
             tooltip.transition().duration(0).style("opacity", 1);
             tooltip.html(`
                 <div>${d.id}</div>
                 <div>Node type: ${nodeType}</div>
                 <div>Country: ${country}</div>
-                <div>N. sources: ${companiesToInvestigate.includes(d.id) ? sourcesPerTargetCount[d.id] - (companiesToInvestigate.length-1) : sourcesPerTargetCount[d.id]}</div>
-                <div>N. targets: ${companiesToInvestigate.includes(d.id) ? targetsPerSourceCount[d.id] - (companiesToInvestigate.length-1) : targetsPerSourceCount[d.id]}</div>
+                <div>N. sources: ${companiesToInvestigate.includes(d.id) ? sourcesPerTargetCount[d.id] - (companiesToInvestigate.length - 1) : sourcesPerTargetCount[d.id]}</div>
+                <div>N. targets: ${companiesToInvestigate.includes(d.id) ? targetsPerSourceCount[d.id] - (companiesToInvestigate.length - 1) : targetsPerSourceCount[d.id]}</div>
             `)
-            .style("left", (event.pageX + 5) + "px")
-            .style("top", (event.pageY - 28) + "px");
+                .style("left", (event.pageX + 5) + "px")
+                .style("top", (event.pageY - 28) + "px");
         })
         .on('mouseout', () => {
             tooltip.transition().duration(0).style("opacity", 0);
         });
 }
 
-export { createLinks, createNodes, createMarkers, createLabels, setupTooltip }
+export { createLabels, createLinks, createMarkers, createNodes, setupTooltip };

@@ -1,5 +1,5 @@
-import { getCurrentData, getInitialData } from './dataManagement';
-import { graphDimensionsBorder } from './constants'
+import { graphDimensionsBorder } from './constants';
+import { getInitialData } from './dataManagement';
 function getUniqueItemsPerKey(key) {
     //turned to set and back to array because i want the elements to be unique
     return Array.from(new Set(Array.from(getInitialData()).map(d => d[key])));
@@ -47,4 +47,4 @@ function findPerSourceNumberOfTargetsOrOpposite(data, type) {
     return result;
 }
 
-export { getUniqueItemsPerKey, removeDuplicatesBetweenSet1AndSet2, isObjectEmpty, getGraphDimensions, findPerSourceNumberOfTargetsOrOpposite }
+export { findPerSourceNumberOfTargetsOrOpposite, getGraphDimensions, getUniqueItemsPerKey, isObjectEmpty, removeDuplicatesBetweenSet1AndSet2 };

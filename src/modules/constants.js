@@ -23,10 +23,10 @@ const companiesToInvestigate = [
     "8327"
 ]
 const companiesToInvestigateExtraInfo = {
-    "Mar de la Vida OJSC":{nodeType:null, country:null},
-    "979893388":{nodeType:"organization", country:null},
-    "Oceanfront Oasis Inc Carrie":{nodeType:null, country:null},
-    "8327":{nodeType:"organization", country:null}
+    "Mar de la Vida OJSC": { nodeType: null, country: null },
+    "979893388": { nodeType: "organization", country: null },
+    "Oceanfront Oasis Inc Carrie": { nodeType: null, country: null },
+    "8327": { nodeType: "organization", country: null }
 }
 const companiesToInvestigateTypeOfLink = "toInvestigate";
 
@@ -41,4 +41,4 @@ export {
     selectDefaultValue, selectDefaultValueText,
     companiesToInvestigate, companiesToInvestigateExtraInfo,
     companiesToInvestigateSelectVal, companiesToInvestigateText, companiesToInvestigateTypeOfLink,
-}
+};

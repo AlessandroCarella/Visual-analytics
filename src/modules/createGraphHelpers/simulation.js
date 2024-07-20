@@ -19,95 +19,98 @@ function getIntersectionY(node1, node2, isSource) {
     return y;
 }
 
-// function ticked(width, height, svg) {
-//     svg.selectAll('line.link')
-//         .attr('x1', d => {
-//             try {
-//                 const x1 = getIntersectionX(d.source, d.target, true);
-//                 if (isNaN(x1)) throw new Error('x1 is NaN');
-//                 return x1;
-//             } catch (error) {
-//                 console.error('Error setting x1 attribute for line.link:', error);
-//                 console.error('Data causing error:', d);
-//                 return 0; // Or some default value
-//             }
-//         })
-//         .attr('y1', d => {
-//             try {
-//                 const y1 = getIntersectionY(d.source, d.target, true);
-//                 if (isNaN(y1)) throw new Error('y1 is NaN');
-//                 return y1;
-//             } catch (error) {
-//                 console.error('Error setting y1 attribute for line.link:', error);
-//                 console.error('Data causing error:', d);
-//                 return 0; // Or some default value
-//             }
-//         })
-//         .attr('x2', d => {
-//             try {
-//                 const x2 = getIntersectionX(d.target, d.source, false);
-//                 if (isNaN(x2)) throw new Error('x2 is NaN');
-//                 return x2;
-//             } catch (error) {
-//                 console.error('Error setting x2 attribute for line.link:', error);
-//                 console.error('Data causing error:', d);
-//                 return 0; // Or some default value
-//             }
-//         })
-//         .attr('y2', d => {
-//             try {
-//                 const y2 = getIntersectionY(d.target, d.source, false);
-//                 if (isNaN(y2)) throw new Error('y2 is NaN');
-//                 return y2;
-//             } catch (error) {
-//                 console.error('Error setting y2 attribute for line.link:', error);
-//                 console.error('Data causing error:', d);
-//                 return 0; // Or some default value
-//             }
-//         });
+/*
+//with errors statement
+function ticked(width, height, svg) {
+    svg.selectAll('line.link')
+        .attr('x1', d => {
+            try {
+                const x1 = getIntersectionX(d.source, d.target, true);
+                if (isNaN(x1)) throw new Error('x1 is NaN');
+                return x1;
+            } catch (error) {
+                console.error('Error setting x1 attribute for line.link:', error);
+                console.error('Data causing error:', d);
+                return 0; // Or some default value
+            }
+        })
+        .attr('y1', d => {
+            try {
+                const y1 = getIntersectionY(d.source, d.target, true);
+                if (isNaN(y1)) throw new Error('y1 is NaN');
+                return y1;
+            } catch (error) {
+                console.error('Error setting y1 attribute for line.link:', error);
+                console.error('Data causing error:', d);
+                return 0; // Or some default value
+            }
+        })
+        .attr('x2', d => {
+            try {
+                const x2 = getIntersectionX(d.target, d.source, false);
+                if (isNaN(x2)) throw new Error('x2 is NaN');
+                return x2;
+            } catch (error) {
+                console.error('Error setting x2 attribute for line.link:', error);
+                console.error('Data causing error:', d);
+                return 0; // Or some default value
+            }
+        })
+        .attr('y2', d => {
+            try {
+                const y2 = getIntersectionY(d.target, d.source, false);
+                if (isNaN(y2)) throw new Error('y2 is NaN');
+                return y2;
+            } catch (error) {
+                console.error('Error setting y2 attribute for line.link:', error);
+                console.error('Data causing error:', d);
+                return 0; // Or some default value
+            }
+        });
 
-//     svg.selectAll('circle')
-//         .attr('cx', d => {
-//             try {
-//                 d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
-//                 return d.x;
-//             } catch (error) {
-//                 console.error('Error setting cx attribute for circle:', error);
-//                 console.error('Data causing error:', d);
-//                 return 0; // Or some default value
-//             }
-//         })
-//         .attr('cy', d => {
-//             try {
-//                 d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
-//                 return d.y;
-//             } catch (error) {
-//                 console.error('Error setting cy attribute for circle:', error);
-//                 console.error('Data causing error:', d);
-//                 return 0; // Or some default value
-//             }
-//         });
+    svg.selectAll('circle')
+        .attr('cx', d => {
+            try {
+                d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
+                return d.x;
+            } catch (error) {
+                console.error('Error setting cx attribute for circle:', error);
+                console.error('Data causing error:', d);
+                return 0; // Or some default value
+            }
+        })
+        .attr('cy', d => {
+            try {
+                d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
+                return d.y;
+            } catch (error) {
+                console.error('Error setting cy attribute for circle:', error);
+                console.error('Data causing error:', d);
+                return 0; // Or some default value
+            }
+        });
 
-//     svg.selectAll('text')
-//         .attr('x', d => {
-//             try {
-//                 return d.x;
-//             } catch (error) {
-//                 console.error('Error setting x attribute for text:', error);
-//                 console.error('Data causing error:', d);
-//                 return 0; // Or some default value
-//             }
-//         })
-//         .attr('y', d => {
-//             try {
-//                 return d.y + 4;
-//             } catch (error) {
-//                 console.error('Error setting y attribute for text:', error);
-//                 console.error('Data causing error:', d);
-//                 return 0; // Or some default value
-//             }
-//         });
-// }
+    svg.selectAll('text')
+        .attr('x', d => {
+            try {
+                return d.x;
+            } catch (error) {
+                console.error('Error setting x attribute for text:', error);
+                console.error('Data causing error:', d);
+                return 0; // Or some default value
+            }
+        })
+        .attr('y', d => {
+            try {
+                return d.y + 4;
+            } catch (error) {
+                console.error('Error setting y attribute for text:', error);
+                console.error('Data causing error:', d);
+                return 0; // Or some default value
+            }
+        });
+}
+*/
 
 function ticked(width, height, svg) {
     svg.selectAll('line.link')
@@ -146,7 +149,7 @@ function ticked(width, height, svg) {
 
 ////////////////////////////////////////
 
-import { svg } from '../../index'
+import { svg } from '../../index';
 import { getGraphDimensions } from '../utils';
 
 function initializeSimulation(nodes, links) {
@@ -159,4 +162,4 @@ function initializeSimulation(nodes, links) {
         .on('tick', () => ticked(width, height, svg));
 }
 
-export { initializeSimulation }
+export { initializeSimulation };

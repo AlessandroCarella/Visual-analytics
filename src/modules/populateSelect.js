@@ -1,7 +1,7 @@
 import * as d3 from "d3";
+import { companiesToInvestigateSelectVal, companiesToInvestigateText, selectDefaultValueText, sourceSelectTag, targetSelectTag } from "./constants";
 import { getSelectedSource, getSelectedTarget, resetSelectedSource, resetSelectedTarget, selectDefaultValue, setSelectedSource, setSelectedTarget, } from "./dataManagement";
 import { refreshGraph } from "./refreshGraph";
-import { companiesToInvestigateSelectVal, companiesToInvestigateText, selectDefaultValueText, sourceSelectTag, targetSelectTag } from "./constants";
 
 function populateSelect(idSelect, items) {
     const dropdown = d3.select(idSelect);
@@ -12,15 +12,15 @@ function populateSelect(idSelect, items) {
 
     //add the "all" option
     dropdown
-       .append('option')
-       .attr('value', selectDefaultValue)
-       .text(selectDefaultValueText);
+        .append('option')
+        .attr('value', selectDefaultValue)
+        .text(selectDefaultValueText);
 
     //add the to investigate nodes
     dropdown
-       .append('option')
-       .attr('value', companiesToInvestigateSelectVal)
-       .text(companiesToInvestigateText);
+        .append('option')
+        .attr('value', companiesToInvestigateSelectVal)
+        .text(companiesToInvestigateText);
 
     //add the actual options
     items.forEach(item =>
@@ -55,14 +55,14 @@ function handleDropdownChange(selectedValue) {
         // and set the new selected value as the target
         resetSelectedSource();
         setSelectedTarget(selectedValue);
-    } 
+    }
     // Check if the newly selected value matches the previously selected target
     else if (previouslySelectedTarget === selectedTarget) {
         // If the selected target is the same as the previous target, reset the selected target
         // and set the new selected value as the source
         resetSelectedTarget();
         setSelectedSource(selectedValue);
-    } 
+    }
     else {
         // If the source dropdown value has changed
         if (selectedSource === selectedValue) {
@@ -87,4 +87,4 @@ function handleDropdownChange(selectedValue) {
     refreshGraph();
 }
 
-export { populateSelect, addDropdownEventListeners }
+export { addDropdownEventListeners, populateSelect };

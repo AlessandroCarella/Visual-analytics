@@ -1,4 +1,3 @@
-import { None } from "vega"
 import { companiesToInvestigate } from "../constants"
 
 const graphDimensionsBorder = 25
@@ -39,9 +38,8 @@ const nodeTypeColor = {
 
 function determineNodeColor(node) {
     let color = blackColor
-    
-    if (companiesToInvestigate.includes(node.id)){
-        console.log(node.id)
+
+    if (companiesToInvestigate.includes(node.id)) {
         return entityToInvestigateColor;
     }
 
@@ -55,7 +53,7 @@ function determineNodeColor(node) {
     return color;
 }
 
-function determineNodeBorderColor(node){     
+function determineNodeBorderColor(node) {
     return nodeTypeColor[node.nodeType]
 }
 
@@ -66,4 +64,4 @@ export {
     linksSizeMultiplier, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel,
     tooltipBackgroundColor,
     determineNodeColor, determineNodeBorderColor, nodeBorderSize
-}
+};
