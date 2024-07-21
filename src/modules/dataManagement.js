@@ -41,7 +41,7 @@ function needToAddNode(node) {
             }).forEach(link => {
                 if (!currentData.has(link) && getActiveButtons().has(link.typeOfLink)) {
                     needToAddNodeVar = true;
-                    return;
+                    return needToAddNodeVar; //exit the loop
                 }
             })
         }
@@ -55,7 +55,7 @@ function needToAddNode(node) {
                 }).forEach(link => {
                     if (!currentData.has(link) && getActiveButtons().has(link.typeOfLink)) {
                         needToAddNodeVar = true;
-                        return;
+                        return needToAddNodeVar; //exit the loop
                     }
                 })
             }
@@ -72,7 +72,11 @@ function updateCurrentDataWithNewNodes() {
     addedNodes.forEach(newNode => {
         //TODO add logic for nodes that are sources but also target to show the nodes that point at it
         initialData.forEach(link => {
-            if (newNode.type === 'target' && newNode.alsoSource && link.source === newNode.id) {
+            if (
+                (newNode.type === 'target' && newNode.alsoSource && link.source === newNode.id)
+                ||
+                (newNode.type === 'source' && newNode.alsoTarget && link.target === newNode.id)
+            ) {
                 if (!currentData.has(link)) {
                     dataToAdd.add(link)
                 }
