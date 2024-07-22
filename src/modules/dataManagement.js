@@ -30,50 +30,50 @@ function resetAddedNodes() {
     addedNodes.clear();
 }
 
+let relevantLinks;
 function needToAddNode(node) {
-    let needToAddNodeVar = false;//sorry for the funky name, js really likes to assign boolean values to variables
+    let needToAddNodeVar = false;
 
-    if (
-        (node.type === "target" && node.alsoSource)
-        ||
-        (node.type === "source" && node.alsoTarget)
-    ) {
-        //all targets of the node in currentdata
-        Array.from(initialData).filter(link => {
-            return link.source === node.id || link.target === node.id;
-        }).forEach(link => {
-            console.log(link);
-            if (!currentData.has(link) && getActiveButtons().has(link.typeOfLink)) {
-                needToAddNodeVar = true;
-                return needToAddNodeVar; //exit the loop
-            }
-        })
+    if ((node.type === "target" && node.alsoSource) || (node.type === "source" && node.alsoTarget)) {
+        relevantLinks = Array.from(initialData).filter(link => link.source === node.id || link.target === node.id);
+    }else if (node.type === "source" && !node.alsoTarget) {
+        relevantLinks = Array.from(initialData).filter(link => link.source === node.id);
+    } else if (node.type === "target" && !node.alsoSource) {
+        relevantLinks = Array.from(initialData).filter(link => link.target === node.id);
+    }
+
+    for (const link of relevantLinks) {
+        if (!currentData.has(link) && getActiveButtons().has(link.typeOfLink)) {
+            needToAddNodeVar = true;
+            break; // exit the loop
+        }
     }
 
     return needToAddNodeVar;
 }
 
 function updateCurrentDataWithNewNodes() {
-    //nodeType == source or target
-    let dataToAdd = new Set()
+    let dataToAdd = new Set();
 
     addedNodes.forEach(newNode => {
-        //TODO add logic for nodes that are sources but also target to show the nodes that point at it
-        initialData.forEach(link => {
-            if (
-                (newNode.type === 'target' && newNode.alsoSource && (link.source === newNode.id || link.target === newNode.id))
-                ||
-                (newNode.type === 'source' && newNode.alsoTarget && (link.target === newNode.id || link.source === newNode.id))
-            ) {
-                if (!currentData.has(link)) {
-                    dataToAdd.add(link)
-                }
+        if ((newNode.type === "target" && newNode.alsoSource) || (newNode.type === "source" && newNode.alsoTarget)) {
+            relevantLinks = Array.from(initialData).filter(link => link.source === newNode.id || link.target === newNode.id);
+        } else if (newNode.type === 'source' && !newNode.alsoTarget) {
+            relevantLinks = Array.from(initialData).filter(link => link.source === newNode.id);
+        } else if (newNode.type === 'target' && !newNode.alsoSource) {
+            relevantLinks = Array.from(initialData).filter(link => link.target === newNode.id);
+        }
+
+        relevantLinks.forEach(link => {
+            if (!currentData.has(link)) {
+                dataToAdd.add(link);
             }
         });
     });
 
     setCurrentData(new Set([...currentData, ...dataToAdd]));
 }
+
 
 ///////////////////////////////////////////
 
