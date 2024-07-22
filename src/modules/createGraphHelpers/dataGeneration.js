@@ -1,4 +1,4 @@
-import { getCurrentData, getInitialData } from "../dataManagement";
+import { getAllSources, getAllTargets, getCurrentData, getInitialData } from "../dataManagement";
 import { removeDuplicatesBetweenSet1AndSet2 } from "../utils";
 
 function getPossibleNodes(data) {
@@ -58,16 +58,14 @@ function findTargetsNotActiveButInGraph() {
 
 function createNodesData(sources, targets, sourcesNotActiveButInGraph, targetsNotActiveButInGraph, dictSourceToTypeCountry) {
     const nodesData = [];
-    console.log("sourcesNotActiveButInGraph", sourcesNotActiveButInGraph)
-    console.log("targetsNotActiveButInGraph", targetsNotActiveButInGraph)
-
+    
     sources.forEach(source => {
         nodesData.push(
             {
                 id: source,
                 type: 'source',
                 alsoSource: true,
-                alsoTarget: (sourcesNotActiveButInGraph.has(source) || targetsNotActiveButInGraph.has(source)),
+                alsoTarget: (getAllTargets().has(source)),
                 nodeType: dictSourceToTypeCountry[source]["nodeType"],
                 country: dictSourceToTypeCountry[source]["country"]
             }
@@ -79,7 +77,7 @@ function createNodesData(sources, targets, sourcesNotActiveButInGraph, targetsNo
             {
                 id: target,
                 type: 'target',
-                alsoSource: (sourcesNotActiveButInGraph.has(target) || targetsNotActiveButInGraph.has(target)),
+                alsoSource: (getAllSources().has(target)),
                 alsoTarget: true,
                 nodeType: dictSourceToTypeCountry[target]["nodeType"],
                 country: dictSourceToTypeCountry[target]["country"]

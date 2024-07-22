@@ -89,6 +89,25 @@ function updateCurrentDataWithNewNodes() {
 
 ///////////////////////////////////////////
 
+let allSources = new Set();
+let allTargets = new Set();
+
+function getAllSources() {
+    if (allSources.length === 0 || typeof allSources.length === 'undefined'){
+        allSources = new Set(Array.from(initialData).map(d => d.source));
+    }
+    return allSources;
+}
+
+function getAllTargets() {
+    if (allTargets.length === 0 || typeof allTargets.length === 'undefined'){
+        allTargets = new Set(Array.from(initialData).map(d => d.target));
+    }
+    return allTargets;
+}
+
+///////////////////////////////////////////
+
 import { companiesToInvestigate, companiesToInvestigateSelectVal, typesOfLinks } from "./constants";
 
 let activeButtons;
@@ -203,6 +222,7 @@ export {
     getInitialData, setInitialData, 
     setCurrentData, getCurrentData, 
     needToAddNode, updateCurrentDataWithNewNodes,
+    getAllSources, getAllTargets,
     getAddedNodes, addNodeToAddedNodes, resetAddedNodes,
     getTypesOfLinks, 
     createActiveButtons, getActiveButtons, updateActiveButtons,
