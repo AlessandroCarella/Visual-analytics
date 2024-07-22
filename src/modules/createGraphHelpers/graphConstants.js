@@ -1,7 +1,9 @@
 import { companiesToInvestigate } from "../constants"
+import { clickableNode } from "../dataManagement"
 
 const graphDimensionsBorder = 25
 
+const clickableNodeColor = '#f542ef'
 const sourceAndTargetColor = '#04820f' //green
 const targetAndSourceColor = '#FFEA00' //yellow
 const sourceColor = '#821304' //red
@@ -41,6 +43,10 @@ function determineNodeColor(node) {
 
     if (companiesToInvestigate.includes(node.id)) {
         return entityToInvestigateColor;
+    }
+
+    if (clickableNode(node)){
+        return clickableNodeColor;
     }
 
     if (node.type === 'source') {

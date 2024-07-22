@@ -1,6 +1,6 @@
 import { svg } from "../../index";
 import { colorsOfLinks, companiesToInvestigate } from "../constants";
-import { addNodeToAddedNodes, getTypesOfLinks, needToAddNode } from "../dataManagement";
+import { addNodeToAddedNodes, getTypesOfLinks, clickableNode } from "../dataManagement";
 import { refreshGraph } from "../refreshGraph";
 import {
     determineNodeBorderColor,
@@ -87,7 +87,7 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
     const allCircles = circles.merge(enteredCircles);
 
     allCircles.on('click', (event, d) => {
-        if (needToAddNode(d)) {
+        if (clickableNode(d)) {
             addNodeToAddedNodes(d)
             refreshGraph();
         }

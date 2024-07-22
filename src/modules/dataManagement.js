@@ -31,8 +31,8 @@ function resetAddedNodes() {
 }
 
 let relevantLinks;
-function needToAddNode(node) {
-    let needToAddNodeVar = false;
+function clickableNode(node) {
+    let clickableNodeVar = false;
 
     if ((node.type === "target" && node.alsoSource) || (node.type === "source" && node.alsoTarget)) {
         relevantLinks = Array.from(initialData).filter(link => link.source === node.id || link.target === node.id);
@@ -44,12 +44,12 @@ function needToAddNode(node) {
 
     for (const link of relevantLinks) {
         if (!currentData.has(link) && getActiveButtons().has(link.typeOfLink)) {
-            needToAddNodeVar = true;
+            clickableNodeVar = true;
             break; // exit the loop
         }
     }
 
-    return needToAddNodeVar;
+    return clickableNodeVar;
 }
 
 function updateCurrentDataWithNewNodes() {
@@ -209,7 +209,7 @@ function updateCurrentDataBasedOnSelect() {
 export {
     getInitialData, setInitialData, 
     setCurrentData, getCurrentData, 
-    needToAddNode, updateCurrentDataWithNewNodes,
+    clickableNode, updateCurrentDataWithNewNodes,
     getAllSources, getAllTargets,
     getAddedNodes, addNodeToAddedNodes, resetAddedNodes,
     getTypesOfLinks, 
