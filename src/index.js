@@ -1,12 +1,16 @@
 const jsonFilePath = "data/mergedDatasetWithToInvestigateExtraData.json";
 
-import * as d3 from "d3";
 import { addTypeButtonsEventListeners } from "./modules/buttons";
 import { createGraph } from "./modules/createGraph";
 import {
     createActiveButtons,
+    generateInitialDictNodeToTypeCountry,
+    generateInitialLinksData,
+    generateInitialNodesData,
+    generateInitialSourcesANDtargetsANDsourcesTargetsANDTargetsSources,
     setCurrentData,
-    setInitialData
+    setInitialData,
+    setUpTargetsPerSourceCountAndViceversa,
 } from "./modules/dataManagement";
 import { addDropdownEventListeners, populateSelect } from "./modules/populateSelect";
 import { getUniqueItemsPerKey } from "./modules/utils";
@@ -30,6 +34,12 @@ d3.json(jsonFilePath)
         addDropdownEventListeners("#target-select");
 
         //graph
+        ////data generation for the graph when initial data is selected
+        /**/setUpTargetsPerSourceCountAndViceversa();
+        /**/generateInitialSourcesANDtargetsANDsourcesTargetsANDTargetsSources()
+        /**/generateInitialDictNodeToTypeCountry();
+        /**/generateInitialNodesData();
+        /**/generateInitialLinksData();
         createGraph();
 
         //buttons

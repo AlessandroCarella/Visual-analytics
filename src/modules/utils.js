@@ -27,24 +27,4 @@ function getGraphDimensions() {
     return { width: width - graphDimensionsBorder, height: height - graphDimensionsBorder };
 }
 
-function findPerSourceNumberOfTargetsOrOpposite(data, type) {
-    //find the number of targets for each source 
-    //(or the number of sources for target based on the type passed)
-    //example usages:
-    //const targetsPerSourceCount = findPerSourceNumberOfTargetsOrOpposite(getCurrentData(), "source");
-    //const sourcesPerTargetCount = findPerSourceNumberOfTargetsOrOpposite(getCurrentData(), "target");
-    let result = {};
-
-    data.forEach(d => {
-        let key = type === 'source' ? d.source : d.target;
-
-        if (!result[key]) {
-            result[key] = 0;
-        }
-        result[key]++;
-    });
-
-    return result;
-}
-
-export { findPerSourceNumberOfTargetsOrOpposite, getGraphDimensions, getUniqueItemsPerKey, isObjectEmpty, removeDuplicatesBetweenSet1AndSet2 };
+export { getGraphDimensions, getUniqueItemsPerKey, isObjectEmpty, removeDuplicatesBetweenSet1AndSet2 };

@@ -1,7 +1,8 @@
 import { svg } from "../../index";
 import { colorsOfLinks, companiesToInvestigate } from "../constants";
-import { addNodeToAddedNodes, getTypesOfLinks, needToAddNode } from "../dataManagement";
+import { addNodeToAddedNodes, getSourcesPerTargetCountVal, getTargetsPerSourceCountVal, getTypesOfLinks, needToAddNode } from "../dataManagement";
 import { refreshGraph } from "../refreshGraph";
+import { findSourcesOrTargetsNotActiveButInGraph } from "./dataGeneration";
 import {
     determineNodeBorderColor,
     determineNodeColor,
@@ -50,29 +51,18 @@ function createLinks(links) {
     });
 }
 
-function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
-    //when the node is not both a source and a target the value in one of the 2 arrays
-    //is going to be undefined
-    //i prefer to handle this issue here rather than in the findPerSourceNumberOfTargetsOrOpposite
-    //function in utils
-    if (targetsPerSourceCount[d.id] === undefined) {
-        targetsPerSourceCount[d.id] = 0;
-    }
-    if (sourcesPerTargetCount[d.id] === undefined) {
-        sourcesPerTargetCount[d.id] = 0;
-    }
-
-    return Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id]) * 3;
+function calculateRadius(d) {
+    return Math.sqrt(getTargetsPerSourceCountVal(d.id) + getSourcesPerTargetCountVal(d.id)) * 3;
 }
 
-function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation) {
+function createNodes(nodes, simulation) {
     const circles = svg.selectAll('circle').data(nodes);
     circles.exit().remove();
 
     const enteredCircles = circles.enter().append('circle')
         .attr('class', d => d.type)
         .attr('r', d => {
-            d.radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
+            d.radius = calculateRadius(d);
             return d.radius
         })
         .style('fill', d => determineNodeColor(d))
@@ -112,13 +102,13 @@ function createMarkers() {
         .attr("class", "arrowhead");
 }
 
-function createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount) {
+function createLabels(nodes) {
     svg.selectAll('text')
         .data(nodes)
         .enter().append('text')
         .attr('class', d => d.type)
         .text(d => {
-            const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount)
+            const radius = calculateRadius(d)
             return radius > labelsNodeMinRadiusToShowLabel ? d.id : '';
         })
         .style('font-size', labelsFontSize)
@@ -128,7 +118,7 @@ function createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount) {
         .style('pointer-events', 'none');
 }
 
-function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
+function setupTooltip() {
     const tooltip = d3.select("body").append("div-tooltip")
         .attr("class", "tooltip")
         .style("opacity", 0)
@@ -150,10 +140,8 @@ function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
                 <div>${d.id}</div>
                 <div>Node type: ${nodeType}</div>
                 <div>Country: ${country}</div>
-                <div>N. sources: ${companiesToInvestigate.includes(d.id) ? sourcesPerTargetCount[d.id] - (companiesToInvestigate.length - 1) : sourcesPerTargetCount[d.id]}</div>
-                <div>N. targets: ${companiesToInvestigate.includes(d.id) ? targetsPerSourceCount[d.id] - (companiesToInvestigate.length - 1) : targetsPerSourceCount[d.id]}</div>
-                <div>Also source: ${d.alsoSource}</div>
-                <div>Also target: ${d.alsoTarget}</div>
+                <div>N. sources: ${companiesToInvestigate.includes(d.id) ? getSourcesPerTargetCountVal(d.id) - (companiesToInvestigate.length - 1) : getSourcesPerTargetCountVal(d.id)}</div>
+                <div>N. targets: ${companiesToInvestigate.includes(d.id) ? getTargetsPerSourceCountVal(d.id) - (companiesToInvestigate.length - 1) : getTargetsPerSourceCountVal(d.id)}</div>
             `)
                 .style("left", (event.pageX + 5) + "px")
                 .style("top", (event.pageY - 28) + "px");
