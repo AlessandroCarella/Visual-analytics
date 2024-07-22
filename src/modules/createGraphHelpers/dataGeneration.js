@@ -1,14 +1,16 @@
 import { getCurrentData, getInitialData, getInitialDictNodeToTypeCountry, getInitialLinksData, getInitialNodesData, getInitialSources, getInitialSourcesTargets, getInitialTargets, getInitialTargetsSources, getSourcesPerTargetCountVal, getTargetsPerSourceCountVal } from "../dataManagement";
-import { removeDuplicatesBetweenSet1AndSet2 } from "../utils";
+import { isObjectEmpty, removeDuplicatesBetweenSet1AndSet2 } from "../utils";
 
 function getPossibleNodes(data) {
     if (data === getInitialData()) {
-        return {
-            sources: getInitialSources(),
-            targets: getInitialTargets(),
-            sourcesTargets: getInitialSourcesTargets(),
-            targetsSources: getInitialTargetsSources()
-        };
+        if (getInitialSources().length !== 0 && getInitialTargets().length !== 0 && getInitialSourcesTargets().length !== 0 && getInitialTargetsSources().length !== 0) {
+            return {
+                sources: getInitialSources(),
+                targets: getInitialTargets(),
+                sourcesTargets: getInitialSourcesTargets(),
+                targetsSources: getInitialTargetsSources()
+            };
+        }
     }
     
     const sources = new Set(Array.from(data).map(d => d.source));
@@ -65,9 +67,11 @@ function findTargetsNotActiveButInGraph() {
 
 
 function createNodesData(sources, targets, dictSourceToTypeCountry) {
-    if (sources === getInitialSources() && targets === getInitialTargets()){
+    if (sources === getInitialSources() && targets === getInitialTargets() && typeof dictSourceToTypeCountry !== 'undefined'){
         return getInitialNodesData();
     }
+
+
 
     const nodesData = [];
    
@@ -101,10 +105,10 @@ function createNodesData(sources, targets, dictSourceToTypeCountry) {
 }
 
 function createDictNodeToTypeCountry(data, sources, targets, sourcesTargets, targetsSources) {
-    if (data === getInitialData()){
+    if (data === getInitialData() && typeof getInitialDictNodeToTypeCountry() !== 'undefined') {
         return getInitialDictNodeToTypeCountry();
     }
-    
+
     let resultDict = {};
 
     const names = new Set([...sources, ...targets, ...sourcesTargets, ...targetsSources])
@@ -134,7 +138,7 @@ function createDictNodeToTypeCountry(data, sources, targets, sourcesTargets, tar
 }
 
 function createLinksData(data, nodes) {
-    if (data === getInitialData()){
+    if (data === getInitialData() && getInitialLinksData().length !== 0){
         return getInitialLinksData();
     }
 

@@ -136,8 +136,8 @@ function getSourcesPerTargetCountVal (nodeId){
 
 ///////////////////////////////////////////
 
-let initialSources;
-let initialTargets;
+let initialSources = [];
+let initialTargets = [];
 let initialSourcesTargets = [];
 let initialTargetsSources = [];
 
@@ -163,7 +163,7 @@ function generateInitialSourcesANDtargetsANDsourcesTargetsANDTargetsSources(){
 
 ////////////////////
 
-let initialDictNodeToTypeCountry;
+let initialDictNodeToTypeCountry = {};
 
 function getInitialDictNodeToTypeCountry (){
     return initialDictNodeToTypeCountry;
@@ -187,14 +187,14 @@ function getInitialNodesData() {
 
 ////////////////////
 
-let initialLinks = [];
+let initialLinksData = [];
 
 function generateInitialLinksData() {
-    createLinksData (getInitialData(), getInitialNodesData())
+    initialLinksData = createLinksData (getInitialData(), getInitialNodesData())
 }
 
 function getInitialLinksData() {
-    return initialLinks;
+    return initialLinksData;
 }
 
 ///////////////////////////////////////////

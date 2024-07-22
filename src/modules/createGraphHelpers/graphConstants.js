@@ -44,6 +44,7 @@ function determineNodeColor(node) {
     //TODO replace with the count of its targets and sources and the count of the links the node is in 
     //count of sources + count of targets === number of links the node is in
 
+    console.log("initial links", getInitialLinksData())
     let filteredLinks = Array.from(getInitialLinksData()).filter(link => {
         return (link.source.id === node.id || link.target.id === node.id)
     })
