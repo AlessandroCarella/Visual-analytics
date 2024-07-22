@@ -33,33 +33,21 @@ function resetAddedNodes() {
 function needToAddNode(node) {
     let needToAddNodeVar = false;//sorry for the funky name, js really likes to assign boolean values to variables
 
-    if (node.type === "target") {//target that becomes ALSO source
-        if (node.alsoSource) {
-            //all targets of the node in currentdata
-            Array.from(initialData).filter(link => {
-                return link.source === node.id;
-            }).forEach(link => {
-                if (!currentData.has(link) && getActiveButtons().has(link.typeOfLink)) {
-                    needToAddNodeVar = true;
-                    return needToAddNodeVar; //exit the loop
-                }
-            })
-        }
-    }
-    else {//source that becomes ALSO target
-        if (node.type === "source") {
-            if (node.alsoTarget) {
-                //all sources of the node in current data
-                Array.from(initialData).filter(link => {
-                    return link.target === node.id;
-                }).forEach(link => {
-                    if (!currentData.has(link) && getActiveButtons().has(link.typeOfLink)) {
-                        needToAddNodeVar = true;
-                        return needToAddNodeVar; //exit the loop
-                    }
-                })
+    if (
+        (node.type === "target" && node.alsoSource)
+        ||
+        (node.type === "source" && node.alsoTarget)
+    ) {
+        //all targets of the node in currentdata
+        Array.from(initialData).filter(link => {
+            return link.source === node.id || link.target === node.id;
+        }).forEach(link => {
+            console.log(link);
+            if (!currentData.has(link) && getActiveButtons().has(link.typeOfLink)) {
+                needToAddNodeVar = true;
+                return needToAddNodeVar; //exit the loop
             }
-        }
+        })
     }
 
     return needToAddNodeVar;
@@ -73,9 +61,9 @@ function updateCurrentDataWithNewNodes() {
         //TODO add logic for nodes that are sources but also target to show the nodes that point at it
         initialData.forEach(link => {
             if (
-                (newNode.type === 'target' && newNode.alsoSource && link.source === newNode.id)
+                (newNode.type === 'target' && newNode.alsoSource && (link.source === newNode.id || link.target === newNode.id))
                 ||
-                (newNode.type === 'source' && newNode.alsoTarget && link.target === newNode.id)
+                (newNode.type === 'source' && newNode.alsoTarget && (link.target === newNode.id || link.source === newNode.id))
             ) {
                 if (!currentData.has(link)) {
                     dataToAdd.add(link)
@@ -93,14 +81,14 @@ let allSources = new Set();
 let allTargets = new Set();
 
 function getAllSources() {
-    if (allSources.length === 0 || typeof allSources.length === 'undefined'){
+    if (allSources.length === 0 || typeof allSources.length === 'undefined') {
         allSources = new Set(Array.from(initialData).map(d => d.source));
     }
     return allSources;
 }
 
 function getAllTargets() {
-    if (allTargets.length === 0 || typeof allTargets.length === 'undefined'){
+    if (allTargets.length === 0 || typeof allTargets.length === 'undefined') {
         allTargets = new Set(Array.from(initialData).map(d => d.target));
     }
     return allTargets;
@@ -218,7 +206,7 @@ function updateCurrentDataBasedOnSelect() {
 
 ///////////////////////////////////////////
 
-export { 
+export {
     getInitialData, setInitialData, 
     setCurrentData, getCurrentData, 
     needToAddNode, updateCurrentDataWithNewNodes,
