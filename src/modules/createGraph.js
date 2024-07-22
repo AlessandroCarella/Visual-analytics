@@ -1,7 +1,8 @@
 import { createLabels, createLinks, createMarkers, createNodes, setupTooltip } from './createGraphHelpers/createEntities';
-import { createDictNodeToTypeCountry, createLinksData, createNodesData, getPossibleNodes } from './createGraphHelpers/dataGeneration';
+import { createDictNodeToTypeCountry, createLinksData, createNodesData, findSourcesOrTargetsNotActiveButInGraph, getPossibleNodes } from './createGraphHelpers/dataGeneration';
 import { initializeSimulation } from './createGraphHelpers/simulation';
 import { getCurrentData, getInitialData } from './dataManagement';
+import { findPerSourceNumberOfTargetsOrOpposite } from './utils';
 
 let initialData;
 
@@ -11,7 +12,13 @@ function createGraph() {
 
     const dictNodeToTypeCountry = createDictNodeToTypeCountry(getCurrentData(), sources, targets, sourcesTargets, targetsSources);
 
-    const nodes = createNodesData(sources, targets, dictNodeToTypeCountry);
+    const targetsPerSourceCount = findPerSourceNumberOfTargetsOrOpposite(getInitialData(), "source");
+    const sourcesPerTargetCount = findPerSourceNumberOfTargetsOrOpposite(getInitialData(), "target");
+
+    const sourcesNotActiveButInGraph = findSourcesOrTargetsNotActiveButInGraph("source");    
+    const targetsNotActiveButInGraph = findSourcesOrTargetsNotActiveButInGraph("target");
+
+    const nodes = createNodesData(sources, targets, sourcesNotActiveButInGraph, targetsNotActiveButInGraph, dictNodeToTypeCountry);
     const links = createLinksData(getCurrentData(), nodes);
 
     //simulation
@@ -19,10 +26,10 @@ function createGraph() {
 
     //graph enetites
     createLinks(links);
-    createNodes(nodes, simulation);
+    createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation);
     createMarkers();
-    createLabels(nodes);
-    setupTooltip();
+    createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount);
+    setupTooltip(targetsPerSourceCount, sourcesPerTargetCount);
 }
 
 export { createGraph };

@@ -1,9 +1,9 @@
 import { companiesToInvestigate } from "../constants"
-import { getInitialLinksData, getSourcesPerTargetCountVal, getTargetsPerSourceCountVal } from "../dataManagement"
 
 const graphDimensionsBorder = 25
 
-const expandableNodeColor = '#FFEA00' //yellow
+const sourceAndTargetColor = '#04820f' //green
+const targetAndSourceColor = '#FFEA00' //yellow
 const sourceColor = '#821304' //red
 const targetColor = '#042882' //blue
 const blackColor = '#000' //black
@@ -37,34 +37,20 @@ const nodeTypeColor = {
 
 
 function determineNodeColor(node) {
+    let color = blackColor
+
     if (companiesToInvestigate.includes(node.id)) {
         return entityToInvestigateColor;
     }
 
-    //TODO replace with the count of its targets and sources and the count of the links the node is in 
-    //count of sources + count of targets === number of links the node is in
-
-    console.log("initial links", getInitialLinksData())
-    let filteredLinks = Array.from(getInitialLinksData()).filter(link => {
-        return (link.source.id === node.id || link.target.id === node.id)
-    })
-    console.log("TargetsPerSourceCountVal", getTargetsPerSourceCountVal(node.id))
-    console.log("SourcesPerTargetCountVal", getSourcesPerTargetCountVal(node.id))
-    console.log("filteredLinks.length", filteredLinks.length)
-    if ((getTargetsPerSourceCountVal(node.id) + getSourcesPerTargetCountVal(node.id)) === filteredLinks.length) {
-        return expandableNodeColor;
-    }
-    //else the node is fully expanded
-
     if (node.type === 'source') {
-        return sourceColor;
+        color = node.alsoTarget ? sourceAndTargetColor : sourceColor;
+    }
+    else {
+        color = node.alsoSource ? targetAndSourceColor : targetColor;
     }
 
-    if (node.type === 'target') {
-        return targetColor;
-    }
-
-    return blackColor;
+    return color;
 }
 
 function determineNodeBorderColor(node) {
@@ -73,6 +59,7 @@ function determineNodeBorderColor(node) {
 
 export {
     graphDimensionsBorder,
+    sourceAndTargetColor, sourceColor, targetColor, blackColor, entityToInvestigateColor,
     markersRefX, markersRefY, markerWidth, markerHeight,
     linksSizeMultiplier, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel,
     tooltipBackgroundColor,

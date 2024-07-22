@@ -1,18 +1,7 @@
-import { getCurrentData, getInitialData, getInitialDictNodeToTypeCountry, getInitialLinksData, getInitialNodesData, getInitialSources, getInitialSourcesTargets, getInitialTargets, getInitialTargetsSources, getSourcesPerTargetCountVal, getTargetsPerSourceCountVal } from "../dataManagement";
-import { isObjectEmpty, removeDuplicatesBetweenSet1AndSet2 } from "../utils";
+import { getCurrentData, getInitialData } from "../dataManagement";
+import { removeDuplicatesBetweenSet1AndSet2 } from "../utils";
 
 function getPossibleNodes(data) {
-    if (data === getInitialData()) {
-        if (getInitialSources().length !== 0 && getInitialTargets().length !== 0 && getInitialSourcesTargets().length !== 0 && getInitialTargetsSources().length !== 0) {
-            return {
-                sources: getInitialSources(),
-                targets: getInitialTargets(),
-                sourcesTargets: getInitialSourcesTargets(),
-                targetsSources: getInitialTargetsSources()
-            };
-        }
-    }
-    
     const sources = new Set(Array.from(data).map(d => d.source));
     let targets = new Set(Array.from(data).map(d => d.target));
 
@@ -30,23 +19,24 @@ function findSourcesOrTargetsNotActiveButInGraph(type) {
 
     let initialDataNodes;
     let inactiveNodes;
+    let inactiveSourcesInTargetsOrViceversa;
 
     if(type === "source"){
         initialDataNodes = new Set(Array.from(getInitialData()).map(d => d.source));
         // Find initial data sources that are not in current data sources
         inactiveNodes = new Set([...initialDataNodes].filter(node => !currentDataSources.has(node)));
         // Find inactive sources that are also in current data targets
-        let inactiveSourcesInTargets = new Set([...inactiveNodes].filter(node => currentDataTargets.has(node)));
-        return inactiveSourcesInTargets;
+        inactiveSourcesInTargetsOrViceversa = new Set([...inactiveNodes].filter(node => currentDataTargets.has(node)));
     }
     else{
         initialDataNodes = new Set(Array.from(getInitialData()).map(d => d.target));
         // Find initial data targets that are not in current data sources
         inactiveNodes = new Set([...initialDataNodes].filter(node => !currentDataTargets.has(node)));
         // Find inactive targets that are also in current data targets
-        let inactiveTargetsInSources = new Set([...inactiveNodes].filter(node => currentDataSources.has(node)));
-        return inactiveTargetsInSources;
+        inactiveSourcesInTargetsOrViceversa = new Set([...inactiveNodes].filter(node => currentDataSources.has(node)));
     }
+
+    return inactiveSourcesInTargetsOrViceversa;
 }
 
 function findTargetsNotActiveButInGraph() {
@@ -66,22 +56,18 @@ function findTargetsNotActiveButInGraph() {
 }
 
 
-function createNodesData(sources, targets, dictSourceToTypeCountry) {
-    if (sources === getInitialSources() && targets === getInitialTargets() && typeof dictSourceToTypeCountry !== 'undefined'){
-        return getInitialNodesData();
-    }
-
-
-
+function createNodesData(sources, targets, sourcesNotActiveButInGraph, targetsNotActiveButInGraph, dictSourceToTypeCountry) {
     const nodesData = [];
-   
+    console.log("sourcesNotActiveButInGraph", sourcesNotActiveButInGraph)
+    console.log("targetsNotActiveButInGraph", targetsNotActiveButInGraph)
+
     sources.forEach(source => {
         nodesData.push(
             {
                 id: source,
                 type: 'source',
                 alsoSource: true,
-                alsoTarget: (getTargetsPerSourceCountVal(source) > 0),
+                alsoTarget: (sourcesNotActiveButInGraph.has(source) || targetsNotActiveButInGraph.has(source)),
                 nodeType: dictSourceToTypeCountry[source]["nodeType"],
                 country: dictSourceToTypeCountry[source]["country"]
             }
@@ -93,7 +79,7 @@ function createNodesData(sources, targets, dictSourceToTypeCountry) {
             {
                 id: target,
                 type: 'target',
-                alsoSource: (getSourcesPerTargetCountVal(target) > 0),
+                alsoSource: (sourcesNotActiveButInGraph.has(target) || targetsNotActiveButInGraph.has(target)),
                 alsoTarget: true,
                 nodeType: dictSourceToTypeCountry[target]["nodeType"],
                 country: dictSourceToTypeCountry[target]["country"]
@@ -105,10 +91,6 @@ function createNodesData(sources, targets, dictSourceToTypeCountry) {
 }
 
 function createDictNodeToTypeCountry(data, sources, targets, sourcesTargets, targetsSources) {
-    if (data === getInitialData() && typeof getInitialDictNodeToTypeCountry() !== 'undefined') {
-        return getInitialDictNodeToTypeCountry();
-    }
-
     let resultDict = {};
 
     const names = new Set([...sources, ...targets, ...sourcesTargets, ...targetsSources])
@@ -138,10 +120,6 @@ function createDictNodeToTypeCountry(data, sources, targets, sourcesTargets, tar
 }
 
 function createLinksData(data, nodes) {
-    if (data === getInitialData() && getInitialLinksData().length !== 0){
-        return getInitialLinksData();
-    }
-
     let links = [];
 
     data.forEach(d => {
