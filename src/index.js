@@ -45,6 +45,7 @@ Promise.all([
     // investigate distance
     setupInvestigateDistanceElements('decrease-source', 'increase-source', 'sourceNumberInput', -1, 7);
     setupInvestigateDistanceElements('decrease-target', 'increase-target', 'targetNumberInput', -1, 6);
+    setupInvestigateDistanceElements('decrease-both', 'increase-both', 'bothNumberInput', -1, 7);
 
     // buttons
     addTypeButtonsEventListeners();

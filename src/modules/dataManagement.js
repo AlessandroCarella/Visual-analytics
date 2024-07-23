@@ -217,11 +217,36 @@ function setInitialDataInvestigateDistanceSource(data) {
 }
 
 function getInitialDataInvestigateDistanceTarget() {
+    console.log("getInitialDataInvestigateDistance", initialDataInvestigateDistanceTarget);
     return initialDataInvestigateDistanceTarget;
 }
 
 function setInitialDataInvestigateDistanceTarget(data) {
     initialDataInvestigateDistanceTarget = data;
+}
+
+function getInitialDataInvestigateDistanceBoth() {
+    let initialDataInvestigateDistanceBoth = {};
+
+    // Merge arrays from both sources for each entity and level
+    for (let entity in initialDataInvestigateDistanceSource) {
+        if (!initialDataInvestigateDistanceBoth[entity]) {
+            initialDataInvestigateDistanceBoth[entity] = {};
+        }
+
+        for (let level in initialDataInvestigateDistanceSource[entity]) {
+            // Combine arrays from source and target
+            // and
+            // Remove duplicates from the combined array
+            initialDataInvestigateDistanceBoth[entity][level] = [...new Set(
+                initialDataInvestigateDistanceSource[entity][level].concat(
+                    initialDataInvestigateDistanceTarget[entity][level]
+                )
+            )];
+        }
+    }
+
+    return initialDataInvestigateDistanceBoth;
 }
 
 function getSourceValueInvestigateDistance() {
@@ -234,6 +259,11 @@ function getTargetValueInvestigateDistance() {
     return parseInt(targetInput.value);
 }
 
+function getBothValueInvestigateDistance() {
+    const bothInput = document.getElementById('bothNumberInput');
+    return parseInt(bothInput.value);
+}
+
 function resetSourceValueInvestigateDistance() {
     document.getElementById('sourceNumberInput').value = -1;
 }
@@ -242,11 +272,21 @@ function resetTargetValueInvestigateDistance() {
     document.getElementById('targetNumberInput').value = -1;
 }
 
+function resetBothValueInvestigateDistance() {
+    document.getElementById('bothNumberInput').value = -1;
+}
+
 function resetOtherInputFromInvestigateDistance(currentInputId) {
     if (currentInputId === 'sourceNumberInput') {
         resetTargetValueInvestigateDistance();
+        resetBothValueInvestigateDistance();
     } else if (currentInputId === 'targetNumberInput') {
         resetSourceValueInvestigateDistance();
+        resetBothValueInvestigateDistance();
+    }
+    else if (currentInputId === 'bothNumberInput') {
+        resetSourceValueInvestigateDistance();
+        resetTargetValueInvestigateDistance();
     }
 
     //select reset
@@ -266,15 +306,21 @@ function determineSelectionInvestigateDistance() {
         selectedLevel = getTargetValueInvestigateDistance();
         selectedKind = 'target';
     }
+    if (getBothValueInvestigateDistance() !== -1) {
+        selectedLevel = getBothValueInvestigateDistance();
+        selectedKind = 'both';
+    }
 
     return { selectedLevel, selectedKind };
 }
 
-function getDataToWorkWithInvestigateDistance(selectedKind) {
+function getDataToWorkWithInvestigateDistance(selectedKind, selectedLevel) {
     if (selectedKind === 'source') {
         return getInitialDataInvestigateDistanceSource();
     } else if (selectedKind === 'target') {
         return getInitialDataInvestigateDistanceTarget();
+    } else if (selectedKind === 'both') {
+        return getInitialDataInvestigateDistanceBoth();
     }
     return {}; // Return an empty object if no valid kind is provided
 }
@@ -309,7 +355,7 @@ function updateCurrentDataBasedOnInvestigateDistanceValues() {
         return;
     }
 
-    const dataToWorkWith = getDataToWorkWithInvestigateDistance(selectedKind);
+    const dataToWorkWith = getDataToWorkWithInvestigateDistance(selectedKind, selectedLevel);
     const nodesIdsToConsider = processNodesIdsInvestigateDistance(dataToWorkWith, selectedLevel, companiesToInvestigate);
 
     filterAndSetCurrentDataInvestigateDistance(nodesIdsToConsider);
@@ -319,5 +365,5 @@ function updateCurrentDataBasedOnInvestigateDistanceValues() {
 
 export {
     addNodeToAddedNodes, clickableNode, createActiveButtons, getActiveButtons, getAddedNodes, getAllSources, getAllTargets, getCurrentData, getInitialData, getInitialDataInvestigateDistanceSource, getInitialDataInvestigateDistanceTarget, getSelectedSource, getSelectedTarget, getSourceValueInvestigateDistance, getTargetValueInvestigateDistance, getTypesOfLinks, resetAddedNodes, resetOtherInputFromInvestigateDistance, resetSelectedSource, resetSelectedTarget, resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, setCurrentData, setInitialData, setInitialDataInvestigateDistanceSource, setInitialDataInvestigateDistanceTarget, setSelectedSource, setSelectedTarget, updateActiveButtons,
-    updateCurrentDataBasedOnButtons, updateCurrentDataBasedOnInvestigateDistanceValues, updateCurrentDataBasedOnSelect, updateCurrentDataWithNewNodes
+    updateCurrentDataBasedOnButtons, updateCurrentDataBasedOnInvestigateDistanceValues, updateCurrentDataBasedOnSelect, updateCurrentDataWithNewNodes, resetBothValueInvestigateDistance
 };
