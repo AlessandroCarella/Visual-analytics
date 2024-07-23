@@ -137,6 +137,7 @@ function updateCurrentDataBasedOnButtons() {
 ///////////////////////////////////////////
 
 import { selectEmptyVal, sourceSelectTag, targetSelectTag } from './constants';
+import { refreshGraph } from "./refreshGraph";
 let selectedSource = selectEmptyVal;
 let selectedTarget = selectEmptyVal;
 
@@ -203,6 +204,98 @@ function updateCurrentDataBasedOnSelect() {
     setCurrentData(newData);
 }
 
+///////////////////////////////////////////
+
+let initialDataInvestigateDistanceSource;
+let initialDataInvestigateDistanceTarget;
+
+function getInitialDataInvestigateDistanceSource(){
+    return initialDataInvestigateDistanceSource;
+}
+
+function setInitialDataInvestigateDistanceSource(data) {
+    initialDataInvestigateDistanceSource = data;
+}
+
+function getInitialDataInvestigateDistanceTarget(){
+    return initialDataInvestigateDistanceTarget;
+}
+
+function setInitialDataInvestigateDistanceTarget(data) {
+    initialDataInvestigateDistanceTarget = data;
+}
+
+function getSourceValueInvestigateDistance() {
+    const sourceInput = document.getElementById('sourceNumberInput');
+    return parseInt(sourceInput.value);
+}
+
+function getTargetValueInvestigateDistance() {
+    const targetInput = document.getElementById('targetNumberInput');
+    return parseInt(targetInput.value);
+}
+
+function resetSourceValueInvestigateDistance() {
+    document.getElementById('sourceNumberInput').value = -1;
+}
+
+function resetTargetValueInvestigateDistance() {
+    document.getElementById('targetNumberInput').value = -1;
+}
+
+function resetOtherInputFromInvestigateDistance(currentInputId) {
+    if (currentInputId === 'sourceNumberInput') {
+        resetTargetValueInvestigateDistance();
+    } else if (currentInputId === 'targetNumberInput') {
+        resetSourceValueInvestigateDistance();
+    }
+
+    //select reset
+    resetSelectedSource()
+    resetSelectedTarget()
+}
+
+function updateCurrentDataBasedOnInvestigateDistanceValues(){
+    let selectedLevel = -1;
+    let selectedKind;
+    
+    if (getSourceValueInvestigateDistance() !== -1){
+        selectedLevel = getSourceValueInvestigateDistance()
+        selectedKind = 'source'
+    }
+    if (getTargetValueInvestigateDistance()!== -1){
+        selectedLevel = getTargetValueInvestigateDistance()
+        selectedKind = 'target'
+    }
+    if (selectedLevel === -1) {
+        setCurrentData(currentData);
+        return;
+    }
+
+    let dataToWorkWith;
+    if (selectedKind ==='source') {
+        dataToWorkWith = getInitialDataInvestigateDistanceSource()
+    }
+    else {//(selectedKind === 'target') 
+        dataToWorkWith = getInitialDataInvestigateDistanceTarget()
+    }
+
+    let nodesIdsToConsider = companiesToInvestigate;
+    for (var entity in dataToWorkWith){
+        for (let level in dataToWorkWith[entity]){
+            if (parseInt(level) <= selectedLevel) {
+                nodesIdsToConsider = nodesIdsToConsider.concat(dataToWorkWith[entity][level])
+            }
+        }
+    }
+    nodesIdsToConsider = new Set(nodesIdsToConsider)
+
+    setCurrentData(new Set(Array.from(initialData).filter(link => 
+        nodesIdsToConsider.has(link.source)
+        &&
+        nodesIdsToConsider.has(link.target)
+    )))
+}
 
 ///////////////////////////////////////////
 
@@ -218,4 +311,10 @@ export {
     getSelectedSource, resetSelectedSource, setSelectedSource,
     getSelectedTarget, resetSelectedTarget, setSelectedTarget,  
     updateCurrentDataBasedOnSelect,
+    getSourceValueInvestigateDistance, getTargetValueInvestigateDistance,
+    resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance,
+    resetOtherInputFromInvestigateDistance,
+    updateCurrentDataBasedOnInvestigateDistanceValues,
+    getInitialDataInvestigateDistanceSource, setInitialDataInvestigateDistanceSource,
+    getInitialDataInvestigateDistanceTarget, setInitialDataInvestigateDistanceTarget,
 };

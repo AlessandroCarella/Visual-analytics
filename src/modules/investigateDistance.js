@@ -1,7 +1,15 @@
-import { resetSelectedSource, resetSelectedTarget } from "./dataManagement";
+import { resetOtherInputFromInvestigateDistance } from "./dataManagement";
 import { refreshGraph } from "./refreshGraph";
 
-function setupButtonControlsInvestigateDistance(decreaseButtonId, increaseButtonId, inputId, minValue, maxValue) {
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
+function setupInvestigateDistanceElements(decreaseButtonId, increaseButtonId, inputId, minValue, maxValue) {
     const input = document.getElementById(inputId);
     const decreaseButton = document.getElementById(decreaseButtonId);
     const increaseButton = document.getElementById(increaseButtonId);
@@ -16,12 +24,18 @@ function setupButtonControlsInvestigateDistance(decreaseButtonId, increaseButton
         }
     }
 
+    // Create a debounced version of the refreshGraph function
+    const debouncedRefreshGraph = debounce(() => {
+        resetOtherInputFromInvestigateDistance(inputId);  // Reset the other input when changed
+        refreshGraph();
+    }, 300); // 300ms delay
+
     decreaseButton.addEventListener('click', () => {
         let value = parseInt(input.value);
         if (value > minValue) {
             input.value = value - 1;
             validateAndStore();
-            resetOtherInput(inputId);  // Reset the other input when changed
+            debouncedRefreshGraph();  // Use the debounced function
         }
     });
 
@@ -30,47 +44,11 @@ function setupButtonControlsInvestigateDistance(decreaseButtonId, increaseButton
         if (value < maxValue) {
             input.value = value + 1;
             validateAndStore();
-            resetOtherInput(inputId);  // Reset the other input when changed
+            debouncedRefreshGraph();  // Use the debounced function
         }
     });
 }
 
-function getSourceValueInvestigateDistance() {
-    const sourceInput = document.getElementById('sourceNumberInput');
-    return parseInt(sourceInput.value);
-}
-
-function getTargetValueInvestigateDistance() {
-    const targetInput = document.getElementById('targetNumberInput');
-    return parseInt(targetInput.value);
-}
-
-// Functions to reset the values of the inputs
-function resetSourceValueInvestigateDistance() {
-    document.getElementById('sourceNumberInput').value = -1;
-}
-
-function resetTargetValueInvestigateDistance() {
-    document.getElementById('targetNumberInput').value = -1;
-}
-
-// Reset the other input based on the current input ID
-function resetOtherInput(currentInputId) {
-    if (currentInputId === 'sourceNumberInput') {
-        resetTargetValueInvestigateDistance();
-    } else if (currentInputId === 'targetNumberInput') {
-        resetSourceValueInvestigateDistance();
-    }
-
-    //select reset
-    resetSelectedSource()
-    resetSelectedTarget()
-
-    refreshGraph()
-}
-
-export { 
-    setupButtonControlsInvestigateDistance, 
-    getSourceValueInvestigateDistance, getTargetValueInvestigateDistance, 
-    resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, 
+export {
+    setupInvestigateDistanceElements
 };

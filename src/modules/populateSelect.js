@@ -2,7 +2,7 @@ import * as d3 from "d3";
 import { companiesToInvestigateSelectVal, companiesToInvestigateText, selectAllNodesVal, selectAllNodesText, sourceSelectTag, targetSelectTag, selectEmptyVal, selectEmptyText } from "./constants";
 import { getSelectedSource, getSelectedTarget, resetSelectedSource, resetSelectedTarget, setSelectedSource, setSelectedTarget, } from "./dataManagement";
 import { refreshGraph } from "./refreshGraph";
-import { resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance } from "./investigateDistance";
+import { resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance } from "./dataManagement";
 
 function populateSelect(idSelect, items) {
     const dropdown = d3.select(idSelect);

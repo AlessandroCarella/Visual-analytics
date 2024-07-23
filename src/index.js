@@ -1,14 +1,15 @@
 import * as d3 from "d3";
 import { addTypeButtonsEventListeners } from "./modules/buttons";
-import { createGraph } from "./modules/createGraph";
 import {
     createActiveButtons,
     setCurrentData,
-    setInitialData
+    setInitialData,
+    setInitialDataInvestigateDistanceSource,
+    setInitialDataInvestigateDistanceTarget
 } from "./modules/dataManagement";
 import { addDropdownEventListeners, populateSelect } from "./modules/populateSelect";
 import { getUniqueItemsPerKey } from "./modules/utils";
-import { setupButtonControlsInvestigateDistance } from "./modules/investigateDistance";
+import { setupInvestigateDistanceElements } from "./modules/investigateDistance";
 
 const jsonFilePathForMergedDatasetWithToInvestigateExtraData = "data/mergedDatasetWithToInvestigateExtraData.json";
 const jsonFilePathForConnectionsLevelsSouspectSourcesNoRepetition = "data/connectionsLevelsSouspectSourcesNoRepetition.json";
@@ -28,10 +29,11 @@ Promise.all([
     setInitialData(mergedDatasetWithToInvestigateExtraData);
     setCurrentData(mergedDatasetWithToInvestigateExtraData);
 
-    createActiveButtons();
+    setInitialDataInvestigateDistanceSource(connectionsLevelsSouspectSourcesNoRepetition);
+    setInitialDataInvestigateDistanceTarget(connectionsLevelsSouspectTargetsNoRepetition);
 
-    console.log('Connections Levels Sources:', connectionsLevelsSouspectSourcesNoRepetition);
-    console.log('Connections Levels Targets:', connectionsLevelsSouspectTargetsNoRepetition);
+    // buttons
+    createActiveButtons();
 
     // selects
     populateSelect("#source-select", getUniqueItemsPerKey("source").sort());
@@ -41,8 +43,8 @@ Promise.all([
     addDropdownEventListeners("#target-select");
 
     // investigate distance
-    setupButtonControlsInvestigateDistance('decrease-source', 'increase-source', 'sourceNumberInput', -1, 7);
-    setupButtonControlsInvestigateDistance('decrease-target', 'increase-target', 'targetNumberInput', -1, 8);
+    setupInvestigateDistanceElements('decrease-source', 'increase-source', 'sourceNumberInput', -1, 7);
+    setupInvestigateDistanceElements('decrease-target', 'increase-target', 'targetNumberInput', -1, 6);
 
     // buttons
     addTypeButtonsEventListeners();
