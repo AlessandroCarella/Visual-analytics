@@ -1,4 +1,4 @@
-const graphDimensionsBorder = 25
+const graphDimensionsBorder = 0
 
 const activeButtonClass = "active-button"
 const inactiveButtonClass = "inactive-button"

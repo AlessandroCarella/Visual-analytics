@@ -1,11 +1,8 @@
 import { companiesToInvestigate } from "../constants"
 import { clickableNode } from "../dataManagement"
 
-const graphDimensionsBorder = 25
-
-const clickableNodeColor = '#f542ef'
+const clickableNodeColor = '#FFEA00' //yellow
 const sourceAndTargetColor = '#04820f' //green
-const targetAndSourceColor = '#FFEA00' //yellow
 const sourceColor = '#821304' //red
 const targetColor = '#042882' //blue
 const blackColor = '#000' //black
@@ -53,7 +50,7 @@ function determineNodeColor(node) {
         color = node.alsoTarget ? sourceAndTargetColor : sourceColor;
     }
     else {
-        color = node.alsoSource ? targetAndSourceColor : targetColor;
+        color = node.alsoSource ? sourceAndTargetColor : targetColor;
     }
 
     return color;
@@ -64,7 +61,6 @@ function determineNodeBorderColor(node) {
 }
 
 export {
-    graphDimensionsBorder,
     sourceAndTargetColor, sourceColor, targetColor, blackColor, entityToInvestigateColor,
     markersRefX, markersRefY, markerWidth, markerHeight,
     linksSizeMultiplier, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel,
