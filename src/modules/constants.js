@@ -19,6 +19,9 @@ const selectEmptyText = '';
 const selectAllNodesVal = 'all';
 const selectAllNodesText = 'All'
 
+
+const idSelectInvestigate = "#investigate-select"
+
 const companiesToInvestigate = [
     "Mar de la Vida OJSC",
     "979893388",
@@ -36,6 +39,5 @@ const companiesToInvestigateSelectVal = companiesToInvestigate.join(" ");
 const companiesToInvestigateText = "Entities to investigate"
 
 export {
-    activeButtonClass, colorsOfLinks, companiesToInvestigate, companiesToInvestigateExtraInfo,
-    companiesToInvestigateSelectVal, companiesToInvestigateText, graphDimensionsBorder, inactiveButtonClass, selectAllNodesText, selectAllNodesVal, selectEmptyText, selectEmptyVal, sourceSelectTag, targetSelectTag, typesOfLinks
+    activeButtonClass, colorsOfLinks, companiesToInvestigate, companiesToInvestigateExtraInfo, companiesToInvestigateSelectVal, companiesToInvestigateText, graphDimensionsBorder, idSelectInvestigate, inactiveButtonClass, selectAllNodesText, selectAllNodesVal, selectEmptyText, selectEmptyVal, sourceSelectTag, targetSelectTag, typesOfLinks
 };

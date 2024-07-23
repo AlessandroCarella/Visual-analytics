@@ -1,4 +1,6 @@
-import { resetOtherInputFromInvestigateDistance } from "./dataManagement";
+import * as d3 from "d3";
+import { companiesToInvestigate, idSelectInvestigate, selectAllNodesText, selectAllNodesVal, selectEmptyVal } from "./constants";
+import { resetBothValueInvestigateDistance, resetOtherInputFromInvestigateDistance, resetSelectedSource, resetSelectedTarget, resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, setSelectedValueInvestigate } from "./dataManagement";
 import { refreshGraph } from "./refreshGraph";
 
 function debounce(func, wait) {
@@ -49,6 +51,54 @@ function setupInvestigateDistanceElements(decreaseButtonId, increaseButtonId, in
     });
 }
 
-export {
-    setupInvestigateDistanceElements
-};
+//////////////////////////////////////////////
+
+function populateSelectInvestigate() {
+    let dropdown = d3.select(idSelectInvestigate);
+
+    // Remove all the options from the select
+    dropdown
+        .selectAll('option')
+        .remove();
+
+    // Add the "all" option
+    dropdown
+        .append('option')
+        .attr('value', selectAllNodesVal)
+        .text(selectAllNodesText);
+
+    // Add the actual options
+    companiesToInvestigate.forEach(item => {
+        dropdown
+            .append('option')
+            .attr('value', item)
+            .text(item);
+    });
+
+    // Set "all" as the selected value
+    dropdown.property('value', selectEmptyVal);
+}
+
+function addDropdownEventListenersInvestigate() {
+    d3.select(idSelectInvestigate).on('change', function () {
+        handleDropdownChangeInvestigate(this.value);
+    });
+}
+
+function handleDropdownChangeInvestigate(selectedValue) {
+    setSelectedValueInvestigate(selectedValue);
+
+    //change the values in the investigate distance boxes
+    resetSourceValueInvestigateDistance()
+    resetTargetValueInvestigateDistance()
+    resetBothValueInvestigateDistance()
+
+    //reset values in the selects
+    resetSelectedSource()
+    resetSelectedTarget()
+
+    // Refresh the graph to reflect the changes made
+    refreshGraph();
+}
+
+export { addDropdownEventListenersInvestigate, populateSelectInvestigate, setupInvestigateDistanceElements };

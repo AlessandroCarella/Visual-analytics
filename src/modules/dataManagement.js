@@ -31,6 +31,7 @@ function resetAddedNodes() {
 }
 
 let relevantLinks;
+
 function clickableNode(node) {
     let clickableNodeVar = false;
 
@@ -96,7 +97,7 @@ function getAllTargets() {
 
 ///////////////////////////////////////////
 
-import { companiesToInvestigate, companiesToInvestigateSelectVal, selectAllNodesVal, typesOfLinks } from "./constants";
+import { companiesToInvestigate, companiesToInvestigateSelectVal, idSelectInvestigate, selectAllNodesVal, typesOfLinks } from "./constants";
 
 let activeButtons;
 
@@ -137,6 +138,7 @@ function updateCurrentDataBasedOnButtons() {
 ///////////////////////////////////////////
 
 import { selectEmptyVal, sourceSelectTag, targetSelectTag } from './constants';
+
 let selectedSource = selectEmptyVal;
 let selectedTarget = selectEmptyVal;
 
@@ -217,7 +219,6 @@ function setInitialDataInvestigateDistanceSource(data) {
 }
 
 function getInitialDataInvestigateDistanceTarget() {
-    console.log("getInitialDataInvestigateDistance", initialDataInvestigateDistanceTarget);
     return initialDataInvestigateDistanceTarget;
 }
 
@@ -326,12 +327,16 @@ function getDataToWorkWithInvestigateDistance(selectedKind, selectedLevel) {
 }
 
 function processNodesIdsInvestigateDistance(dataToWorkWith, selectedLevel, companiesToInvestigate) {
+    let selectedToInvestigateEntity = d3.select(idSelectInvestigate).property("value")
+
     let nodesIdsToConsider = companiesToInvestigate.slice(); // Copying the array
 
     for (let entity in dataToWorkWith) {
-        for (let level in dataToWorkWith[entity]) {
-            if (parseInt(level) <= selectedLevel) {
-                nodesIdsToConsider = nodesIdsToConsider.concat(dataToWorkWith[entity][level]);
+        if (entity === selectedToInvestigateEntity || selectedToInvestigateEntity === selectAllNodesVal) {
+            for (let level in dataToWorkWith[entity]) {
+                if (parseInt(level) <= selectedLevel) {
+                    nodesIdsToConsider = nodesIdsToConsider.concat(dataToWorkWith[entity][level]);
+                }
             }
         }
     }
@@ -348,6 +353,11 @@ function filterAndSetCurrentDataInvestigateDistance(nodesIdsToConsider) {
 }
 
 function updateCurrentDataBasedOnInvestigateDistanceValues() {
+    let dropdown = d3.select(idSelectInvestigate);
+    if (dropdown.property("value") === selectEmptyVal) {
+        dropdown.property('value', selectAllNodesVal);
+    }
+
     const { selectedLevel, selectedKind } = determineSelectionInvestigateDistance();
 
     if (selectedLevel === -1) {
@@ -361,9 +371,26 @@ function updateCurrentDataBasedOnInvestigateDistanceValues() {
     filterAndSetCurrentDataInvestigateDistance(nodesIdsToConsider);
 }
 
+///////////////////
+
+let selectedValueInvestigate = companiesToInvestigateSelectVal;
+
+function getSelectedValueInvestigate() {
+    return selectedValueInvestigate;
+}
+
+function setSelectedValueInvestigate(value) {
+    selectedValueInvestigate = value;
+}
+
+function resetSelectedValueInvestigate() {
+    d3.select(idSelectInvestigate).property('value', selectEmptyVal);
+    selectedValueInvestigate = selectEmptyVal;
+}
+
 ///////////////////////////////////////////
 
 export {
-    addNodeToAddedNodes, clickableNode, createActiveButtons, getActiveButtons, getAddedNodes, getAllSources, getAllTargets, getCurrentData, getInitialData, getInitialDataInvestigateDistanceSource, getInitialDataInvestigateDistanceTarget, getSelectedSource, getSelectedTarget, getSourceValueInvestigateDistance, getTargetValueInvestigateDistance, getTypesOfLinks, resetAddedNodes, resetOtherInputFromInvestigateDistance, resetSelectedSource, resetSelectedTarget, resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, setCurrentData, setInitialData, setInitialDataInvestigateDistanceSource, setInitialDataInvestigateDistanceTarget, setSelectedSource, setSelectedTarget, updateActiveButtons,
-    updateCurrentDataBasedOnButtons, updateCurrentDataBasedOnInvestigateDistanceValues, updateCurrentDataBasedOnSelect, updateCurrentDataWithNewNodes, resetBothValueInvestigateDistance
+    addNodeToAddedNodes, clickableNode, createActiveButtons, getActiveButtons, getAddedNodes, getAllSources, getAllTargets, getCurrentData, getInitialData, getInitialDataInvestigateDistanceSource, getInitialDataInvestigateDistanceTarget, getSelectedSource, getSelectedTarget, getSelectedValueInvestigate, getSourceValueInvestigateDistance, getTargetValueInvestigateDistance, getTypesOfLinks, resetAddedNodes, resetBothValueInvestigateDistance, resetOtherInputFromInvestigateDistance, resetSelectedSource, resetSelectedTarget, resetSelectedValueInvestigate, resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, setCurrentData, setInitialData, setInitialDataInvestigateDistanceSource, setInitialDataInvestigateDistanceTarget, setSelectedSource, setSelectedTarget, setSelectedValueInvestigate, updateActiveButtons,
+    updateCurrentDataBasedOnButtons, updateCurrentDataBasedOnInvestigateDistanceValues, updateCurrentDataBasedOnSelect, updateCurrentDataWithNewNodes
 };

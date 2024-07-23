@@ -21,7 +21,6 @@
 		<div class="command-column">
 			<h2>Commands</h2>
 
-			<!-- buttons -->
 			<div>
 				<button
 					id="ownership"
@@ -52,26 +51,29 @@
 				</button>
 			</div>
 
-			<!-- selects -->
 			<div>
 				<label for="source-select"
 					>Select Source and see its targets:</label
 				>
-				<select id="source-select" class="source-or-target-select">
-					<option value="all">All</option>
+				<select id="source-select">
+					<option value=""></option>
 				</select>
 
 				<label for="target-select"
 					>Select Target and see its sources:</label
 				>
-				<select id="target-select" class="source-or-target-select">
-					<option value="all">All</option>
+				<select id="target-select">
+					<option value=""></option>
 				</select>
 			</div>
 
-			<!-- distance investigation -->
 			<div>
 				<h2>Investigate distance from nodes to investigate</h2>
+
+				<label for="investigate-select"
+					>Select enity to investigate:</label
+				>
+				<select id="investigate-select"></select>
 
 				<h3>As source</h3>
 				<div class="investigate-distance-div">

@@ -7,9 +7,9 @@ import {
     setInitialDataInvestigateDistanceSource,
     setInitialDataInvestigateDistanceTarget
 } from "./modules/dataManagement";
+import { addDropdownEventListenersInvestigate, populateSelectInvestigate, setupInvestigateDistanceElements } from "./modules/investigateDistance";
 import { addDropdownEventListeners, populateSelect } from "./modules/populateSelect";
 import { getUniqueItemsPerKey } from "./modules/utils";
-import { setupInvestigateDistanceElements } from "./modules/investigateDistance";
 
 const jsonFilePathForMergedDatasetWithToInvestigateExtraData = "data/mergedDatasetWithToInvestigateExtraData.json";
 const jsonFilePathForConnectionsLevelsSouspectSourcesNoRepetition = "data/connectionsLevelsSouspectSourcesNoRepetition.json";
@@ -22,34 +22,37 @@ Promise.all([
     d3.json(jsonFilePathForConnectionsLevelsSouspectSourcesNoRepetition),
     d3.json(jsonFilePathForConnectionsLevelsSouspectTargetsNoRepetition)
 ])
-.then(([mergedDatasetWithToInvestigateExtraData, connectionsLevelsSouspectSourcesNoRepetition, connectionsLevelsSouspectTargetsNoRepetition]) => {
-    // data
-    mergedDatasetWithToInvestigateExtraData = new Set(mergedDatasetWithToInvestigateExtraData);
+    .then(([mergedDatasetWithToInvestigateExtraData, connectionsLevelsSouspectSourcesNoRepetition, connectionsLevelsSouspectTargetsNoRepetition]) => {
+        // data
+        mergedDatasetWithToInvestigateExtraData = new Set(mergedDatasetWithToInvestigateExtraData);
 
-    setInitialData(mergedDatasetWithToInvestigateExtraData);
-    setCurrentData(mergedDatasetWithToInvestigateExtraData);
+        setInitialData(mergedDatasetWithToInvestigateExtraData);
+        setCurrentData(mergedDatasetWithToInvestigateExtraData);
 
-    setInitialDataInvestigateDistanceSource(connectionsLevelsSouspectSourcesNoRepetition);
-    setInitialDataInvestigateDistanceTarget(connectionsLevelsSouspectTargetsNoRepetition);
+        setInitialDataInvestigateDistanceSource(connectionsLevelsSouspectSourcesNoRepetition);
+        setInitialDataInvestigateDistanceTarget(connectionsLevelsSouspectTargetsNoRepetition);
 
-    // buttons
-    createActiveButtons();
+        // buttons
+        createActiveButtons();
 
-    // selects
-    populateSelect("#source-select", getUniqueItemsPerKey("source").sort());
-    populateSelect("#target-select", getUniqueItemsPerKey("target").sort());
+        // selects
+        populateSelect("#source-select", getUniqueItemsPerKey("source").sort());
+        populateSelect("#target-select", getUniqueItemsPerKey("target").sort());
 
-    addDropdownEventListeners("#source-select");
-    addDropdownEventListeners("#target-select");
+        addDropdownEventListeners("#source-select");
+        addDropdownEventListeners("#target-select");
 
-    // investigate distance
-    setupInvestigateDistanceElements('decrease-source', 'increase-source', 'sourceNumberInput', -1, 7);
-    setupInvestigateDistanceElements('decrease-target', 'increase-target', 'targetNumberInput', -1, 6);
-    setupInvestigateDistanceElements('decrease-both', 'increase-both', 'bothNumberInput', -1, 7);
+        // investigate distance
+        populateSelectInvestigate()
+        addDropdownEventListenersInvestigate()
 
-    // buttons
-    addTypeButtonsEventListeners();
-})
-.catch((error) => console.error("Error loading the data:", error));
+        setupInvestigateDistanceElements('decrease-source', 'increase-source', 'sourceNumberInput', -1, 7);
+        setupInvestigateDistanceElements('decrease-target', 'increase-target', 'targetNumberInput', -1, 6);
+        setupInvestigateDistanceElements('decrease-both', 'increase-both', 'bothNumberInput', -1, 7);
+
+        // buttons
+        addTypeButtonsEventListeners();
+    })
+    .catch((error) => console.error("Error loading the data:", error));
 
 export { svg };

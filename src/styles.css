@@ -82,7 +82,7 @@ svg {
 	stroke: #ffffff;
 }
 
-.source-or-target-select {
+select {
 	width: 100%;
 	padding: 10px;
 	font-size: 16px;
@@ -129,13 +129,13 @@ svg {
 }
 
 /* Hide the spinner buttons in WebKit browsers (like Chrome, Safari, etc.) */
-.investigate-distance-div input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
-    margin: 0; 
+.investigate-distance-div input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 /* Hide the spinner buttons in Firefox */
-.investigate-distance-div input[type=number] {
-    -moz-appearance: textfield;
+.investigate-distance-div input[type="number"] {
+	-moz-appearance: textfield;
 }
