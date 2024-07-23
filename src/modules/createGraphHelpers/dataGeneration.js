@@ -21,14 +21,14 @@ function findSourcesOrTargetsNotActiveButInGraph(type) {
     let inactiveNodes;
     let inactiveSourcesInTargetsOrViceversa;
 
-    if(type === "source"){
+    if (type === "source") {
         initialDataNodes = new Set(Array.from(getInitialData()).map(d => d.source));
         // Find initial data sources that are not in current data sources
         inactiveNodes = new Set([...initialDataNodes].filter(node => !currentDataSources.has(node)));
         // Find inactive sources that are also in current data targets
         inactiveSourcesInTargetsOrViceversa = new Set([...inactiveNodes].filter(node => currentDataTargets.has(node)));
     }
-    else{
+    else {
         initialDataNodes = new Set(Array.from(getInitialData()).map(d => d.target));
         // Find initial data targets that are not in current data sources
         inactiveNodes = new Set([...initialDataNodes].filter(node => !currentDataTargets.has(node)));
@@ -58,7 +58,7 @@ function findTargetsNotActiveButInGraph() {
 
 function createNodesData(sources, targets, sourcesNotActiveButInGraph, targetsNotActiveButInGraph, dictSourceToTypeCountry) {
     const nodesData = [];
-    
+
     sources.forEach(source => {
         nodesData.push(
             {

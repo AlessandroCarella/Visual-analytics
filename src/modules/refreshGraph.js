@@ -2,7 +2,7 @@
 import * as d3 from 'd3';
 import { svg } from '../index';
 import { createGraph } from './createGraph';
-import { getCurrentData, updateCurrentDataBasedOnButtons, updateCurrentDataBasedOnInvestigateDistanceValues, updateCurrentDataBasedOnSelect, updateCurrentDataWithNewNodes } from './dataManagement';
+import { updateCurrentDataBasedOnButtons, updateCurrentDataBasedOnInvestigateDistanceValues, updateCurrentDataBasedOnSelect, updateCurrentDataWithNewNodes } from './dataManagement';
 
 
 function refreshGraph() {
@@ -40,4 +40,3 @@ function refreshGraph() {
 }
 
 export { refreshGraph };
-

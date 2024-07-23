@@ -42,7 +42,7 @@ function determineNodeColor(node) {
         return entityToInvestigateColor;
     }
 
-    if (clickableNode(node)){
+    if (clickableNode(node)) {
         return clickableNodeColor;
     }
 
@@ -60,10 +60,4 @@ function determineNodeBorderColor(node) {
     return nodeTypeColor[node.nodeType]
 }
 
-export {
-    sourceAndTargetColor, sourceColor, targetColor, blackColor, entityToInvestigateColor,
-    markersRefX, markersRefY, markerWidth, markerHeight,
-    linksSizeMultiplier, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel,
-    tooltipBackgroundColor,
-    determineNodeColor, determineNodeBorderColor, nodeBorderSize
-};
+export { blackColor, determineNodeBorderColor, determineNodeColor, entityToInvestigateColor, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel, linksSizeMultiplier, markerHeight, markersRefX, markersRefY, markerWidth, nodeBorderSize, sourceAndTargetColor, sourceColor, targetColor, tooltipBackgroundColor }

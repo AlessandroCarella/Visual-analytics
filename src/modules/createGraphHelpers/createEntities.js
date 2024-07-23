@@ -1,6 +1,6 @@
 import { svg } from "../../index";
 import { colorsOfLinks, companiesToInvestigate } from "../constants";
-import { addNodeToAddedNodes, getTypesOfLinks, clickableNode } from "../dataManagement";
+import { addNodeToAddedNodes, clickableNode, getTypesOfLinks } from "../dataManagement";
 import { refreshGraph } from "../refreshGraph";
 import {
     determineNodeBorderColor,

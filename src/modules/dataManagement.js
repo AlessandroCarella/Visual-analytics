@@ -36,7 +36,7 @@ function clickableNode(node) {
 
     if ((node.type === "target" && node.alsoSource) || (node.type === "source" && node.alsoTarget)) {
         relevantLinks = Array.from(initialData).filter(link => link.source === node.id || link.target === node.id);
-    }else if (node.type === "source" && !node.alsoTarget) {
+    } else if (node.type === "source" && !node.alsoTarget) {
         relevantLinks = Array.from(initialData).filter(link => link.source === node.id);
     } else if (node.type === "target" && !node.alsoSource) {
         relevantLinks = Array.from(initialData).filter(link => link.target === node.id);
@@ -137,7 +137,6 @@ function updateCurrentDataBasedOnButtons() {
 ///////////////////////////////////////////
 
 import { selectEmptyVal, sourceSelectTag, targetSelectTag } from './constants';
-import { refreshGraph } from "./refreshGraph";
 let selectedSource = selectEmptyVal;
 let selectedTarget = selectEmptyVal;
 
@@ -209,7 +208,7 @@ function updateCurrentDataBasedOnSelect() {
 let initialDataInvestigateDistanceSource;
 let initialDataInvestigateDistanceTarget;
 
-function getInitialDataInvestigateDistanceSource(){
+function getInitialDataInvestigateDistanceSource() {
     return initialDataInvestigateDistanceSource;
 }
 
@@ -217,7 +216,7 @@ function setInitialDataInvestigateDistanceSource(data) {
     initialDataInvestigateDistanceSource = data;
 }
 
-function getInitialDataInvestigateDistanceTarget(){
+function getInitialDataInvestigateDistanceTarget() {
     return initialDataInvestigateDistanceTarget;
 }
 
@@ -255,66 +254,70 @@ function resetOtherInputFromInvestigateDistance(currentInputId) {
     resetSelectedTarget()
 }
 
-function updateCurrentDataBasedOnInvestigateDistanceValues(){
+function determineSelectionInvestigateDistance() {
     let selectedLevel = -1;
     let selectedKind;
-    
-    if (getSourceValueInvestigateDistance() !== -1){
-        selectedLevel = getSourceValueInvestigateDistance()
-        selectedKind = 'source'
+
+    if (getSourceValueInvestigateDistance() !== -1) {
+        selectedLevel = getSourceValueInvestigateDistance();
+        selectedKind = 'source';
     }
-    if (getTargetValueInvestigateDistance()!== -1){
-        selectedLevel = getTargetValueInvestigateDistance()
-        selectedKind = 'target'
+    if (getTargetValueInvestigateDistance() !== -1) {
+        selectedLevel = getTargetValueInvestigateDistance();
+        selectedKind = 'target';
     }
+
+    return { selectedLevel, selectedKind };
+}
+
+function getDataToWorkWithInvestigateDistance(selectedKind) {
+    if (selectedKind === 'source') {
+        return getInitialDataInvestigateDistanceSource();
+    } else if (selectedKind === 'target') {
+        return getInitialDataInvestigateDistanceTarget();
+    }
+    return {}; // Return an empty object if no valid kind is provided
+}
+
+function processNodesIdsInvestigateDistance(dataToWorkWith, selectedLevel, companiesToInvestigate) {
+    let nodesIdsToConsider = companiesToInvestigate.slice(); // Copying the array
+
+    for (let entity in dataToWorkWith) {
+        for (let level in dataToWorkWith[entity]) {
+            if (parseInt(level) <= selectedLevel) {
+                nodesIdsToConsider = nodesIdsToConsider.concat(dataToWorkWith[entity][level]);
+            }
+        }
+    }
+
+    return new Set(nodesIdsToConsider); // Return a Set of nodes IDs to consider
+}
+
+function filterAndSetCurrentDataInvestigateDistance(nodesIdsToConsider) {
+    const filteredData = new Set(Array.from(initialData).filter(link =>
+        nodesIdsToConsider.has(link.source) && nodesIdsToConsider.has(link.target)
+    ));
+
+    setCurrentData(filteredData);
+}
+
+function updateCurrentDataBasedOnInvestigateDistanceValues() {
+    const { selectedLevel, selectedKind } = determineSelectionInvestigateDistance();
+
     if (selectedLevel === -1) {
         setCurrentData(currentData);
         return;
     }
 
-    let dataToWorkWith;
-    if (selectedKind ==='source') {
-        dataToWorkWith = getInitialDataInvestigateDistanceSource()
-    }
-    else {//(selectedKind === 'target') 
-        dataToWorkWith = getInitialDataInvestigateDistanceTarget()
-    }
+    const dataToWorkWith = getDataToWorkWithInvestigateDistance(selectedKind);
+    const nodesIdsToConsider = processNodesIdsInvestigateDistance(dataToWorkWith, selectedLevel, companiesToInvestigate);
 
-    let nodesIdsToConsider = companiesToInvestigate;
-    for (var entity in dataToWorkWith){
-        for (let level in dataToWorkWith[entity]){
-            if (parseInt(level) <= selectedLevel) {
-                nodesIdsToConsider = nodesIdsToConsider.concat(dataToWorkWith[entity][level])
-            }
-        }
-    }
-    nodesIdsToConsider = new Set(nodesIdsToConsider)
-
-    setCurrentData(new Set(Array.from(initialData).filter(link => 
-        nodesIdsToConsider.has(link.source)
-        &&
-        nodesIdsToConsider.has(link.target)
-    )))
+    filterAndSetCurrentDataInvestigateDistance(nodesIdsToConsider);
 }
 
 ///////////////////////////////////////////
 
 export {
-    getInitialData, setInitialData, 
-    setCurrentData, getCurrentData, 
-    clickableNode, updateCurrentDataWithNewNodes,
-    getAllSources, getAllTargets,
-    getAddedNodes, addNodeToAddedNodes, resetAddedNodes,
-    getTypesOfLinks, 
-    createActiveButtons, getActiveButtons, updateActiveButtons,
-    updateCurrentDataBasedOnButtons,
-    getSelectedSource, resetSelectedSource, setSelectedSource,
-    getSelectedTarget, resetSelectedTarget, setSelectedTarget,  
-    updateCurrentDataBasedOnSelect,
-    getSourceValueInvestigateDistance, getTargetValueInvestigateDistance,
-    resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance,
-    resetOtherInputFromInvestigateDistance,
-    updateCurrentDataBasedOnInvestigateDistanceValues,
-    getInitialDataInvestigateDistanceSource, setInitialDataInvestigateDistanceSource,
-    getInitialDataInvestigateDistanceTarget, setInitialDataInvestigateDistanceTarget,
+    addNodeToAddedNodes, clickableNode, createActiveButtons, getActiveButtons, getAddedNodes, getAllSources, getAllTargets, getCurrentData, getInitialData, getInitialDataInvestigateDistanceSource, getInitialDataInvestigateDistanceTarget, getSelectedSource, getSelectedTarget, getSourceValueInvestigateDistance, getTargetValueInvestigateDistance, getTypesOfLinks, resetAddedNodes, resetOtherInputFromInvestigateDistance, resetSelectedSource, resetSelectedTarget, resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, setCurrentData, setInitialData, setInitialDataInvestigateDistanceSource, setInitialDataInvestigateDistanceTarget, setSelectedSource, setSelectedTarget, updateActiveButtons,
+    updateCurrentDataBasedOnButtons, updateCurrentDataBasedOnInvestigateDistanceValues, updateCurrentDataBasedOnSelect, updateCurrentDataWithNewNodes
 };
