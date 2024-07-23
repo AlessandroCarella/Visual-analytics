@@ -10,6 +10,7 @@ import {
 } from "./modules/dataManagement";
 import { addDropdownEventListeners, populateSelect } from "./modules/populateSelect";
 import { getUniqueItemsPerKey } from "./modules/utils";
+import { setupButtonControlsInvestigateDistance } from "./modules/investigateDistance";
 
 const svg = d3.select('.graph svg');
 
@@ -30,7 +31,10 @@ d3.json(jsonFilePath)
         addDropdownEventListeners("#target-select");
 
         //graph
-        createGraph();
+        //createGraph();
+
+        setupButtonControlsInvestigateDistance('decrease-source', 'increase-source', 'sourceNumberInput', -1, 7);
+        setupButtonControlsInvestigateDistance('decrease-target', 'increase-target', 'targetNumberInput', -1, 8);
 
         //buttons
         addTypeButtonsEventListeners();

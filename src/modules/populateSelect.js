@@ -1,6 +1,6 @@
 import * as d3 from "d3";
-import { companiesToInvestigateSelectVal, companiesToInvestigateText, selectDefaultValueText, sourceSelectTag, targetSelectTag } from "./constants";
-import { getSelectedSource, getSelectedTarget, resetSelectedSource, resetSelectedTarget, selectDefaultValue, setSelectedSource, setSelectedTarget, } from "./dataManagement";
+import { companiesToInvestigateSelectVal, companiesToInvestigateText, selectAllNodesVal, selectAllNodesText, sourceSelectTag, targetSelectTag, selectEmptyVal, selectEmptyText } from "./constants";
+import { getSelectedSource, getSelectedTarget, resetSelectedSource, resetSelectedTarget, setSelectedSource, setSelectedTarget, } from "./dataManagement";
 import { refreshGraph } from "./refreshGraph";
 
 function populateSelect(idSelect, items) {
@@ -10,17 +10,23 @@ function populateSelect(idSelect, items) {
         .selectAll('option')
         .remove();
 
-    //add the "all" option
+    //add the empty option
     dropdown
         .append('option')
-        .attr('value', selectDefaultValue)
-        .text(selectDefaultValueText);
+        .attr('value', selectEmptyVal)
+        .text(selectEmptyText);
 
-    //add the to investigate nodes
+    //add the "to investigate nodes" nodes
     dropdown
         .append('option')
         .attr('value', companiesToInvestigateSelectVal)
         .text(companiesToInvestigateText);
+    
+    //add the "all" option
+    dropdown
+        .append('option')
+        .attr('value', selectAllNodesVal)
+        .text(selectAllNodesText);
 
     //add the actual options
     items.forEach(item =>
@@ -30,8 +36,8 @@ function populateSelect(idSelect, items) {
             .text(item)
     );
 
-    //set all as the default value
-    dropdown.property('value', selectDefaultValue);
+    //set all as the entities to investigate value
+    dropdown.property('value', selectEmptyValselectAllNodesVal );
 }
 
 function addDropdownEventListeners(idSelect) {

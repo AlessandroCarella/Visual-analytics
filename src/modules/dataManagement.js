@@ -96,7 +96,7 @@ function getAllTargets() {
 
 ///////////////////////////////////////////
 
-import { companiesToInvestigate, companiesToInvestigateSelectVal, typesOfLinks } from "./constants";
+import { companiesToInvestigate, companiesToInvestigateSelectVal, selectAllNodesVal, typesOfLinks } from "./constants";
 
 let activeButtons;
 
@@ -136,17 +136,17 @@ function updateCurrentDataBasedOnButtons() {
 
 ///////////////////////////////////////////
 
-import { selectDefaultValue, sourceSelectTag, targetSelectTag } from './constants';
-let selectedSource = selectDefaultValue;
-let selectedTarget = selectDefaultValue;
+import { selectEmptyVal, sourceSelectTag, targetSelectTag } from './constants';
+let selectedSource = selectEmptyVal;
+let selectedTarget = selectEmptyVal;
 
 function getSelectedSource() {
     return selectedSource;
 }
 
 function resetSelectedSource() {
-    d3.select(sourceSelectTag).property('value', selectDefaultValue);
-    selectedSource = selectDefaultValue;
+    d3.select(sourceSelectTag).property('value', selectEmptyVal);
+    selectedSource = selectEmptyVal;
 }
 
 function setSelectedSource(element) {
@@ -161,8 +161,8 @@ function getSelectedTarget() {
 }
 
 function resetSelectedTarget() {
-    d3.select(targetSelectTag).property('value', selectDefaultValue);
-    selectedTarget = selectDefaultValue;
+    d3.select(targetSelectTag).property('value', selectEmptyVal);
+    selectedTarget = selectEmptyVal;
 }
 
 function setSelectedTarget(element) {
@@ -173,10 +173,10 @@ function setSelectedTarget(element) {
 ///////////////////
 
 function updateCurrentDataBasedOnSelect() {
-    let selectedValue = selectedSource !== selectDefaultValue ? selectedSource : selectedTarget;
-    let selectedType = selectedSource !== selectDefaultValue ? 'source' : 'target';
+    let selectedValue = selectedSource !== selectEmptyVal ? selectedSource : selectedTarget;
+    let selectedType = selectedSource !== selectEmptyVal ? 'source' : 'target';
 
-    if (selectedSource === selectDefaultValue && selectedTarget === selectDefaultValue) {
+    if (selectedSource === selectAllNodesVal || selectedTarget === selectAllNodesVal) {
         setCurrentData(initialData);
         return;
     }
@@ -217,5 +217,5 @@ export {
     updateCurrentDataBasedOnButtons,
     getSelectedSource, resetSelectedSource, setSelectedSource,
     getSelectedTarget, resetSelectedTarget, setSelectedTarget,  
-    selectDefaultValue, updateCurrentDataBasedOnSelect,
+    updateCurrentDataBasedOnSelect,
 };

@@ -91,28 +91,33 @@ svg {
 }
 
 .investigate-source-or-target-distance-select {
+	pointer-events: none; /* Prevent mouse interaction */
 	text-align: center;
-	width: 800px; /* Adjust width as needed */
+	width: 90px; /* Adjust width as needed */
 	padding: 10px; /* Adjust padding for consistent height */
 	border: 2px groove black;
 	border-radius: 5px;
 	font-size: 16px; /* Set font size to be consistent with buttons */
 	line-height: 1; /* Adjust line height if needed */
-	margin: 0; /* Remove default margin */
-	margin-top: -10px;
+	margin: 0 10px; /* Remove default margin */
+	margin-top: 0px;
 }
 
-.plus-button,
-.minus-button {
-	background-color: transparent; /* Remove default button styling */
+.investigate-distance-div {
+	display: flex;
+	align-items: center; /* Center items vertically */
+	justify-content: center; /* Center items horizontally */
+}
+
+.investigate-distance-div button {
 	border: 1px solid #ccc;
-	padding: 10px 15px; /* Ensure buttons have consistent padding */
+	padding: 10px 10px; /* Ensure buttons have consistent padding */
 	cursor: pointer;
-	margin: 0 5px; /* Space between buttons and input */
 	border-radius: 5px;
 	font-size: 16px; /* Set font size to match input */
 	line-height: 1.2; /* Adjust line height if needed */
 	box-sizing: border-box; /* Ensure padding and border are included in width/height */
+	margin: 0 10px;
 }
 
 .plus-button {
@@ -123,8 +128,14 @@ svg {
 	background-color: blue;
 }
 
-.investigate-distance-div {
-	display: flex;
-	align-items: center; /* Center items vertically */
-	justify-content: center; /* Center items horizontally */
+/* Hide the spinner buttons in WebKit browsers (like Chrome, Safari, etc.) */
+.investigate-distance-div input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+/* Hide the spinner buttons in Firefox */
+.investigate-distance-div input[type=number] {
+    -moz-appearance: textfield;
 }

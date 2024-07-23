@@ -13,8 +13,11 @@ const colorsOfLinks = d3.scaleOrdinal()
 const sourceSelectTag = `#source-select`;
 const targetSelectTag = `#target-select`;
 
-const selectDefaultValue = 'all';
-const selectDefaultValueText = 'All'
+const selectEmptyVal = '';
+const selectEmptyText = '';
+
+const selectAllNodesVal = 'all';
+const selectAllNodesText = 'All'
 
 const companiesToInvestigate = [
     "Mar de la Vida OJSC",
@@ -28,7 +31,6 @@ const companiesToInvestigateExtraInfo = {
     "Oceanfront Oasis Inc Carrie": { nodeType: null, country: null },
     "8327": { nodeType: "organization", country: null }
 }
-const companiesToInvestigateTypeOfLink = "toInvestigate";
 
 const companiesToInvestigateSelectVal = companiesToInvestigate.join(" ");
 const companiesToInvestigateText = "Entities to investigate"
@@ -38,7 +40,8 @@ export {
     activeButtonClass, inactiveButtonClass,
     typesOfLinks, colorsOfLinks,
     sourceSelectTag, targetSelectTag,
-    selectDefaultValue, selectDefaultValueText,
+    selectEmptyVal, selectEmptyText,
+    selectAllNodesVal, selectAllNodesText,
     companiesToInvestigate, companiesToInvestigateExtraInfo,
-    companiesToInvestigateSelectVal, companiesToInvestigateText, companiesToInvestigateTypeOfLink,
+    companiesToInvestigateSelectVal, companiesToInvestigateText,
 };
