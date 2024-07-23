@@ -1,5 +1,3 @@
-const jsonFilePath = "data/mergedDatasetWithToInvestigateExtraData.json";
-
 import * as d3 from "d3";
 import { addTypeButtonsEventListeners } from "./modules/buttons";
 import { createGraph } from "./modules/createGraph";
@@ -12,33 +10,43 @@ import { addDropdownEventListeners, populateSelect } from "./modules/populateSel
 import { getUniqueItemsPerKey } from "./modules/utils";
 import { setupButtonControlsInvestigateDistance } from "./modules/investigateDistance";
 
+const jsonFilePathForMergedDatasetWithToInvestigateExtraData = "data/mergedDatasetWithToInvestigateExtraData.json";
+const jsonFilePathForConnectionsLevelsSouspectSourcesNoRepetition = "data/connectionsLevelsSouspectSourcesNoRepetition.json";
+const jsonFilePathForConnectionsLevelsSouspectTargetsNoRepetition = "data/connectionsLevelsSouspectTargetsNoRepetition.json";
+
 const svg = d3.select('.graph svg');
 
-d3.json(jsonFilePath)
-    .then((data) => {
-        data = new Set(data);
-        //data
-        setInitialData(data)
-        setCurrentData(data)
+Promise.all([
+    d3.json(jsonFilePathForMergedDatasetWithToInvestigateExtraData),
+    d3.json(jsonFilePathForConnectionsLevelsSouspectSourcesNoRepetition),
+    d3.json(jsonFilePathForConnectionsLevelsSouspectTargetsNoRepetition)
+])
+.then(([mergedDatasetWithToInvestigateExtraData, connectionsLevelsSouspectSourcesNoRepetition, connectionsLevelsSouspectTargetsNoRepetition]) => {
+    // data
+    mergedDatasetWithToInvestigateExtraData = new Set(mergedDatasetWithToInvestigateExtraData);
 
-        createActiveButtons();
+    setInitialData(mergedDatasetWithToInvestigateExtraData);
+    setCurrentData(mergedDatasetWithToInvestigateExtraData);
 
-        //selects
-        populateSelect("#source-select", getUniqueItemsPerKey("source").sort());
-        populateSelect("#target-select", getUniqueItemsPerKey("target").sort());
+    createActiveButtons();
 
-        addDropdownEventListeners("#source-select");
-        addDropdownEventListeners("#target-select");
+    console.log('Connections Levels Sources:', connectionsLevelsSouspectSourcesNoRepetition);
+    console.log('Connections Levels Targets:', connectionsLevelsSouspectTargetsNoRepetition);
 
-        //graph
-        //createGraph();
+    // selects
+    populateSelect("#source-select", getUniqueItemsPerKey("source").sort());
+    populateSelect("#target-select", getUniqueItemsPerKey("target").sort());
 
-        setupButtonControlsInvestigateDistance('decrease-source', 'increase-source', 'sourceNumberInput', -1, 7);
-        setupButtonControlsInvestigateDistance('decrease-target', 'increase-target', 'targetNumberInput', -1, 8);
+    addDropdownEventListeners("#source-select");
+    addDropdownEventListeners("#target-select");
 
-        //buttons
-        addTypeButtonsEventListeners();
-    })
-    .catch((error) => console.error("Error loading the data:", error));
+    // investigate distance
+    setupButtonControlsInvestigateDistance('decrease-source', 'increase-source', 'sourceNumberInput', -1, 7);
+    setupButtonControlsInvestigateDistance('decrease-target', 'increase-target', 'targetNumberInput', -1, 8);
+
+    // buttons
+    addTypeButtonsEventListeners();
+})
+.catch((error) => console.error("Error loading the data:", error));
 
 export { svg };

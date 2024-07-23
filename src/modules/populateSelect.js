@@ -2,6 +2,7 @@ import * as d3 from "d3";
 import { companiesToInvestigateSelectVal, companiesToInvestigateText, selectAllNodesVal, selectAllNodesText, sourceSelectTag, targetSelectTag, selectEmptyVal, selectEmptyText } from "./constants";
 import { getSelectedSource, getSelectedTarget, resetSelectedSource, resetSelectedTarget, setSelectedSource, setSelectedTarget, } from "./dataManagement";
 import { refreshGraph } from "./refreshGraph";
+import { resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance } from "./investigateDistance";
 
 function populateSelect(idSelect, items) {
     const dropdown = d3.select(idSelect);
@@ -37,7 +38,7 @@ function populateSelect(idSelect, items) {
     );
 
     //set all as the entities to investigate value
-    dropdown.property('value', selectEmptyValselectAllNodesVal );
+    dropdown.property('value', selectEmptyVal);
 }
 
 function addDropdownEventListeners(idSelect) {
@@ -88,6 +89,10 @@ function handleDropdownChange(selectedValue) {
             resetSelectedTarget();
         }
     }
+
+    //change the values in the investigate distance boxes
+    resetSourceValueInvestigateDistance()
+    resetTargetValueInvestigateDistance()
 
     // Refresh the graph to reflect the changes made
     refreshGraph();
