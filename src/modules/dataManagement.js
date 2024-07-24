@@ -1,6 +1,7 @@
 let initialData;
 let currentData;
 let addedNodes = new Set();
+let lastAddedNodeId = "";
 
 function getInitialData() {
     return initialData;
@@ -28,6 +29,14 @@ function addNodeToAddedNodes(node) {
 
 function resetAddedNodes() {
     addedNodes.clear();
+}
+
+function getLastAddedNodeId() {
+    return lastAddedNodeId;
+}
+
+function setLastAddedNodeId(nodeId) {
+    lastAddedNodeId = nodeId;
 }
 
 let relevantLinks;
@@ -391,6 +400,6 @@ function resetSelectedValueInvestigate() {
 ///////////////////////////////////////////
 
 export {
-    addNodeToAddedNodes, clickableNode, createActiveButtons, getActiveButtons, getAddedNodes, getAllSources, getAllTargets, getCurrentData, getInitialData, getInitialDataInvestigateDistanceSource, getInitialDataInvestigateDistanceTarget, getSelectedSource, getSelectedTarget, getSelectedValueInvestigate, getSourceValueInvestigateDistance, getTargetValueInvestigateDistance, getTypesOfLinks, resetAddedNodes, resetBothValueInvestigateDistance, resetOtherInputFromInvestigateDistance, resetSelectedSource, resetSelectedTarget, resetSelectedValueInvestigate, resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, setCurrentData, setInitialData, setInitialDataInvestigateDistanceSource, setInitialDataInvestigateDistanceTarget, setSelectedSource, setSelectedTarget, setSelectedValueInvestigate, updateActiveButtons,
+    addNodeToAddedNodes, getLastAddedNodeId, setLastAddedNodeId, clickableNode, createActiveButtons, getActiveButtons, getAddedNodes, getAllSources, getAllTargets, getCurrentData, getInitialData, getInitialDataInvestigateDistanceSource, getInitialDataInvestigateDistanceTarget, getSelectedSource, getSelectedTarget, getSelectedValueInvestigate, getSourceValueInvestigateDistance, getTargetValueInvestigateDistance, getTypesOfLinks, resetAddedNodes, resetBothValueInvestigateDistance, resetOtherInputFromInvestigateDistance, resetSelectedSource, resetSelectedTarget, resetSelectedValueInvestigate, resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, setCurrentData, setInitialData, setInitialDataInvestigateDistanceSource, setInitialDataInvestigateDistanceTarget, setSelectedSource, setSelectedTarget, setSelectedValueInvestigate, updateActiveButtons,
     updateCurrentDataBasedOnButtons, updateCurrentDataBasedOnInvestigateDistanceValues, updateCurrentDataBasedOnSelect, updateCurrentDataWithNewNodes
 };

@@ -1,12 +1,13 @@
 import { companiesToInvestigate } from "../constants"
-import { clickableNode } from "../dataManagement"
+import { clickableNode, getLastAddedNodeId } from "../dataManagement"
 
+const lastAddedNodeColor = '#FF0000' //light red
+const entityToInvestigateColor = '#54119c'//purple
 const clickableNodeColor = '#FFEA00' //yellow
 const sourceAndTargetColor = '#04820f' //green
 const sourceColor = '#821304' //red
 const targetColor = '#042882' //blue
 const blackColor = '#000' //black
-const entityToInvestigateColor = '#54119c'
 
 const markersRefX = 8
 const markersRefY = 0
@@ -40,6 +41,10 @@ function determineNodeColor(node) {
 
     if (companiesToInvestigate.includes(node.id)) {
         return entityToInvestigateColor;
+    }
+
+    if (node.id === getLastAddedNodeId()) {
+        return lastAddedNodeColor;
     }
 
     if (clickableNode(node)) {
