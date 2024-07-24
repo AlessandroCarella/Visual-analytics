@@ -19,7 +19,8 @@ function dragstarted(event, d, simulation) {
     d.fy = d.y;
 }
 
-function dragged(event, d) {
+function dragged(event, d) {    
+    d3.selectAll('div-tooltip.tooltip').style('opacity', 0); // Hide tooltip on click
     d.fx = event.x;
     d.fy = event.y;
 }
@@ -153,8 +154,6 @@ function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
                 <div>Country: ${country}</div>
                 <div>N. sources: ${companiesToInvestigate.includes(d.id) ? sourcesPerTargetCount[d.id] - (companiesToInvestigate.length - 1) : sourcesPerTargetCount[d.id]}</div>
                 <div>N. targets: ${companiesToInvestigate.includes(d.id) ? targetsPerSourceCount[d.id] - (companiesToInvestigate.length - 1) : targetsPerSourceCount[d.id]}</div>
-                <div>Also source: ${d.alsoSource}</div>
-                <div>Also target: ${d.alsoTarget}</div>
             `)
                 .style("left", (event.pageX + 5) + "px")
                 .style("top", (event.pageY - 28) + "px");
