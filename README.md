@@ -1,27 +1,57 @@
 # Visual-analytics
 
 # TODO:
-* graph:
-  * hard:
-    * sometimes there are mutliple links between the same 2 source and target, find a (better) way to plot both of the types of connection, at least in the markers
-    * assign a shape to each one of the nodetypes and instead of the colors for each of them plot the node in a different shape
-    * bug when the dataset is of size 1000 and the partnership button i clicked 
-  * medium:
-    * in the method that gets called when a node is clicked you can perform the adding of either the sources or the targets (or both) of the node that has been clicked
-    
-      create a ratio input to select which kind of other nodes to add (or to remove(?)) and update the function updateCurrentData in dataManagement.js 
-    * create selects that can add a node out of the ones that are not in the graph yet
-    * add a column on the right too to show informations and the guide to colors
+  * tutto
+    * Inverti bordi e riempimenti
+    * Nodi unknown con il colore grigio
 
-  * easy(?):
-    * bug fix:
-      * if select target and then select source everything is fine, once source is selected cant switch back to target
-    * to investigate companies 
-      * add to the sources an option to plot the 4 and move the 4 to the top of the selects
-      * when either one of the four or the option with the 4 is selected add to the controls a slider to plot the connections of those nodes
-    * when the show entities to investigate option is selected a new type of link between the entities to investigate pops up so that they are distinguscable
-* dataset:
-  * order the sources from the one with most targets to the one with less
+    * Implementa il refresh dinamico per forza, controlla metodo join di d3.js https://d3js.org/d3-force/simulation#simulation_alphaTarget https://d3js.org/d3-force/simulation#simulation_restart 
+
+    * Cambia forze in base al numero di nodi  diminuire forza di repulsione e edge
+
+    * Whats the end goal of the minichallange 1, show clusters in the entities to investigate with the select setted to All and 
+      * I cluster sono importanti
+
+    * Proposal of showing svg image related to the type of node instead of the circles 
+      * Si
+
+    * Right click on the node to expand only as source or as target or as both (already in the left click anyway)
+      * si
+
+    * How should I implement the ambiguous multiple links between 2 entities, show what you have done, propose tooltip solution (show in/out nodes in the tooltip (bad for the ui, too crowded), hover on the link (hover the link to see all the links between a source and a target), other proposed by the teacher
+      * Linea curva al posto della linea retta  Utilizzare path al posto di line per create la linea  trova punto medio e poi trova la curva utilizzando quel punto
+      * Tooltip no perché può essere importante vedere quanti archi ci sono fra i 2 nodi
+      * Arco solo quando ci sono più di un collegamento
+
+    * Can I implement the what’s going on tab or is it cheating
+      * Si ma solo legenda, prova come ultima cosa a fare la speigazione contestuale
+
+    * Keep the “fake” link between the entities to investigate or not
+    *   Forza di linking in base al tipo di collegamento e metterla più bassa per i link “to investigate”
+
+    * Size of the window has to fit the 16:9 1920x1080p? What about full screen?
+      * Scrolling solo sulla Colonna sinistra al posto della pagina
+
+    * If the palette I’m able to extract from the image is not enough where should I get colors from
+      * https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3
+
+  * Dataset
+    * Do I merge the nodes that have weird names? Like there is a node that has the id 0 and then there are multiple nodes that are named: 0 and some following gibberish
+      * Lascia separati
+
+
+  * Report:
+    *Which are the chapters to write (cant access didawiki)
+    https://web.archive.org/web/20240529095145/http://didawiki.cli.di.unipi.it/doku.php/magistraleinformaticaeconomia/va/start
+
+    * Whats state of the art in this case (remember reading about it)
+      * Nulla o cose simili che comunque sono li a grandi linee
+
+    * Discussion about implementation that I tried but didn’t keep because they didn’t fit?
+      * Perchè no
+
+    * Do I show all I did in the data analysis part? Is what I did ok (quick runthrough)?
+
 
 ## To run the project:
 * install node (developed in node 20.11.1)
