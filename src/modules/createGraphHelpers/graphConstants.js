@@ -41,17 +41,14 @@ function determineNodeColor(node) {
     let color = blackColor
 
     if (companiesToInvestigate.includes(node.id)) {
-        console.log (entityToInvestigateColor)
         return entityToInvestigateColor;
     }
 
     if (node.id === getLastAddedNodeId()) {
-        console.log (lastAddedNodeColor)
         return lastAddedNodeColor;
     }
 
     if (clickableNode(node)) {
-        console.log (clickableNodeColor)
         return clickableNodeColor;
     }
 
@@ -61,7 +58,6 @@ function determineNodeColor(node) {
     else {
         color = node.alsoSource ? sourceAndTargetColor : targetColor;
     }
-    console.log (color)
 
     return color;
 }

@@ -26,7 +26,7 @@ function createGraph() {
 
     //graph enetites
     createLinks(links);
-    createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation);
+    let allImages = createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation);
     createMarkers();
     //createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount);
     setupTooltip(targetsPerSourceCount, sourcesPerTargetCount);

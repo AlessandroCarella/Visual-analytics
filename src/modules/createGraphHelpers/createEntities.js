@@ -68,8 +68,9 @@ function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
     return radius === 0 ? 1 : radius;
 }
 
-// Modify the SVGs to include a stroke
-function getIconUrl(type, color) {
+
+
+async function loadSvg(type) {
     const iconMap = {
         null: '../svgs/questionMark.svg',
         'company': '../svgs/company.svg',
@@ -83,25 +84,42 @@ function getIconUrl(type, color) {
     };
 
     const url = iconMap[type] || '../svgs/circle.svg';
-    return `${url}?color=${encodeURIComponent(color)}`;
+    const response = await fetch(url);
+    const text = await response.text();
+    return text;
 }
 
 function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation) {
     // Update data binding
-    const images = svg.selectAll('image').data(nodes);
+    const images = svg.selectAll('g.node').data(nodes);
     images.exit().remove();
 
-    const enteredImages = images.enter().append('image')
-        .attr('class', d => d.type)
-        .attr('xlink:href', d => getIconUrl(d.nodeType, determineNodeColor(d)))
-        .attr('width', d => calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) * 2)
-        .attr('height', d => calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) * 2)
-        .attr('x', d => d.x - calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount)) // Centering the image
-        .attr('y', d => d.y - calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount)) // Centering the image
+    const enteredImages = images.enter().append('g')
+        .attr('class', 'node')
+        .attr('transform', d => `translate(${d.x}, ${d.y})`)
         .call(d3.drag()
             .on('start', (event, d) => dragstarted(event, d, simulation))
             .on('drag', dragged)
             .on('end', (event, d) => dragended(event, d, simulation)));
+
+    enteredImages.each(async function(d) {
+        const node = d3.select(this);
+        const svgString = await loadSvg(d.nodeType);
+        node.html(svgString);
+
+        const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
+        
+        // Scale the SVG
+        node.select('svg')
+            .attr('width', radius * 2)
+            .attr('height', radius * 2)
+            .attr('x', -radius)
+            .attr('y', -radius);
+
+        // Dynamically set the stroke color
+        node.select('path')
+            .attr('stroke', determineNodeColor(d));
+    });
 
     const allImages = images.merge(enteredImages);
 
@@ -112,7 +130,18 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
             refreshGraph();
         }
     });
+
+    // Update positions on each tick of the simulation
+    simulation.on('tick', () => {
+        allImages.attr('transform', d => `translate(${d.x}, ${d.y})`);
+    });
+
+    // Set initial positions
+    allImages.attr('transform', d => `translate(${d.x}, ${d.y})`);
+
+    return allImages;
 }
+
 
 
 

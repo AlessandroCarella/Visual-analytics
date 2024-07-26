@@ -111,7 +111,7 @@ function getIntersectionY(node1, node2, isSource) {
     return y;
 }
 
-function ticked(width, height, svg) {
+function ticked(width, height, svg, allImages) {
     svg.selectAll('line.link')
         .attr('x1', d => {
             const x1 = getIntersectionX(d.source, d.target, true);
@@ -139,7 +139,7 @@ function ticked(width, height, svg) {
             d.y = Math.max(0, Math.min(height - svgSize, d.y));
             return d.y - svgSize / 2; // Adjust for centering
         });
-
+        
     svg.selectAll('text')
         .attr('x', d => d.x)
         .attr('y', d => d.y + 4);
@@ -158,7 +158,7 @@ function calculateRepulsionStrength(numNodes) {
     return baseStrength / scalingFactor;
 }
 
-function initializeSimulation(nodes, links) {
+function initializeSimulation(nodes, links, allImages) {
     const { width, height } = getGraphDimensions();
     const numNodes = nodes.length;
     const repulsionStrength = calculateRepulsionStrength(numNodes);
@@ -167,7 +167,7 @@ function initializeSimulation(nodes, links) {
         .force('link', d3.forceLink().id(d => d.id).links(links).distance(100))
         .force('charge', d3.forceManyBody().strength(repulsionStrength))
         .force('center', d3.forceCenter(width / 2, height / 2))
-        .on('tick', () => ticked(width, height, svg));
+        .on('tick', () => ticked(width, height, svg, allImages));
 }
 
 export { initializeSimulation };
