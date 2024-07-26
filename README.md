@@ -10,8 +10,8 @@
 
     * Cambia forze in base al numero di nodi  diminuire forza di repulsione e edge
 
-    * Whats the end goal of the minichallange 1, show clusters in the entities to investigate with the select setted to All and 
-      * I cluster sono importanti
+    * ~~Whats the end goal of the minichallange 1, show clusters in the entities to investigate with the select setted to All and~~
+      * ~~I cluster sono importanti~~
 
     * Proposal of showing svg image related to the type of node instead of the circles 
       * Si
