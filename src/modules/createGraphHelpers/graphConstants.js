@@ -24,7 +24,7 @@ const tooltipBackgroundColor = "#fff"//white
 
 const nodeBorderSize = 2;
 const nodeTypeColor = {
-    null: '#808080',         // Black
+    null: '#808080',         // Grey
     'company': '#0000FF',      // Blue
     'event': '#00FF00',        // Green
     'location': '#FF0000',     // Red
@@ -41,14 +41,17 @@ function determineNodeColor(node) {
     let color = blackColor
 
     if (companiesToInvestigate.includes(node.id)) {
+        console.log (entityToInvestigateColor)
         return entityToInvestigateColor;
     }
 
     if (node.id === getLastAddedNodeId()) {
+        console.log (lastAddedNodeColor)
         return lastAddedNodeColor;
     }
 
     if (clickableNode(node)) {
+        console.log (clickableNodeColor)
         return clickableNodeColor;
     }
 
@@ -58,6 +61,7 @@ function determineNodeColor(node) {
     else {
         color = node.alsoSource ? sourceAndTargetColor : targetColor;
     }
+    console.log (color)
 
     return color;
 }

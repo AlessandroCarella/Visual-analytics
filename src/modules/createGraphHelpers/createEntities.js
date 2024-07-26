@@ -64,7 +64,26 @@ function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
         sourcesPerTargetCount[d.id] = 0;
     }
 
-    return Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id]) * 3;
+    const radius = Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id]) * 3;
+    return radius === 0 ? 1 : radius;
+}
+
+// Modify the SVGs to include a stroke
+function getIconUrl(type, color) {
+    const iconMap = {
+        null: '../svgs/questionMark.svg',
+        'company': '../svgs/company.svg',
+        'event': '../svgs/event.svg',
+        'location': '../svgs/location.svg',
+        'movement': '../svgs/movement.svg',
+        'organization': '../svgs/organization.svg',
+        'person': '../svgs/person.svg',
+        'political_organization': '../svgs/politicalOrganization.svg',
+        'vessel': '../svgs/vessel.svg'
+    };
+
+    const url = iconMap[type] || '../svgs/circle.svg';
+    return `${url}?color=${encodeURIComponent(color)}`;
 }
 
 function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation) {
@@ -74,13 +93,11 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
 
     const enteredImages = images.enter().append('image')
         .attr('class', d => d.type)
-        .attr('xlink:href', d => getIconUrl(d.nodeType))
+        .attr('xlink:href', d => getIconUrl(d.nodeType, determineNodeColor(d)))
         .attr('width', d => calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) * 2)
         .attr('height', d => calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) * 2)
         .attr('x', d => d.x - calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount)) // Centering the image
         .attr('y', d => d.y - calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount)) // Centering the image
-        .style('stroke', d => determineNodeColor(d)) // Note: Stroke may not be applicable for <image> but can be used for other styles
-        .style('stroke-width', nodeBorderSize) // Note: Stroke-width may not be applicable for <image> but can be used for other styles
         .call(d3.drag()
             .on('start', (event, d) => dragstarted(event, d, simulation))
             .on('drag', dragged)
@@ -95,24 +112,8 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
             refreshGraph();
         }
     });
-
-    // Function to get the URL of the SVG icon based on node type
-    function getIconUrl(type) {
-        const iconMap = {
-            'questionMark': '../svgs/questionMark.svg',
-            'company': '../svgs/company.svg',
-            'event': '../svgs/event.svg',
-            'location': '../svgs/location.svg',
-            'movement': '../svgs/movement.svg',
-            'organization': '../svgs/organization.svg',
-            'person': '../svgs/person.svg',
-            'politicalOrganization': '../svgs/politicalOrganization.svg',
-            'vessel': '../svgs/vessel.svg'
-        };
-
-        return iconMap[type] || '../svgs/circle.svg'; // Default icon if type is not found
-    }
 }
+
 
 
 function createMarkers() {
