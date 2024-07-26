@@ -24,7 +24,7 @@ const tooltipBackgroundColor = "#fff"//white
 
 const nodeBorderSize = 2;
 const nodeTypeColor = {
-    null: '#000000',         // Black
+    null: '#808080',         // Black
     'company': '#0000FF',      // Blue
     'event': '#00FF00',        // Green
     'location': '#FF0000',     // Red
