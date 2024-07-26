@@ -39,5 +39,5 @@ const companiesToInvestigateSelectVal = companiesToInvestigate.join(" ");
 const companiesToInvestigateText = "Entities to investigate"
 
 export {
-    activeButtonClass, colorsOfLinks, companiesToInvestigate, companiesToInvestigateExtraInfo, companiesToInvestigateSelectVal, companiesToInvestigateText, graphDimensionsBorder, idSelectInvestigate, inactiveButtonClass, selectAllNodesText, selectAllNodesVal, selectEmptyText, selectEmptyVal, sourceSelectTag, targetSelectTag, typesOfLinks
+    activeButtonClass, colorsOfLinks, colorsOfLinksVals, companiesToInvestigate, companiesToInvestigateExtraInfo, companiesToInvestigateSelectVal, companiesToInvestigateText, graphDimensionsBorder, idSelectInvestigate, inactiveButtonClass, selectAllNodesText, selectAllNodesVal, selectEmptyText, selectEmptyVal, sourceSelectTag, targetSelectTag, typesOfLinks
 };

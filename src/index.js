@@ -10,6 +10,7 @@ import {
 import { addDropdownEventListenersInvestigate, populateSelectInvestigate, setupInvestigateDistanceElements } from "./modules/investigateDistance";
 import { addDropdownEventListeners, populateSelect } from "./modules/populateSelect";
 import { getUniqueItemsPerKey } from "./modules/utils";
+import { setupGuideButton } from "./modules/guide";
 
 const jsonFilePathForMergedDatasetWithToInvestigateExtraData = "data/mergedDatasetWithToInvestigateExtraData.json";
 const jsonFilePathForConnectionsLevelsSouspectSourcesNoRepetition = "data/connectionsLevelsSouspectSourcesNoRepetition.json";
@@ -52,6 +53,9 @@ Promise.all([
 
         // buttons
         addTypeButtonsEventListeners();
+
+        //guide
+        setupGuideButton()
     })
     .catch((error) => console.error("Error loading the data:", error));
 

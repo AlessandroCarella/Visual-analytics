@@ -27,7 +27,7 @@
       * Si ma solo legenda, prova come ultima cosa a fare la speigazione contestuale
 
     * Keep the “fake” link between the entities to investigate or not
-    *   Forza di linking in base al tipo di collegamento e metterla più bassa per i link “to investigate”
+      * Forza di linking in base al tipo di collegamento e metterla più bassa per i link “to investigate”
 
     * ~~Size of the window has to fit the 16:9 1920x1080p? What about full screen?~~
       * ~~Scrolling solo sulla Colonna sinistra al posto della pagina~~

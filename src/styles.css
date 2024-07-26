@@ -31,6 +31,7 @@ body {
 }
 
 .graph {
+	position: relative;
 	flex-grow: 1; /* Allow .graph to grow and take remaining width */
 	height: 100%; /* Full height of the parent */
 	display: flex;
@@ -141,4 +142,74 @@ input[type="number"]::-webkit-outer-spin-button {
 /* Hide the spinner buttons in Firefox */
 .investigate-distance-div input[type="number"] {
 	-moz-appearance: textfield;
+}
+
+.show-guide-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.show-guide-button:hover {
+    background-color: #0056b3;
+}
+
+.guide-column {
+    display: none; /* Initially hidden */
+    top: 0;
+    right: 0;
+    width: 300px;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 100%; /* Full height of the parent */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc; /* Adjusted border */
+}
+
+.guide-column h2, .guide-column h3 {
+    margin-top: 0;
+}
+
+.hide-guide-button {
+    position: absolute;
+    top: 20px; /* Same position as show-guide-button */
+    right: 20px; /* Same position as show-guide-button */
+    background-color: #dc3545; /* Different color for visual distinction */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hide-guide-button:hover {
+    background-color: #c82333;
+}
+
+.color-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.color-square {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+
+.color-label {
+    display: inline-block;
+    vertical-align: middle;
 }

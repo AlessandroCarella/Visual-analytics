@@ -65,4 +65,4 @@ function determineNodeBorderColor(node) {
     return nodeTypeColor[node.nodeType]
 }
 
-export { blackColor, determineNodeBorderColor, determineNodeColor, entityToInvestigateColor, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel, linksSizeMultiplier, markerHeight, markersRefX, markersRefY, markerWidth, nodeBorderSize, sourceAndTargetColor, sourceColor, targetColor, tooltipBackgroundColor }
+export { blackColor, nodeTypeColor, determineNodeBorderColor, determineNodeColor, entityToInvestigateColor, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel, linksSizeMultiplier, markerHeight, markersRefX, markersRefY, markerWidth, nodeBorderSize, sourceAndTargetColor, sourceColor, targetColor, tooltipBackgroundColor }
