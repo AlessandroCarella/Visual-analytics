@@ -4,8 +4,6 @@ import { initializeSimulation } from './createGraphHelpers/simulation';
 import { getCurrentData, getInitialData } from './dataManagement';
 import { findPerSourceNumberOfTargetsOrOpposite } from './utils';
 
-let initialData;
-
 function createGraph() {
     //data generation
     const { sources: sources, targets: targets, sourcesTargets: sourcesTargets, targetsSources: targetsSources } = getPossibleNodes(getCurrentData());

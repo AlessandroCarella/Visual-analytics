@@ -99,7 +99,7 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
     images.exit().remove();
 
     const enteredImages = images.enter().append('g')
-        .attr('class', 'node')
+        .attr('class', d => d.type)
         .attr('transform', d => `translate(${d.x}, ${d.y})`)
         .call(d3.drag()
             .on('start', (event, d) => dragstarted(event, d, simulation))
@@ -144,6 +144,8 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
             refreshGraph();
         }
     });
+
+    console.log(allImages);
 
     // Update positions on each tick of the simulation
     simulation.on('tick', () => {
