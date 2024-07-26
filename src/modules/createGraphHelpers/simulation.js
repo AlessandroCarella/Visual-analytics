@@ -130,14 +130,14 @@ function ticked(width, height, svg) {
             return isNaN(y2) ? 0 : y2;
         });
 
-    svg.selectAll('circle')
-        .attr('cx', d => {
-            d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
-            return d.x;
+    svg.selectAll('image')
+        .attr('x', d => {
+            d.x = Math.max(0, Math.min(width - svgSize, d.x));
+            return d.x - svgSize / 2; // Adjust for centering
         })
-        .attr('cy', d => {
-            d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
-            return d.y;
+        .attr('y', d => {
+            d.y = Math.max(0, Math.min(height - svgSize, d.y));
+            return d.y - svgSize / 2; // Adjust for centering
         });
 
     svg.selectAll('text')
@@ -150,6 +150,7 @@ function ticked(width, height, svg) {
 
 import { svg } from '../../index';
 import { getGraphDimensions } from '../utils';
+import { svgSize } from './graphConstants';
 
 function calculateRepulsionStrength(numNodes) {
     const baseStrength = -600; // Increase the base strength

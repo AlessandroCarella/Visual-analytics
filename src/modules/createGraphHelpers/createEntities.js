@@ -10,6 +10,7 @@ import {
     markerHeight,
     markersRefX, markersRefY, markerWidth,
     nodeBorderSize,
+    svgSize,
     tooltipBackgroundColor
 } from "./graphConstants";
 
@@ -67,33 +68,50 @@ function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
 }
 
 function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation) {
-    const circles = svg.selectAll('circle').data(nodes);
-    circles.exit().remove();
+    // Update data binding
+    const images = svg.selectAll('image').data(nodes);
+    images.exit().remove();
 
-    const enteredCircles = circles.enter().append('circle')
+    const enteredImages = images.enter().append('image')
         .attr('class', d => d.type)
-        .attr('r', d => {
-            d.radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
-            return d.radius
-        })
-        .style('fill', d => determineNodeBorderColor(d))
-        .style('stroke', d => determineNodeColor(d))
-        .style('stroke-width', nodeBorderSize)
-        //.style('visibility', 'hidden') //debugging markers
+        .attr('xlink:href', d => getIconUrl(d.nodeType))
+        .attr('width', svgSize)
+        .attr('height', svgSize)
+        .attr('x', d => d.x - svgSize / 2) // Centering the image
+        .attr('y', d => d.y - svgSize / 2) // Centering the image
+        .style('stroke', d => determineNodeColor(d)) // Note: Stroke may not be applicable for <image> but can be used for other styles
+        .style('stroke-width', nodeBorderSize) // Note: Stroke-width may not be applicable for <image> but can be used for other styles
         .call(d3.drag()
             .on('start', (event, d) => dragstarted(event, d, simulation))
             .on('drag', dragged)
             .on('end', (event, d) => dragended(event, d, simulation)));
 
-    const allCircles = circles.merge(enteredCircles);
+    const allImages = images.merge(enteredImages);
 
-    allCircles.on('click', (event, d) => {
+    allImages.on('click', (event, d) => {
         if (clickableNode(d)) {
-            addNodeToAddedNodes(d)
-            setLastAddedNodeId(d.id)
+            addNodeToAddedNodes(d);
+            setLastAddedNodeId(d.id);
             refreshGraph();
         }
     });
+
+    // Function to get the URL of the SVG icon based on node type
+    function getIconUrl(type) {
+        const iconMap = {
+            'questionMark': '../svgs/questionMark.svg',
+            'company': '../svgs/company.svg',
+            'event': '../svgs/event.svg',
+            'location': '../svgs/location.svg',
+            'movement': '../svgs/movement.svg',
+            'organization': '../svgs/organization.svg',
+            'person': '../svgs/person.svg',
+            'politicalOrganization': '../svgs/politicalOrganization.svg',
+            'vessel': '../svgs/vessel.svg'
+        };
+
+        return iconMap[type] || '../svgs/circle.svg'; // Default icon if type is not found
+    }
 }
 
 function createMarkers() {
@@ -131,7 +149,7 @@ function createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount) {
 }
 
 function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
-    const tooltip = d3.select("body").append("div-tooltip")
+    const tooltip = d3.select("body").append("div")
         .attr("class", "tooltip")
         .style("opacity", 0)
         .style("position", "absolute")
@@ -141,7 +159,7 @@ function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
         .style("border-radius", "3px")
         .style("pointer-events", "none");
 
-    svg.selectAll('circle')
+    svg.selectAll('image')
         .on('mouseover', (event, d) => {
             // Default to "Unknown" if nodeType or country are null
             const nodeType = d.nodeType ? d.nodeType : "Unknown";
@@ -162,5 +180,6 @@ function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
             tooltip.transition().duration(0).style("opacity", 0);
         });
 }
+
 
 export { createLabels, createLinks, createMarkers, createNodes, setupTooltip };
