@@ -42,7 +42,7 @@
 
 
   * Report:
-    *Which are the chapters to write (cant access didawiki)
+    * Which are the chapters to write (cant access didawiki)
     https://web.archive.org/web/20240529095145/http://didawiki.cli.di.unipi.it/doku.php/magistraleinformaticaeconomia/va/start
 
     * Whats state of the art in this case (remember reading about it)
@@ -53,6 +53,13 @@
 
     * Do I show all I did in the data analysis part? Is what I did ok (quick runthrough)?
 
+
+## Notes
+* the svgs that are used as nodes are only draggable by their countourn (or otherwise said "If the SVGs inside your nodes are not filled, it can make the areas within the SVG graphics non-interactive for drag events, as they might not have any actual content or "hit boxes" to catch those events.")
+  
+  for this a circle, with a 4/5 radius (radius == width == height of the svgs) is at the same location of the svg
+  
+  the svgs are still dragable by their countourn but it's not the best
 
 ## To run the project:
 * install node (developed in node 20.11.1)

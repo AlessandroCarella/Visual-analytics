@@ -33,6 +33,8 @@ function dragended(event, d, simulation) {
 }
 
 ////////////////////////////////////////
+// Cache for preloaded SVGs
+const svgCache = {};
 
 function createLinks(links) {
     getTypesOfLinks().forEach(typeOfLink => {
@@ -68,11 +70,6 @@ function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
     return radius === 0 ? 1 : radius;
 }
 
-
-// Cache for preloaded SVGs
-const svgCache = {};
-
-// Function to preload SVGs
 async function preloadSvgs() {
     const iconMap = {
         null: '../svgs/questionMark.svg',
@@ -112,11 +109,20 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
     enteredImages.each(function(d) {
         const node = d3.select(this);
         const svgString = svgCache[d.nodeType] || svgCache['null']; // Use preloaded SVG or default
+        const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
 
         node.html(svgString);
 
-        const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
-        
+        // Add a transparent rectangle for dragging the node (else the node is only draggable by the svg line)
+        node.append('circle')
+            .attr('cx', 0)
+            .attr('cy', 0)
+            // Radius of the hit circle, the 4/5 ratio is because the svg dimension is different all around so 
+            // having a slightly smaller radius is beter for the dragging functionality
+            .attr('r', radius*4/5) 
+            .attr('fill', 'black') // Invisible fill
+            .attr('pointer-events', 'all'); // Make sure it's interactive
+
         // Scale the SVG
         node.select('svg')
             .attr('width', radius * 2)
@@ -144,9 +150,6 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
         allImages.attr('transform', d => `translate(${d.x}, ${d.y})`);
     });
 }
-
-
-
 
 function createMarkers() {
     // Create the markers at the end
