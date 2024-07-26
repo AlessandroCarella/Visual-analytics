@@ -1,24 +1,3 @@
-
-function getIntersectionX(node1, node2, isSource) {
-    const dx = node2.x - node1.x;
-    const dy = node2.y - node1.y;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    const r = node1.radius;
-
-    const x = node1.x + (r / dist) * dx * (1);
-    return x;
-}
-
-function getIntersectionY(node1, node2, isSource) {
-    const dx = node2.x - node1.x;
-    const dy = node2.y - node1.y;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    const r = node1.radius;
-
-    const y = node1.y + (r / dist) * dy * (1);
-    return y;
-}
-
 /*
 //with errors statement
 function ticked(width, height, svg) {
@@ -112,6 +91,26 @@ function ticked(width, height, svg) {
 }
 */
 
+function getIntersectionX(node1, node2, isSource) {
+    const dx = node2.x - node1.x;
+    const dy = node2.y - node1.y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    const r = node1.radius;
+
+    const x = node1.x + (r / dist) * dx * (1);
+    return x;
+}
+
+function getIntersectionY(node1, node2, isSource) {
+    const dx = node2.x - node1.x;
+    const dy = node2.y - node1.y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    const r = node1.radius;
+
+    const y = node1.y + (r / dist) * dy * (1);
+    return y;
+}
+
 function ticked(width, height, svg) {
     svg.selectAll('line.link')
         .attr('x1', d => {
@@ -152,14 +151,23 @@ function ticked(width, height, svg) {
 import { svg } from '../../index';
 import { getGraphDimensions } from '../utils';
 
+function calculateRepulsionStrength(numNodes) {
+    const baseStrength = -600; // Increase the base strength
+    const scalingFactor = Math.log(numNodes + 1); // Use log scaling
+    return baseStrength / scalingFactor;
+}
+
 function initializeSimulation(nodes, links) {
     const { width, height } = getGraphDimensions();
+    const numNodes = nodes.length;
+    const repulsionStrength = calculateRepulsionStrength(numNodes);
 
     return d3.forceSimulation(nodes)
         .force('link', d3.forceLink().id(d => d.id).links(links).distance(100))
-        .force('charge', d3.forceManyBody().strength(-300))
+        .force('charge', d3.forceManyBody().strength(repulsionStrength))
         .force('center', d3.forceCenter(width / 2, height / 2))
         .on('tick', () => ticked(width, height, svg));
 }
 
 export { initializeSimulation };
+

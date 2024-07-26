@@ -8,7 +8,7 @@
 
     * Implementa il refresh dinamico per forza, controlla metodo join di d3.js https://d3js.org/d3-force/simulation#simulation_alphaTarget https://d3js.org/d3-force/simulation#simulation_restart 
 
-    * Cambia forze in base al numero di nodi  diminuire forza di repulsione e edge
+    * ~~Cambia forze in base al numero di nodi -> diminuire forza di repulsione e edge~~
 
     * ~~Whats the end goal of the minichallange 1, show clusters in the entities to investigate with the select setted to All and~~
       * ~~I cluster sono importanti~~
