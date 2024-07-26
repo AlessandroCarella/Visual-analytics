@@ -130,7 +130,7 @@ function ticked(width, height, svg, allImages) {
             return isNaN(y2) ? 0 : y2;
         });
 
-    svg.selectAll('image')
+    svg.selectAll('g.node')
         .attr('x', d => {
             d.x = Math.max(0, Math.min(width - svgSize, d.x));
             return d.x - svgSize / 2; // Adjust for centering
@@ -139,7 +139,7 @@ function ticked(width, height, svg, allImages) {
             d.y = Math.max(0, Math.min(height - svgSize, d.y));
             return d.y - svgSize / 2; // Adjust for centering
         });
-        
+
     svg.selectAll('text')
         .attr('x', d => d.x)
         .attr('y', d => d.y + 4);

@@ -137,7 +137,7 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
     });
 
     // Set initial positions
-    allImages.attr('transform', d => `translate(${d.x}, ${d.y})`);
+    // allImages.attr('transform', d => `translate(${d.x}, ${d.y})`);
 
     return allImages;
 }
