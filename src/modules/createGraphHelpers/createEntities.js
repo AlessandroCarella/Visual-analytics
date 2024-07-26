@@ -69,8 +69,11 @@ function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
 }
 
 
+// Cache for preloaded SVGs
+const svgCache = {};
 
-async function loadSvg(type) {
+// Function to preload SVGs
+async function preloadSvgs() {
     const iconMap = {
         null: '../svgs/questionMark.svg',
         'company': '../svgs/company.svg',
@@ -83,10 +86,14 @@ async function loadSvg(type) {
         'vessel': '../svgs/vessel.svg'
     };
 
-    const url = iconMap[type] || '../svgs/circle.svg';
-    const response = await fetch(url);
-    const text = await response.text();
-    return text;
+    const promises = Object.entries(iconMap).map(async ([type, url]) => {
+        const response = await fetch(url);
+        const text = await response.text();
+        svgCache[type] = text;
+    });
+
+    // Preload all SVGs
+    await Promise.all(promises);
 }
 
 function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation) {
@@ -102,9 +109,10 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
             .on('drag', dragged)
             .on('end', (event, d) => dragended(event, d, simulation)));
 
-    enteredImages.each(async function(d) {
+    enteredImages.each(function(d) {
         const node = d3.select(this);
-        const svgString = await loadSvg(d.nodeType);
+        const svgString = svgCache[d.nodeType] || svgCache['null']; // Use preloaded SVG or default
+
         node.html(svgString);
 
         const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
@@ -135,11 +143,6 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
     simulation.on('tick', () => {
         allImages.attr('transform', d => `translate(${d.x}, ${d.y})`);
     });
-
-    // Set initial positions
-    // allImages.attr('transform', d => `translate(${d.x}, ${d.y})`);
-
-    return allImages;
 }
 
 
@@ -213,4 +216,4 @@ function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
 }
 
 
-export { createLabels, createLinks, createMarkers, createNodes, setupTooltip };
+export { preloadSvgs, createLabels, createLinks, createMarkers, createNodes, setupTooltip };
