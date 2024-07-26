@@ -76,8 +76,8 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
             d.radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
             return d.radius
         })
-        .style('fill', d => determineNodeColor(d))
-        .style('stroke', d => determineNodeBorderColor(d))
+        .style('fill', d => determineNodeBorderColor(d))
+        .style('stroke', d => determineNodeColor(d))
         .style('stroke-width', nodeBorderSize)
         //.style('visibility', 'hidden') //debugging markers
         .call(d3.drag()
