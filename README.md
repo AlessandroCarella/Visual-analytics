@@ -37,8 +37,8 @@
       * https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3
 
   * Dataset
-    * Do I merge the nodes that have weird names? Like there is a node that has the id 0 and then there are multiple nodes that are named: 0 and some following gibberish
-      * Lascia separati
+    * ~~Do I merge the nodes that have weird names? Like there is a node that has the id 0 and then there are multiple nodes that are named: 0 and some following gibberish~~
+      * ~~Lascia separati~~
 
 
   * Report:
