@@ -29,8 +29,8 @@
     * Keep the “fake” link between the entities to investigate or not
     *   Forza di linking in base al tipo di collegamento e metterla più bassa per i link “to investigate”
 
-    * Size of the window has to fit the 16:9 1920x1080p? What about full screen?
-      * Scrolling solo sulla Colonna sinistra al posto della pagina
+    * ~~Size of the window has to fit the 16:9 1920x1080p? What about full screen?~~
+      * ~~Scrolling solo sulla Colonna sinistra al posto della pagina~~
 
     * If the palette I’m able to extract from the image is not enough where should I get colors from
       * https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3

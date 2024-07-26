@@ -8,11 +8,14 @@ body {
 }
 
 .command-column {
-	width: 300px;
-	padding: 20px;
-	border-right: 1px solid #ccc;
-	box-sizing: border-box;
+    width: 300px;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 100%; /* Full height of the parent */
 }
+
 
 .command-column h2 {
 	margin-top: 0;
