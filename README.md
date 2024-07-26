@@ -23,8 +23,8 @@
       * Tooltip no perché può essere importante vedere quanti archi ci sono fra i 2 nodi
       * Arco solo quando ci sono più di un collegamento
 
-    * Can I implement the what’s going on tab or is it cheating
-      * Si ma solo legenda, prova come ultima cosa a fare la speigazione contestuale
+    * ~~Can I implement the what’s going on tab or is it cheating~~
+      * ~~Si ma solo legenda,~~ prova come ultima cosa a fare la speigazione contestuale
 
     * Keep the “fake” link between the entities to investigate or not
       * Forza di linking in base al tipo di collegamento e metterla più bassa per i link “to investigate”
