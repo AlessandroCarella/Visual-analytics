@@ -75,10 +75,10 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
     const enteredImages = images.enter().append('image')
         .attr('class', d => d.type)
         .attr('xlink:href', d => getIconUrl(d.nodeType))
-        .attr('width', svgSize)
-        .attr('height', svgSize)
-        .attr('x', d => d.x - svgSize / 2) // Centering the image
-        .attr('y', d => d.y - svgSize / 2) // Centering the image
+        .attr('width', d => calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) * 2)
+        .attr('height', d => calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) * 2)
+        .attr('x', d => d.x - calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount)) // Centering the image
+        .attr('y', d => d.y - calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount)) // Centering the image
         .style('stroke', d => determineNodeColor(d)) // Note: Stroke may not be applicable for <image> but can be used for other styles
         .style('stroke-width', nodeBorderSize) // Note: Stroke-width may not be applicable for <image> but can be used for other styles
         .call(d3.drag()
@@ -113,6 +113,7 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
         return iconMap[type] || '../svgs/circle.svg'; // Default icon if type is not found
     }
 }
+
 
 function createMarkers() {
     // Create the markers at the end

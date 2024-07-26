@@ -28,7 +28,7 @@ function createGraph() {
     createLinks(links);
     createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation);
     createMarkers();
-    createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount);
+    //createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount);
     setupTooltip(targetsPerSourceCount, sourcesPerTargetCount);
 }
 
