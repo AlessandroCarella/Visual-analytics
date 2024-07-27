@@ -112,9 +112,8 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
             const newSvg = nodeGroup.append(() => svgElement)
                 .attr('width', radius * 2)
                 .attr('height', radius * 2)
-                .attr('x', d.radius)  // Center the SVG horizontally
-                .attr('y', d.radius); // Center the SVG vertically
-
+                .attr('x', -d.radius)  // Center the SVG horizontally
+                .attr('y', -d.radius); // Center the SVG vertically
 
             // Adjust paths within the SVG
             newSvg.selectAll('path')
