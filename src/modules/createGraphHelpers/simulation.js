@@ -131,15 +131,17 @@ function ticked(width, height, svg) {
             return isNaN(y2) ? 0 : y2;
         });
 
-    svg.selectAll('circle')
-        .attr('cx', d => {
-            d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
-            return d.x;
-        })
-        .attr('cy', d => {
-            d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
-            return d.y;
-        });
+    svg.selectAll('g.node')
+        .attr('transform', d => `translate(${d.x},${d.y})`); // Update position of node groups
+
+        // .attr('cx', d => {
+        //     d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
+        //     return d.x;
+        // })
+        // .attr('cy', d => {
+        //     d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
+        //     return d.y;
+        // });
 
     svg.selectAll('text')
         .attr('x', d => d.x)

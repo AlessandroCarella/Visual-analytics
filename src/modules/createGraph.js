@@ -25,12 +25,13 @@ function createGraph() {
     const simulation = initializeSimulation(nodes, links);
 
     //graph enetites
-    preloadSvgs()
-    createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation);
-    createLinks(links);
-    createMarkers();
-    //createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount);
-    setupTooltip(targetsPerSourceCount, sourcesPerTargetCount);
+    preloadSvgs().then(() => {
+        createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation);
+        createLinks(links);
+        createMarkers();
+        //createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount);
+        setupTooltip(targetsPerSourceCount, sourcesPerTargetCount);
+    });
 }
 
 export { createGraph };

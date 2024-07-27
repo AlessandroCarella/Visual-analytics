@@ -96,7 +96,7 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
     // Append SVG icons to the groups
     enteredNodeGroups.each(function (d) {
         const nodeGroup = d3.select(this);
-        const svgString = svgCache[d.nodeType] || svgCache['null'];
+        const svgString = svgCache[d.nodeType];
         const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
 
         // Create a temporary div to parse the SVG string
@@ -111,21 +111,23 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
             // Adjust SVG properties and append to the group
             const newSvg = nodeGroup.append(() => svgElement)
                 .attr('width', radius * 2)
-                .attr('height', radius * 2);
+                .attr('height', radius * 2)
+                .attr('x', d.radius)  // Center the SVG horizontally
+                .attr('y', d.radius); // Center the SVG vertically
 
-            // Adjust SVG position
-            newSvg.attr('x', -radius)
-                  .attr('y', -radius);
 
             // Adjust paths within the SVG
             newSvg.selectAll('path')
-                  .attr('stroke', determineNodeColor(d));
+                .attr('stroke', determineNodeColor(d));
         }
     });
 
     // Merge entered groups with existing ones
-    nodeGroups.merge(enteredNodeGroups);
+    nodeGroups.merge(enteredNodeGroups)
 }
+
+
+
 
 
 
