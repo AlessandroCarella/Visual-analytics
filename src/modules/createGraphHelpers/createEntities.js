@@ -60,6 +60,75 @@ async function preloadSvgs() {
     await Promise.all(promises);
 }
 
+function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation) {
+    // Bind data to existing circles
+    const circles = svg.selectAll('circle').data(nodes, d => d.id);
+
+    // Remove old circles
+    circles.exit().remove();
+
+    // Enter selection for new circles
+    const enteredCircles = circles.enter().append('circle')
+        .attr('class', d => d.type)
+        .attr('r', d => {
+            d.radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
+            return d.radius;
+        })
+        .style('stroke-width', nodeBorderSize)
+        .style('fill', 'transparent') // debugging markers
+        .style('stroke', d => determineNodeColor(d))
+        .call(d3.drag()
+            .on('start', (event, d) => dragstarted(event, d, simulation))
+            .on('drag', dragged)
+            .on('end', (event, d) => dragended(event, d, simulation)))
+        .on('click', (event, d) => {
+            if (clickableNode(d)) {
+                addNodeToAddedNodes(d);
+                setLastAddedNodeId(d.id);
+                refreshGraph();
+            }
+        });
+
+    // Merge entered circles with existing ones
+    const allCircles = circles.merge(enteredCircles);
+
+    // Update circles and append SVG content
+    allCircles.each(function(d) {
+        const node = d3.select(this);
+        const svgString = svgCache[d.nodeType] || svgCache['null'];
+        const radius = d.radius;
+
+        // Create a temporary div to parse the SVG string
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = svgString;
+        const svgElement = tempDiv.querySelector('svg');
+
+        // Ensure paths within the SVG have the correct stroke
+        d3.select(svgElement).selectAll('path')
+            .attr('stroke', determineNodeColor(d));
+
+        // Clear any previous SVG content within the circle
+        node.selectAll('g').remove(); // Remove any existing 'g' elements which will hold the SVG
+
+        // Create a group element to hold the SVG
+        const g = node.append('g')
+            .attr('class', 'svg-container') // Optional: class for styling or debugging
+            .attr('transform', `translate(${radius}, ${radius})`); // Center the group in the circle
+
+        // Append the SVG element to the group
+        g.append(() => svgElement);
+
+        // Set the size of the SVG element
+        d3.select(svgElement)
+            .attr('width', radius * 2)
+            .attr('height', radius * 2)
+            .attr('viewBox', `0 0 ${radius * 2} ${radius * 2}`) // Adjust viewBox to ensure SVG scales correctly
+            .style('position', 'absolute') // Ensure proper positioning
+            .style('top', `-${radius}px`)
+            .style('left', `-${radius}px`);
+    });
+}
+
 function createLinks(links) {
     getTypesOfLinks().forEach(typeOfLink => {
         const linkSelection = svg.selectAll(`line.link.${typeOfLink}`)
@@ -92,36 +161,6 @@ function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
 
     const radius = Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id]) * 3;
     return radius === 0 ? 1 : radius;
-}
-
-function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation) {
-    const circles = svg.selectAll('circle').data(nodes);
-    circles.exit().remove();
-
-    const enteredCircles = circles.enter().append('circle')
-        .attr('class', d => d.type)
-        .attr('r', d => {
-            d.radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
-            return d.radius
-        })
-        .style('fill', d => determineNodeBorderColor(d))
-        .style('stroke', d => determineNodeColor(d))
-        .style('stroke-width', nodeBorderSize)
-        //.style('visibility', 'hidden') //debugging markers
-        .call(d3.drag()
-            .on('start', (event, d) => dragstarted(event, d, simulation))
-            .on('drag', dragged)
-            .on('end', (event, d) => dragended(event, d, simulation)));
-
-    const allCircles = circles.merge(enteredCircles);
-
-    allCircles.on('click', (event, d) => {
-        if (clickableNode(d)) {
-            addNodeToAddedNodes(d)
-            setLastAddedNodeId(d.id)
-            refreshGraph();
-        }
-    });
 }
 
 function createMarkers() {

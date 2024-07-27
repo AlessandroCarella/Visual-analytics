@@ -1,4 +1,4 @@
-import { createLabels, createLinks, createMarkers, createNodes, setupTooltip } from './createGraphHelpers/createEntities';
+import { createLabels, createLinks, createMarkers, createNodes, preloadSvgs, setupTooltip } from './createGraphHelpers/createEntities';
 import { createDictNodeToTypeCountry, createLinksData, createNodesData, findSourcesOrTargetsNotActiveButInGraph, getPossibleNodes } from './createGraphHelpers/dataGeneration';
 import { initializeSimulation } from './createGraphHelpers/simulation';
 import { getCurrentData, getInitialData } from './dataManagement';
@@ -25,10 +25,12 @@ function createGraph() {
     const simulation = initializeSimulation(nodes, links);
 
     //graph enetites
+    preloadSvgs().then(() => {
+        createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation);
+    });
     createLinks(links);
-    createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation);
     createMarkers();
-    createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount);
+    //createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount);
     setupTooltip(targetsPerSourceCount, sourcesPerTargetCount);
 }
 
