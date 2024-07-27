@@ -22,12 +22,13 @@ function dragstarted(event, d, simulation) {
 }
 
 function dragged(event, d) {    
-    d3.selectAll('div-tooltip.tooltip').style('opacity', 0); // Hide tooltip on click
+    //d3.selectAll('div-tooltip.tooltip').style('opacity', 0); // Hide tooltip on click
     d.fx = event.x;
     d.fy = event.y;
 }
 
 function dragended(event, d, simulation) {
+    d3.selectAll('div-tooltip.tooltip').style('opacity', 1);
     if (!event.active) simulation.alphaTarget(0);
     d.fx = null;
     d.fy = null;
@@ -60,30 +61,16 @@ async function preloadSvgs() {
     await Promise.all(promises);
 }
 
-function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation) {
-    // Bind data to existing groups
-    const nodeGroups = svg.selectAll('g.node').data(nodes, d => d.id);
+function handleClick(event, d) {
+    if (clickableNode(d)) {
+        addNodeToAddedNodes(d);
+        setLastAddedNodeId(d.id);
+        refreshGraph();
+    }
+}
 
-    // Remove old groups
-    nodeGroups.exit().remove();
-
-    // Enter selection for new groups
-    const enteredNodeGroups = nodeGroups.enter().append('g')
-        .attr('class', 'node')
-        .call(d3.drag()
-            .on('start', (event, d) => dragstarted(event, d, simulation))
-            .on('drag', dragged)
-            .on('end', (event, d) => dragended(event, d, simulation)))
-        .on('click', (event, d) => {
-            if (clickableNode(d)) {
-                addNodeToAddedNodes(d);
-                setLastAddedNodeId(d.id);
-                refreshGraph();
-            }
-        });
-
-    // Append circles to the groups
-    enteredNodeGroups.append('circle')
+function appendCircles(nodeGroups, nodes, targetsPerSourceCount, sourcesPerTargetCount) {
+    nodeGroups.append('circle')
         .attr('class', d => d.type)
         .attr('r', d => {
             d.radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
@@ -92,9 +79,10 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
         .style('stroke-width', nodeBorderSize)
         .style('fill', 'transparent') // debugging markers
         .style('stroke', d => determineNodeColor(d));
+}
 
-    // Append SVG icons to the groups
-    enteredNodeGroups.each(function (d) {
+function appendSVGIcons(nodeGroups, nodes, targetsPerSourceCount, sourcesPerTargetCount) {
+    nodeGroups.each(function (d) {
         const nodeGroup = d3.select(this);
         const svgString = svgCache[d.nodeType];
         const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
@@ -120,15 +108,28 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
                 .attr('stroke', determineNodeColor(d));
         }
     });
-
-    // Merge entered groups with existing ones
-    nodeGroups.merge(enteredNodeGroups)
 }
 
+function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation) {
+    const nodeGroups = svg.selectAll('g.node').data(nodes, d => d.id);
+    nodeGroups.exit().remove();
 
+    // Enter selection for new groups
+    const enteredNodeGroups = nodeGroups.enter().append('g')
+        .attr('class', 'node')
+        .call(d3.drag()
+            .on('start', (event, d) => dragstarted(event, d, simulation))
+            .on('drag', dragged)
+            .on('end', (event, d) => dragended(event, d, simulation)))
+        .on('click', (event, d) => handleClick(event, d));
 
+    // Append circles and SVG icons
+    appendCircles(enteredNodeGroups, nodes, targetsPerSourceCount, sourcesPerTargetCount);
+    appendSVGIcons(enteredNodeGroups, nodes, targetsPerSourceCount, sourcesPerTargetCount);
 
-
+    // Merge entered groups with existing ones
+    nodeGroups.merge(enteredNodeGroups);
+}
 
 function createLinks(links) {
     getTypesOfLinks().forEach(typeOfLink => {

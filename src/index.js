@@ -11,6 +11,7 @@ import { addDropdownEventListenersInvestigate, populateSelectInvestigate, setupI
 import { addDropdownEventListeners, populateSelect } from "./modules/populateSelect";
 import { getUniqueItemsPerKey } from "./modules/utils";
 import { setupGuideButton } from "./modules/guide";
+import { preloadSvgs } from "./modules/createGraphHelpers/createEntities";
 
 const jsonFilePathForMergedDatasetWithToInvestigateExtraData = "data/mergedDatasetWithToInvestigateExtraData.json";
 const jsonFilePathForConnectionsLevelsSouspectSourcesNoRepetition = "data/connectionsLevelsSouspectSourcesNoRepetition.json";
@@ -55,7 +56,9 @@ Promise.all([
         addTypeButtonsEventListeners();
 
         //guide
-        setupGuideButton()
+        preloadSvgs().then(() => {
+            setupGuideButton()
+        });
     })
     .catch((error) => console.error("Error loading the data:", error));
 
