@@ -92,40 +92,22 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
     // Merge entered circles with existing ones
     const allCircles = circles.merge(enteredCircles);
 
-    // Update circles and append SVG content
-    allCircles.each(function(d) {
+    // Add SVG icons inside nodes
+    allCircles.each(function (d) {
         const node = d3.select(this);
         const svgString = svgCache[d.nodeType] || svgCache['null'];
-        const radius = d.radius;
+        const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
 
-        // Create a temporary div to parse the SVG string
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = svgString;
-        const svgElement = tempDiv.querySelector('svg');
+        node.html(svgString);
 
-        // Ensure paths within the SVG have the correct stroke
-        d3.select(svgElement).selectAll('path')
+        node.select('svg')
+        .attr('width', radius * 2)
+        .attr('height', radius * 2)
+        .attr('x', -radius)
+        .attr('y', -radius);
+
+        node.select('path')
             .attr('stroke', determineNodeColor(d));
-
-        // Clear any previous SVG content within the circle
-        node.selectAll('g').remove(); // Remove any existing 'g' elements which will hold the SVG
-
-        // Create a group element to hold the SVG
-        const g = node.append('g')
-            .attr('class', 'svg-container') // Optional: class for styling or debugging
-            .attr('transform', `translate(${radius}, ${radius})`); // Center the group in the circle
-
-        // Append the SVG element to the group
-        g.append(() => svgElement);
-
-        // Set the size of the SVG element
-        d3.select(svgElement)
-            .attr('width', radius * 2)
-            .attr('height', radius * 2)
-            .attr('viewBox', `0 0 ${radius * 2} ${radius * 2}`) // Adjust viewBox to ensure SVG scales correctly
-            .style('position', 'absolute') // Ensure proper positioning
-            .style('top', `-${radius}px`)
-            .style('left', `-${radius}px`);
     });
 }
 
