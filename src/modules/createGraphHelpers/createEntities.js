@@ -79,6 +79,10 @@ function createLinks(links) {
 }
 
 function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
+    //when the node is not both a source and a target the value in one of the 2 arrays
+    //is going to be undefined
+    //i prefer to handle this issue here rather than in the findPerSourceNumberOfTargetsOrOpposite
+    //function in utils
     if (targetsPerSourceCount[d.id] === undefined) {
         targetsPerSourceCount[d.id] = 0;
     }
@@ -91,59 +95,37 @@ function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
 }
 
 function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation) {
-    const images = svg.selectAll('g.node').data(nodes);
-    images.exit().remove();
+    const circles = svg.selectAll('circle').data(nodes);
+    circles.exit().remove();
 
-    const enteredImages = images.enter().append('g')
-        .attr('class', d => `node.${d.type}`)
-        .attr('transform', d => `translate(${d.x}, ${d.y})`)
+    const enteredCircles = circles.enter().append('circle')
+        .attr('class', d => d.type)
+        .attr('r', d => {
+            d.radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
+            return d.radius
+        })
+        .style('fill', d => determineNodeBorderColor(d))
+        .style('stroke', d => determineNodeColor(d))
+        .style('stroke-width', nodeBorderSize)
+        //.style('visibility', 'hidden') //debugging markers
         .call(d3.drag()
             .on('start', (event, d) => dragstarted(event, d, simulation))
             .on('drag', dragged)
             .on('end', (event, d) => dragended(event, d, simulation)));
 
-    enteredImages.each(function(d) {
-        const node = d3.select(this);
-        const svgString = svgCache[d.nodeType] || svgCache['null'];
-        const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
+    const allCircles = circles.merge(enteredCircles);
 
-        node.html(svgString);
-
-        node.append('circle')
-            .attr('cx', 0)
-            .attr('cy', 0)
-            // Radius of the hit circle, the 4/5 ratio is because the svg dimension is different all around so 
-            // having a slightly smaller radius is beter for the dragging functionality
-            .attr('r', radius*4/5)
-            .attr('fill', 'transparent')
-            .attr('pointer-events', 'all');
-
-        node.select('svg')
-            .attr('width', radius * 2)
-            .attr('height', radius * 2)
-            .attr('x', -radius)
-            .attr('y', -radius);
-
-        node.select('path')
-            .attr('stroke', determineNodeColor(d));
-    });
-
-    const allImages = images.merge(enteredImages);
-
-    allImages.on('click', (event, d) => {
+    allCircles.on('click', (event, d) => {
         if (clickableNode(d)) {
-            addNodeToAddedNodes(d);
-            setLastAddedNodeId(d.id);
+            addNodeToAddedNodes(d)
+            setLastAddedNodeId(d.id)
             refreshGraph();
         }
-    });
-
-    simulation.on('tick', () => {
-        allImages.attr('transform', d => `translate(${d.x}, ${d.y})`);
     });
 }
 
 function createMarkers() {
+    // Create the markers at the end
     svg.append("defs").selectAll("marker")
         .data(getTypesOfLinks())
         .enter().append("marker")
@@ -187,7 +169,7 @@ function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
         .style("border-radius", "3px")
         .style("pointer-events", "none");
 
-    svg.selectAll('g.node')
+    svg.selectAll('circle')
         .on('mouseover', (event, d) => {
             const nodeType = d.nodeType ? d.nodeType : "Unknown";
             const country = d.country ? d.country : "Unknown";
