@@ -61,22 +61,15 @@ async function preloadSvgs() {
 }
 
 function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation) {
-    // Bind data to existing circles
-    const circles = svg.selectAll('circle').data(nodes, d => d.id);
+    // Bind data to existing groups
+    const nodeGroups = svg.selectAll('g.node').data(nodes, d => d.id);
 
-    // Remove old circles
-    circles.exit().remove();
+    // Remove old groups
+    nodeGroups.exit().remove();
 
-    // Enter selection for new circles
-    const enteredCircles = circles.enter().append('circle')
-        .attr('class', d => d.type)
-        .attr('r', d => {
-            d.radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
-            return d.radius;
-        })
-        .style('stroke-width', nodeBorderSize)
-        .style('fill', 'transparent') // debugging markers
-        .style('stroke', d => determineNodeColor(d))
+    // Enter selection for new groups
+    const enteredNodeGroups = nodeGroups.enter().append('g')
+        .attr('class', 'node')
         .call(d3.drag()
             .on('start', (event, d) => dragstarted(event, d, simulation))
             .on('drag', dragged)
@@ -89,27 +82,52 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
             }
         });
 
-    // Merge entered circles with existing ones
-    const allCircles = circles.merge(enteredCircles);
+    // Append circles to the groups
+    enteredNodeGroups.append('circle')
+        .attr('class', d => d.type)
+        .attr('r', d => {
+            d.radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
+            return d.radius;
+        })
+        .style('stroke-width', nodeBorderSize)
+        .style('fill', 'transparent') // debugging markers
+        .style('stroke', d => determineNodeColor(d));
 
-    // Add SVG icons inside nodes
-    allCircles.each(function (d) {
-        const node = d3.select(this);
+    // Append SVG icons to the groups
+    enteredNodeGroups.each(function (d) {
+        const nodeGroup = d3.select(this);
         const svgString = svgCache[d.nodeType] || svgCache['null'];
         const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
 
-        node.html(svgString);
+        // Create a temporary div to parse the SVG string
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = svgString;
+        const svgElement = tempDiv.querySelector('svg');
 
-        node.select('svg')
-        .attr('width', radius * 2)
-        .attr('height', radius * 2)
-        .attr('x', -radius)
-        .attr('y', -radius);
+        if (svgElement) {
+            // Remove existing SVG if any
+            nodeGroup.select('svg').remove();
 
-        node.select('path')
-            .attr('stroke', determineNodeColor(d));
+            // Adjust SVG properties and append to the group
+            const newSvg = nodeGroup.append(() => svgElement)
+                .attr('width', radius * 2)
+                .attr('height', radius * 2);
+
+            // Adjust SVG position
+            newSvg.attr('x', -radius)
+                  .attr('y', -radius);
+
+            // Adjust paths within the SVG
+            newSvg.selectAll('path')
+                  .attr('stroke', determineNodeColor(d));
+        }
     });
+
+    // Merge entered groups with existing ones
+    nodeGroups.merge(enteredNodeGroups);
 }
+
+
 
 function createLinks(links) {
     getTypesOfLinks().forEach(typeOfLink => {
