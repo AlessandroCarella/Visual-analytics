@@ -1,3 +1,5 @@
+import * as d3 from 'd3';
+
 let initialData;
 let currentData;
 let addedNodes = new Set();

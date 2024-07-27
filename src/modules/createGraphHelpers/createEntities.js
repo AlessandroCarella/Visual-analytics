@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { svg } from "../../index";
 import { colorsOfLinks, companiesToInvestigate } from "../constants";
 import { addNodeToAddedNodes, clickableNode, getTypesOfLinks, setLastAddedNodeId } from "../dataManagement";
@@ -36,40 +37,6 @@ function dragended(event, d, simulation) {
 // Cache for preloaded SVGs
 const svgCache = {};
 
-function createLinks(links) {
-    getTypesOfLinks().forEach(typeOfLink => {
-        const linkSelection = svg.selectAll(`line.link.${typeOfLink}`)
-            .data(links.filter(d => d.typeOfLink === typeOfLink));
-
-        linkSelection.enter().append('line')
-            .attr('class', `link ${typeOfLink}`)
-            .style('stroke', colorsOfLinks(typeOfLink) || 'black')
-            .style('stroke-width', d => Math.sqrt(d.weight) * linksSizeMultiplier)
-            .attr("marker-end", `url(#arrow-${typeOfLink})`)
-            .each(function (d) {
-                d.initialColor = colorsOfLinks(d.typeOfLink);
-            });
-
-        linkSelection.exit().remove();
-    });
-}
-
-function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
-    //when the node is not both a source and a target the value in one of the 2 arrays
-    //is going to be undefined
-    //i prefer to handle this issue here rather than in the findPerSourceNumberOfTargetsOrOpposite
-    //function in utils
-    if (targetsPerSourceCount[d.id] === undefined) {
-        targetsPerSourceCount[d.id] = 0;
-    }
-    if (sourcesPerTargetCount[d.id] === undefined) {
-        sourcesPerTargetCount[d.id] = 0;
-    }
-
-    const radius = Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id]) * 3;
-    return radius === 0 ? 1 : radius;
-}
-
 async function preloadSvgs() {
     const iconMap = {
         null: '../svgs/questionMark.svg',
@@ -93,13 +60,42 @@ async function preloadSvgs() {
     await Promise.all(promises);
 }
 
+function createLinks(links) {
+    getTypesOfLinks().forEach(typeOfLink => {
+        const linkSelection = svg.selectAll(`line.link.${typeOfLink}`)
+            .data(links.filter(d => d.typeOfLink === typeOfLink));
+
+        linkSelection.enter().append('line')
+            .attr('class', `link ${typeOfLink}`)
+            .style('stroke', colorsOfLinks(typeOfLink) || 'black')
+            .style('stroke-width', d => Math.sqrt(d.weight) * linksSizeMultiplier)
+            .attr("marker-end", `url(#arrow-${typeOfLink})`)
+            .each(function (d) {
+                d.initialColor = colorsOfLinks(d.typeOfLink);
+            });
+
+        linkSelection.exit().remove();
+    });
+}
+
+function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
+    if (targetsPerSourceCount[d.id] === undefined) {
+        targetsPerSourceCount[d.id] = 0;
+    }
+    if (sourcesPerTargetCount[d.id] === undefined) {
+        sourcesPerTargetCount[d.id] = 0;
+    }
+
+    const radius = Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id]) * 3;
+    return radius === 0 ? 1 : radius;
+}
+
 function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation) {
-    // Update data binding
     const images = svg.selectAll('g.node').data(nodes);
     images.exit().remove();
 
     const enteredImages = images.enter().append('g')
-        .attr('class', d => d.type)
+        .attr('class', d => `node.${d.type}`)
         .attr('transform', d => `translate(${d.x}, ${d.y})`)
         .call(d3.drag()
             .on('start', (event, d) => dragstarted(event, d, simulation))
@@ -108,29 +104,26 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
 
     enteredImages.each(function(d) {
         const node = d3.select(this);
-        const svgString = svgCache[d.nodeType] || svgCache['null']; // Use preloaded SVG or default
+        const svgString = svgCache[d.nodeType] || svgCache['null'];
         const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
 
         node.html(svgString);
 
-        // Add a transparent rectangle for dragging the node (else the node is only draggable by the svg line)
         node.append('circle')
             .attr('cx', 0)
             .attr('cy', 0)
             // Radius of the hit circle, the 4/5 ratio is because the svg dimension is different all around so 
             // having a slightly smaller radius is beter for the dragging functionality
-            .attr('r', radius*4/5) 
-            .attr('fill', 'black') // Invisible fill
-            .attr('pointer-events', 'all'); // Make sure it's interactive
+            .attr('r', radius*4/5)
+            .attr('fill', 'transparent')
+            .attr('pointer-events', 'all');
 
-        // Scale the SVG
         node.select('svg')
             .attr('width', radius * 2)
             .attr('height', radius * 2)
             .attr('x', -radius)
             .attr('y', -radius);
 
-        // Dynamically set the stroke color
         node.select('path')
             .attr('stroke', determineNodeColor(d));
     });
@@ -145,16 +138,12 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
         }
     });
 
-    console.log(allImages);
-
-    // Update positions on each tick of the simulation
     simulation.on('tick', () => {
         allImages.attr('transform', d => `translate(${d.x}, ${d.y})`);
     });
 }
 
 function createMarkers() {
-    // Create the markers at the end
     svg.append("defs").selectAll("marker")
         .data(getTypesOfLinks())
         .enter().append("marker")
@@ -188,7 +177,7 @@ function createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount) {
 }
 
 function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
-    const tooltip = d3.select("body").append("div")
+    const tooltip = d3.select("body").append("div-tooltip")
         .attr("class", "tooltip")
         .style("opacity", 0)
         .style("position", "absolute")
@@ -198,9 +187,8 @@ function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
         .style("border-radius", "3px")
         .style("pointer-events", "none");
 
-    svg.selectAll('image')
+    svg.selectAll('g.node')
         .on('mouseover', (event, d) => {
-            // Default to "Unknown" if nodeType or country are null
             const nodeType = d.nodeType ? d.nodeType : "Unknown";
             const country = d.country ? d.country : "Unknown";
 
@@ -219,6 +207,5 @@ function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
             tooltip.transition().duration(0).style("opacity", 0);
         });
 }
-
 
 export { preloadSvgs, createLabels, createLinks, createMarkers, createNodes, setupTooltip };

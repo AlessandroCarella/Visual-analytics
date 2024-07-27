@@ -90,6 +90,7 @@ function ticked(width, height, svg) {
         });
 }
 */
+import * as d3 from 'd3';
 
 function getIntersectionX(node1, node2, isSource) {
     const dx = node2.x - node1.x;
@@ -111,7 +112,7 @@ function getIntersectionY(node1, node2, isSource) {
     return y;
 }
 
-function ticked(width, height, svg, allImages) {
+function ticked(width, height, svg) {
     svg.selectAll('line.link')
         .attr('x1', d => {
             const x1 = getIntersectionX(d.source, d.target, true);
@@ -131,11 +132,11 @@ function ticked(width, height, svg, allImages) {
         });
 
     svg.selectAll('g.node')
-        .attr('x', d => {
+        .attr('cx', d => {
             d.x = Math.max(0, Math.min(width - svgSize, d.x));
             return d.x - svgSize / 2; // Adjust for centering
         })
-        .attr('y', d => {
+        .attr('cy', d => {
             d.y = Math.max(0, Math.min(height - svgSize, d.y));
             return d.y - svgSize / 2; // Adjust for centering
         });
@@ -158,7 +159,7 @@ function calculateRepulsionStrength(numNodes) {
     return baseStrength / scalingFactor;
 }
 
-function initializeSimulation(nodes, links, allImages) {
+function initializeSimulation(nodes, links) {
     const { width, height } = getGraphDimensions();
     const numNodes = nodes.length;
     const repulsionStrength = calculateRepulsionStrength(numNodes);
@@ -167,7 +168,7 @@ function initializeSimulation(nodes, links, allImages) {
         .force('link', d3.forceLink().id(d => d.id).links(links).distance(100))
         .force('charge', d3.forceManyBody().strength(repulsionStrength))
         .force('center', d3.forceCenter(width / 2, height / 2))
-        .on('tick', () => ticked(width, height, svg, allImages));
+        .on('tick', () => ticked(width, height, svg));
 }
 
 export { initializeSimulation };

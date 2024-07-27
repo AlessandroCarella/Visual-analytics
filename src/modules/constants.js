@@ -1,3 +1,5 @@
+import * as d3 from 'd3';
+
 const graphDimensionsBorder = 0
 
 const activeButtonClass = "active-button"
