@@ -115,15 +115,15 @@ function appendSVGIcons(nodeGroups, nodes, targetsPerSourceCount, sourcesPerTarg
 
 function getNewRadius(nodeType, radius) {
     const radiusMap = {
+        'default': 1,
         'company': 15 / 20,
+        'event': 18 / 20,
+        'location': 23 / 20,
         'movement': 14 / 20,
-        'vessel': 18 / 20,
         'organization': 18 / 20,
         'person': 18 / 20,
-        'location': 23 / 20,
         'political_organization': 15 / 20,
-        'event': 18 / 20,
-        'default': 1
+        'vessel': 18 / 20,
     };
 
     return radius * (radiusMap[nodeType] || radiusMap['default']);

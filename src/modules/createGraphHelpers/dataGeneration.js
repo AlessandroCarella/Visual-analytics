@@ -117,20 +117,49 @@ function createDictNodeToTypeCountry(data, sources, targets, sourcesTargets, tar
     return resultDict;
 }
 
+function getMultipleLinksBetweenNodesMap(data) {
+    let linkCountMap = new Map();
+
+    // Step 1: Count the number of links between each pair of nodes
+    data.forEach(d => {
+        const sourceTargetKey = `${d.source}-${d.target}`;
+        const targetSourceKey = `${d.target}-${d.source}`;
+
+        if (linkCountMap.has(sourceTargetKey)) {
+            linkCountMap.set(sourceTargetKey, linkCountMap.get(sourceTargetKey) + 1);
+        } else if (linkCountMap.has(targetSourceKey)) {
+            linkCountMap.set(targetSourceKey, linkCountMap.get(targetSourceKey) + 1);
+        } else {
+            linkCountMap.set(sourceTargetKey, 1);
+        }
+    });
+
+    return linkCountMap;
+}
+
 function createLinksData(data, nodes) {
     let links = [];
+    const multipleLinksBetweenNodesMap = getMultipleLinksBetweenNodesMap(data);
 
     data.forEach(d => {
+        const sourceTargetKey = `${d.source}-${d.target}`;
+        const targetSourceKey = `${d.target}-${d.source}`;
+
+        const sourceTargetCount = multipleLinksBetweenNodesMap.get(sourceTargetKey) || 0;
+        const targetSourceCount = multipleLinksBetweenNodesMap.get(targetSourceKey) || 0;
+
         const link = {
             source: nodes.find(node => node.id === d.source),
             target: nodes.find(node => node.id === d.target),
             typeOfLink: d.typeOfLink,
-            weight: d.weight
+            weight: d.weight,
+            nMultipleLinks: sourceTargetCount + targetSourceCount
         };
         links.push(link);
     });
 
     return links;
 }
+
 
 export { createDictNodeToTypeCountry, createLinksData, createNodesData, findSourcesOrTargetsNotActiveButInGraph, getPossibleNodes };

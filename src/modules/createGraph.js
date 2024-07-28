@@ -20,6 +20,7 @@ function createGraph() {
 
     const nodes = createNodesData(sources, targets, sourcesNotActiveButInGraph, targetsNotActiveButInGraph, dictNodeToTypeCountry);
     const links = createLinksData(getCurrentData(), nodes);
+    console.log(links)
 
     //simulation
     const simulation = initializeSimulation(nodes, links);
