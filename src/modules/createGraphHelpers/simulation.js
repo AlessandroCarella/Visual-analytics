@@ -113,36 +113,55 @@ function getIntersectionY(node1, node2, isSource) {
 }
 
 function linkArc(d) {
-    let number = d3.randomInt(5);
-    let dx = d.target.x - d.source.x
-    let dy = d.target.y - d.source.y
-    let r = 5
-    
-    if (number == 1) r = 60; // Add a fixed distance to separate the arcs
-    
-    return "M" + d.source.x + "," + d.source.y +
-        "A" + r + "," + r + " 0 0,1 " + d.target.x + "," + d.target.y;
-  }
+    const typeAngleMap = {
+        "ownership": Math.PI / 6,            // 30 degrees
+        "partnership": Math.PI / 4,          // 45 degrees
+        "family_relationship": Math.PI / 3,  // 60 degrees
+        "membership": Math.PI / 2.5,         // 72 degrees
+    };
+
+    let dx = d.target.x - d.source.x;
+    let dy = d.target.y - d.source.y;
+    let distance = Math.sqrt(dx * dx + dy * dy);
+
+    if (d.nMultipleLinks === 1 || d.typeOfLink === "toInvestigate") {
+        // Straight line for single link
+        return "M" + d.source.x + "," + d.source.y +
+               "L" + d.target.x + "," + d.target.y;
+    } else {
+        // Get the angle for the given typeOfLink or default to 60 degrees
+        let angle = typeAngleMap[d.typeOfLink] || Math.PI / 3;
+
+        // Calculate the control points for the arc
+        let cx = (d.source.x + d.target.x) / 2 + Math.cos(angle) * distance / 3;
+        let cy = (d.source.y + d.target.y) / 2 + Math.sin(angle) * distance / 3;
+
+        return "M" + d.source.x + "," + d.source.y +
+               "Q" + cx + "," + cy + " " + d.target.x + "," + d.target.y;
+    }
+}
+
 
 function ticked(width, height, svg) {
     svg.selectAll('path.link')
-        // .attr('x1', d => {
-        //     const x1 = getIntersectionX(d.source, d.target, true);
-        //     return isNaN(x1) ? 0 : x1;
-        // })
-        // .attr('y1', d => {
-        //     const y1 = getIntersectionY(d.source, d.target, true);
-        //     return isNaN(y1) ? 0 : y1;
-        // })
-        // .attr('x2', d => {
-        //     const x2 = getIntersectionX(d.target, d.source, false);
-        //     return isNaN(x2) ? 0 : x2;
-        // })
-        // .attr('y2', d => {
-        //     const y2 = getIntersectionY(d.target, d.source, false);
-        //     return isNaN(y2) ? 0 : y2;
-        // })
-        .attr('d', d=> linkArc(d))
+        .attr('d', d => linkArc(d))
+        .attr('fill', 'none')
+    // .attr('x1', d => {
+    //     const x1 = getIntersectionX(d.source, d.target, true);
+    //     return isNaN(x1) ? 0 : x1;
+    // })
+    // .attr('y1', d => {
+    //     const y1 = getIntersectionY(d.source, d.target, true);
+    //     return isNaN(y1) ? 0 : y1;
+    // })
+    // .attr('x2', d => {
+    //     const x2 = getIntersectionX(d.target, d.source, false);
+    //     return isNaN(x2) ? 0 : x2;
+    // })
+    // .attr('y2', d => {
+    //     const y2 = getIntersectionY(d.target, d.source, false);
+    //     return isNaN(y2) ? 0 : y2;
+    // })
 
 
     svg.selectAll('g.node')
@@ -152,14 +171,14 @@ function ticked(width, height, svg) {
             d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
             return `translate(${d.x},${d.y})`;
         });
-        // .attr('cx', d => {
-        //     d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
-        //     return d.x;
-        // })
-        // .attr('cy', d => {
-        //     d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
-        //     return d.y;
-        // });
+    // .attr('cx', d => {
+    //     d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
+    //     return d.x;
+    // })
+    // .attr('cy', d => {
+    //     d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
+    //     return d.y;
+    // });
 
     svg.selectAll('text')
         .attr('x', d => d.x)
@@ -171,7 +190,6 @@ function ticked(width, height, svg) {
 
 import { svg } from '../../index';
 import { getGraphDimensions } from '../utils';
-import { svgSize } from './graphConstants';
 
 function calculateRepulsionStrength(numNodes) {
     const baseStrength = -600; // Increase the base strength
