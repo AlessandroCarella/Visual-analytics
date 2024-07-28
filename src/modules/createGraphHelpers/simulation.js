@@ -144,9 +144,14 @@ function ticked(width, height, svg) {
         // })
         .attr('d', d=> linkArc(d))
 
-    svg.selectAll('g.node')
-        .attr('transform', d => `translate(${d.x},${d.y})`); // Update position of node groups
 
+    svg.selectAll('g.node')
+        .attr('transform', d => {
+            // Ensure nodes stay within the boundaries
+            d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
+            d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
+            return `translate(${d.x},${d.y})`;
+        });
         // .attr('cx', d => {
         //     d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
         //     return d.x;

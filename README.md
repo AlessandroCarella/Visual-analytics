@@ -63,6 +63,8 @@
   
   the svgs are still dragable by their countourn but it's not the best
 
+* another kind of implementation of the links was to add a tooltip on hover of the link to show the various kinds of links 2 entities shared
+
 ## To run the project:
 * install node (developed in node 20.11.1)
 * in the folder of the project run
