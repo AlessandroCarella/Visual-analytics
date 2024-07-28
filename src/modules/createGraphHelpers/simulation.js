@@ -112,24 +112,37 @@ function getIntersectionY(node1, node2, isSource) {
     return y;
 }
 
+function linkArc(d) {
+    let number = d3.randomInt(5);
+    let dx = d.target.x - d.source.x
+    let dy = d.target.y - d.source.y
+    let r = 5
+    
+    if (number == 1) r = 60; // Add a fixed distance to separate the arcs
+    
+    return "M" + d.source.x + "," + d.source.y +
+        "A" + r + "," + r + " 0 0,1 " + d.target.x + "," + d.target.y;
+  }
+
 function ticked(width, height, svg) {
-    svg.selectAll('line.link')
-        .attr('x1', d => {
-            const x1 = getIntersectionX(d.source, d.target, true);
-            return isNaN(x1) ? 0 : x1;
-        })
-        .attr('y1', d => {
-            const y1 = getIntersectionY(d.source, d.target, true);
-            return isNaN(y1) ? 0 : y1;
-        })
-        .attr('x2', d => {
-            const x2 = getIntersectionX(d.target, d.source, false);
-            return isNaN(x2) ? 0 : x2;
-        })
-        .attr('y2', d => {
-            const y2 = getIntersectionY(d.target, d.source, false);
-            return isNaN(y2) ? 0 : y2;
-        });
+    svg.selectAll('path.link')
+        // .attr('x1', d => {
+        //     const x1 = getIntersectionX(d.source, d.target, true);
+        //     return isNaN(x1) ? 0 : x1;
+        // })
+        // .attr('y1', d => {
+        //     const y1 = getIntersectionY(d.source, d.target, true);
+        //     return isNaN(y1) ? 0 : y1;
+        // })
+        // .attr('x2', d => {
+        //     const x2 = getIntersectionX(d.target, d.source, false);
+        //     return isNaN(x2) ? 0 : x2;
+        // })
+        // .attr('y2', d => {
+        //     const y2 = getIntersectionY(d.target, d.source, false);
+        //     return isNaN(y2) ? 0 : y2;
+        // })
+        .attr('d', d=> linkArc(d))
 
     svg.selectAll('g.node')
         .attr('transform', d => `translate(${d.x},${d.y})`); // Update position of node groups

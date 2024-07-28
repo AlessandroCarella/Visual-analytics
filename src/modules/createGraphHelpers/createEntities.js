@@ -152,10 +152,10 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
 
 function createLinks(links) {
     getTypesOfLinks().forEach(typeOfLink => {
-        const linkSelection = svg.selectAll(`line.link.${typeOfLink}`)
+        const linkSelection = svg.selectAll(`path.link.${typeOfLink}`)
             .data(links.filter(d => d.typeOfLink === typeOfLink));
 
-        linkSelection.enter().append('line')
+        linkSelection.enter().append('path')
             .attr('class', `link ${typeOfLink}`)
             .style('stroke', colorsOfLinks(typeOfLink) || 'black')
             .style('stroke-width', d => Math.sqrt(d.weight) * linksSizeMultiplier)
