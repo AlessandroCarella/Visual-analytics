@@ -163,7 +163,6 @@ function resetSelectedSource() {
 }
 
 function setSelectedSource(element) {
-    resetAddedNodes();
     selectedSource = element;
 }
 
@@ -179,7 +178,6 @@ function resetSelectedTarget() {
 }
 
 function setSelectedTarget(element) {
-    resetAddedNodes();
     selectedTarget = element;
 }
 
@@ -364,22 +362,24 @@ function filterAndSetCurrentDataInvestigateDistance(nodesIdsToConsider) {
 }
 
 function updateCurrentDataBasedOnInvestigateDistanceValues() {
-    let dropdown = d3.select(idSelectInvestigate);
-    if (dropdown.property("value") === selectEmptyVal) {
-        dropdown.property('value', selectAllNodesVal);
+    if (getBothValueInvestigateDistance() !== -1 || getSourceValueInvestigateDistance()!== -1 || getTargetValueInvestigateDistance()!== -1) {
+        let dropdown = d3.select(idSelectInvestigate);
+        if (dropdown.property("value") === selectEmptyVal) {
+            dropdown.property('value', selectAllNodesVal);
+        }
+
+        const { selectedLevel, selectedKind } = determineSelectionInvestigateDistance();
+
+        if (selectedLevel === -1) {
+            setCurrentData(currentData);
+            return;
+        }
+
+        const dataToWorkWith = getDataToWorkWithInvestigateDistance(selectedKind, selectedLevel);
+        const nodesIdsToConsider = processNodesIdsInvestigateDistance(dataToWorkWith, selectedLevel, companiesToInvestigate);
+
+        filterAndSetCurrentDataInvestigateDistance(nodesIdsToConsider);
     }
-
-    const { selectedLevel, selectedKind } = determineSelectionInvestigateDistance();
-
-    if (selectedLevel === -1) {
-        setCurrentData(currentData);
-        return;
-    }
-
-    const dataToWorkWith = getDataToWorkWithInvestigateDistance(selectedKind, selectedLevel);
-    const nodesIdsToConsider = processNodesIdsInvestigateDistance(dataToWorkWith, selectedLevel, companiesToInvestigate);
-
-    filterAndSetCurrentDataInvestigateDistance(nodesIdsToConsider);
 }
 
 ///////////////////

@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 import { companiesToInvestigateSelectVal, companiesToInvestigateText, selectAllNodesText, selectAllNodesVal, selectEmptyText, selectEmptyVal, sourceSelectTag, targetSelectTag } from "./constants";
-import { getSelectedSource, getSelectedTarget, resetBothValueInvestigateDistance, resetSelectedSource, resetSelectedTarget, resetSelectedValueInvestigate, resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, setSelectedSource, setSelectedTarget, } from "./dataManagement";
+import { getSelectedSource, getSelectedTarget, resetAddedNodes, resetBothValueInvestigateDistance, resetSelectedSource, resetSelectedTarget, resetSelectedValueInvestigate, resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, setSelectedSource, setSelectedTarget, } from "./dataManagement";
 import { refreshGraph } from "./refreshGraph";
 
 function populateSelect(idSelect, items) {
@@ -89,8 +89,10 @@ function handleDropdownChange(selectedValue) {
         }
     }
 
-    resetSelectedValueInvestigate()
-
+    //Reset the added nodes
+    resetAddedNodes();
+    
+    resetSelectedValueInvestigate();
     //change the values in the investigate distance boxes
     resetSourceValueInvestigateDistance()
     resetTargetValueInvestigateDistance()

@@ -14,6 +14,7 @@ import {
     svgSize,
     tooltipBackgroundColor
 } from "./graphConstants";
+import { isObjectEmpty } from '../utils';
 
 function dragstarted(event, d, simulation) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
@@ -22,13 +23,13 @@ function dragstarted(event, d, simulation) {
 }
 
 function dragged(event, d) {    
-    //d3.selectAll('div-tooltip.tooltip').style('opacity', 0); // Hide tooltip on click
+    d3.selectAll('div-tooltip.tooltip').style('visibility', 'hidden'); // Hide tooltip on click
     d.fx = event.x;
     d.fy = event.y;
 }
 
 function dragended(event, d, simulation) {
-    d3.selectAll('div-tooltip.tooltip').style('opacity', 1);
+    d3.selectAll('div-tooltip.tooltip').style('visibility', 'visible');
     if (!event.active) simulation.alphaTarget(0);
     d.fx = null;
     d.fy = null;
@@ -40,7 +41,7 @@ const svgCache = {};
 
 async function preloadSvgs() {
     const iconMap = {
-        null: '../svgs/questionMark.svg',
+        'Unknown': '../svgs/questionMark.svg',
         'company': '../svgs/company.svg',
         'event': '../svgs/event.svg',
         'location': '../svgs/location.svg',
@@ -77,15 +78,17 @@ function appendCircles(nodeGroups, nodes, targetsPerSourceCount, sourcesPerTarge
             return d.radius;
         })
         .style('stroke-width', nodeBorderSize)
-        .style('fill', 'transparent') // debugging markers
+        .style('fill', 'black') // debugging markers
         .style('stroke', d => determineNodeColor(d));
 }
 
 function appendSVGIcons(nodeGroups, nodes, targetsPerSourceCount, sourcesPerTargetCount) {
     nodeGroups.each(function (d) {
         const nodeGroup = d3.select(this);
-        const svgString = svgCache[d.nodeType];
+        const nodeType = typeof d.nodeType === 'object' ? d.nodeType?.nodeType || "Unknown" : d.nodeType || "Unknown";
+        const svgString = svgCache[nodeType];
         const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
+        const newRadius = getNewRadius(nodeType, radius);
 
         // Create a temporary div to parse the SVG string
         const tempDiv = document.createElement('div');
@@ -98,16 +101,32 @@ function appendSVGIcons(nodeGroups, nodes, targetsPerSourceCount, sourcesPerTarg
 
             // Adjust SVG properties and append to the group
             const newSvg = nodeGroup.append(() => svgElement)
-                .attr('width', radius * 2)
-                .attr('height', radius * 2)
-                .attr('x', -d.radius)  // Center the SVG horizontally
-                .attr('y', -d.radius); // Center the SVG vertically
+                .attr('width', newRadius * 2)
+                .attr('height', newRadius * 2)
+                .attr('x', -newRadius)  // Center the SVG horizontally
+                .attr('y', -newRadius); // Center the SVG vertically
 
             // Adjust paths within the SVG
             newSvg.selectAll('path')
                 .attr('stroke', determineNodeColor(d));
         }
     });
+}
+
+function getNewRadius(nodeType, radius) {
+    const radiusMap = {
+        'company': 15 / 20,
+        'movement': 14 / 20,
+        'vessel': 18 / 20,
+        'organization': 18 / 20,
+        'person': 18 / 20,
+        'location': 23 / 20,
+        'political_organization': 15 / 20,
+        'event': 18 / 20,
+        'default': 1
+    };
+
+    return radius * (radiusMap[nodeType] || radiusMap['default']);
 }
 
 function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation) {
@@ -161,7 +180,7 @@ function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
         sourcesPerTargetCount[d.id] = 0;
     }
 
-    const radius = Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id]) * 3;
+    let radius = Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id]) * 3;
     return radius === 0 ? 1 : radius;
 }
 
@@ -189,7 +208,7 @@ function createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount) {
         .enter().append('text')
         .attr('class', d => d.type)
         .text(d => {
-            const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount)
+            const radius = calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount);
             return radius > labelsNodeMinRadiusToShowLabel ? d.id : '';
         })
         .style('font-size', labelsFontSize)
@@ -210,10 +229,10 @@ function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
         .style("border-radius", "3px")
         .style("pointer-events", "none");
 
-    svg.selectAll('circle')
+    svg.selectAll('g.node')
         .on('mouseover', (event, d) => {
-            const nodeType = d.nodeType ? d.nodeType : "Unknown";
-            const country = d.country ? d.country : "Unknown";
+            const nodeType = typeof d.nodeType === 'object' ? d.nodeType?.nodeType || "Unknown" : d.nodeType || "Unknown";
+            const country = d.country || "Unknown";
 
             tooltip.transition().duration(0).style("opacity", 1);
             tooltip.html(`

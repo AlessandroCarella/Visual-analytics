@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 import { companiesToInvestigate, idSelectInvestigate, selectAllNodesText, selectAllNodesVal, selectEmptyVal } from "./constants";
-import { resetBothValueInvestigateDistance, resetOtherInputFromInvestigateDistance, resetSelectedSource, resetSelectedTarget, resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, setSelectedValueInvestigate } from "./dataManagement";
+import { resetAddedNodes, resetBothValueInvestigateDistance, resetOtherInputFromInvestigateDistance, resetSelectedSource, resetSelectedTarget, resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, setSelectedValueInvestigate } from "./dataManagement";
 import { refreshGraph } from "./refreshGraph";
 
 function debounce(func, wait) {

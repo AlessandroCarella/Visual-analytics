@@ -25,8 +25,8 @@ function createGraph() {
     const simulation = initializeSimulation(nodes, links);
 
     //graph enetites
-    createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation);
     createLinks(links);
+    createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simulation);
     createMarkers();
     //createLabels(nodes, targetsPerSourceCount, sourcesPerTargetCount);
     setupTooltip(targetsPerSourceCount, sourcesPerTargetCount);

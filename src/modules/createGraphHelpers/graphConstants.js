@@ -44,9 +44,9 @@ function determineNodeColor(node) {
         return entityToInvestigateColor;
     }
 
-    if (node.id === getLastAddedNodeId()) {
-        return lastAddedNodeColor;
-    }
+    // if (node.id === getLastAddedNodeId()) {
+    //     return lastAddedNodeColor;
+    // }
 
     if (clickableNode(node)) {
         return clickableNodeColor;

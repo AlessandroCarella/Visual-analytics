@@ -2,6 +2,8 @@
 
 # TODO:
   * tutto
+    * call resetAddedNodes when one of the plus button in the investigate section is pressed, only problem is that you have to get all the values of the inputs related to the investigate distance thing and you have to implement the logic to save the previous values
+
     * ~~Inverti bordi e riempimenti~~
 
     * ~~Nodi unknown con il colore grigio~~
@@ -13,8 +15,8 @@
     * ~~Whats the end goal of the minichallange 1, show clusters in the entities to investigate with the select setted to All and~~
       * ~~I cluster sono importanti~~
 
-    * Proposal of showing svg image related to the type of node instead of the circles 
-      * Si
+    * ~~Proposal of showing svg image related to the type of node instead of the circles~~ 
+      * ~~Si~~
 
     * Right click on the node to expand only as source or as target or as both (already in the left click anyway)
       * si
