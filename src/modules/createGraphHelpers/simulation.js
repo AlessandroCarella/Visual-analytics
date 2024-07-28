@@ -112,62 +112,85 @@ function getIntersectionY(node1, node2, isSource) {
     return y;
 }
 
-function linkArc(d) {
-    const angleMap = {
-        2: [Math.PI / 6, -Math.PI / 6],
-        3: [Math.PI / 6, 0, -Math.PI / 6],
-        4: [Math.PI / 6, Math.PI / 4, -Math.PI / 4, -Math.PI / 6]
+// Angle map for different numbers of links
+// Angle map for different numbers of links
+const angleMap = {
+    2: [Math.PI / 6, -Math.PI / 6],
+    3: [Math.PI / 6, 0, -Math.PI / 6],
+    4: [Math.PI / 6, Math.PI / 4, -Math.PI / 4, -Math.PI / 6]
+};
+
+// Calculate the distance between source and target nodes
+function calculateDistance(dx, dy) {
+    return Math.sqrt(dx * dx + dy * dy);
+}
+
+// Calculate the angle of the link direction
+function calculateAngle(dy, dx) {
+    return Math.atan2(dy, dx);
+}
+
+// Calculate the position on the node border for the link
+function calculateNodeBorderPosition(x, y, angle, radius) {
+    return {
+        x: x + Math.cos(angle) * radius,
+        y: y + Math.sin(angle) * radius
     };
+}
 
-    let dx = d.target.x - d.source.x;
-    let dy = d.target.y - d.source.y;
-    let distance = Math.sqrt(dx * dx + dy * dy);
-
-    // Calculate the angle of the link direction
-    let angle = Math.atan2(dy, dx);
-
-    // Determine the radius of the source and target nodes
-    let sourceRadius = d.source.radius || 0;
-    let targetRadius = d.target.radius || 0;
-
-    // Calculate the start and end points of the link on the node borders
-    let sourceX = d.source.x + Math.cos(angle) * sourceRadius;
-    let sourceY = d.source.y + Math.sin(angle) * sourceRadius;
-    let targetX = d.target.x - Math.cos(angle) * targetRadius;
-    let targetY = d.target.y - Math.sin(angle) * targetRadius;
-
-    // If there's only one link or it's the link to investigate, draw a straight line
-    if (
-        d.nMultipleLinks === 1 
-        || 
-        d.typeOfLink === "toInvestigate"
-        ||
+// Check if a straight line should be drawn
+function shouldDrawStraightLine(d) {
+    return (
+        d.nMultipleLinks === 1 ||
+        d.typeOfLink === "toInvestigate" ||
         (d.nMultipleLinks === 2 && Object.values(d.multipleLinks).some(value => value === 2))
-    ) {
+    );
+}
+
+// Get the specific angle for this link
+function getArcAngle(linkCount, typeIndex) {
+    const angleList = angleMap[linkCount] || [Math.PI / 3, -Math.PI / 3]; // Default angles if not specified in angleMap
+    return angleList[typeIndex] || 0; // Default to 0 if not found
+}
+
+// Calculate the control points for the arc
+function calculateControlPoints(sourceX, sourceY, targetX, targetY, arcAngle, distance) {
+    return {
+        cx: (sourceX + targetX) / 2 + Math.cos(arcAngle) * distance / 3,
+        cy: (sourceY + targetY) / 2 + Math.sin(arcAngle) * distance / 3
+    };
+}
+
+// Main linkArc function
+function linkArc(d) {
+    const dx = d.target.x - d.source.x;
+    const dy = d.target.y - d.source.y;
+    const distance = calculateDistance(dx, dy);
+    const angle = calculateAngle(dy, dx);
+
+    const sourceRadius = d.source.radius || 0;
+    const targetRadius = d.target.radius || 0;
+
+    const sourcePosition = calculateNodeBorderPosition(d.source.x, d.source.y, angle, sourceRadius);
+    const targetPosition = calculateNodeBorderPosition(d.target.x, d.target.y, angle + Math.PI, targetRadius);
+
+    const sourceX = sourcePosition.x;
+    const sourceY = sourcePosition.y;
+    const targetX = targetPosition.x;
+    const targetY = targetPosition.y;
+
+    if (shouldDrawStraightLine(d)) {
         return `M${sourceX},${sourceY}L${targetX},${targetY}`;
     } else {
-        // Determine which link this is by counting the number of links of this type
-        let linkCount = Object.keys(d.multipleLinks).length;
-        let typeIndex = Object.keys(d.multipleLinks).indexOf(d.typeOfLink); // Zero-based index
+        const linkCount = Object.keys(d.multipleLinks).length;
+        const typeIndex = Object.keys(d.multipleLinks).indexOf(d.typeOfLink); // Zero-based index
+        const arcAngle = getArcAngle(linkCount, typeIndex);
 
-        // Retrieve the angle list from the angleMap
-        let angleList = angleMap[linkCount] || [Math.PI / 3, -Math.PI / 3]; // Default angles if not specified in angleMap
-
-        // Get the specific angle for this link
-        let arcAngle = angleList[typeIndex] || 0; // Default to 0 if not found
-
-        // Calculate the control points for the arc
-        let cx = (sourceX + targetX) / 2 + Math.cos(arcAngle) * distance / 3;
-        let cy = (sourceY + targetY) / 2 + Math.sin(arcAngle) * distance / 3;
+        const { cx, cy } = calculateControlPoints(sourceX, sourceY, targetX, targetY, arcAngle, distance);
 
         return `M${sourceX},${sourceY}Q${cx},${cy} ${targetX},${targetY}`;
     }
 }
-
-
-
-
-
 
 function ticked(width, height, svg) {
     svg.selectAll('path.link')
