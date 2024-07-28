@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 import { companiesToInvestigate, idSelectInvestigate, selectAllNodesText, selectAllNodesVal, selectEmptyVal } from "./constants";
-import { resetAddedNodes, resetBothValueInvestigateDistance, resetOtherInputFromInvestigateDistance, resetSelectedSource, resetSelectedTarget, resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, setSelectedValueInvestigate } from "./dataManagement";
+import { getSelectedSource, getSelectedTarget, resetAddedNodes, resetBothValueInvestigateDistance, resetOtherInputFromInvestigateDistance, resetSelectedSource, resetSelectedTarget, resetSourceValueInvestigateDistance, resetTargetValueInvestigateDistance, setSelectedValueInvestigate } from "./dataManagement";
 import { refreshGraph } from "./refreshGraph";
 
 function debounce(func, wait) {
@@ -33,6 +33,10 @@ function setupInvestigateDistanceElements(decreaseButtonId, increaseButtonId, in
     }, 300); // 300ms delay
 
     decreaseButton.addEventListener('click', () => {
+        if (getSelectedSource() !== selectEmptyVal || getSelectedTarget !== selectEmptyVal){
+            resetAddedNodes()
+        }
+
         let value = parseInt(input.value);
         if (value > minValue) {
             input.value = value - 1;
@@ -42,6 +46,10 @@ function setupInvestigateDistanceElements(decreaseButtonId, increaseButtonId, in
     });
 
     increaseButton.addEventListener('click', () => {
+        if (getSelectedSource() !== selectEmptyVal && getSelectedTarget !== selectEmptyVal){
+            resetAddedNodes()
+        }
+
         let value = parseInt(input.value);
         if (value < maxValue) {
             input.value = value + 1;
@@ -89,9 +97,9 @@ function handleDropdownChangeInvestigate(selectedValue) {
     setSelectedValueInvestigate(selectedValue);
 
     //change the values in the investigate distance boxes
-    resetSourceValueInvestigateDistance()
-    resetTargetValueInvestigateDistance()
-    resetBothValueInvestigateDistance()
+    // resetSourceValueInvestigateDistance()
+    // resetTargetValueInvestigateDistance()
+    // resetBothValueInvestigateDistance()
 
     //reset values in the selects
     resetSelectedSource()
