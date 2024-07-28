@@ -113,33 +113,60 @@ function getIntersectionY(node1, node2, isSource) {
 }
 
 function linkArc(d) {
-    const typeAngleMap = {
-        "ownership": Math.PI / 6,            // 30 degrees
-        "partnership": Math.PI / 4,          // 45 degrees
-        "family_relationship": Math.PI / 3,  // 60 degrees
-        "membership": Math.PI / 2.5,         // 72 degrees
+    const angleMap = {
+        2: [Math.PI / 6, -Math.PI / 6],
+        3: [Math.PI / 6, 0, -Math.PI / 6],
+        4: [Math.PI / 6, Math.PI / 4, -Math.PI / 4, -Math.PI / 6]
     };
 
     let dx = d.target.x - d.source.x;
     let dy = d.target.y - d.source.y;
     let distance = Math.sqrt(dx * dx + dy * dy);
 
-    if (d.nMultipleLinks === 1 || d.typeOfLink === "toInvestigate") {
-        // Straight line for single link
-        return "M" + d.source.x + "," + d.source.y +
-               "L" + d.target.x + "," + d.target.y;
+    // Calculate the angle of the link direction
+    let angle = Math.atan2(dy, dx);
+
+    // Determine the radius of the source and target nodes
+    let sourceRadius = d.source.radius || 0;
+    let targetRadius = d.target.radius || 0;
+
+    // Calculate the start and end points of the link on the node borders
+    let sourceX = d.source.x + Math.cos(angle) * sourceRadius;
+    let sourceY = d.source.y + Math.sin(angle) * sourceRadius;
+    let targetX = d.target.x - Math.cos(angle) * targetRadius;
+    let targetY = d.target.y - Math.sin(angle) * targetRadius;
+
+    // If there's only one link or it's the link to investigate, draw a straight line
+    if (
+        d.nMultipleLinks === 1 
+        || 
+        d.typeOfLink === "toInvestigate"
+        ||
+        (d.nMultipleLinks === 2 && Object.values(d.multipleLinks).some(value => value === 2))
+    ) {
+        return `M${sourceX},${sourceY}L${targetX},${targetY}`;
     } else {
-        // Get the angle for the given typeOfLink or default to 60 degrees
-        let angle = typeAngleMap[d.typeOfLink] || Math.PI / 3;
+        // Determine which link this is by counting the number of links of this type
+        let linkCount = Object.keys(d.multipleLinks).length;
+        let typeIndex = Object.keys(d.multipleLinks).indexOf(d.typeOfLink); // Zero-based index
+
+        // Retrieve the angle list from the angleMap
+        let angleList = angleMap[linkCount] || [Math.PI / 3, -Math.PI / 3]; // Default angles if not specified in angleMap
+
+        // Get the specific angle for this link
+        let arcAngle = angleList[typeIndex] || 0; // Default to 0 if not found
 
         // Calculate the control points for the arc
-        let cx = (d.source.x + d.target.x) / 2 + Math.cos(angle) * distance / 3;
-        let cy = (d.source.y + d.target.y) / 2 + Math.sin(angle) * distance / 3;
+        let cx = (sourceX + targetX) / 2 + Math.cos(arcAngle) * distance / 3;
+        let cy = (sourceY + targetY) / 2 + Math.sin(arcAngle) * distance / 3;
 
-        return "M" + d.source.x + "," + d.source.y +
-               "Q" + cx + "," + cy + " " + d.target.x + "," + d.target.y;
+        return `M${sourceX},${sourceY}Q${cx},${cy} ${targetX},${targetY}`;
     }
 }
+
+
+
+
 
 
 function ticked(width, height, svg) {
@@ -180,9 +207,9 @@ function ticked(width, height, svg) {
     //     return d.y;
     // });
 
-    svg.selectAll('text')
-        .attr('x', d => d.x)
-        .attr('y', d => d.y + 4);
+    // svg.selectAll('text')
+    //     .attr('x', d => d.x)
+    //     .attr('y', d => d.y + 4);
 }
 
 

@@ -181,6 +181,7 @@ function calculateRadius(d, targetsPerSourceCount, sourcesPerTargetCount) {
     }
 
     let radius = Math.sqrt(targetsPerSourceCount[d.id] + sourcesPerTargetCount[d.id]) * 3;
+     //return 1
     return radius === 0 ? 1 : radius;
 }
 

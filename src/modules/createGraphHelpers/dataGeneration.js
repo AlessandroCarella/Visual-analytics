@@ -1,3 +1,4 @@
+import { typesOfLinks } from "../constants";
 import { getAllSources, getAllTargets, getCurrentData, getInitialData } from "../dataManagement";
 import { removeDuplicatesBetweenSet1AndSet2 } from "../utils";
 
@@ -118,23 +119,35 @@ function createDictNodeToTypeCountry(data, sources, targets, sourcesTargets, tar
 }
 
 function getMultipleLinksBetweenNodesMap(data) {
-    let linkCountMap = new Map();
+    const linkCountMap = new Map();
+    const typesOfLinksToUse = typesOfLinks.filter(type => type !== 'toInvestigate');
 
-    // Step 1: Count the number of links between each pair of nodes
     data.forEach(d => {
         const sourceTargetKey = `${d.source}-${d.target}`;
         const targetSourceKey = `${d.target}-${d.source}`;
+        const key = linkCountMap.has(sourceTargetKey) ? sourceTargetKey : targetSourceKey;
 
-        if (linkCountMap.has(sourceTargetKey)) {
-            linkCountMap.set(sourceTargetKey, linkCountMap.get(sourceTargetKey) + 1);
-        } else if (linkCountMap.has(targetSourceKey)) {
-            linkCountMap.set(targetSourceKey, linkCountMap.get(targetSourceKey) + 1);
-        } else {
-            linkCountMap.set(sourceTargetKey, 1);
+        // Initialize the dictionary for the key if not present
+        if (!linkCountMap.has(key)) {
+            const initialCounts = typesOfLinksToUse.reduce((acc, type) => {
+                acc[type] = 0;
+                return acc;
+            }, {});
+            linkCountMap.set(key, initialCounts);
+        }
+
+        // Update the count for the specific type of link
+        const linkCounts = linkCountMap.get(key);
+        if (d.typeOfLink !== 'toInvestigate') {
+            linkCounts[d.typeOfLink] = (linkCounts[d.typeOfLink] || 0) + 1;
         }
     });
 
     return linkCountMap;
+}
+
+function countMultipleLinks(dict) {
+    return Object.values(dict).reduce((acc, val) => acc + val, 0);
 }
 
 function createLinksData(data, nodes) {
@@ -142,18 +155,15 @@ function createLinksData(data, nodes) {
     const multipleLinksBetweenNodesMap = getMultipleLinksBetweenNodesMap(data);
 
     data.forEach(d => {
-        const sourceTargetKey = `${d.source}-${d.target}`;
-        const targetSourceKey = `${d.target}-${d.source}`;
-
-        const sourceTargetCount = multipleLinksBetweenNodesMap.get(sourceTargetKey) || 0;
-        const targetSourceCount = multipleLinksBetweenNodesMap.get(targetSourceKey) || 0;
+        const multipleLinksDict = multipleLinksBetweenNodesMap.get(`${d.source}-${d.target}`) || multipleLinksBetweenNodesMap.get(`${d.target}-${d.source}`);
 
         const link = {
             source: nodes.find(node => node.id === d.source),
             target: nodes.find(node => node.id === d.target),
             typeOfLink: d.typeOfLink,
             weight: d.weight,
-            nMultipleLinks: sourceTargetCount + targetSourceCount
+            multipleLinks: multipleLinksDict,
+            nMultipleLinks: countMultipleLinks(multipleLinksDict)
         };
         links.push(link);
     });
