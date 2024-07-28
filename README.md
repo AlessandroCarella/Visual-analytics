@@ -65,6 +65,8 @@
 
 * another kind of implementation of the links was to add a tooltip on hover of the link to show the various kinds of links 2 entities shared
 
+* there are 203 double linking nodes, 19 triple linking nodes, 11 quaruple linking nodes
+
 ## To run the project:
 * install node (developed in node 20.11.1)
 * in the folder of the project run
