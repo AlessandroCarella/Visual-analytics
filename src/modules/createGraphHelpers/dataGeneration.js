@@ -1,4 +1,4 @@
-import { typesOfLinks } from "../constants";
+import { linkToInvestigateTag, typesOfLinks } from "../constants";
 import { getAllSources, getAllTargets, getCurrentData, getInitialData } from "../dataManagement";
 import { removeDuplicatesBetweenSet1AndSet2 } from "../utils";
 
@@ -120,7 +120,7 @@ function createDictNodeToTypeCountry(data, sources, targets, sourcesTargets, tar
 
 function getMultipleLinksBetweenNodesMap(data) {
     const linkCountMap = new Map();
-    const typesOfLinksToUse = typesOfLinks.filter(type => type !== 'toInvestigate');
+    const typesOfLinksToUse = typesOfLinks.filter(type => type !== linkToInvestigateTag);
 
     data.forEach(d => {
         const sourceTargetKey = `${d.source}-${d.target}`;
@@ -138,7 +138,7 @@ function getMultipleLinksBetweenNodesMap(data) {
 
         // Update the count for the specific type of link
         const linkCounts = linkCountMap.get(key);
-        if (d.typeOfLink !== 'toInvestigate') {
+        if (d.typeOfLink !== linkToInvestigateTag) {
             linkCounts[d.typeOfLink] = (linkCounts[d.typeOfLink] || 0) + 1;
         }
     });

@@ -2,7 +2,9 @@
 
 # TODO:
   * tutto
-    * call resetAddedNodes when one of the plus button in the investigate section is pressed, only problem is that you have to get all the values of the inputs related to the investigate distance thing and you have to implement the logic to save the previous values
+    * zoom based on the number of nodes in the graph
+    
+    * ~~call resetAddedNodes when one of the plus button in the investigate section is pressed, only problem is that you have to get all the values of the inputs related to the investigate distance thing and you have to implement the logic to save the previous values~~
 
     * ~~Inverti bordi e riempimenti~~
 

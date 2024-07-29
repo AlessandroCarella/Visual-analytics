@@ -5,7 +5,8 @@ const graphDimensionsBorder = 0
 const activeButtonClass = "active-button"
 const inactiveButtonClass = "inactive-button"
 
-const typesOfLinks = ["ownership", "partnership", "family_relationship", "membership", "toInvestigate"];
+const linkToInvestigateTag = "toInvestigate";
+const typesOfLinks = ["ownership", "partnership", "family_relationship", "membership", linkToInvestigateTag];
 const colorsOfLinksVals = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "black"]
 const colorsOfLinks = d3.scaleOrdinal()
     .domain(typesOfLinks)
@@ -40,6 +41,6 @@ const companiesToInvestigateExtraInfo = {
 const companiesToInvestigateSelectVal = companiesToInvestigate.join(" ");
 const companiesToInvestigateText = "Entities to investigate"
 
-export {
+export {linkToInvestigateTag,
     activeButtonClass, colorsOfLinks, colorsOfLinksVals, companiesToInvestigate, companiesToInvestigateExtraInfo, companiesToInvestigateSelectVal, companiesToInvestigateText, graphDimensionsBorder, idSelectInvestigate, inactiveButtonClass, selectAllNodesText, selectAllNodesVal, selectEmptyText, selectEmptyVal, sourceSelectTag, targetSelectTag, typesOfLinks
 };

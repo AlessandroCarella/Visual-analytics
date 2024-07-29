@@ -25,8 +25,8 @@ function getAddedNodes() {
     return addedNodes;
 }
 
-function addNodeToAddedNodes(node) {
-    addedNodes.add(node);
+function addNodeToAddedNodes(node, option='both') {
+    addedNodes.add({node, option});
 }
 
 function resetAddedNodes() {
@@ -41,41 +41,90 @@ function setLastAddedNodeId(nodeId) {
     lastAddedNodeId = nodeId;
 }
 
-let relevantLinks;
-
-function clickableNode(node) {
-    let clickableNodeVar = false;
-
-    if ((node.type === "target" && node.alsoSource) || (node.type === "source" && node.alsoTarget)) {
-        relevantLinks = Array.from(initialData).filter(link => link.source === node.id || link.target === node.id);
-    } else if (node.type === "source" && !node.alsoTarget) {
-        relevantLinks = Array.from(initialData).filter(link => link.source === node.id);
-    } else if (node.type === "target" && !node.alsoSource) {
-        relevantLinks = Array.from(initialData).filter(link => link.target === node.id);
+function clickableNode(node, option='both') {
+    // Helper function to get the relevant links based on the node type
+    function getRelevantLinks(node) {
+        return Array.from(initialData).filter(link => {
+            if (node.type === "source") {
+                return ((link.source === node.id || (node.alsoTarget && link.target === node.id)) && link.typeOfLink !== linkToInvestigateTag);
+            } else if (node.type === "target") {
+                return ((link.target === node.id || (node.alsoSource && link.source === node.id)) && link.typeOfLink !== linkToInvestigateTag);
+            }
+            return false;
+        });
     }
 
-    for (const link of relevantLinks) {
-        if (!currentData.has(link) && getActiveButtons().has(link.typeOfLink)) {
-            clickableNodeVar = true;
-            break; // exit the loop
+    // Helper function to determine if a link is relevant and expandable
+    function isRelevantAndExpandable(link) {
+        return !currentData.has(link) && getActiveButtons().has(link.typeOfLink);
+    }
+
+    // Helper function to determine if the node is expandable as source, target, or both
+    function determineExpandability(relevantLinks) {
+        let isSourceExpandable = false;
+        let isTargetExpandable = false;
+
+        for (const link of relevantLinks) {
+            if (isRelevantAndExpandable(link)) {
+                if (link.source === node.id) 
+                    isSourceExpandable = true;
+                if (link.target === node.id) 
+                    isTargetExpandable = true;
+                if (isSourceExpandable && isTargetExpandable) 
+                    break; // Short-circuit if both are true
+            }
+        }
+
+        if (isSourceExpandable && isTargetExpandable) {
+            return 'both';
+        } else if (isSourceExpandable) {
+            return 'source';
+        } else if (isTargetExpandable) {
+            return 'target';
+        } else {
+            return 'not at all';
         }
     }
 
-    return clickableNodeVar;
+    // Main function logic
+    const relevantLinks = getRelevantLinks(node);
+    const expandableBy = determineExpandability(relevantLinks);
+
+    // Return true if option is source or target and expandableBy is both
+    if (expandableBy === 'both' && (option === 'source' || option === 'target')) {
+        return true;
+    }
+
+    if (option === 'both' && expandableBy !== 'not at all') {
+        return true;
+    }
+
+    return expandableBy === option;
 }
 
 function updateCurrentDataWithNewNodes() {
     let dataToAdd = new Set();
+    let relevantLinks = [];
 
-    addedNodes.forEach(newNode => {
-        if ((newNode.type === "target" && newNode.alsoSource) || (newNode.type === "source" && newNode.alsoTarget)) {
-            relevantLinks = Array.from(initialData).filter(link => link.source === newNode.id || link.target === newNode.id);
-        } else if (newNode.type === 'source' && !newNode.alsoTarget) {
+    addedNodes.forEach(item => {
+        let newNode = item.node;
+        let option = item.option;
+
+        if (option === 'both') {
+            if ((newNode.type === "target" && newNode.alsoSource) || (newNode.type === "source" && newNode.alsoTarget))
+                relevantLinks = Array.from(initialData).filter(link => link.source === newNode.id || link.target === newNode.id);
+            else if (newNode.type === 'source' && !newNode.alsoTarget) 
+                relevantLinks = Array.from(initialData).filter(link => link.source === newNode.id);
+            else if (newNode.type === 'target' && !newNode.alsoSource) 
+                relevantLinks = Array.from(initialData).filter(link => link.target === newNode.id);
+        }
+        else if (option ==='source') {
             relevantLinks = Array.from(initialData).filter(link => link.source === newNode.id);
-        } else if (newNode.type === 'target' && !newNode.alsoSource) {
+        }
+        else if (option === 'target') {
             relevantLinks = Array.from(initialData).filter(link => link.target === newNode.id);
         }
-
+    
         relevantLinks.forEach(link => {
             if (!currentData.has(link)) {
                 dataToAdd.add(link);
@@ -85,7 +134,6 @@ function updateCurrentDataWithNewNodes() {
 
     setCurrentData(new Set([...currentData, ...dataToAdd]));
 }
-
 
 ///////////////////////////////////////////
 
@@ -108,7 +156,7 @@ function getAllTargets() {
 
 ///////////////////////////////////////////
 
-import { companiesToInvestigate, companiesToInvestigateSelectVal, idSelectInvestigate, selectAllNodesVal, typesOfLinks } from "./constants";
+import { companiesToInvestigate, companiesToInvestigateSelectVal, idSelectInvestigate, linkToInvestigateTag, selectAllNodesVal, typesOfLinks } from "./constants";
 
 let activeButtons;
 

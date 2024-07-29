@@ -15,6 +15,7 @@ import {
     tooltipBackgroundColor
 } from "./graphConstants";
 import { isObjectEmpty } from '../utils';
+import { showContextMenu } from '../contextMenu';
 
 function dragstarted(event, d, simulation) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
@@ -140,7 +141,11 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
             .on('start', (event, d) => dragstarted(event, d, simulation))
             .on('drag', dragged)
             .on('end', (event, d) => dragended(event, d, simulation)))
-        .on('click', (event, d) => handleClick(event, d));
+        .on('click', (event, d) => handleClick(event, d))
+        .on("contextmenu", (event, d) => {
+            event.preventDefault();
+            showContextMenu(event, d);
+        });
 
     // Append circles and SVG icons
     appendCircles(enteredNodeGroups, nodes, targetsPerSourceCount, sourcesPerTargetCount);

@@ -142,7 +142,7 @@ function calculateNodeBorderPosition(x, y, angle, radius) {
 function shouldDrawStraightLine(d) {
     return (
         d.nMultipleLinks === 1 ||
-        d.typeOfLink === "toInvestigate" ||
+        d.typeOfLink === linkToInvestigateTag ||
         (d.nMultipleLinks === 2 && Object.values(d.multipleLinks).some(value => value === 2))
     );
 }
@@ -240,6 +240,7 @@ function ticked(width, height, svg) {
 
 import { svg } from '../../index';
 import { getGraphDimensions } from '../utils';
+import { linkToInvestigateTag } from '../constants';
 
 function calculateRepulsionStrength(numNodes) {
     const baseStrength = -600; // Increase the base strength
