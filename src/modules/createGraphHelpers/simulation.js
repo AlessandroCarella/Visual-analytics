@@ -89,8 +89,6 @@ function ticked(width, height, svg) {
             }
         });
 }
-*/
-import * as d3 from 'd3';
 
 function getIntersectionX(node1, node2, isSource) {
     const dx = node2.x - node1.x;
@@ -111,6 +109,8 @@ function getIntersectionY(node1, node2, isSource) {
     const y = node1.y + (r / dist) * dy * (1);
     return y;
 }
+*/
+import * as d3 from 'd3';
 
 // Angle map for different numbers of links
 // Angle map for different numbers of links
@@ -196,23 +196,6 @@ function ticked(width, height, svg) {
     svg.selectAll('path.link')
         .attr('d', d => linkArc(d))
         .attr('fill', 'none')
-    // .attr('x1', d => {
-    //     const x1 = getIntersectionX(d.source, d.target, true);
-    //     return isNaN(x1) ? 0 : x1;
-    // })
-    // .attr('y1', d => {
-    //     const y1 = getIntersectionY(d.source, d.target, true);
-    //     return isNaN(y1) ? 0 : y1;
-    // })
-    // .attr('x2', d => {
-    //     const x2 = getIntersectionX(d.target, d.source, false);
-    //     return isNaN(x2) ? 0 : x2;
-    // })
-    // .attr('y2', d => {
-    //     const y2 = getIntersectionY(d.target, d.source, false);
-    //     return isNaN(y2) ? 0 : y2;
-    // })
-
 
     svg.selectAll('g.node')
         .attr('transform', d => {
@@ -221,18 +204,6 @@ function ticked(width, height, svg) {
             d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
             return `translate(${d.x},${d.y})`;
         });
-    // .attr('cx', d => {
-    //     d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
-    //     return d.x;
-    // })
-    // .attr('cy', d => {
-    //     d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
-    //     return d.y;
-    // });
-
-    // svg.selectAll('text')
-    //     .attr('x', d => d.x)
-    //     .attr('y', d => d.y + 4);
 }
 
 
@@ -241,6 +212,16 @@ function ticked(width, height, svg) {
 import { svg } from '../../index';
 import { getGraphDimensions } from '../utils';
 import { linkToInvestigateTag } from '../constants';
+
+// Define a function to set link distance based on link type
+function linkDistance(d) {
+    switch (d.typeOfLink) {
+        case linkToInvestigateTag:
+            return 500;
+        default:
+            return 100; // Default d3.js distance
+    }
+}
 
 function calculateRepulsionStrength(numNodes) {
     const baseStrength = -600; // Increase the base strength
@@ -254,11 +235,10 @@ function initializeSimulation(nodes, links) {
     const repulsionStrength = calculateRepulsionStrength(numNodes);
 
     return d3.forceSimulation(nodes)
-        .force('link', d3.forceLink().id(d => d.id).links(links).distance(100))
+        .force('link', d3.forceLink(links).id(d => d.id).distance(linkDistance))
         .force('charge', d3.forceManyBody().strength(repulsionStrength))
         .force('center', d3.forceCenter(width / 2, height / 2))
         .on('tick', () => ticked(width, height, svg));
 }
 
 export { initializeSimulation };
-
