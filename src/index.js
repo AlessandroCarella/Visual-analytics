@@ -30,7 +30,7 @@ Promise.all([
         mergedDatasetWithToInvestigateExtraData = new Set(mergedDatasetWithToInvestigateExtraData);
 
         setInitialData(mergedDatasetWithToInvestigateExtraData);
-        setCurrentData(mergedDatasetWithToInvestigateExtraData);
+        setCurrentData(new Set());
 
         setInitialDataInvestigateDistanceSource(connectionsLevelsSouspectSourcesNoRepetition);
         setInitialDataInvestigateDistanceTarget(connectionsLevelsSouspectTargetsNoRepetition);

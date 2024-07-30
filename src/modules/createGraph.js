@@ -1,4 +1,4 @@
-import { createLabels, createLinks, createMarkers, createNodes, preloadSvgs, setupTooltip } from './createGraphHelpers/createEntities';
+import { createLinks, createMarkers, createNodes, setupTooltip } from './createGraphHelpers/createEntities';
 import { createDictNodeToTypeCountry, createLinksData, createNodesData, findSourcesOrTargetsNotActiveButInGraph, getPossibleNodes } from './createGraphHelpers/dataGeneration';
 import { initializeSimulation } from './createGraphHelpers/simulation';
 import { getCurrentData, getInitialData } from './dataManagement';
@@ -7,23 +7,23 @@ import { findPerSourceNumberOfTargetsOrOpposite } from './utils';
 let initialData;
 let simulation;
 
-function createNodesAndLinks() {
-    const { sources: sources, targets: targets, sourcesTargets: sourcesTargets, targetsSources: targetsSources } = getPossibleNodes(getCurrentData());
+function createNodesAndLinks(data = getCurrentData()) {
+    const { sources: sources, targets: targets, sourcesTargets: sourcesTargets, targetsSources: targetsSources } = getPossibleNodes(data);
 
-    const dictNodeToTypeCountry = createDictNodeToTypeCountry(getCurrentData(), sources, targets, sourcesTargets, targetsSources);
+    const dictNodeToTypeCountry = createDictNodeToTypeCountry(data, sources, targets, sourcesTargets, targetsSources);
 
     const sourcesNotActiveButInGraph = findSourcesOrTargetsNotActiveButInGraph("source");
     const targetsNotActiveButInGraph = findSourcesOrTargetsNotActiveButInGraph("target");
 
     const nodes = createNodesData(sources, targets, sourcesNotActiveButInGraph, targetsNotActiveButInGraph, dictNodeToTypeCountry);
-    const links = createLinksData(nodes);
+    const links = createLinksData(nodes, data);
 
     return { nodes, links };
 }
 
 function createGraph() {
     //data generation
-    const { nodes: nodes, links: links } = createNodesAndLinks();
+    const { nodes: nodes, links: links } = createNodesAndLinks(getCurrentData());
     const targetsPerSourceCount = findPerSourceNumberOfTargetsOrOpposite(getInitialData(), "source");
     const sourcesPerTargetCount = findPerSourceNumberOfTargetsOrOpposite(getInitialData(), "target");
 

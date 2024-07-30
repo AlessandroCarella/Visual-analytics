@@ -1,15 +1,19 @@
 // refreshGraph.js
 import * as d3 from 'd3';
 import { svg } from '../index';
-import { createGraph } from './createGraph';
-import { getAddedNodes, updateCurrentDataBasedOnButtons, updateCurrentDataBasedOnInvestigateDistanceValues, updateCurrentDataBasedOnSelect, updateCurrentDataWithNewNodes } from './dataManagement';
+import { createGraph, createNodesAndLinks, simulation } from './createGraph';
+import { getAddedNodes, getCurrentData, getInitialData, updateCurrentDataBasedOnButtons, updateCurrentDataBasedOnInvestigateDistanceValues, updateCurrentDataBasedOnSelect, updateCurrentDataWithNewNodes } from './dataManagement';
+import { createLinks, createNodes } from './createGraphHelpers/createEntities';
+import { findPerSourceNumberOfTargetsOrOpposite } from './utils';
+import { initializeSimulation } from './createGraphHelpers/simulation';
 
 function findDataDelta(previousData, currentData) {
     const addedData = new Set([...currentData].filter(x => !previousData.has(x)));
     const removedData = new Set([...previousData].filter(x => !currentData.has(x)));
 
-    const { nodesToAdd, linksToAdd } = createNodesAndLinks(addedData);
-    const { nodesToRemove, linksToRemove } = createNodesAndLinks(removedData);
+    const { nodes:nodesToAdd, links:linksToAdd } = createNodesAndLinks(addedData);
+    const { nodes:nodesToRemove, links:linksToRemove } = createNodesAndLinks(removedData);
+    
     return { nodesToAdd, linksToAdd, nodesToRemove, linksToRemove };
 }
 
@@ -22,11 +26,45 @@ function removeNodes(nodesToRemove) {
     nodesToRemoveSelection.remove();
 }
 
+function removeLinks(linksToRemove) {
+    const linksIdsToRemove = linksToRemove.map(link => link.id);
+
+    const linksToRemoveSelection = svg.selectAll('path.link')
+       .filter(d => linksIdsToRemove.includes(d.id));
+
+    linksToRemoveSelection.remove();
+}
+
 function updateGraph(nodesToAdd, linksToAdd, nodesToRemove, linksToRemove) {
+    const targetsPerSourceCount = findPerSourceNumberOfTargetsOrOpposite(getInitialData(), "source");
+    const sourcesPerTargetCount = findPerSourceNumberOfTargetsOrOpposite(getInitialData(), "target");
+
+    if (typeof simulation === 'undefined') {
+        createGraph();
+        return;
+    }
+
+    removeLinks(linksToRemove);
     removeNodes(nodesToRemove);
+
+    // Create and append new links and nodes
+    createLinks(linksToAdd);
+    createNodes(nodesToAdd, targetsPerSourceCount, sourcesPerTargetCount, simulation);
+
+    // Remove deleted nodes and links from simulation
+    simulation.nodes(simulation.nodes().filter(d => !nodesToRemove.some(node => node.id === d.id)));
+    simulation.force('link').links(simulation.force('link').links().filter(d => !linksToRemove.some(link => link.id === d.id)));
+    
+    // Update simulation nodes and links
+    simulation.nodes(simulation.nodes().concat(nodesToAdd));
+    simulation.force('link').links(simulation.force('link').links().concat(linksToAdd));
+
+    // Restart the simulation
+    //simulation.alpha(0.3).restart();
 }
 
 function refreshGraph() {
+    const previousCurrentData = getCurrentData();
     d3.selectAll('div-tooltip.tooltip').style('opacity', 0); // Hide tooltip on click
 
     //this is the most general update because it is based on the values 
@@ -47,17 +85,19 @@ function refreshGraph() {
     //other functions that work on the initial datas
     updateCurrentDataBasedOnButtons();
 
-    //TODO replace the next 2 methods (svg.selectAll.remove and createGraph)
-    //with 3 methods
-    //find difference (currentData, previousCurrentData)
-    //remove excess data
-    //add missing data
+    //update or update the graph
+    const { nodesToAdd, linksToAdd, nodesToRemove, linksToRemove } = findDataDelta(previousCurrentData, getCurrentData());
+    
+    if (nodesToAdd.length === 0 && linksToAdd.length === 0 && nodesToRemove.length === 0 && linksToRemove.length === 0)
+        createGraph();
+    else    
+        updateGraph(nodesToAdd, linksToAdd, nodesToRemove, linksToRemove);
 
-    // Clear existing graph elements
-    svg.selectAll('*').remove();
+    // // Clear existing graph elements
+    // svg.selectAll('*').remove();
 
-    // Create the graph with the filtered data
-    createGraph();
+    // // Create the graph with the filtered data
+    // createGraph();
 }
 
 export { refreshGraph };
