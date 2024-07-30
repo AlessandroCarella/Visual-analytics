@@ -51,16 +51,10 @@ function updateGraph(nodesToAdd, linksToAdd, nodesToRemove, linksToRemove) {
     createLinks(linksToAdd);
     createNodes(nodesToAdd, targetsPerSourceCount, sourcesPerTargetCount, simulation);
 
-    // Remove deleted nodes and links from simulation
-    simulation.nodes(simulation.nodes().filter(d => !nodesToRemove.some(node => node.id === d.id)));
-    simulation.force('link').links(simulation.force('link').links().filter(d => !linksToRemove.some(link => link.id === d.id)));
-    
-    // Update simulation nodes and links
-    simulation.nodes(simulation.nodes().concat(nodesToAdd));
-    simulation.force('link').links(simulation.force('link').links().concat(linksToAdd));
-
     // Restart the simulation
-    //simulation.alpha(0.3).restart();
+    simulation.nodes (nodesToAdd)
+    simulation.force('link', d3.forceLink(linksToAdd))
+
 }
 
 function refreshGraph() {
@@ -86,12 +80,12 @@ function refreshGraph() {
     updateCurrentDataBasedOnButtons();
 
     //update or update the graph (not working)
-    // const { nodesToAdd, linksToAdd, nodesToRemove, linksToRemove } = findDataDelta(previousCurrentData, getCurrentData());
     
+    // const { nodesToAdd, linksToAdd, nodesToRemove, linksToRemove } = findDataDelta(previousCurrentData, getCurrentData());
     // if (nodesToAdd.length === 0 && linksToAdd.length === 0 && nodesToRemove.length === 0 && linksToRemove.length === 0)
     //     createGraph();
-    // else    
-    //     updateGraph(nodesToAdd, linksToAdd, nodesToRemove, linksToRemove);
+    // else
+    //     updateGraph(nodesToAdd, linksToAdd, nodesToRemove, linksToRemove); 
 
     // Clear existing graph elements
     svg.selectAll('*').remove();

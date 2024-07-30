@@ -196,26 +196,16 @@ function ticked(width, height, svg) {
     try {
         svg.selectAll('path.link')
             .attr('d', d => {
-                try {
                     return linkArc(d);
-                } catch (error) {
-                    console.error("Error in linkArc function with data:", d, error);
-                    return '';  // Fallback to empty string or any other appropriate fallback
-                }
             })
             .attr('fill', 'none');
 
         svg.selectAll('g.node')
             .attr('transform', d => {
-                try {
-                    // Ensure nodes stay within the boundaries
-                    d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
-                    d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
-                    return `translate(${d.x},${d.y})`;
-                } catch (error) {
-                    console.error("Error in node transform with data:", d, error);
-                    return 'translate(0,0)';  // Fallback to origin or any other appropriate fallback
-                }
+                // Ensure nodes stay within the boundaries
+                d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
+                d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
+                return `translate(${d.x},${d.y})`;
             });
     } catch (error) {
         console.error("Error in ticked function:", error);

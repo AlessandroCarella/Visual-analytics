@@ -29,6 +29,8 @@ function createGraph() {
 
     //simulation
     simulation = initializeSimulation(nodes, links);
+    simulation.stop()
+    simulation.alphaTarget(0.1).restart()
 
     //graph enetites
     createLinks(links);
