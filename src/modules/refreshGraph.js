@@ -4,6 +4,27 @@ import { svg } from '../index';
 import { createGraph } from './createGraph';
 import { getAddedNodes, updateCurrentDataBasedOnButtons, updateCurrentDataBasedOnInvestigateDistanceValues, updateCurrentDataBasedOnSelect, updateCurrentDataWithNewNodes } from './dataManagement';
 
+function findDataDelta(previousData, currentData) {
+    const addedData = new Set([...currentData].filter(x => !previousData.has(x)));
+    const removedData = new Set([...previousData].filter(x => !currentData.has(x)));
+
+    const { nodesToAdd, linksToAdd } = createNodesAndLinks(addedData);
+    const { nodesToRemove, linksToRemove } = createNodesAndLinks(removedData);
+    return { nodesToAdd, linksToAdd, nodesToRemove, linksToRemove };
+}
+
+function removeNodes(nodesToRemove) {
+    const nodeIdsToRemove = nodesToRemove.map(node => node.id);
+
+    const nodesToRemoveSelection = svg.selectAll('g.node')
+        .filter(d => nodeIdsToRemove.includes(d.id));
+
+    nodesToRemoveSelection.remove();
+}
+
+function updateGraph(nodesToAdd, linksToAdd, nodesToRemove, linksToRemove) {
+    removeNodes(nodesToRemove);
+}
 
 function refreshGraph() {
     d3.selectAll('div-tooltip.tooltip').style('opacity', 0); // Hide tooltip on click

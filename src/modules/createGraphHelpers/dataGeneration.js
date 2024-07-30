@@ -13,10 +13,10 @@ function getPossibleNodes(data) {
     return { sources, targets, sourcesTargets, targetsSources };
 }
 
-function findSourcesOrTargetsNotActiveButInGraph(type) {
-    const currentData = getCurrentData();
-    const currentDataSources = new Set(Array.from(currentData).map(d => d.source));
-    const currentDataTargets = new Set(Array.from(currentData).map(d => d.target));
+function findSourcesOrTargetsNotActiveButInGraph(type, data=getCurrentData()) {
+    console.log(data)
+    const currentDataSources = new Set(Array.from(data).map(d => d.source));
+    const currentDataTargets = new Set(Array.from(data).map(d => d.target));
 
     let initialDataNodes;
     let inactiveNodes;
@@ -40,10 +40,9 @@ function findSourcesOrTargetsNotActiveButInGraph(type) {
     return inactiveSourcesInTargetsOrViceversa;
 }
 
-function findTargetsNotActiveButInGraph() {
-    const currentData = getCurrentData();
-    const currentDataTargets = new Set(Array.from(currentData).map(d => d.target));
-    const currentDataSources = new Set(Array.from(currentData).map(d => d.source));
+function findTargetsNotActiveButInGraph(data=getCurrentData()) {
+    const currentDataTargets = new Set(Array.from(data).map(d => d.target));
+    const currentDataSources = new Set(Array.from(data).map(d => d.source));
 
     const initialDataTargets = new Set(Array.from(getInitialData()).map(d => d.target));
 
@@ -150,7 +149,9 @@ function countMultipleLinks(dict) {
     return Object.values(dict).reduce((acc, val) => acc + val, 0);
 }
 
-function createLinksData(data, nodes) {
+function createLinksData(nodes) {
+    const data = getCurrentData();
+    
     let links = [];
     const multipleLinksBetweenNodesMap = getMultipleLinksBetweenNodesMap(data);
 

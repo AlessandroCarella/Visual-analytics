@@ -5,24 +5,30 @@ import { getCurrentData, getInitialData } from './dataManagement';
 import { findPerSourceNumberOfTargetsOrOpposite } from './utils';
 
 let initialData;
+let simulation;
 
-function createGraph() {
-    //data generation
+function createNodesAndLinks() {
     const { sources: sources, targets: targets, sourcesTargets: sourcesTargets, targetsSources: targetsSources } = getPossibleNodes(getCurrentData());
 
     const dictNodeToTypeCountry = createDictNodeToTypeCountry(getCurrentData(), sources, targets, sourcesTargets, targetsSources);
-
-    const targetsPerSourceCount = findPerSourceNumberOfTargetsOrOpposite(getInitialData(), "source");
-    const sourcesPerTargetCount = findPerSourceNumberOfTargetsOrOpposite(getInitialData(), "target");
 
     const sourcesNotActiveButInGraph = findSourcesOrTargetsNotActiveButInGraph("source");
     const targetsNotActiveButInGraph = findSourcesOrTargetsNotActiveButInGraph("target");
 
     const nodes = createNodesData(sources, targets, sourcesNotActiveButInGraph, targetsNotActiveButInGraph, dictNodeToTypeCountry);
-    const links = createLinksData(getCurrentData(), nodes);
-    
+    const links = createLinksData(nodes);
+
+    return { nodes, links };
+}
+
+function createGraph() {
+    //data generation
+    const { nodes: nodes, links: links } = createNodesAndLinks();
+    const targetsPerSourceCount = findPerSourceNumberOfTargetsOrOpposite(getInitialData(), "source");
+    const sourcesPerTargetCount = findPerSourceNumberOfTargetsOrOpposite(getInitialData(), "target");
+
     //simulation
-    const simulation = initializeSimulation(nodes, links);
+    simulation = initializeSimulation(nodes, links);
 
     //graph enetites
     createLinks(links);
@@ -32,4 +38,4 @@ function createGraph() {
     setupTooltip(targetsPerSourceCount, sourcesPerTargetCount);
 }
 
-export { createGraph };
+export { createGraph, createNodesAndLinks, simulation };

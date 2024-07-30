@@ -23,7 +23,7 @@
     * ~~Right click on the node to expand only as source or as target or as both (already in the left click anyway)~~
       * ~~si~~
 
-    * ~~How should I implement the ambiguous multiple links between 2 entities, show what you have done, propose tooltip solution (show in/out nodes in the tooltip (bad for the ui, too crowded), hover on the link (hover the link to see all the links between a source and a target), other proposed by the teacher~~
+    * ~~How should I implement the ambiguous multiple links between 2 entities, show what you have done, propose tooltip solution (show in/out nodes in the tooltip (bad for the ui, too crowded)), hover on the link (hover the link to see all the links between a source and a target), other proposed by the teacher~~
       * ~~Linea curva al posto della linea retta  Utilizzare path al posto di line per create la linea -> trova punto medio e poi trova la curva utilizzando quel punto~~
       * ~~Tooltip no perché può essere importante vedere quanti archi ci sono fra i 2 nodi~~
       * ~~Arco solo quando ci sono più di un collegamento~~
@@ -31,8 +31,8 @@
     * ~~Can I implement the what’s going on tab or is it cheating~~
       * ~~Si ma solo legenda,~~ prova come ultima cosa a fare la speigazione contestuale
 
-    * Keep the “fake” link between the entities to investigate or not
-      * Forza di linking in base al tipo di collegamento e metterla più bassa per i link “to investigate”
+    * ~~Keep the “fake” link between the entities to investigate or not~~
+      * ~~Forza di linking in base al tipo di collegamento e metterla più bassa per i link “to investigate”~~
 
     * ~~Size of the window has to fit the 16:9 1920x1080p? What about full screen?~~
       * ~~Scrolling solo sulla Colonna sinistra al posto della pagina~~

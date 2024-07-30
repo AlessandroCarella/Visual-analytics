@@ -137,6 +137,7 @@ function createNodes(nodes, targetsPerSourceCount, sourcesPerTargetCount, simula
     // Enter selection for new groups
     const enteredNodeGroups = nodeGroups.enter().append('g')
         .attr('class', 'node')
+        .attr('id', d => `node-${d.id}`)
         .call(d3.drag()
             .on('start', (event, d) => dragstarted(event, d, simulation))
             .on('drag', dragged)
@@ -162,6 +163,7 @@ function createLinks(links) {
 
         linkSelection.enter().append('path')
             .attr('class', `link ${typeOfLink}`)
+            .attr('id', d => `link-${d.source.id}-${d.target.id}-${typeOfLink}`)
             .style('stroke', colorsOfLinks(typeOfLink) || 'black')
             .style('stroke-width', d => Math.sqrt(d.weight) * linksSizeMultiplier)
             .attr("marker-end", `url(#arrow-${typeOfLink})`)
