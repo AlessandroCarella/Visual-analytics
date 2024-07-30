@@ -85,19 +85,19 @@ function refreshGraph() {
     //other functions that work on the initial datas
     updateCurrentDataBasedOnButtons();
 
-    //update or update the graph
-    const { nodesToAdd, linksToAdd, nodesToRemove, linksToRemove } = findDataDelta(previousCurrentData, getCurrentData());
+    //update or update the graph (not working)
+    // const { nodesToAdd, linksToAdd, nodesToRemove, linksToRemove } = findDataDelta(previousCurrentData, getCurrentData());
     
-    if (nodesToAdd.length === 0 && linksToAdd.length === 0 && nodesToRemove.length === 0 && linksToRemove.length === 0)
-        createGraph();
-    else    
-        updateGraph(nodesToAdd, linksToAdd, nodesToRemove, linksToRemove);
+    // if (nodesToAdd.length === 0 && linksToAdd.length === 0 && nodesToRemove.length === 0 && linksToRemove.length === 0)
+    //     createGraph();
+    // else    
+    //     updateGraph(nodesToAdd, linksToAdd, nodesToRemove, linksToRemove);
 
-    // // Clear existing graph elements
-    // svg.selectAll('*').remove();
+    // Clear existing graph elements
+    svg.selectAll('*').remove();
 
-    // // Create the graph with the filtered data
-    // createGraph();
+    // Create the graph with the filtered data
+    createGraph();
 }
 
 export { refreshGraph };
