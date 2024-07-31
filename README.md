@@ -134,7 +134,7 @@
 
     * ~~Nodi unknown con il colore grigio~~
 
-    * Implementa il refresh dinamico per forza, controlla metodo join di d3.js https://d3js.org/d3-force/simulation#simulation_alphaTarget https://d3js.org/d3-force/simulation#simulation_restart 
+    * ~~Implementa il refresh dinamico per forza, controlla metodo join di d3.js https://d3js.org/d3-force/simulation#simulation_alphaTarget https://d3js.org/d3-force/simulation#simulation_restart~~
 
     * ~~Cambia forze in base al numero di nodi -> diminuire forza di repulsione e edge~~
 
