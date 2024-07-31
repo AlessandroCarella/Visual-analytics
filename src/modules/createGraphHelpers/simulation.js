@@ -1,123 +1,11 @@
-/*
-//with errors statement
-function ticked(width, height, svg) {
-    svg.selectAll('line.link')
-        .attr('x1', d => {
-            try {
-                const x1 = getIntersectionX(d.source, d.target, true);
-                if (isNaN(x1)) throw new Error('x1 is NaN');
-                return x1;
-            } catch (error) {
-                console.error('Error setting x1 attribute for line.link:', error);
-                console.error('Data causing error:', d);
-                return 0; // Or some default value
-            }
-        })
-        .attr('y1', d => {
-            try {
-                const y1 = getIntersectionY(d.source, d.target, true);
-                if (isNaN(y1)) throw new Error('y1 is NaN');
-                return y1;
-            } catch (error) {
-                console.error('Error setting y1 attribute for line.link:', error);
-                console.error('Data causing error:', d);
-                return 0; // Or some default value
-            }
-        })
-        .attr('x2', d => {
-            try {
-                const x2 = getIntersectionX(d.target, d.source, false);
-                if (isNaN(x2)) throw new Error('x2 is NaN');
-                return x2;
-            } catch (error) {
-                console.error('Error setting x2 attribute for line.link:', error);
-                console.error('Data causing error:', d);
-                return 0; // Or some default value
-            }
-        })
-        .attr('y2', d => {
-            try {
-                const y2 = getIntersectionY(d.target, d.source, false);
-                if (isNaN(y2)) throw new Error('y2 is NaN');
-                return y2;
-            } catch (error) {
-                console.error('Error setting y2 attribute for line.link:', error);
-                console.error('Data causing error:', d);
-                return 0; // Or some default value
-            }
-        });
-
-    svg.selectAll('circle')
-        .attr('cx', d => {
-            try {
-                d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
-                return d.x;
-            } catch (error) {
-                console.error('Error setting cx attribute for circle:', error);
-                console.error('Data causing error:', d);
-                return 0; // Or some default value
-            }
-        })
-        .attr('cy', d => {
-            try {
-                d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
-                return d.y;
-            } catch (error) {
-                console.error('Error setting cy attribute for circle:', error);
-                console.error('Data causing error:', d);
-                return 0; // Or some default value
-            }
-        });
-
-    svg.selectAll('text')
-        .attr('x', d => {
-            try {
-                return d.x;
-            } catch (error) {
-                console.error('Error setting x attribute for text:', error);
-                console.error('Data causing error:', d);
-                return 0; // Or some default value
-            }
-        })
-        .attr('y', d => {
-            try {
-                return d.y + 4;
-            } catch (error) {
-                console.error('Error setting y attribute for text:', error);
-                console.error('Data causing error:', d);
-                return 0; // Or some default value
-            }
-        });
-}
-
-function getIntersectionX(node1, node2, isSource) {
-    const dx = node2.x - node1.x;
-    const dy = node2.y - node1.y;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    const r = node1.radius;
-
-    const x = node1.x + (r / dist) * dx * (1);
-    return x;
-}
-
-function getIntersectionY(node1, node2, isSource) {
-    const dx = node2.x - node1.x;
-    const dy = node2.y - node1.y;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    const r = node1.radius;
-
-    const y = node1.y + (r / dist) * dy * (1);
-    return y;
-}
-*/
 import * as d3 from 'd3';
 
 // Angle map for different numbers of links
 // Angle map for different numbers of links
 const angleMap = {
-    2: [Math.PI / 6, -Math.PI / 6],
-    3: [Math.PI / 6, 0, -Math.PI / 6],
-    4: [Math.PI / 6, Math.PI / 4, -Math.PI / 4, -Math.PI / 6]
+    2: [Math.PI / 6, -Math.PI / 6], // Same angle, opposite direction
+    3: [Math.PI / 6, 0, -Math.PI / 6], // Same as 2, plus straight in the middle
+    4: [Math.PI / 6, Math.PI / 3, -Math.PI / 3, -Math.PI / 6] // Two pairs of opposite angles with larger angles
 };
 
 // Calculate the distance between source and target nodes
@@ -154,12 +42,18 @@ function getArcAngle(linkCount, typeIndex) {
 }
 
 // Calculate the control points for the arc
-function calculateControlPoints(sourceX, sourceY, targetX, targetY, arcAngle, distance) {
-    return {
-        cx: (sourceX + targetX) / 2 + Math.cos(arcAngle) * distance / 3,
-        cy: (sourceY + targetY) / 2 + Math.sin(arcAngle) * distance / 3
-    };
+function calculateControlPoints(sourceX, sourceY, targetX, targetY, controlAngle, controlPointDistance) {
+    // Midpoint between source and target
+    const midX = (sourceX + targetX) / 2;
+    const midY = (sourceY + targetY) / 2;
+
+    // Control point offset from the midpoint
+    const cx = midX + Math.cos(controlAngle) * controlPointDistance;
+    const cy = midY + Math.sin(controlAngle) * controlPointDistance;
+
+    return { cx, cy };
 }
+
 
 // Main linkArc function
 function linkArc(d) {
@@ -171,6 +65,7 @@ function linkArc(d) {
     const sourceRadius = d.source.radius || 0;
     const targetRadius = d.target.radius || 0;
 
+    // Calculate positions on the border of the source and target nodes
     const sourcePosition = calculateNodeBorderPosition(d.source.x, d.source.y, angle, sourceRadius);
     const targetPosition = calculateNodeBorderPosition(d.target.x, d.target.y, angle + Math.PI, targetRadius);
 
@@ -186,11 +81,16 @@ function linkArc(d) {
         const typeIndex = Object.keys(d.multipleLinks).indexOf(d.typeOfLink); // Zero-based index
         const arcAngle = getArcAngle(linkCount, typeIndex);
 
-        const { cx, cy } = calculateControlPoints(sourceX, sourceY, targetX, targetY, arcAngle, distance);
+        // Adjust control point calculation to ensure better angles
+        const controlPointDistance = distance / 3; // Adjust fraction as needed
+        const controlAngle = angle + arcAngle;
+
+        const { cx, cy } = calculateControlPoints(sourceX, sourceY, targetX, targetY, controlAngle, controlPointDistance);
 
         return `M${sourceX},${sourceY}Q${cx},${cy} ${targetX},${targetY}`;
     }
 }
+
 
 function ticked(width, height, svg) {
     try {
