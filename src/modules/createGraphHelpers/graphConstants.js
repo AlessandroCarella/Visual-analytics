@@ -1,5 +1,5 @@
 import { companiesToInvestigate } from "../constants"
-import { clickableNode, getLastAddedNodeId } from "../dataManagement"
+import { clickableNode } from "../dataManagement"
 
 const lastAddedNodeColor = '#FF0000' //light red
 const entityToInvestigateColor = '#54119c'//purple
@@ -8,6 +8,15 @@ const sourceAndTargetColor = '#04820f' //green
 const sourceColor = '#821304' //red
 const targetColor = '#042882' //blue
 const blackColor = '#000' //black
+
+const nodeStateColor = {
+    'Entity to investigate': entityToInvestigateColor, // Purple
+    'Clickable node': clickableNodeColor, // Yellow
+    'Source and target': sourceAndTargetColor, // Green
+    'Source': sourceColor, // Red
+    'Target': targetColor, // Blue
+    'Last added node': lastAddedNodeColor, // Light Red
+}
 
 const markersRefX = 9
 const markersRefY = 0
@@ -66,4 +75,4 @@ function determineNodeBorderColor(node) {
     return nodeTypeColor[node.nodeType]
 }
 
-export { svgSize, blackColor, nodeTypeColor, determineNodeBorderColor, determineNodeColor, entityToInvestigateColor, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel, linksSizeMultiplier, markerHeight, markersRefX, markersRefY, markerWidth, nodeBorderSize, sourceAndTargetColor, sourceColor, targetColor, tooltipBackgroundColor }
+export { blackColor, determineNodeBorderColor, determineNodeColor, entityToInvestigateColor, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel, linksSizeMultiplier, markerHeight, markersRefX, markersRefY, markerWidth, nodeBorderSize, nodeStateColor, nodeTypeColor, sourceAndTargetColor, sourceColor, svgSize, targetColor, tooltipBackgroundColor }

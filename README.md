@@ -163,6 +163,8 @@
 
     * If the palette I’m able to extract from the image is not enough where should I get colors from
       * https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3
+    
+    * remove non active options from the right click menu
 
   * Dataset
     * ~~Do I merge the nodes that have weird names? Like there is a node that has the id 0 and then there are multiple nodes that are named: 0 and some following gibberish~~
@@ -180,7 +182,6 @@
       * Perchè no
 
     * Do I show all I did in the data analysis part? Is what I did ok (quick runthrough)?
-
 
 ## Notes
 * the svgs that are used as nodes are only draggable by their countourn (or otherwise said "If the SVGs inside your nodes are not filled, it can make the areas within the SVG graphics non-interactive for drag events, as they might not have any actual content or "hit boxes" to catch those events.")

@@ -258,4 +258,4 @@ function setupTooltip(targetsPerSourceCount, sourcesPerTargetCount) {
         });
 }
 
-export { preloadSvgs, createLabels, createLinks, createMarkers, createNodes, setupTooltip };
+export { svgCache, preloadSvgs, createLabels, createLinks, createMarkers, createNodes, setupTooltip };

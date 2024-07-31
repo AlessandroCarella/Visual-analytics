@@ -1,6 +1,7 @@
 // modules/guide.js
 import { typesOfLinks, colorsOfLinksVals } from "./constants";
-import { nodeTypeColor } from "./createGraphHelpers/graphConstants";
+import { svgCache } from "./createGraphHelpers/createEntities";
+import { nodeStateColor, nodeTypeColor } from "./createGraphHelpers/graphConstants";
 
 function setupGuideButton() {
     const showGuideButton = document.querySelector('.show-guide-button');
@@ -37,20 +38,30 @@ function populateGuideContent() {
 
 function populateLinksColors(section) {
     section.innerHTML = ''; // Clear previous content
-    typesOfLinks.forEach((type, index) => {
-        const formattedType = formatLabel(type);
-        const colorDiv = createColorDiv(colorsOfLinksVals[index], formattedType);
+    for (let nodeType in nodeTypeColor){
+        const formattedType = formatLabel(nodeType);
+        const colorDiv = createSvgDiv(nodeType === 'null' ? svgCache['Unknown'] : svgCache[nodeType], formattedType);
         section.appendChild(colorDiv);
-    });
+    }
 }
 
 function populateNodesColors(section) {
     section.innerHTML = ''; // Clear previous content
-    for (const [nodeType, color] of Object.entries(nodeTypeColor)) {
+    for (const [nodeType, color] of Object.entries(nodeStateColor)) {
         const formattedType = formatLabel(nodeType);
         const colorDiv = createColorDiv(color, formattedType);
         section.appendChild(colorDiv);
     }
+}
+
+function createSvgDiv(svgContent, label) {
+    const svgDiv = document.createElement('div');
+    svgDiv.classList.add('svg-section-item');
+    svgDiv.innerHTML = `
+        <div class="svg-square">${svgContent}</div>
+        <div class="svg-label">${label}</div>
+    `;
+    return svgDiv;
 }
 
 function createColorDiv(color, label) {
