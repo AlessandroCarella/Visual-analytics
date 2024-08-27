@@ -6,6 +6,14 @@
   * npm run build
   * npm start
 
+# notes
+in the report report the fact that the software has been tested both with people which do not have a great knowledge of the domain and with someone who does and the following considerations came out of the user testing:
+* Mettere nella legenda il fatto che il link tra le entita da investigare è in grigio spiegare cos'è
+* "Investigate numer of links distance from nodes to investogate" al posto del testo precedente
+* show Map legend al posto di show guide
+* esplicitare la possibilita di usare in tasto destro nella legenda
+* Specificare quali sono i bordi dei bottoni per i livelli, da -1 a n
+
 ## record of what i have done so far (not updated):
 
 * ### datasets
