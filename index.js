@@ -15,9 +15,9 @@ import { setupGuideButton } from "./modules/guide";
 import { preloadSvgs } from "./modules/createGraphHelpers/createEntities";
 import { setupOpacitySlider } from './modules/opacitySlider';
 
-const jsonFilePathForMergedDatasetWithToInvestigateExtraData = "data/mergedDatasetWithToInvestigateExtraData.json";
-const jsonFilePathForConnectionsLevelsSouspectSourcesNoRepetition = "data/connectionsLevelsSouspectSourcesNoRepetition.json";
-const jsonFilePathForConnectionsLevelsSouspectTargetsNoRepetition = "data/connectionsLevelsSouspectTargetsNoRepetition.json";
+const jsonFilePathForMergedDatasetWithToInvestigateExtraData = "./data/mergedDatasetWithToInvestigateExtraData.json";
+const jsonFilePathForConnectionsLevelsSouspectSourcesNoRepetition = "./data/connectionsLevelsSouspectSourcesNoRepetition.json";
+const jsonFilePathForConnectionsLevelsSouspectTargetsNoRepetition = "./data/connectionsLevelsSouspectTargetsNoRepetition.json";
 
 const svg = d3.select('.graph svg');
 
