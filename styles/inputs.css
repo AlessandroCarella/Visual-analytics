@@ -1,0 +1,47 @@
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.investigate-source-or-target-distance-select {
+    pointer-events: none;
+    text-align: center;
+    width: 90px;
+    padding: 10px;
+    border: 2px groove black;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0 10px;
+    margin-top: 0px;
+}
+
+.investigate-distance-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.investigate-distance-div button {
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.2;
+    box-sizing: border-box;
+    margin: 0 10px;
+}
+
+.investigate-distance-div input[type="number"]::-webkit-inner-spin-button,
+.investigate-distance-div input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.investigate-distance-div input[type="number"] {
+    -moz-appearance: textfield;
+}

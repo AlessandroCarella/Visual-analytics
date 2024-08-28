@@ -1,0 +1,4002 @@
+[
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.90195256,
+        "source": "1017141",
+        "sourceType": "organization",
+        "target": "0",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9113865,
+        "source": "2591586",
+        "sourceType": "organization",
+        "target": "0",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8960208,
+        "source": "185040354",
+        "sourceType": "organization",
+        "target": "0",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.80260277,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8761594,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "Faurtil F\u00c3\u00a1brica Urnas Tiet\u00c3\u00aa",
+        "targetType": null,
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8558467,
+        "source": "Faroe Islands Shrimp Shark",
+        "sourceType": "company",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8066812,
+        "source": "341411",
+        "sourceType": "organization",
+        "target": "Sonia Fisheries Pvt",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8563299,
+        "source": "341411",
+        "sourceType": "organization",
+        "target": "Uttar Pradesh Sp",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.82944757,
+        "source": "341411",
+        "sourceType": "organization",
+        "target": "2028",
+        "targetType": "movement",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.84984857,
+        "source": "128692",
+        "sourceType": "organization",
+        "target": "199442",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8761564,
+        "source": "Elizabeth Welch",
+        "sourceType": "person",
+        "target": "da0a7bbb-5bd1-42aa-bcc0-b8923d5c15d4",
+        "targetType": "location",
+        "sourceCountry": "Country_712875",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.86860394,
+        "source": "Elizabeth Welch",
+        "sourceType": "person",
+        "target": "Sept",
+        "targetType": null,
+        "sourceCountry": "Country_712875",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.91782093,
+        "source": "Elizabeth Welch",
+        "sourceType": "person",
+        "target": "Kathleen Gates",
+        "targetType": "person",
+        "sourceCountry": "Country_712875",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8479064,
+        "source": "Elizabeth Welch",
+        "sourceType": "person",
+        "target": "Adam Cook",
+        "targetType": "person",
+        "sourceCountry": "Country_712875",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9334543,
+        "source": "Elizabeth Welch",
+        "sourceType": "person",
+        "target": "Jason Huff",
+        "targetType": "person",
+        "sourceCountry": "Country_712875",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8198022,
+        "source": "Elizabeth Welch",
+        "sourceType": "person",
+        "target": "341411",
+        "targetType": "organization",
+        "sourceCountry": "Country_712875",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.87356156,
+        "source": "Elizabeth Welch",
+        "sourceType": "person",
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": "Country_712875",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9060049,
+        "source": "da0a7bbb-5bd1-42aa-bcc0-b8923d5c15d4",
+        "sourceType": "location",
+        "target": "Elizabeth Welch",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_712875"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8011801,
+        "source": "4",
+        "sourceType": "organization",
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8237005,
+        "source": "4",
+        "sourceType": "organization",
+        "target": "Uttar Pradesh Sp",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8639725,
+        "source": "4",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9627352,
+        "source": "0",
+        "sourceType": "organization",
+        "target": "7775",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.96630234,
+        "source": "0",
+        "sourceType": "organization",
+        "target": "Sean Vasquez",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9068577,
+        "source": "0",
+        "sourceType": "organization",
+        "target": "196159",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.97251624,
+        "source": "0",
+        "sourceType": "organization",
+        "target": "755",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9256628,
+        "source": "0",
+        "sourceType": "organization",
+        "target": "Ancla del Mar Ltd. Corporation",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8890874,
+        "source": "0",
+        "sourceType": "organization",
+        "target": "Mrs. Jessica Meyer",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.801551,
+        "source": "0",
+        "sourceType": "organization",
+        "target": "IMPORT",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8385527,
+        "source": "196159",
+        "sourceType": "organization",
+        "target": "44956",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8560038,
+        "source": "196159",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8259875,
+        "source": "6406040",
+        "sourceType": "political_organization",
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9111117,
+        "source": "766649",
+        "sourceType": "political_organization",
+        "target": "8814",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.87009597,
+        "source": "9067",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.96955264,
+        "source": "750975",
+        "sourceType": "organization",
+        "target": "4348721",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8591079,
+        "source": "750975",
+        "sourceType": "organization",
+        "target": "b20c0baf-8530-4a84-a5b6-8da324ebebdb",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8478948,
+        "source": "750975",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8589815,
+        "source": "750975",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8258793,
+        "source": "750975",
+        "sourceType": "organization",
+        "target": "Sonia Fisheries Pvt",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8568271,
+        "source": "85117949",
+        "sourceType": "political_organization",
+        "target": "Sonia Fisheries Pvt",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8551498,
+        "source": "3506021",
+        "sourceType": "organization",
+        "target": "60197861",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.94104576,
+        "source": "69150209",
+        "sourceType": "organization",
+        "target": "Aquaculture\u00e2",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9151142,
+        "source": "69150209",
+        "sourceType": "organization",
+        "target": "51",
+        "targetType": "political_organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8604943,
+        "source": "69150209",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8246702,
+        "source": "72",
+        "sourceType": "organization",
+        "target": "Sonia Fisheries Pvt",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.96197516,
+        "source": "Derek Burke",
+        "sourceType": "person",
+        "target": "520",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9636095,
+        "source": "Derek Burke",
+        "sourceType": "person",
+        "target": "85",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8048599,
+        "source": "44956",
+        "sourceType": "organization",
+        "target": "3",
+        "targetType": "political_organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8288136,
+        "source": "44956",
+        "sourceType": "organization",
+        "target": "3404599",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.823576,
+        "source": "44956",
+        "sourceType": "organization",
+        "target": "4f533d76-17d7-4b95-86b5-106503c99b0c",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.959009,
+        "source": "5",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.89943177,
+        "source": "77",
+        "sourceType": "vessel",
+        "target": "Ryan Lewis",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.85460746,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "7361",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.91268694,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "\u00e2\u0080\u009clocal\u00e2",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.91548765,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "Ex-Lax",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.82628816,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "78565892",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8020636,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "salmon",
+        "targetType": "vessel",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8037681,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "Angela Powers",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_34878"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.912199,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "9166",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8317246,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "185040354",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.85085946,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "759",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8803859,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "2262",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9063994,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "Pacific Island States United States\u00e2",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9350891,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "territory American Samoa",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.85632855,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "PC",
+        "targetType": "vessel",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8105983,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "7892",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8589457,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "39",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8562819,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "6406040",
+        "targetType": "political_organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.84161437,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "76609426",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8781474,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "Fishisland",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8161097,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "Tamil Nadu S.p.A.",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8215945,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "5680682",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.93202955,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "Mar del Oeste Pic",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Vesperlandia"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9454411,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.96567106,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8923753,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9125178,
+        "source": "7298083",
+        "sourceType": "organization",
+        "target": "png xi  Line",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Country_628643"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8317078,
+        "source": "Maria Mitchell",
+        "sourceType": "person",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Oceanus",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.81732166,
+        "source": "9",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.95530415,
+        "source": "14bda3bb-9993-4265-97cc-1747808c144e",
+        "sourceType": "location",
+        "target": "Alan Wells",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8278751,
+        "source": "14bda3bb-9993-4265-97cc-1747808c144e",
+        "sourceType": "location",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8251332,
+        "source": "Amanda Mckenzie",
+        "sourceType": "person",
+        "target": "a0deebdf-db0c-4aa8-91b6-0536e017c20f",
+        "targetType": "location",
+        "sourceCountry": "Oceanus",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9113967,
+        "source": "Amanda Mckenzie",
+        "sourceType": "person",
+        "target": "Maria Russell",
+        "targetType": "person",
+        "sourceCountry": "Oceanus",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8252303,
+        "source": "Amanda Mckenzie",
+        "sourceType": "person",
+        "target": "Aquaculture\u00e2",
+        "targetType": null,
+        "sourceCountry": "Oceanus",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8209239,
+        "source": "8698",
+        "sourceType": "organization",
+        "target": "964",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9365071,
+        "source": "8698",
+        "sourceType": "organization",
+        "target": "Claire Russell",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.86202246,
+        "source": "8698",
+        "sourceType": "organization",
+        "target": "Jason Davis",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8285236,
+        "source": "8698",
+        "sourceType": "organization",
+        "target": "9488645",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8570836,
+        "source": "8698",
+        "sourceType": "organization",
+        "target": "Anthony Gomez",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8618691,
+        "source": "8698",
+        "sourceType": "organization",
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8599207,
+        "source": "2262",
+        "sourceType": "organization",
+        "target": "Alan Wells",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9195689,
+        "source": "93873119",
+        "sourceType": "organization",
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9372252,
+        "source": "St",
+        "sourceType": null,
+        "target": "Victoria Parks",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8325767,
+        "source": "St",
+        "sourceType": null,
+        "target": "e40c01a4-8ed5-400f-857d-31e7bd263e35",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8147994,
+        "source": "St",
+        "sourceType": null,
+        "target": "Samuel Cross",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_230197"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.88163954,
+        "source": "St",
+        "sourceType": null,
+        "target": "18139144-efbe-4540-8e65-fde29def1993",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8476954,
+        "source": "St",
+        "sourceType": null,
+        "target": "826749274",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8593325,
+        "source": "St",
+        "sourceType": null,
+        "target": "West Bengal SRL Marine conservation",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8924565,
+        "source": "St",
+        "sourceType": null,
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8558144,
+        "source": "St",
+        "sourceType": null,
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8533904,
+        "source": "St",
+        "sourceType": null,
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8559126,
+        "source": "Bryan Taylor",
+        "sourceType": "person",
+        "target": "199442",
+        "targetType": "organization",
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.93653303,
+        "source": "380",
+        "sourceType": "organization",
+        "target": "Kerala Market Corp Consulting",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.88431066,
+        "source": "6731",
+        "sourceType": "organization",
+        "target": "d025bbec-393d-4f51-94b3-01b77280ef31",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8362729,
+        "source": "6731",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8804744,
+        "source": "665",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9659513,
+        "source": "947",
+        "sourceType": "organization",
+        "target": "4348721",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.84734964,
+        "source": "947",
+        "sourceType": "organization",
+        "target": "b20c0baf-8530-4a84-a5b6-8da324ebebdb",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.83156615,
+        "source": "947",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8400339,
+        "source": "Michael Compton",
+        "sourceType": "person",
+        "target": "b20c0baf-8530-4a84-a5b6-8da324ebebdb",
+        "targetType": "location",
+        "sourceCountry": "Vesperand's Bay",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.82857007,
+        "source": "Michael Compton",
+        "sourceType": "person",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Vesperand's Bay",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.97005975,
+        "source": "4348721",
+        "sourceType": "organization",
+        "target": "USS Hershel",
+        "targetType": "vessel",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8511437,
+        "source": "4348721",
+        "sourceType": "organization",
+        "target": "Gregory Ortiz",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Vesperand's Bay"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.80471647,
+        "source": "4348721",
+        "sourceType": "organization",
+        "target": "Michael Compton",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Vesperand's Bay"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8480846,
+        "source": "4348721",
+        "sourceType": "organization",
+        "target": "b20c0baf-8530-4a84-a5b6-8da324ebebdb",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.82456464,
+        "source": "4348721",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8527388,
+        "source": "b20c0baf-8530-4a84-a5b6-8da324ebebdb",
+        "sourceType": "location",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.82555556,
+        "source": "b20c0baf-8530-4a84-a5b6-8da324ebebdb",
+        "sourceType": "location",
+        "target": "Playa del Cielo Kga",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Rio Isla"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.84836704,
+        "source": "21538",
+        "sourceType": "organization",
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.90199476,
+        "source": "435054320",
+        "sourceType": "organization",
+        "target": "8327",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.81258255,
+        "source": "435054320",
+        "sourceType": "organization",
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8091495,
+        "source": "435054320",
+        "sourceType": "organization",
+        "target": "8851578d-3dd7-4430-8f73-b95305eb1f03",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8949433,
+        "source": "435054320",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9035101,
+        "source": "f21800ca-b3c9-404b-8438-3d75ea84c409",
+        "sourceType": "location",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8778388,
+        "source": "1560",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.84824204,
+        "source": "Sept",
+        "sourceType": null,
+        "target": "Paul Wiley",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.81330615,
+        "source": "Sept",
+        "sourceType": null,
+        "target": "Seth Kelley",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9250021,
+        "source": "Sept",
+        "sourceType": null,
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.80954653,
+        "source": "John Gonzalez",
+        "sourceType": "person",
+        "target": "Emily Kennedy",
+        "targetType": "person",
+        "sourceCountry": "Nalakond",
+        "targetCountry": "Country_614826"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.80070466,
+        "source": "John Gonzalez",
+        "sourceType": "person",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Nalakond",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.92652833,
+        "source": "57",
+        "sourceType": "political_organization",
+        "target": "51",
+        "targetType": "political_organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.80143034,
+        "source": "months",
+        "sourceType": "movement",
+        "target": "68ac10aa-80a3-4b3c-99e5-f5708715ab2c",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.83965176,
+        "source": "94",
+        "sourceType": "organization",
+        "target": "Alan Wells",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.93991554,
+        "source": "e85c691a-2adc-4094-8d29-5ea328486951",
+        "sourceType": "location",
+        "target": "Alan Wells",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8397438,
+        "source": "41870892-4565-42cd-9374-8665d01e9aa9",
+        "sourceType": "location",
+        "target": "199442",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9390002,
+        "source": "23",
+        "sourceType": "vessel",
+        "target": "Kerala Market Corp Consulting",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8298293,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": "Country_628643",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.87335443,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "Ashley Wiggins",
+        "targetType": "person",
+        "sourceCountry": "Country_628643",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8257876,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "\u00e2\u0080\u009csink\u00e2",
+        "targetType": null,
+        "sourceCountry": "Country_628643",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8094637,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "801809",
+        "targetType": "organization",
+        "sourceCountry": "Country_628643",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.80862314,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "Saturday",
+        "targetType": "movement",
+        "sourceCountry": "Country_628643",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8386882,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "Alan Wells",
+        "targetType": "person",
+        "sourceCountry": "Country_628643",
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.94744104,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "Patricia Bowen",
+        "targetType": "person",
+        "sourceCountry": "Country_628643",
+        "targetCountry": "Oceanus"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9400678,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "Patricia Bowen",
+        "targetType": "person",
+        "sourceCountry": "Country_628643",
+        "targetCountry": "Oceanus"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.84387016,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "Patricia Bowen",
+        "targetType": "person",
+        "sourceCountry": "Country_628643",
+        "targetCountry": "Oceanus"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.88016313,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "Jonathan Spence",
+        "targetType": "person",
+        "sourceCountry": "Country_628643",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8558293,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "Madeline Collins",
+        "targetType": "person",
+        "sourceCountry": "Country_628643",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8548082,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Country_628643",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.80904883,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "Faurtil F\u00c3\u00a1brica Urnas Tiet\u00c3\u00aa",
+        "targetType": null,
+        "sourceCountry": "Country_628643",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8635392,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "Tiffany Leonard",
+        "targetType": "person",
+        "sourceCountry": "Country_628643",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.81828177,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "Kerala Market Corp Consulting",
+        "targetType": null,
+        "sourceCountry": "Country_628643",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9135672,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "Kerala Market Corp Consulting",
+        "targetType": null,
+        "sourceCountry": "Country_628643",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8399092,
+        "source": "png xi  Line",
+        "sourceType": "company",
+        "target": "Sudd Swamp  Wave AS Freight ",
+        "targetType": "company",
+        "sourceCountry": "Country_628643",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.95190364,
+        "source": "277983365",
+        "sourceType": "organization",
+        "target": "85",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.93983865,
+        "source": "Playa del Cielo Kga",
+        "sourceType": "company",
+        "target": "Kari Zavala",
+        "targetType": "person",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.82821363,
+        "source": "Playa del Cielo Kga",
+        "sourceType": "company",
+        "target": "68ac10aa-80a3-4b3c-99e5-f5708715ab2c",
+        "targetType": "location",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.82052255,
+        "source": "Playa del Cielo Kga",
+        "sourceType": "company",
+        "target": "b03a6fc7-507a-4328-9814-57561acb4fc6",
+        "targetType": "location",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.88463426,
+        "source": "Playa del Cielo Kga",
+        "sourceType": "company",
+        "target": "3887",
+        "targetType": "organization",
+        "sourceCountry": "Rio Isla",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.83857125,
+        "source": "235866056",
+        "sourceType": "organization",
+        "target": "Uttar Pradesh Sp",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.82629174,
+        "source": "235866056",
+        "sourceType": "organization",
+        "target": "2028",
+        "targetType": "movement",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.914028,
+        "source": "486",
+        "sourceType": "organization",
+        "target": "8814",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.92975163,
+        "source": "arts",
+        "sourceType": "event",
+        "target": "95",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.88265264,
+        "source": "arts",
+        "sourceType": "event",
+        "target": "903311212",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.88802505,
+        "source": "April",
+        "sourceType": "event",
+        "target": "b03a6fc7-507a-4328-9814-57561acb4fc6",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8269599,
+        "source": "April",
+        "sourceType": "event",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9653765,
+        "source": "April",
+        "sourceType": "event",
+        "target": "Sonia Fisheries Pvt",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8039211,
+        "source": "Jennifer Alvarez",
+        "sourceType": "person",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Oceanus",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.801047,
+        "source": "743225",
+        "sourceType": "organization",
+        "target": "5ede75fe-f670-4a59-b693-da34e7f6eb47",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.95016116,
+        "source": "49",
+        "sourceType": "organization",
+        "target": "SIMPComplianceGuide",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.88690263,
+        "source": "49",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8592093,
+        "source": "9488645",
+        "sourceType": "organization",
+        "target": "\u00e2\u0080\u009dTheoretically",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9224307,
+        "source": "9488645",
+        "sourceType": "organization",
+        "target": "Gary Dunn",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8791151,
+        "source": "Lauren Moore",
+        "sourceType": "person",
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": "Merigrad",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8342798,
+        "source": "Leominster Provincetown\u00e2",
+        "sourceType": null,
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.94897234,
+        "source": "d7f220de-bba2-4965-9c15-3dd38ef5c3c7",
+        "sourceType": "location",
+        "target": "fisheries\u00e2",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.85245764,
+        "source": "d7f220de-bba2-4965-9c15-3dd38ef5c3c7",
+        "sourceType": "location",
+        "target": "Uttar Pradesh Sp",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.82621896,
+        "source": "fisheries\u00e2",
+        "sourceType": null,
+        "target": "49",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.85398453,
+        "source": "fisheries\u00e2",
+        "sourceType": null,
+        "target": "Uttar Pradesh Sp",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9355626,
+        "source": "fisheries\u00e2",
+        "sourceType": null,
+        "target": "d7f220de-bba2-4965-9c15-3dd38ef5c3c7",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8349277,
+        "source": "34",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.81415534,
+        "source": "34",
+        "sourceType": "organization",
+        "target": "381051499",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9113339,
+        "source": "34",
+        "sourceType": "organization",
+        "target": "Sonia Fisheries Pvt",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9331588,
+        "source": "Kyle Stanton",
+        "sourceType": "person",
+        "target": "Laura Smith",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.80031896,
+        "source": "Kyle Stanton",
+        "sourceType": "person",
+        "target": "Mar del Oeste Pic",
+        "targetType": "company",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Vesperlandia"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8216632,
+        "source": "5a52675e-1243-4244-ad55-85a06c4408de",
+        "sourceType": "location",
+        "target": "199442",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8064336,
+        "source": "Stephanie Hinton",
+        "sourceType": "person",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Oceanus",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.93138134,
+        "source": "47562016",
+        "sourceType": "organization",
+        "target": "665",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8409182,
+        "source": "47562016",
+        "sourceType": "organization",
+        "target": "589",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9294618,
+        "source": "47562016",
+        "sourceType": "organization",
+        "target": "Ht Shipping",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.96270365,
+        "source": "47562016",
+        "sourceType": "organization",
+        "target": "Selena Building",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.94379646,
+        "source": "47562016",
+        "sourceType": "organization",
+        "target": "87940",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8584748,
+        "source": "47562016",
+        "sourceType": "organization",
+        "target": "Platts Oilgram",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8367175,
+        "source": "47562016",
+        "sourceType": "organization",
+        "target": "Sergio Ross",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8592001,
+        "source": "47562016",
+        "sourceType": "organization",
+        "target": "Daniel Middleton",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8620751,
+        "source": "47562016",
+        "sourceType": "organization",
+        "target": "Platts\u00e2",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.86265534,
+        "source": "47562016",
+        "sourceType": "organization",
+        "target": "Patricia Hunter",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9186074,
+        "source": "47562016",
+        "sourceType": "organization",
+        "target": "Kerala Market Corp Consulting",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.87399596,
+        "source": "672",
+        "sourceType": "organization",
+        "target": "Sudd Swamp  Wave AS Freight ",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8599659,
+        "source": "672",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.3388,
+        "source": "59",
+        "sourceType": "organization",
+        "target": "Kerala Market Corp Consulting",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.87497324,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "\u00e2\u0080\u009ccollaborative\u00e2",
+        "targetType": null,
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.82532555,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "Tammy Ryan",
+        "targetType": "person",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8563945,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "Madeline Collins",
+        "targetType": "person",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8568431,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.81371176,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8361138,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.85297817,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8073796,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8219221,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "targetType": "location",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8275977,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "d4947401-8ec7-48b9-a66f-45d983d59e0a",
+        "targetType": "location",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8525566,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "288971672",
+        "targetType": "political_organization",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8840127,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "d025bbec-393d-4f51-94b3-01b77280ef31",
+        "targetType": "location",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.87102634,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "Rachel Arnold",
+        "targetType": "person",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.83500046,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "199442",
+        "targetType": "organization",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8324256,
+        "source": "Mar del Oeste Pic",
+        "sourceType": "company",
+        "target": "65",
+        "targetType": "organization",
+        "sourceCountry": "Vesperlandia",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.857494,
+        "source": "8327",
+        "sourceType": "organization",
+        "target": "185106",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8913318,
+        "source": "8327",
+        "sourceType": "organization",
+        "target": "weeks",
+        "targetType": "movement",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8248391,
+        "source": "8327",
+        "sourceType": "organization",
+        "target": "40213337",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.90779465,
+        "source": "8327",
+        "sourceType": "organization",
+        "target": "cutters",
+        "targetType": "vessel",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.81697214,
+        "source": "8327",
+        "sourceType": "organization",
+        "target": "435054320",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.88461506,
+        "source": "8327",
+        "sourceType": "organization",
+        "target": "7505050",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.817435,
+        "source": "8327",
+        "sourceType": "organization",
+        "target": "\u00e2\u0080\u009cIllegal",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.90622,
+        "source": "8327",
+        "sourceType": "organization",
+        "target": "water",
+        "targetType": "vessel",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.900931,
+        "source": "8327",
+        "sourceType": "organization",
+        "target": "Calvin Salas",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.951483,
+        "source": "weeks",
+        "sourceType": "movement",
+        "target": "Kari Zavala",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8283572,
+        "source": "40213337",
+        "sourceType": "organization",
+        "target": "cutter James",
+        "targetType": "vessel",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8234881,
+        "source": "Coast",
+        "sourceType": "vessel",
+        "target": "8327",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8524496,
+        "source": "Coast",
+        "sourceType": "vessel",
+        "target": "cutter James",
+        "targetType": "vessel",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8272843,
+        "source": "7505050",
+        "sourceType": "organization",
+        "target": "8327",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8916783,
+        "source": "Today",
+        "sourceType": "event",
+        "target": "8327",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9154421,
+        "source": "8787",
+        "sourceType": "organization",
+        "target": "Alan Wells",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.80477226,
+        "source": "Michael Nicholson",
+        "sourceType": "person",
+        "target": "Sonia Fisheries Pvt",
+        "targetType": null,
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8106895,
+        "source": "98332",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8377153,
+        "source": "9786",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8124407,
+        "source": "Dana Goodwin",
+        "sourceType": "person",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Marebak",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8611696,
+        "source": "826273",
+        "sourceType": "organization",
+        "target": "464454263",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8388489,
+        "source": "22a2062d-03d8-48c3-9e91-9e5930b8d29f",
+        "sourceType": "location",
+        "target": "199442",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8324959,
+        "source": "ab195b55-453e-4436-ab0c-9f5660b4ec8c",
+        "sourceType": "location",
+        "target": "199442",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.81463224,
+        "source": "Cindy Ritter",
+        "sourceType": "person",
+        "target": "199442",
+        "targetType": "organization",
+        "sourceCountry": "Oceanus",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.84420145,
+        "source": "5441",
+        "sourceType": "organization",
+        "target": "199442",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.87112874,
+        "source": "199442",
+        "sourceType": "organization",
+        "target": "John Hutchinson",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.81385446,
+        "source": "199442",
+        "sourceType": "organization",
+        "target": "813",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8005786,
+        "source": "199442",
+        "sourceType": "organization",
+        "target": "5495",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9287848,
+        "source": "199442",
+        "sourceType": "organization",
+        "target": "Rodney Compton",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.872489,
+        "source": "199442",
+        "sourceType": "organization",
+        "target": "21538",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8057932,
+        "source": "199442",
+        "sourceType": "organization",
+        "target": "6242224",
+        "targetType": "political_organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.89012337,
+        "source": "199442",
+        "sourceType": "organization",
+        "target": "3740",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.83971775,
+        "source": "199442",
+        "sourceType": "organization",
+        "target": "Lake Malawi SE Freight ",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.84728354,
+        "source": "903",
+        "sourceType": "political_organization",
+        "target": "199442",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8221085,
+        "source": "903",
+        "sourceType": "political_organization",
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.84267575,
+        "source": "7023",
+        "sourceType": "political_organization",
+        "target": "Sudd Swamp  Wave AS Freight ",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.83087754,
+        "source": "7023",
+        "sourceType": "political_organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.88882333,
+        "source": "Morgan Bell",
+        "sourceType": "person",
+        "target": "431",
+        "targetType": "political_organization",
+        "sourceCountry": "Country_895471",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8101527,
+        "source": "1465792",
+        "sourceType": "organization",
+        "target": "png xi  Line",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Country_628643"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8048147,
+        "source": "17c99d9d-7049-4ebb-8a2a-f3d39cc42870",
+        "sourceType": "location",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.86700195,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "States\u00e2",
+        "targetType": null,
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.91406375,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "85117949",
+        "targetType": "political_organization",
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.83607864,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "Stephen Gutierrez",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8560825,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "Victoria Anderson",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.81298304,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "Caribbean",
+        "targetType": null,
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.85956645,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "Lake Malawi SE Freight ",
+        "targetType": null,
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8641511,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "Angela Hernandez",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9429591,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "Randy Logan",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9454054,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "Elizabeth Martin",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9502601,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "\u00e2\u0080\u009ctheoriginaldragoncove\u00e2",
+        "targetType": null,
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.87291026,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "Aaron Bennett",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8475468,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "Kathleen Rowe",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8201947,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "460859346",
+        "targetType": "political_organization",
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.83639693,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "940161722",
+        "targetType": "organization",
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8579501,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "237659945",
+        "targetType": "organization",
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8481845,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "662bfccd-798d-4e60-b308-2cb2918e3dd2",
+        "targetType": "location",
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8225328,
+        "source": "Delhi ers AS Holdings",
+        "sourceType": "company",
+        "target": "33560",
+        "targetType": "organization",
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.87518865,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "\u00e2\u0080\u009cbelieve",
+        "targetType": "event",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8471375,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Morgan Black",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.84283453,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Elijah Gordon",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.82367146,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Richard Perkins",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Oceanus"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.91656166,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Dr. Daniel Massey",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9285469,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "\u00e2\u0080\u009cWhat\u00e2\u0080\u0099s",
+        "targetType": "event",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8461893,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Martin Bryant",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.92799276,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Jerry Welch",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.89922166,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Alan Wells",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8864137,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Brooke Hamilton",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.93628806,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Amanda Mckenzie",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Oceanus"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8140302,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Kathleen Benitez",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8335848,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Brett Williams",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9037438,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Easterlings\u00e2",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.91655487,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Seth Peters",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.94453263,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "341411",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8473768,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8153044,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.84206855,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8394395,
+        "source": "fc4e853f-6e18-4631-bf95-f70d6a30579f",
+        "sourceType": "location",
+        "target": "SeaSpray Wave SRL Solutions",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8848501,
+        "source": "aa1f466d-d060-40fa-ab0e-3f8bb2ca940f",
+        "sourceType": "location",
+        "target": "Wendy Duarte",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8113173,
+        "source": "aa1f466d-d060-40fa-ab0e-3f8bb2ca940f",
+        "sourceType": "location",
+        "target": "Alexis Murphy",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8796692,
+        "source": "aa1f466d-d060-40fa-ab0e-3f8bb2ca940f",
+        "sourceType": "location",
+        "target": "750975",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.86130476,
+        "source": "aa1f466d-d060-40fa-ab0e-3f8bb2ca940f",
+        "sourceType": "location",
+        "target": "497",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8963638,
+        "source": "52",
+        "sourceType": "organization",
+        "target": "0",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.83850676,
+        "source": "42603647",
+        "sourceType": "organization",
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8467373,
+        "source": "5070599",
+        "sourceType": "organization",
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8293097,
+        "source": "8966",
+        "sourceType": "organization",
+        "target": "7298083",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.894098,
+        "source": "Plastic",
+        "sourceType": "vessel",
+        "target": "Kerala Market Corp Consulting",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.822751,
+        "source": "c14a3dc1-59d0-4b92-b9f3-331e51912787",
+        "sourceType": "location",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.83825815,
+        "source": "Christopher Peterson",
+        "sourceType": "person",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Oceanus",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8601238,
+        "source": "43685541",
+        "sourceType": "organization",
+        "target": "3887",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.92932975,
+        "source": "22",
+        "sourceType": "organization",
+        "target": "Alan Wells",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8227655,
+        "source": "Di\u00c3",
+        "sourceType": null,
+        "target": "Alan Wells",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8423662,
+        "source": "Abigail Foster",
+        "sourceType": "person",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Country_895471",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8185503,
+        "source": "890",
+        "sourceType": "organization",
+        "target": "\u00e2\u0080\u009cU",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8358893,
+        "source": "890",
+        "sourceType": "organization",
+        "target": "SeaSpray Wave SRL Solutions",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8791356,
+        "source": "\u00e2\u0080\u009cU",
+        "sourceType": null,
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.92605674,
+        "source": "Mario Richardson",
+        "sourceType": "person",
+        "target": "\u00e2\u0080\u009csink\u00e2",
+        "targetType": null,
+        "sourceCountry": "Country_459036",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.855808,
+        "source": "555217629",
+        "sourceType": "organization",
+        "target": "Sonia Fisheries Pvt",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8190675,
+        "source": "Kelly Brown",
+        "sourceType": "person",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Country_198078",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8736781,
+        "source": "Evelyn Huang",
+        "sourceType": "person",
+        "target": "Amanda Mitchell",
+        "targetType": "person",
+        "sourceCountry": "Oceanterra",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.92327124,
+        "source": "Daniel Mason",
+        "sourceType": "person",
+        "target": "Amanda Mitchell",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.93741554,
+        "source": "Miss Angel Thomas",
+        "sourceType": "person",
+        "target": "Amanda Mitchell",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.939332,
+        "source": "Amanda Mitchell",
+        "sourceType": "person",
+        "target": "Scott Brown",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.96405524,
+        "source": "days",
+        "sourceType": "movement",
+        "target": "Amanda Mitchell",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9082189,
+        "source": "days",
+        "sourceType": "movement",
+        "target": "Jeanette Kim",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.95343107,
+        "source": "days",
+        "sourceType": "movement",
+        "target": "sh rn y Corporation",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9605963,
+        "source": "1225",
+        "sourceType": "organization",
+        "target": "Alan Wells",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8611399,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "1225",
+        "targetType": "organization",
+        "sourceCountry": "Marebak",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9060349,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "Jasmine Camacho",
+        "targetType": "person",
+        "sourceCountry": "Marebak",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8479955,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "Lindsey Palmer",
+        "targetType": "person",
+        "sourceCountry": "Marebak",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9312306,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "\u00e2\u0080\u009cespecially",
+        "targetType": "event",
+        "sourceCountry": "Marebak",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.83269536,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "\u00e2\u0080\u0160",
+        "targetType": "event",
+        "sourceCountry": "Marebak",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.82561827,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "871",
+        "targetType": "organization",
+        "sourceCountry": "Marebak",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.84652907,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "James Scott",
+        "targetType": "person",
+        "sourceCountry": "Marebak",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8431831,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "Krista Harris",
+        "targetType": "person",
+        "sourceCountry": "Marebak",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.91652995,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "\u00e2\u0080\u009ceverything",
+        "targetType": "event",
+        "sourceCountry": "Marebak",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8306204,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "Brooke Hamilton",
+        "targetType": "person",
+        "sourceCountry": "Marebak",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.84553105,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "Joanna Brown",
+        "targetType": "person",
+        "sourceCountry": "Marebak",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8722382,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "46319064",
+        "targetType": "organization",
+        "sourceCountry": "Marebak",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8486595,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "46901627",
+        "targetType": "organization",
+        "sourceCountry": "Marebak",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8651784,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "Amanda Mckenzie",
+        "targetType": "person",
+        "sourceCountry": "Marebak",
+        "targetCountry": "Oceanus"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9318761,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "011ad1ae-ae1b-4c74-9f58-c020e6a3e836",
+        "targetType": "location",
+        "sourceCountry": "Marebak",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.85012454,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "341411",
+        "targetType": "organization",
+        "sourceCountry": "Marebak",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8281847,
+        "source": "Alan Wells",
+        "sourceType": "person",
+        "target": "Playa del Cielo Kga",
+        "targetType": "company",
+        "sourceCountry": "Marebak",
+        "targetCountry": "Rio Isla"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8839824,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Stephanie Robinson",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.89063764,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Punjab Market Marine sanctuary ship",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.897328,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "9237588",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8708564,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Robert Edwards",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8727544,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "1039",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.92740345,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Brandi White",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8245844,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Amanda Becker",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.90975904,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "68ac10aa-80a3-4b3c-99e5-f5708715ab2c",
+        "targetType": "location",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.829279,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Christopher Benitez",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.86624074,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Charles Fitzgerald",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.89450556,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Niger River Delta Ges.m.b.H. Services",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.83405995,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Faroe Islands Shrimp Shark",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Rio Isla"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8055147,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Playa del Cielo Kga",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Rio Isla"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.89267,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.875825,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Ocean Fisheries Llc",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.88929397,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Mar del Oeste Pic",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Vesperlandia"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.84116393,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "Mar del Oeste Pic",
+        "targetType": "company",
+        "sourceCountry": null,
+        "targetCountry": "Vesperlandia"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.89554244,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "SeaSpray Wave SRL Solutions",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.81470114,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "SeaSpray Wave SRL Solutions",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9063263,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "903311212",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8741458,
+        "source": "e678510b-947d-455a-8eb0-44d1009682ec",
+        "sourceType": "location",
+        "target": "903311212",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.92744976,
+        "source": "ad8fe467-3759-4f53-bf6a-896a237d187f",
+        "sourceType": "location",
+        "target": "sh rn y Corporation",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9028851,
+        "source": "ad8fe467-3759-4f53-bf6a-896a237d187f",
+        "sourceType": "location",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.9157882,
+        "source": "ad8fe467-3759-4f53-bf6a-896a237d187f",
+        "sourceType": "location",
+        "target": "Sonia Fisheries Pvt",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8548713,
+        "source": "Michael Brock",
+        "sourceType": "person",
+        "target": "\u00e2\u0080\u009ccollaborative\u00e2",
+        "targetType": null,
+        "sourceCountry": "Country_461742",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.90592545,
+        "source": "Thomas Morales",
+        "sourceType": "person",
+        "target": "Seth Kelley",
+        "targetType": "person",
+        "sourceCountry": "Country_542476",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9543801,
+        "source": "138782226",
+        "sourceType": "organization",
+        "target": "520",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9564423,
+        "source": "138782226",
+        "sourceType": "organization",
+        "target": "85",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8859373,
+        "source": "138782226",
+        "sourceType": "organization",
+        "target": "464454263",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9266035,
+        "source": "Linda Sherman",
+        "sourceType": "person",
+        "target": "Ryan Lewis",
+        "targetType": "person",
+        "sourceCountry": "Country_887466",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.853533,
+        "source": "Linda Sherman",
+        "sourceType": "person",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": "Country_887466",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.90312576,
+        "source": "Richard Perkins",
+        "sourceType": "person",
+        "target": "Tiffany Leonard",
+        "targetType": "person",
+        "sourceCountry": "Oceanus",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8209345,
+        "source": "Carlos White",
+        "sourceType": "person",
+        "target": "\u00e2\u0080\u009dTheoretically",
+        "targetType": null,
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.90223944,
+        "source": "Carlos White",
+        "sourceType": "person",
+        "target": "Gary Dunn",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.3568,
+        "source": "958085",
+        "sourceType": "organization",
+        "target": "55674",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8977157,
+        "source": "5ede75fe-f670-4a59-b693-da34e7f6eb47",
+        "sourceType": "location",
+        "target": "Kelly Brown",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_198078"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.85490364,
+        "source": "5ede75fe-f670-4a59-b693-da34e7f6eb47",
+        "sourceType": "location",
+        "target": "water",
+        "targetType": "vessel",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8881235,
+        "source": "5ede75fe-f670-4a59-b693-da34e7f6eb47",
+        "sourceType": "location",
+        "target": "Ms. Brittany Murray",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8891047,
+        "source": "5ede75fe-f670-4a59-b693-da34e7f6eb47",
+        "sourceType": "location",
+        "target": "\u00e2\u0080\u009cHe",
+        "targetType": "event",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.81047314,
+        "source": "Robert Adams",
+        "sourceType": "person",
+        "target": "5ede75fe-f670-4a59-b693-da34e7f6eb47",
+        "targetType": "location",
+        "sourceCountry": "Country_271835",
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9520512,
+        "source": "243964",
+        "sourceType": "organization",
+        "target": "Patricia Bowen",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Oceanus"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8532548,
+        "source": "Daniel Snyder",
+        "sourceType": "person",
+        "target": "Maria Russell",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8932247,
+        "source": "\u00e2\u0080\u0099\u00e2",
+        "sourceType": null,
+        "target": "Amanda Andrews",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8266292,
+        "source": "Amanda Andrews",
+        "sourceType": "person",
+        "target": "Amanda Mckenzie",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Oceanus"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8199188,
+        "source": "Amanda Andrews",
+        "sourceType": "person",
+        "target": "Calvin Salas",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8336316,
+        "source": "Amanda Andrews",
+        "sourceType": "person",
+        "target": "Teresa Jackson",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.9071884,
+        "source": "Amanda Andrews",
+        "sourceType": "person",
+        "target": "Marie Lee",
+        "targetType": "person",
+        "sourceCountry": "Country_271835",
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8539279,
+        "source": "3016",
+        "sourceType": "organization",
+        "target": "979893388",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8363937,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "Oceanfront Oasis Inc Carriers",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.9010467,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "months",
+        "targetType": "movement",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.83718294,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "Sept",
+        "targetType": null,
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8596191,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "John Gonzalez",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Nalakond"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.8037018,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "Amy Wise",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "membership",
+        "weight": 0.84400237,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "34",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8669315,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "98703",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8527762,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "Dana Goodwin",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Marebak"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8544229,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "567",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.8737811,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "990",
+        "targetType": "organization",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8380823,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "23",
+        "targetType": "vessel",
+        "sourceCountry": null,
+        "targetCountry": null
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8509253,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "Jennifer Reilly",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "ownership",
+        "weight": 0.9245638,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "Kristin Jones",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "family_relationship",
+        "weight": 0.8067644,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "Krystal Lee",
+        "targetType": "person",
+        "sourceCountry": null,
+        "targetCountry": "Country_271835"
+    },
+    {
+        "typeOfLink": "partnership",
+        "weight": 0.8316039,
+        "source": "979893388",
+        "sourceType": "organization",
+        "target": "ARA Contraalmirante Cordero",
+        "targetType": "vessel",
+        "sourceCountry": null,
+        "targetCountry": null
+    }
+]
