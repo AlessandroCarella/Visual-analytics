@@ -14,6 +14,9 @@ in the report report the fact that the software has been tested both with people
 * esplicitare la possibilita di usare in tasto destro nella legenda
 * Specificare quali sono i bordi dei bottoni per i livelli, da -1 a n
 
+# inspirations
+* for the highlight of the nodes and its connection i took inspiration from https://www.flightradar24.com/DLH06U/36d67a46
+
 ## record of what i have done so far (not updated):
 
 * ### datasets
