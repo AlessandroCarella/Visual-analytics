@@ -44,6 +44,19 @@ const nodeTypeColor = {
     'vessel': '#8B4513'        // Brown
 };
 
+const defaultNodeOpacity = 1;
+let nonHighlightedNodeOpacity = 0.1;
+
+function setNonHighlightedNodeOpacity(value) {
+    nonHighlightedNodeOpacity = value;
+    // You might want to trigger a re-render of the graph here
+    // or use an observer pattern to notify components that use this value
+}
+
+function getNonHighlightedNodeOpacity() {
+    return nonHighlightedNodeOpacity;
+}
+
 const svgSize = 20; // Size of the SVG icons
 
 function determineNodeColor(node) {
@@ -75,4 +88,4 @@ function determineNodeBorderColor(node) {
     return nodeTypeColor[node.nodeType]
 }
 
-export { blackColor, determineNodeBorderColor, determineNodeColor, entityToInvestigateColor, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel, linksSizeMultiplier, markerHeight, markersRefX, markersRefY, markerWidth, nodeBorderSize, nodeStateColor, nodeTypeColor, sourceAndTargetColor, sourceColor, svgSize, targetColor, tooltipBackgroundColor }
+export { setNonHighlightedNodeOpacity, getNonHighlightedNodeOpacity, defaultNodeOpacity, nonHighlightedNodeOpacity, blackColor, determineNodeBorderColor, determineNodeColor, entityToInvestigateColor, labelsColor, labelsFontSize, labelsNodeMinRadiusToShowLabel, linksSizeMultiplier, markerHeight, markersRefX, markersRefY, markerWidth, nodeBorderSize, nodeStateColor, nodeTypeColor, sourceAndTargetColor, sourceColor, svgSize, targetColor, tooltipBackgroundColor }

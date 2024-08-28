@@ -13,6 +13,7 @@ import { addDropdownEventListeners, populateSelect } from "./modules/populateSel
 import { getUniqueItemsPerKey } from "./modules/utils";
 import { setupGuideButton } from "./modules/guide";
 import { preloadSvgs } from "./modules/createGraphHelpers/createEntities";
+import { setupOpacitySlider } from './modules/opacitySlider';
 
 const jsonFilePathForMergedDatasetWithToInvestigateExtraData = "data/mergedDatasetWithToInvestigateExtraData.json";
 const jsonFilePathForConnectionsLevelsSouspectSourcesNoRepetition = "data/connectionsLevelsSouspectSourcesNoRepetition.json";
@@ -60,6 +61,9 @@ Promise.all([
         preloadSvgs().then(() => {
             setupGuideButton()
         });
+
+        //opacity slider
+        setupOpacitySlider();
     })
     .catch((error) => console.error("Error loading the data:", error));
 

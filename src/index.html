@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="styles/buttons.css" />
         <link rel="stylesheet" href="styles/inputs.css" />
         <link rel="stylesheet" href="styles/guide.css" />
+        <link rel="stylesheet" href="styles/slider.css" />
         <link rel="stylesheet" href="styles/contextMenu.css" />
         <style>
             /* Additional styles for radio buttons and labels */
@@ -23,59 +24,11 @@
     </head>
     <body>
         <div class="command-column">
-            <h2>Commands</h2>
-
-            <div>
-                <button
-                    id="ownership"
-                    class="button ownershipButton active-button"
-                >
-                    ownership
-                </button>
-
-                <button
-                    id="partnership"
-                    class="button partnershipButton active-button"
-                >
-                    partnership
-                </button>
-
-                <button
-                    id="family_relationship"
-                    class="button family_relationshipButton active-button"
-                >
-                    family relationship
-                </button>
-
-                <button
-                    id="membership"
-                    class="button membershipButton active-button"
-                >
-                    membership
-                </button>
-            </div>
-
-            <div>
-                <label for="source-select"
-                    >Select Source and see its targets:</label
-                >
-                <select id="source-select">
-                    <option value=""></option>
-                </select>
-
-                <label for="target-select"
-                    >Select Target and see its sources:</label
-                >
-                <select id="target-select">
-                    <option value=""></option>
-                </select>
-            </div>
-
-            <div>
-                <h2>
+            <div class="distance">
+                <h3>
                     Investigate numer of links distance from nodes to
                     investogate
-                </h2>
+                </h3>
 
                 <label for="investigate-select"
                     >Select enity to investigate: (defaults to All)</label
@@ -125,6 +78,66 @@
                     <button id="increase-both" class="plus-button">+</button>
                 </div>
             </div>
+
+            <div clas="type-of-links-active-buttons">
+                <h3>
+                    Choose which type of links to display by pressing the buttons
+                </h3>
+
+                <button
+                    id="ownership"
+                    class="button ownershipButton active-button"
+                >
+                    ownership
+                </button>
+
+                <button
+                    id="partnership"
+                    class="button partnershipButton active-button"
+                >
+                    partnership
+                </button>
+
+                <button
+                    id="family_relationship"
+                    class="button family_relationshipButton active-button"
+                >
+                    family relationship
+                </button>
+
+                <button
+                    id="membership"
+                    class="button membershipButton active-button"
+                >
+                    membership
+                </button>
+            </div>
+
+            <div class="slider-container">
+                <h3>Choose which opacity the not relevant nodes and links will be showed at</h3>
+                <input type="range" id="opacity-slider" min="0" max="10" value="1" step="1">
+                <span id="opacity-value">1</span>
+            </div>
+
+            <div class="source-and-target-select">
+                <h3>
+                    Select a node to investigate its connections as a source or as a target
+                </h3>
+
+                <label for="source-select"
+                    >Select Source and see its targets:</label
+                >
+                <select id="source-select">
+                    <option value=""></option>
+                </select>
+
+                <label for="target-select"
+                    >Select Target and see its sources:</label
+                >
+                <select id="target-select">
+                    <option value=""></option>
+                </select>
+            </div>
         </div>
 
         <div class="graph">
@@ -134,7 +147,7 @@
 
         <div class="guide-column">
             <button class="hide-guide-button">Hide Map Legend</button>
-            <h2>Guide</h2>
+            <h3>Guide</h3>
             <div class="guide-content">
                 <div class="links-colors">
                     <h3>Types of nodes:</h3>
@@ -148,6 +161,7 @@
                 <br />
                 <div class="legend-text">
                     <h3>Additional Information</h3>
+                    <h4>Grey connection between nodes:</h4>
                     <p>
                         There is a black thin line that links the entities under
                         investigation between each other. 
@@ -156,11 +170,15 @@
                         potentially significant relationships between these
                         entities.
                     </p>
+                    <h4>Click on nodes</h4>
+                    <h5>Left click:</h5>
+                    <p>
+                        The left click on a node will highlight the nodes and the links that are connected to it.
+                        You can regulate the opacity of the not relevant nodes and links with the label 
+                        "Choose which opacity the not relevant nodes and links will be showed at".
+                    </p>
+                    <h5>Right click:</h5>
 					<p>
-						The nodes in yellow are both left and right clickable. A left click on them will expand that 
-						particular node or entity as both source and target and will respectively show its targets and 
-						sources (this depends on the entities linked to that node in the first place).
-						<br>
 						The right click opens a custom context menu that shows the 3 possible options:
 						<br> - Expand as source
 						<br> - Expand as target
