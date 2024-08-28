@@ -6,17 +6,6 @@
   * npm run build
   * npm start
 
-# notes
-in the report report the fact that the software has been tested both with people which do not have a great knowledge of the domain and with someone who does and the following considerations came out of the user testing:
-* Mettere nella legenda il fatto che il link tra le entita da investigare è in grigio spiegare cos'è
-* "Investigate numer of links distance from nodes to investogate" al posto del testo precedente
-* show Map legend al posto di show guide
-* esplicitare la possibilita di usare in tasto destro nella legenda
-* Specificare quali sono i bordi dei bottoni per i livelli, da -1 a n
-
-# inspirations
-* for the highlight of the nodes and its connection i took inspiration from https://www.flightradar24.com/DLH06U/36d67a46
-
 ## record of what i have done so far (not updated):
 
 * ### datasets
@@ -204,3 +193,22 @@ in the report report the fact that the software has been tested both with people
 * another kind of implementation of the links was to add a tooltip on hover of the link to show the various kinds of links 2 entities shared
 
 * there are 203 double linking nodes, 19 triple linking nodes, 11 quaruple linking nodes
+
+* first investigation:
+  * with the settings "investigate number of links distance from nodes to investigate" set to All and with the value 1 in the "As source" box we can notice that the 2 biggest companies present are "Mar del Oeste Pic" and "png xi Line"
+  * if we then select the view with only the ownership type of links we can see that they both own each other
+  * only "Mar del Oeste Pic" owns one of the "to investigate" companies: "979893388"
+  * switching to the only partnership links view we can see that the big companies are in a partnership between each other, while "979893388" is out of it
+  * same goes for membership, while for family relationship the connection is a little bit more complicated to explain in words and easier to explain visually but in this case "979893388" comes back into a "bridge" role
+  * we know from setting the visualization to only partnership links and focusing the view on the relevant nodes for "979893388" that this company is linked to a moltitude of partnership clusters which we can even better analyze by clicking on the nodes belonnging to those clusters
+  * *for ease of use the opacity of the not relevant links is set to 0 but with a low value (before 5ish) it is clear anyway
+
+* in the report report the fact that the software has been tested both with people which do not have a great knowledge of the domain and with someone who does and the following considerations came out of the user testing:
+  * Mettere nella legenda il fatto che il link tra le entita da investigare è in grigio spiegare cos'è
+  * "Investigate numer of links distance from nodes to investogate" al posto del testo precedente
+  * show Map legend al posto di show guide
+  * esplicitare la possibilita di usare in tasto destro nella legenda
+  * Specificare quali sono i bordi dei bottoni per i livelli, da -1 a n
+
+# inspirations
+* for the highlight of the nodes and its connection i took inspiration from https://www.flightradar24.com/DLH06U/36d67a46
