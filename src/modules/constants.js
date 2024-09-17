@@ -7,7 +7,7 @@ const inactiveButtonClass = "inactive-button"
 
 const linkToInvestigateTag = "toInvestigate";
 const typesOfLinks = ["ownership", "partnership", "family_relationship", "membership", linkToInvestigateTag];
-const colorsOfLinksVals = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "black"]
+const colorsOfLinksVals = ["#80b1d3", "#fdb462", "#b3de69", "#fccde5", "black"]
 const colorsOfLinks = d3.scaleOrdinal()
     .domain(typesOfLinks)
     .range(colorsOfLinksVals);

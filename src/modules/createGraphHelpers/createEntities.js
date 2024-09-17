@@ -106,8 +106,8 @@ function appendCircles(
             return d.radius;
         })
         .style("stroke-width", nodeBorderSize)
-        .style("fill", "black") // debugging markers
-        .style("stroke", (d) => determineNodeColor(d));
+        .style("fill", (d) => determineNodeColor(d))//"black") // debugging markers
+        .style("stroke", (d) => "black");
 }
 
 function appendSVGIcons(
@@ -148,7 +148,7 @@ function appendSVGIcons(
                 .attr("y", -newRadius); // Center the SVG vertically
 
             // Adjust paths within the SVG
-            newSvg.selectAll("path").attr("stroke", determineNodeColor(d));
+            newSvg.selectAll("path").attr("stroke", "black");//determineNodeColor(d));
         }
     });
 }

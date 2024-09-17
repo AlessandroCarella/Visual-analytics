@@ -1,21 +1,19 @@
 import { companiesToInvestigate } from "../constants"
 import { clickableNode } from "../dataManagement"
 
-const lastAddedNodeColor = '#FF0000' //light red
-const entityToInvestigateColor = '#54119c'//purple
-const clickableNodeColor = '#FFEA00' //yellow
-const sourceAndTargetColor = '#04820f' //green
-const sourceColor = '#821304' //red
-const targetColor = '#042882' //blue
+const entityToInvestigateColor = '#bc80bd'//purple
+const clickableNodeColor = '#ffffb3' //yellow
+const sourceAndTargetColor = '#b3de69' //green
+const sourceColor = '#fb8072' //red
+const targetColor = '#8dd3c7' //blue
 const blackColor = '#000' //black
 
 const nodeStateColor = {
-    'Entity to investigate': entityToInvestigateColor, // Purple
-    'Clickable node': clickableNodeColor, // Yellow
-    'Source and target': sourceAndTargetColor, // Green
-    'Source': sourceColor, // Red
-    'Target': targetColor, // Blue
-    'Last added node': lastAddedNodeColor, // Light Red
+    'Entity to investigate': entityToInvestigateColor, 
+    'Clickable node': clickableNodeColor, 
+    'Source and target': sourceAndTargetColor, 
+    'Source': sourceColor, 
+    'Target': targetColor, 
 }
 
 const markersRefX = 9

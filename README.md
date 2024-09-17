@@ -202,7 +202,7 @@
   * same goes for membership, while for family relationship the connection is a little bit more complicated to explain in words and easier to explain visually but in this case "979893388" comes back into a "bridge" role
   * we know from setting the visualization to only partnership links and focusing the view on the relevant nodes for "979893388" that this company is linked to a moltitude of partnership clusters which we can even better analyze by clicking on the nodes belonnging to those clusters
   * by selecting "Mar del Oeste Pic" or "png xi Line" as source and expanding the other as source as well we can then observe all the links that make the 2 meet
-  * even tho only "Mar del Oeste Pic" owns "979893388" the first is very well connected with "png xi Line" using different big companies that they both own, have a partnership with, are in a family relationship with and with whom they have a membership too
+  * even tho only "Mar del Oeste Pic" owns "979893388" the first is very well connected with "png xi Line" using different big companies that they both own, have a partnership with, are in a family relationship with and with whom they have a membership too: "SeaSpray Wave SRL Solutions", "903311212", and "Ocean Fisheries Llc".
   * *for ease of use the opacity of the not relevant links is set to 0 but with a low value (before 5ish) it is clear anyway
 
 * in the report report the fact that the software has been tested both with people which do not have a great knowledge of the domain and with someone who does and the following considerations came out of the user testing:
