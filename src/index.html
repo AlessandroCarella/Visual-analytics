@@ -26,16 +26,16 @@
         <div class="command-column">
             <div class="distance">
                 <h3>
-                    Investigate numer of links distance from nodes to
-                    investogate
+                    Investigate number of links distance from nodes to
+                    investigate
                 </h3>
 
                 <label for="investigate-select"
-                    >Select enity to investigate: (defaults to All)</label
+                    >Select entity to investigate: (defaults to All)</label
                 >
                 <select id="investigate-select"></select>
 
-                <h3>As source (up to 7 in distance)</h3>
+                <h3>As source (up to 7 in link distance)</h3>
                 <div class="investigate-distance-div">
                     <button id="decrease-source" class="minus-button">-</button>
                     <input
@@ -49,7 +49,7 @@
                     <button id="increase-source" class="plus-button">+</button>
                 </div>
 
-                <h3>As target (up to 6 in distance)</h3>
+                <h3>As target (up to 6 in link distance)</h3>
 
                 <div class="investigate-distance-div">
                     <button id="decrease-target" class="minus-button">-</button>
@@ -64,7 +64,7 @@
                     <button id="increase-target" class="plus-button">+</button>
                 </div>
 
-                <h3>As both  (up to 7 in distance)</h3>
+                <h3>As both (up to 7 in link distance)</h3>
                 <div class="investigate-distance-div">
                     <button id="decrease-both" class="minus-button">-</button>
                     <input
@@ -79,49 +79,61 @@
                 </div>
             </div>
 
-            <div clas="type-of-links-active-buttons">
+            <div>
                 <h3>
-                    Choose which type of links to display by pressing the buttons
+                    Choose which type of links to display by clicking the
+                    buttons
                 </h3>
 
                 <button
                     id="ownership"
                     class="button ownershipButton active-button"
                 >
-                    ownership
+                    Ownership
                 </button>
 
                 <button
                     id="partnership"
                     class="button partnershipButton active-button"
                 >
-                    partnership
+                    Partnership
                 </button>
 
                 <button
                     id="family_relationship"
                     class="button family_relationshipButton active-button"
                 >
-                    family relationship
+                    Family relationship
                 </button>
 
                 <button
                     id="membership"
                     class="button membershipButton active-button"
                 >
-                    membership
+                    Membership
                 </button>
             </div>
 
             <div class="slider-container">
-                <h3>Choose which opacity the not relevant nodes and links will be showed at</h3>
-                <input type="range" id="opacity-slider" min="0" max="10" value="1" step="1">
-                <span id="opacity-value">1</span>
+                <h3>
+                    Choose the opacity at which the irrelevant nodes and links
+                    will be displayed
+                </h3>
+                <input
+                    type="range"
+                    id="opacity-slider"
+                    min="0"
+                    max="100"
+                    value="10"
+                    step="10"
+                />
+                <span id="opacity-value">10</span>
             </div>
 
             <div class="source-and-target-select">
                 <h3>
-                    Select a node to investigate its connections as a source or as a target
+                    Select a node to investigate its connections as a source or
+                    as a target
                 </h3>
 
                 <label for="source-select"
@@ -161,37 +173,47 @@
                 <br />
                 <div class="legend-text">
                     <h3>Additional Information</h3>
-                    <h4>Grey connection between nodes:</h4>
+                    <h4>Black connection between nodes:</h4>
                     <p>
-                        There is a black thin line that links the entities under
-                        investigation between each other. 
-						<br> This connection is not present in the
-                        original dataset but is included to highlight
-                        potentially significant relationships between these
-                        entities.
+                        There is a thin black line that links the entities under
+                        investigation between each other.
+                        <br />
+                        This connection is not present in the original dataset;
+                        it is included to highlight potentially significant
+                        relationships between these entities.
                     </p>
                     <h4>Click on nodes</h4>
                     <h5>Left click:</h5>
                     <p>
-                        The left click on a node will highlight the nodes and the links that are connected to it.
-                        You can regulate the opacity of the not relevant nodes and links with the label 
-                        "Choose which opacity the not relevant nodes and links will be showed at".
+                        The left click on a node will highlight the nodes and
+                        the links that are connected to it. You can adjust the
+                        opacity of the irrelevant nodes and links using the tool
+                        labeled "Choose the opacity at which the irrelevant
+                        nodes and links will be displayed".
                     </p>
                     <h5>Right click:</h5>
-					<p>
-						The right click opens a custom context menu that shows the 3 possible options:
-						<br> - Expand as source
-						<br> - Expand as target
-						<br> - Expand as both
-					</p>
+                    <p>
+                        The right click opens a custom context menu that shows
+                        the 3 possible options:
+                        <br />
+                        - Expand as source <br />
+                        - Expand as target <br />
+                        - Expand as both
+                    </p>
                 </div>
             </div>
         </div>
 
         <div id="context-menu" class="context-menu">
-            <div class="context-menu__item" data-option="source">Expand as source</div>
-            <div class="context-menu__item" data-option="target">Expand as target</div>
-            <div class="context-menu__item" data-option="both">Expand as both</div>
+            <div class="context-menu__item" data-option="source">
+                Expand as source
+            </div>
+            <div class="context-menu__item" data-option="target">
+                Expand as target
+            </div>
+            <div class="context-menu__item" data-option="both">
+                Expand as both
+            </div>
         </div>
 
         <script src="index.js"></script>

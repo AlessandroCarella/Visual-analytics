@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 import { addTypeButtonsEventListeners } from "./modules/buttons";
 import {
     createActiveButtons,
+    getInitialData,
     setCurrentData,
     setInitialData,
     setInitialDataInvestigateDistanceSource,
@@ -40,8 +41,8 @@ Promise.all([
         createActiveButtons();
 
         // selects
-        populateSelect("#source-select", getUniqueItemsPerKey("source").sort());
-        populateSelect("#target-select", getUniqueItemsPerKey("target").sort());
+        populateSelect("#source-select", getUniqueItemsPerKey("source").sort(function(a,b) { return (a.toLowerCase() < b.toLowerCase()) ? -1 : 1;}));
+        populateSelect("#target-select", getUniqueItemsPerKey("target").sort(function(a,b) { return (a.toLowerCase() < b.toLowerCase()) ? -1 : 1;}));
 
         addDropdownEventListeners("#source-select");
         addDropdownEventListeners("#target-select");

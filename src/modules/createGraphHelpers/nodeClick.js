@@ -13,7 +13,7 @@ function resetHighlights() {
         svg.selectAll("g.node")
             .style("opacity", defaultNodeOpacity)
             .select("circle")
-            .style("stroke", (d) => determineNodeColor(d))
+            .style("stroke", (d) => 'black')
             .style("stroke-width", nodeBorderSize);
     }
 
@@ -45,7 +45,7 @@ function highlightConnectedNodes(d, connectedNodes) {
             .attr("class", "highlight")
             .attr("r", (node) => node.radius + nodeBorderSize + 0.1) // 0.1 is an added distance so that the internal border is still well showed
             .style("fill", "none")
-            .style("stroke", "red")
+            // .style("stroke", "red")
             .style("stroke-width", "3px");
     }
 

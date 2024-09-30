@@ -18,7 +18,7 @@ function setupOpacitySlider() {
     slider.addEventListener('input', function() {
         if (getCurrentlyClickedId() === null) {
             const value = parseInt(this.value);
-            setNonHighlightedNodeOpacity(value / 10);
+            setNonHighlightedNodeOpacity(value / 100);
             valueDisplay.textContent = value;
             lastValidValue = this.value;
             tooltip.classList.remove('slider-tooltip-visible');
