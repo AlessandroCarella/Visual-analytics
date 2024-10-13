@@ -39,7 +39,7 @@ function populateGuideContent() {
 function populateLinksColors(section) {
     section.innerHTML = ''; // Clear previous content
     for (let nodeType in nodeTypeColor){
-        const formattedType = formatLabel(nodeType);
+        const formattedType = formatLabel(nodeType.charAt(0).toUpperCase() + nodeType.slice(1));
         const colorDiv = createSvgDiv(nodeType === 'null' ? svgCache['Unknown'] : svgCache[nodeType], formattedType);
         section.appendChild(colorDiv);
     }
