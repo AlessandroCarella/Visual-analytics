@@ -6,5 +6,4 @@
   * npm run build
   * npm start
 
-# TODO:
-## add pdf report here 
+# [Project Report](Visual_analytics.pdf)
