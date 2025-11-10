@@ -80,3 +80,29 @@
 .hide-guide-button:hover {
     background-color: #c82333;
 }
+
+.show-report-button {
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.show-report-button:hover {
+    background-color: #218838;
+}
+
+.hide-report-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.hide-report-button:hover {
+    background-color: #c82333;
+}

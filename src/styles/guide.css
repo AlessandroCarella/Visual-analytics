@@ -1,5 +1,6 @@
 .guide-column {
     display: none;
+    position: relative;
     top: 0;
     right: 0;
     width: 300px;
@@ -12,7 +13,8 @@
     border: 1px solid #ccc;
 }
 
-.guide-column h2, .guide-column h3 {
+.guide-column h2,
+.guide-column h3 {
     margin-top: 0;
 }
 

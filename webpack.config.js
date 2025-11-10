@@ -36,7 +36,8 @@ module.exports = {
       patterns: [
         { from: 'src/data', to: 'data' },
         { from: 'src/svgs', to: 'svgs' },
-        { from: 'src/styles', to: 'styles' }
+        { from: 'src/styles', to: 'styles' },
+        { from: 'src/*.pdf', to: '[name][ext]' }
       ]
     })
   ],

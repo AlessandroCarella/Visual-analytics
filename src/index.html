@@ -3,14 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>D3.js Visualization</title>
+        <title>Visual Analytics Project</title>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <link rel="stylesheet" href="styles/layout.css" />
+        <link rel="stylesheet" href="styles/intro.css" />
         <link rel="stylesheet" href="styles/buttons.css" />
         <link rel="stylesheet" href="styles/inputs.css" />
         <link rel="stylesheet" href="styles/guide.css" />
         <link rel="stylesheet" href="styles/slider.css" />
         <link rel="stylesheet" href="styles/contextMenu.css" />
+        <link rel="stylesheet" href="styles/report.css" />
         <style>
             /* Additional styles for radio buttons and labels */
             .radio-group {
@@ -23,6 +25,84 @@
         </style>
     </head>
     <body>
+        <!-- Introduction Section -->
+        <div class="intro-wrapper">
+            <button class="show-report-button">Show Report</button>
+
+            <div class="intro-section">
+                <h1>Visual Analytics: Illegal Fishing Investigation Tool</h1>
+                
+                <div class="intro-box">
+                    <h2>Background</h2>
+                    <p>
+                        <strong>FishEye International</strong> is dedicated to combating illegal, unreported, and unregulated (IUU) fishing 
+                        and protecting marine species impacted by it. They gather online news articles about fishing, the marine industry, 
+                        and international maritime trade. Using a natural language processing tool, FishEye extracts entities (people and 
+                        businesses) and their relationships from these articles to create a knowledge graph. Analysts use this graph to 
+                        investigate tips about possible IUU activities.
+                    </p>
+                </div>
+
+                <div class="intro-box">
+                    <h2>The Challenge</h2>
+                    <p>
+                        This project addresses <strong>Mini-Challenge 1</strong> from the <strong>VAST Challenge 2023</strong>. FishEye needs to 
+                        quickly understand and explore the context around each tip to connect identified entities to illegal fishing activities 
+                        and advance their investigations. They have included their own case studies in the database, making it possible for 
+                        related organizations and companies to appear in the graph.
+                    </p>
+                    <p>
+                        The challenge is to develop a visual analytics tool that helps analysts see, interact with, and understand the relevant 
+                        context around a tip without being overwhelmed by unnecessary information.
+                    </p>
+                </div>
+
+                <div class="intro-box">
+                    <h2>Entities Under Investigation</h2>
+                    <p>
+                        This visualization focuses on four entities identified in tips received by FishEye:
+                    </p>
+                    <ul>
+                        <li><strong>Mar de la Vida OJSC</strong></li>
+                        <li><strong>979893388</strong></li>
+                        <li><strong>Oceanfront Oasis Inc Carrie</strong></li>
+                        <li><strong>8327</strong></li>
+                    </ul>
+                    <p>
+                        Not all of these entities will necessarily have a substantive connection to illegal fishing. The visualizations developed 
+                        allow analysts to extend the information they see as new entities are discovered.
+                    </p>
+                </div>
+
+                <div class="intro-box">
+                    <h2>About This Tool</h2>
+                    <p>
+                        This interactive visualization provides a comprehensive set of tools to navigate and explore the knowledge graph data. 
+                        The tool enables users to:
+                    </p>
+                    <ul>
+                        <li>Investigate relationships between entities at various link distances</li>
+                        <li>Filter connections by type (ownership, partnership, family relationship, membership)</li>
+                        <li>Highlight specific nodes and their immediate connections</li>
+                        <li>Expand nodes to reveal their sources, targets, or both</li>
+                        <li>Adjust opacity to focus on relevant information</li>
+                    </ul>
+                    <p>
+                        <strong>Key Pattern Identified:</strong> The analysis reveals that entities potentially involved in illegal fishing 
+                        typically exhibit clusters of highly interconnected nodes, with entities having a high number of incoming and outgoing 
+                        links connected to these clusters.
+                    </p>
+                </div>
+
+                <div class="intro-cta">
+                    <h3>Interactive Visualization Below</h3>
+                    <p>Use the controls on the left panel to explore the network and uncover potential illegal fishing connections</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Visualization Section -->
+        <div class="main-content">
         <div class="command-column">
             <div class="distance">
                 <h3>
@@ -204,6 +284,15 @@
             </div>
         </div>
 
+        <!-- Report Panel -->
+        <div class="report-panel">
+            <button class="hide-report-button">Hide Report</button>
+            <h3>Visual Analytics Report</h3>
+            <div class="report-content">
+                <iframe src="Visual_analytics.pdf" class="pdf-viewer"></iframe>
+            </div>
+        </div>
+
         <div id="context-menu" class="context-menu">
             <div class="context-menu__item" data-option="source">
                 Expand as source
@@ -216,6 +305,26 @@
             </div>
         </div>
 
+        </div>
+        
         <script src="index.js"></script>
+        <script>
+            // Report panel toggle functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const showReportButton = document.querySelector('.show-report-button');
+                const hideReportButton = document.querySelector('.hide-report-button');
+                const reportPanel = document.querySelector('.report-panel');
+
+                showReportButton.addEventListener('click', function() {
+                    reportPanel.style.display = 'block';
+                    showReportButton.style.display = 'none';
+                });
+
+                hideReportButton.addEventListener('click', function() {
+                    reportPanel.style.display = 'none';
+                    showReportButton.style.display = 'block';
+                });
+            });
+        </script>
     </body>
 </html>
