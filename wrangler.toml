@@ -1,5 +1,5 @@
 name = "alessandrocarella-visual-analytics-project"
 compatibility_date = "2025-11-10"
 
-[site]
-bucket = "./dist"
+[assets]
+directory = "./dist"
