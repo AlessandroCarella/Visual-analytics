@@ -1,11 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    clean: true // Clean the dist folder before each build
   },
   module: {
     rules: [
@@ -20,17 +22,22 @@ module.exports = {
         }
       },
       {
-        test: /\.json$/,
-        type: 'javascript/auto',
-        use: {
-          loader: 'json-loader'
-        }
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      inject: 'body'
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/data', to: 'data' },
+        { from: 'src/svgs', to: 'svgs' },
+        { from: 'src/styles', to: 'styles' }
+      ]
     })
   ],
   devServer: {
@@ -40,6 +47,5 @@ module.exports = {
     compress: true,
     port: 9000,
     open: true
-  },
-  mode: 'development'
+  }
 };
